@@ -13,6 +13,8 @@ const Hospital = require('../models/Hospital');
 const Doctor = require('../models/Doctor');
 const DoctorSchedule = require('../models/DoctorSchedule');
 
+const statesData = require('./statesData');
+
 dotenv.config({ path: '../.env' });
 
 const seedDatabase = async (skipConnect = false) => {
@@ -23,7 +25,7 @@ const seedDatabase = async (skipConnect = false) => {
       console.log('MongoDB Connected for Seeding');
     }
 
-    // Clear existing data
+    console.log('Clearing existing database collections...');
     await Promise.all([
       User.deleteMany({}),
       State.deleteMany({}),
@@ -37,233 +39,71 @@ const seedDatabase = async (skipConnect = false) => {
       DoctorSchedule.deleteMany({})
     ]);
 
-    // 1. Seed Users
+    // 1. Seed Authentic Users (Patients & Doctors)
     const salt = await bcrypt.genSalt(10);
-    const adminPassword = await bcrypt.hash('admin123', salt);
+    const defaultPassword = await bcrypt.hash('admin123', salt);
     await User.create([
-      { name: 'Admin User', email: 'admin@mediop.com', password: adminPassword, role: 'admin' },
-      { name: 'John Doe', email: 'john@example.com', password: adminPassword, role: 'patient', age: 30, gender: 'Male', phone: '9876543210' },
-      { name: 'Priya Sharma', email: 'priya@example.com', password: adminPassword, role: 'patient', age: 28, gender: 'Female', phone: '9123456789' }
+      { 
+        name: 'Sairam Vittanala', 
+        email: 'sairam@hospitalop.in', 
+        password: defaultPassword, 
+        role: 'patient', 
+        age: 28, 
+        gender: 'Male', 
+        phone: '+91 98765 43210',
+        avatar: 'https://images.unsplash.com/photo-1594824813571-638f026361a1?auto=format&fit=crop&w=180&h=180&q=80',
+        abhaId: '9821-4412-8820',
+        city: 'Visakhapatnam',
+        state: 'Andhra Pradesh'
+      },
+      { 
+        name: 'Dr. Deepthi', 
+        email: 'dr.deepthi@hospitalop.in', 
+        password: defaultPassword, 
+        role: 'doctor', 
+        age: 42, 
+        gender: 'Female', 
+        phone: '+91 98480 12345',
+        avatar: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=180&h=180&q=80',
+        abhaId: 'DOC-8820-4100',
+        city: 'Visakhapatnam',
+        state: 'Andhra Pradesh'
+      },
+      { 
+        name: 'Priya Sharma', 
+        email: 'priya@example.com', 
+        password: defaultPassword, 
+        role: 'patient', 
+        age: 26, 
+        gender: 'Female', 
+        phone: '+91 91234 56789',
+        avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=180&h=180&q=80',
+        abhaId: '9821-7711-2091',
+        city: 'Hyderabad',
+        state: 'Telangana'
+      },
+      { 
+        name: 'Hospital Desk Admin', 
+        email: 'admin@mediop.com', 
+        password: defaultPassword, 
+        role: 'admin',
+        avatar: 'https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&w=180&h=180&q=80',
+        abhaId: 'ADMIN-HQ-01'
+      }
     ]);
 
-    // 2. ALL 29 STATES OF INDIA WITH DISTRICTS, CITIES, & SUBCITIES / LOCALITIES
-    const statesData = [
-      {
-        name: 'Andhra Pradesh',
-        districts: [
-          { name: 'Visakhapatnam', cities: [{ name: 'Visakhapatnam', subCities: ['Gajuwaka', 'MVP Colony', 'Siripuram', 'Madhavadhara'] }, { name: 'Anakapalle', subCities: ['Town Center', 'Ring Road'] }] },
-          { name: 'NTR (Krishna)', cities: [{ name: 'Vijayawada', subCities: ['Benz Circle', 'Governorpet', 'Moghalrajpuram', 'One Town'] }, { name: 'Nuzvid', subCities: ['Bus Stand Road'] }] },
-          { name: 'Guntur', cities: [{ name: 'Guntur', subCities: ['Broadpet', 'Arundelpet', 'Narasaraopet Road'] }] },
-          { name: 'Tirupati', cities: [{ name: 'Tirupati City', subCities: ['Alipiri Road', 'KT Road', 'MR Palle'] }] }
-        ]
-      },
-      {
-        name: 'Arunachal Pradesh',
-        districts: [
-          { name: 'Papum Pare', cities: [{ name: 'Itanagar', subCities: ['Ganga Market', 'Bank Tinali', 'Naharalagun'] }] },
-          { name: 'East Siang', cities: [{ name: 'Pasighat', subCities: ['Main Market', 'Gensi Road'] }] }
-        ]
-      },
-      {
-        name: 'Assam',
-        districts: [
-          { name: 'Kamrup Metropolitan', cities: [{ name: 'Guwahati', subCities: ['Dispur', 'GS Road', 'Paltan Bazaar', 'Zeev Nagar'] }] },
-          { name: 'Cachar', cities: [{ name: 'Silchar', subCities: ['Tarapur', 'Rangirkhari'] }] }
-        ]
-      },
-      {
-        name: 'Bihar',
-        districts: [
-          { name: 'Patna', cities: [{ name: 'Patna', subCities: ['Kankarbagh', 'Boring Road', 'Patliputra Colony', 'Danapur'] }] },
-          { name: 'Gaya', cities: [{ name: 'Gaya', subCities: ['Civil Lines', 'Bodhgaya Road'] }] }
-        ]
-      },
-      {
-        name: 'Chhattisgarh',
-        districts: [
-          { name: 'Raipur', cities: [{ name: 'Raipur', subCities: ['Pandri', 'Shankar Nagar', 'Telibandha'] }] },
-          { name: 'Durg', cities: [{ name: 'Bhilai', subCities: ['Sector 6', 'Civic Center'] }] }
-        ]
-      },
-      {
-        name: 'Goa',
-        districts: [
-          { name: 'North Goa', cities: [{ name: 'Panaji', subCities: ['Miramar', 'Campal', 'Fontainhas'] }] },
-          { name: 'South Goa', cities: [{ name: 'Margao', subCities: ['Fatorda', 'Aquem'] }] }
-        ]
-      },
-      {
-        name: 'Gujarat',
-        districts: [
-          { name: 'Ahmedabad', cities: [{ name: 'Ahmedabad', subCities: ['SG Highway', 'Bodakdev', 'Navrangpura', 'Satellite'] }] },
-          { name: 'Surat', cities: [{ name: 'Surat', subCities: ['Adajan', 'Ghoddod Road', 'Varachha'] }] }
-        ]
-      },
-      {
-        name: 'Haryana',
-        districts: [
-          { name: 'Gurugram', cities: [{ name: 'Gurgaon', subCities: ['DLF Phase 3', 'Cyber City', 'Sohna Road', 'Golf Course Road'] }] },
-          { name: 'Faridabad', cities: [{ name: 'Faridabad', subCities: ['Sector 15', 'NIT Area'] }] }
-        ]
-      },
-      {
-        name: 'Himachal Pradesh',
-        districts: [
-          { name: 'Shimla', cities: [{ name: 'Shimla', subCities: ['Mall Road', 'Chotta Shimla', 'Sanjauli'] }] },
-          { name: 'Kangra', cities: [{ name: 'Dharamshala', subCities: ['McLeod Ganj', 'Kotwali Bazaar'] }] }
-        ]
-      },
-      {
-        name: 'Jharkhand',
-        districts: [
-          { name: 'Ranchi', cities: [{ name: 'Ranchi', subCities: ['Main Road', 'Lalpur', 'Doranda'] }] },
-          { name: 'East Singhbhum', cities: [{ name: 'Jamshedpur', subCities: ['Bistupur', 'Sakchi', 'Kadma'] }] }
-        ]
-      },
-      {
-        name: 'Karnataka',
-        districts: [
-          { name: 'Bengaluru Urban', cities: [{ name: 'Bengaluru', subCities: ['Whitefield', 'Indiranagar', 'Koramangala', 'Jayanagar', 'Electronic City'] }] },
-          { name: 'Mysuru', cities: [{ name: 'Mysore', subCities: ['Gokulam', 'Vijayanagar', 'Vontikoppal'] }] }
-        ]
-      },
-      {
-        name: 'Kerala',
-        districts: [
-          { name: 'Ernakulam', cities: [{ name: 'Kochi (Cochin)', subCities: ['Edappally', 'MG Road', 'Kakkanad', 'Marine Drive'] }] },
-          { name: 'Thiruvananthapuram', cities: [{ name: 'Trivandrum', subCities: ['Palayam', 'Kazhakkoottam (Technopark)', 'Kowdiar'] }] }
-        ]
-      },
-      {
-        name: 'Madhya Pradesh',
-        districts: [
-          { name: 'Indore', cities: [{ name: 'Indore', subCities: ['Vijay Nagar', 'Palasia', 'Rajendra Nagar'] }] },
-          { name: 'Bhopal', cities: [{ name: 'Bhopal', subCities: ['MP Nagar', 'Arera Colony', 'New Market'] }] }
-        ]
-      },
-      {
-        name: 'Maharashtra',
-        districts: [
-          { name: 'Mumbai City', cities: [{ name: 'Mumbai', subCities: ['Bandra West', 'Andheri East', 'Colaba', 'Powai', 'Mulund'] }] },
-          { name: 'Pune', cities: [{ name: 'Pune', subCities: ['Baner', 'Kothrud', 'Viman Nagar', 'Hinjewadi'] }] }
-        ]
-      },
-      {
-        name: 'Manipur',
-        districts: [
-          { name: 'Imphal East', cities: [{ name: 'Imphal', subCities: ['Porompat', 'Thangal Bazaar'] }] }
-        ]
-      },
-      {
-        name: 'Meghalaya',
-        districts: [
-          { name: 'East Khasi Hills', cities: [{ name: 'Shillong', subCities: ['Police Bazaar', 'Laitumkhrah', 'Labna'] }] }
-        ]
-      },
-      {
-        name: 'Mizoram',
-        districts: [
-          { name: 'Aizawl', cities: [{ name: 'Aizawl', subCities: ['Zarkawt', 'Chanmari', 'Bawngkawn'] }] }
-        ]
-      },
-      {
-        name: 'Nagaland',
-        districts: [
-          { name: 'Kohima', cities: [{ name: 'Kohima', subCities: ['PR Hill', 'High School Junction'] }] }
-        ]
-      },
-      {
-        name: 'Odisha',
-        districts: [
-          { name: 'Khurda', cities: [{ name: 'Bhubaneswar', subCities: ['Saheed Nagar', 'Nayapalli', 'Jaydev Vihar'] }] },
-          { name: 'Cuttack', cities: [{ name: 'Cuttack', subCities: ['Chandi Chowk', 'Cantonment Road'] }] }
-        ]
-      },
-      {
-        name: 'Punjab',
-        districts: [
-          { name: 'Ludhiana', cities: [{ name: 'Ludhiana', subCities: ['Sarabha Nagar', 'Model Town'] }] },
-          { name: 'Amritsar', cities: [{ name: 'Amritsar', subCities: ['Ranjit Avenue', 'Mall Road'] }] }
-        ]
-      },
-      {
-        name: 'Rajasthan',
-        districts: [
-          { name: 'Jaipur', cities: [{ name: 'Jaipur', subCities: ['Malviya Nagar', 'Vaishali Nagar', 'C-Scheme'] }] },
-          { name: 'Jodhpur', cities: [{ name: 'Jodhpur', subCities: ['Sardarpura', 'Shastri Nagar'] }] }
-        ]
-      },
-      {
-        name: 'Sikkim',
-        districts: [
-          { name: 'East Sikkim', cities: [{ name: 'Gangtok', subCities: ['MG Marg', 'Deorali', 'Tadong'] }] }
-        ]
-      },
-      {
-        name: 'Tamil Nadu',
-        districts: [
-          { name: 'Chennai', cities: [{ name: 'Chennai', subCities: ['Adyar', 'T. Nagar', 'Anna Nagar', 'Velachery', 'O型 (OMR)'] }] },
-          { name: 'Coimbatore', cities: [{ name: 'Coimbatore', subCities: ['RS Puram', 'Peelamedu', 'Gandhipuram'] }] }
-        ]
-      },
-      {
-        name: 'Telangana',
-        districts: [
-          { name: 'Hyderabad', cities: [{ name: 'Hyderabad', subCities: ['Banjara Hills', 'Jubilee Hills', 'Charminar', 'Secunderabad'] }] },
-          { name: 'Rangareddy', cities: [{ name: 'Cyberabad', subCities: ['Gachibowli', 'Kondapur', 'Hitec City', 'Manikonda'] }] }
-        ]
-      },
-      {
-        name: 'Tripura',
-        districts: [
-          { name: 'West Tripura', cities: [{ name: 'Agartala', subCities: ['Udaypur Road', 'Banamalipur'] }] }
-        ]
-      },
-      {
-        name: 'Uttar Pradesh',
-        districts: [
-          { name: 'Lucknow', cities: [{ name: 'Lucknow', subCities: ['Gomti Nagar', 'Hazratganj', 'Aliganj'] }] },
-          { name: 'Gautam Buddha Nagar', cities: [{ name: 'Noida', subCities: ['Sector 62', 'Sector 18', 'Greater Noida'] }] }
-        ]
-      },
-      {
-        name: 'Uttarakhand',
-        districts: [
-          { name: 'Dehradun', cities: [{ name: 'Dehradun', subCities: ['Rajpur Road', 'Clement Town', 'Vasant Vihar'] }] },
-          { name: 'Nainital', cities: [{ name: 'Haldwani', subCities: ['Kashipur Road', 'Tallital'] }] }
-        ]
-      },
-      {
-        name: 'West Bengal',
-        districts: [
-          { name: 'Kolkata', cities: [{ name: 'Kolkata', subCities: ['Salt Lake Sector 5', 'New Town', 'Ballygunge', 'Park Street'] }] }
-        ]
-      },
-      {
-        name: 'Delhi NCR (UT)',
-        districts: [
-          { name: 'New Delhi', cities: [{ name: 'New Delhi', subCities: ['Connaught Place', 'Saket', 'Vasant Kunj', 'Hauz Khas'] }] }
-        ]
-      }
-    ];
-
-    // 3. Departments
+    // 2. Departments
     const deptNames = [
-      'Cardiology', 'Neurology', 'Orthopedics', 'Pediatrics', 
-      'General Medicine', 'Dermatology', 'Gynecology', 'ENT', 
-      'Gastroenterology', 'Ophthalmology', 'Pulmonology', 'Oncology'
+      'Cardiology', 'Neurology', 'Orthopedics', 'Pediatrics', 'General Medicine',
+      'Dermatology', 'Gynecology', 'ENT', 'Gastroenterology', 'Ophthalmology',
+      'Pulmonology', 'Oncology'
     ];
 
-    const createdDepts = [];
-    for (const dName of deptNames) {
-      const dept = await Department.create({ name: dName });
-      createdDepts.push(dept);
-    }
-
+    const createdDepts = await Department.insertMany(deptNames.map(name => ({ name })));
     const deptMap = {};
     createdDepts.forEach(d => { deptMap[d.name] = d._id; });
 
-    // 4. Health Issues
+    // 3. Health Issues
     const healthIssuesData = [
       { name: 'Heart & Chest Pain', departmentId: deptMap['Cardiology'], icon: '❤️' },
       { name: 'Brain, Stroke & Nerve Issues', departmentId: deptMap['Neurology'], icon: '🧠' },
@@ -280,22 +120,346 @@ const seedDatabase = async (skipConnect = false) => {
     ];
     await HealthIssue.insertMany(healthIssuesData);
 
-    // Hospital Brands
-    const hospitalBrands = [
-      { prefix: 'Apollo Super Specialty Hospital', type: 'Quaternary Care', emergency: true },
-      { prefix: 'Care Multi-Specialty Hospital', type: 'Tertiary Care', emergency: true },
-      { prefix: 'KIMS Medical Institute', type: 'Super Specialty', emergency: true },
-      { prefix: 'Manipal Healthcare Center', type: 'Super Specialty', emergency: true },
-      { prefix: 'Fortis Multi-Specialty Hospital', type: 'Quaternary Care', emergency: true },
-      { prefix: 'Yashoda Super Specialty Hospital', type: 'Tertiary Care', emergency: true },
-      { prefix: 'Max Super Specialty Hospital', type: 'Super Specialty', emergency: true },
-      { prefix: 'Narayana Health City', type: 'Cardiac & Multi-Specialty', emergency: true },
-      { prefix: 'Government General Apex Hospital', type: 'Public Multi-Specialty', emergency: true }
+    // 4. Hospital Exterior Out-View Photo Assets
+    const hospitalExteriorImages = [
+      'https://images.unsplash.com/photo-1587351021759-3e566b6af7cc?auto=format&fit=crop&w=1200&q=80', // Modern glass multi-specialty facade
+      'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1200&q=80', // Hospital campus entrance & emergency wing
+      'https://images.unsplash.com/photo-1586773860418-d37222d8fce3?auto=format&fit=crop&w=1200&q=80', // High-tech hospital building exterior
+      'https://images.unsplash.com/photo-1512678080530-7760d81faba6?auto=format&fit=crop&w=1200&q=80', // Metropolitan medical center building
+      'https://images.unsplash.com/photo-1538108149393-fbbd81895907?auto=format&fit=crop&w=1200&q=80', // Government Area Hospital & Medical Institute
+      'https://images.unsplash.com/photo-1586773860383-dab5f3bc1bcc?auto=format&fit=crop&w=1200&q=80', // Super specialty tower exterior view
+      'https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=1200&q=80', // Area Community Hospital & OP wing
+      'https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1200&q=80'  // Apex healthcare facility architecture
     ];
 
-    // Doctor Templates (with varied fees & experiences)
-    const doctorNames = [
-      { name: 'Dr. Rahul Kumar', qual: 'MBBS, MD, DM Cardiology', spec: 'Cardiologist', dept: 'Cardiology', fee: 900, exp: 15 },
+    // Hospital Brands Template: Covering Smallest (Tier 1 Clinics) to Biggest (Tier 7 Apex AIIMS) & All Major Chains with Branches
+    const hospitalBrands = [
+      // 🩺 Tier 1: Smallest - Neighborhood & Urban Primary Clinics (20-60 Beds)
+      { 
+        prefix: 'Urban Primary Health Clinic (UPHC)', 
+        type: 'Neighborhood OP Clinic', 
+        tier: 'Tier 1 - Neighborhood Clinic',
+        parentChain: 'National Urban Health Mission (NUHM)',
+        emergency: false, 
+        beds: 45, 
+        icu: 6,
+        ots: 1,
+        year: 2018, 
+        rating: 4.4,
+        schemes: ['Ayushman Bharat (PM-JAY)', 'State Free Medicine Scheme', 'National Health Mission Free OP'],
+        facilities: ['Outpatient Consultation', 'Basic Diagnostic Lab', 'Immunization & Vaccination', 'Generic Pharmacy', 'Daycare Observation']
+      },
+      { 
+        prefix: 'Ayushman Arogya Mandir Community Clinic', 
+        type: 'Primary Healthcare Clinic', 
+        tier: 'Tier 1 - Neighborhood Clinic',
+        parentChain: 'Government Health & Wellness Centers',
+        emergency: false, 
+        beds: 35, 
+        icu: 4,
+        ots: 1,
+        year: 2020, 
+        rating: 4.5,
+        schemes: ['Ayushman Bharat (PM-JAY)', 'Free Essential Diagnostics', 'Maternal & Child Health Scheme'],
+        facilities: ['Primary OP Consultations', 'Maternal Care', 'Tele-Consultation with Specialists', 'Free Essential Drugs', 'Blood Pressure & Diabetes Screening']
+      },
+
+      // 🏥 Tier 2: Small-Medium - Community Health Centers & Dispensaries (60-150 Beds)
+      { 
+        prefix: 'Community Health Center (CHC) Area Hospital', 
+        type: 'Community Secondary Hospital', 
+        tier: 'Tier 2 - Community Health Center (CHC)',
+        parentChain: 'State Directorate of Health Services',
+        emergency: true, 
+        beds: 120, 
+        icu: 15,
+        ots: 3,
+        year: 2008, 
+        rating: 4.5,
+        schemes: ['Ayushman Bharat (PM-JAY)', 'State Aarogyasri / Health Assurance', 'Janani Suraksha Yojana'],
+        facilities: ['24x7 Emergency & Casualty', 'General Surgery & Orthopedics', 'Pediatric & Neonatal Ward', 'Digital X-Ray & Ultrasound', '24x7 Labor Room']
+      },
+      { 
+        prefix: 'ESI Model Community Dispensary & Day Hospital', 
+        type: 'ESI Healthcare Hospital', 
+        tier: 'Tier 2 - Community Health Center (CHC)',
+        parentChain: 'Employees State Insurance Corporation (ESIC)',
+        emergency: true, 
+        beds: 150, 
+        icu: 18,
+        ots: 3,
+        year: 2002, 
+        rating: 4.6,
+        schemes: ['ESI Full Medical Benefit Scheme', 'Ayushman Bharat (PM-JAY)', 'Cashless Super Specialty Referral'],
+        facilities: ['24x7 ESI Casualty', 'Occupational Health Wing', 'Cardiology & Diabetology OP', 'Automated Biochemistry Lab', 'Physiotherapy & Rehab']
+      },
+
+      // 🏛️ Tier 3: Medium - Government Area Hospitals & Municipal General (150-350 Beds)
+      { 
+        prefix: 'Government Area Hospital', 
+        type: 'Area Headquarters Hospital', 
+        tier: 'Tier 3 - Government Area Hospital',
+        parentChain: 'State Health Medical Services',
+        emergency: true, 
+        beds: 350, 
+        icu: 45,
+        ots: 6,
+        year: 1998, 
+        rating: 4.6,
+        schemes: ['Ayushman Bharat (PM-JAY)', 'Dr. YSR Aarogyasri / State Health Card', 'ECHS', 'CGHS'],
+        facilities: ['24x7 Trauma & Emergency Bay', 'ICU, CCU & NICU Units', 'Modular Operation Theatres', 'CT Scan & 24x7 Blood Storage', 'Comprehensive Dialysis Center']
+      },
+      { 
+        prefix: 'Municipal Corporation Area General Hospital', 
+        type: 'Municipal General Hospital', 
+        tier: 'Tier 3 - Government Area Hospital',
+        parentChain: 'Municipal Corporation Health Department',
+        emergency: true, 
+        beds: 280, 
+        icu: 35,
+        ots: 5,
+        year: 1995, 
+        rating: 4.5,
+        schemes: ['Ayushman Bharat (PM-JAY)', 'Urban Healthcare Assistance', 'Cashless TPA Insurance'],
+        facilities: ['24x7 Emergency Ward', 'General Medicine & Surgery', 'Obstetrics & High-Risk Pregnancy', 'Pathology & Microbiology Labs', 'Free Pharmacy Counter']
+      },
+
+      // 🏢 Tier 4: Large - District Headquarters Government Civil Hospitals (400-800 Beds)
+      { 
+        prefix: 'District Headquarters Government Civil Hospital', 
+        type: 'District Apex Civil Hospital', 
+        tier: 'Tier 4 - District Headquarters Hospital',
+        parentChain: 'Department of Health & Family Welfare',
+        emergency: true, 
+        beds: 650, 
+        icu: 80,
+        ots: 12,
+        year: 1988, 
+        rating: 4.7,
+        schemes: ['Ayushman Bharat (PM-JAY)', 'State Government Health Scheme (SGHS)', 'ECHS', 'CGHS', 'Railway Medical Pass'],
+        facilities: ['Level-1 Emergency & Multi-Trauma Center', 'Dedicated Cardiac Care Unit (CCU)', 'Advanced CT & MRI Diagnostics', 'Licensed 24x7 Blood Bank & Component Separation', 'Burn Care & Plastic Surgery Unit']
+      },
+
+      // 🏥 Tier 5: Private Multi-Specialty & Surgical Centers (100-300 Beds)
+      { 
+        prefix: 'LifeCare Multi-Specialty & Surgical Hospital', 
+        type: 'Private Multi-Specialty', 
+        tier: 'Tier 5 - Multi-Specialty Private',
+        parentChain: 'LifeCare Hospitals Network',
+        emergency: true, 
+        beds: 220, 
+        icu: 30,
+        ots: 5,
+        year: 2012, 
+        rating: 4.7,
+        schemes: ['Ayushman Bharat (PM-JAY)', 'Private Cashless TPA (Star, HDFC, ICICI, MediAssist)', 'Corporate Tie-Ups'],
+        facilities: ['24x7 Emergency & Critical Care', 'Laparoscopic Minimally Invasive Surgery', 'Joint Replacement Center', 'Comprehensive Maternity Suites', 'Cath Lab & Stroke Management']
+      },
+      { 
+        prefix: 'Sunrise Hospital & Trauma Institute', 
+        type: 'Multi-Specialty Center', 
+        tier: 'Tier 5 - Multi-Specialty Private',
+        parentChain: 'Sunrise Healthcare Group',
+        emergency: true, 
+        beds: 180, 
+        icu: 25,
+        ots: 4,
+        year: 2015, 
+        rating: 4.7,
+        schemes: ['All Major Cashless Insurance TPAs', 'State Health Schemes', 'Corporate Healthcare Plans'],
+        facilities: ['24x7 Polytrauma Management', 'Neurosurgery & Spine Center', 'Advanced Dialysis Unit', 'High-Definition Endoscopy', 'Emergency Mobile ICU Ambulance']
+      },
+
+      // ⭐ Tier 6: Super-Specialty Hospital Chains with Branch Networks (350-900 Beds)
+      { 
+        prefix: 'Apollo Super Specialty Hospital Branch', 
+        type: 'Quaternary Care Multi-Specialty', 
+        tier: 'Tier 6 - Super-Specialty Chain Branch',
+        parentChain: 'Apollo Hospitals Enterprise Ltd.',
+        emergency: true, 
+        beds: 750, 
+        icu: 120,
+        ots: 18,
+        year: 2006, 
+        rating: 4.9,
+        schemes: ['Ayushman Bharat (PM-JAY)', 'CGHS', 'ECHS', 'Apollo Munich & All Cashless TPAs', 'International Patient Insurance'],
+        facilities: ['Apollo 24x7 Emergency & Rapid Response Team', 'Robotic Surgery (Da Vinci Xi)', 'Comprehensive Cancer Center & PET-CT', 'Organ Transplant Center (Liver, Kidney, Heart)', '3T Digital MRI & Dual-Source 512 Slice CT']
+      },
+      { 
+        prefix: 'Manipal Hospital Branch Network', 
+        type: 'Super Specialty Institute', 
+        tier: 'Tier 6 - Super-Specialty Chain Branch',
+        parentChain: 'Manipal Health Enterprises',
+        emergency: true, 
+        beds: 650, 
+        icu: 100,
+        ots: 15,
+        year: 2009, 
+        rating: 4.9,
+        schemes: ['Ayushman Bharat (PM-JAY)', 'ECHS', 'CGHS', 'All Leading Cashless TPA Networks'],
+        facilities: ['24x7 Comprehensive Trauma & Code Red Stroke Center', 'Bone Marrow & Solid Organ Transplant', 'Advanced Interventional Cardiology Cath Labs', 'High-Risk Neonatal NICU Level-3', 'Automated Molecular Diagnostic Labs']
+      },
+      { 
+        prefix: 'Care Multi-Specialty Hospital Branch', 
+        type: 'Tertiary & Super Specialty', 
+        tier: 'Tier 6 - Super-Specialty Chain Branch',
+        parentChain: 'Care Hospitals Group (Evercare Network)',
+        emergency: true, 
+        beds: 550, 
+        icu: 85,
+        ots: 14,
+        year: 2004, 
+        rating: 4.8,
+        schemes: ['State Health Assurance Schemes', 'Ayushman Bharat (PM-JAY)', 'ECHS', 'All Private Cashless TPAs'],
+        facilities: ['Care Heart Institute & ECMO Support', 'Neuro Critical Care Unit', 'Kidney Care & Renal Transplant Suite', 'Advanced Gastro & HPB Surgery', '24x7 Critical Care Ambulance']
+      },
+      { 
+        prefix: 'Fortis Escorts Healthcare Branch', 
+        type: 'Super Specialty Heart & General', 
+        tier: 'Tier 6 - Super-Specialty Chain Branch',
+        parentChain: 'Fortis Healthcare Ltd. (IHH)',
+        emergency: true, 
+        beds: 500, 
+        icu: 80,
+        ots: 12,
+        year: 2008, 
+        rating: 4.8,
+        schemes: ['CGHS', 'ECHS', 'Ayushman Bharat (PM-JAY)', 'Cashless Insurance Corporate Plans'],
+        facilities: ['Fortis Heart & Vascular Institute', 'Joint Replacement with Navigation', 'Liver & Digestive Diseases Center', '24x7 Critical Care & Trauma Service', 'Advanced Sleep Lab & Pulmonology']
+      },
+      { 
+        prefix: 'KIMS Super Specialty Hospital Branch', 
+        type: 'Quaternary Super Specialty', 
+        tier: 'Tier 6 - Super-Specialty Chain Branch',
+        parentChain: 'Krishna Institute of Medical Sciences (KIMS)',
+        emergency: true, 
+        beds: 650, 
+        icu: 110,
+        ots: 16,
+        year: 2007, 
+        rating: 4.8,
+        schemes: ['Dr. YSR Aarogyasri', 'Ayushman Bharat (PM-JAY)', 'ECHS', 'CGHS', 'All Cashless Insurance'],
+        facilities: ['Heart & Lung Transplant Institute', 'Comprehensive Neurosciences Center', 'Pediatric Super Specialty & NICU', 'Day Care Chemotherapy & Oncology', 'Round the Clock Blood Bank & Dialysis']
+      },
+      { 
+        prefix: 'Yashoda Super Specialty Hospital Branch', 
+        type: 'Quaternary Healthcare Hospital', 
+        tier: 'Tier 6 - Super-Specialty Chain Branch',
+        parentChain: 'Yashoda Group of Hospitals',
+        emergency: true, 
+        beds: 600, 
+        icu: 95,
+        ots: 14,
+        year: 2010, 
+        rating: 4.8,
+        schemes: ['State Employee Health Schemes', 'Ayushman Bharat', 'ECHS', 'All Cashless TPA Network'],
+        facilities: ['Tri-Beam RapidArc Radiotherapy Cancer Center', 'Comprehensive Heart Failure Clinic', 'Interventional Pulmonology & Bronchoscopy', '24x7 Stroke Rapid Rescue Protocol', 'Air Ambulance Transfer Support']
+      },
+      { 
+        prefix: 'Max Super Specialty Hospital Branch', 
+        type: 'Quaternary Care Hospital', 
+        tier: 'Tier 6 - Super-Specialty Chain Branch',
+        parentChain: 'Max Healthcare Institute Ltd.',
+        emergency: true, 
+        beds: 700, 
+        icu: 115,
+        ots: 16,
+        year: 2011, 
+        rating: 4.9,
+        schemes: ['CGHS', 'ECHS', 'Ayushman Bharat (PM-JAY)', 'International Health Insurance', 'Cashless TPA'],
+        facilities: ['Max Institute of Cancer Care', 'Robotic Joint & Spine Surgery', 'Bone Marrow & Kidney Transplants', 'Max 24x7 Emergency & Critical Care', 'Advanced Genetic & Genomic Testing']
+      },
+      { 
+        prefix: 'Narayana Health Multi-Specialty City Branch', 
+        type: 'Cardiac & Multi-Specialty Care', 
+        tier: 'Tier 6 - Super-Specialty Chain Branch',
+        parentChain: 'Narayana Hrudayalaya Health Network',
+        emergency: true, 
+        beds: 850, 
+        icu: 140,
+        ots: 20,
+        year: 2005, 
+        rating: 4.9,
+        schemes: ['Ayushman Bharat (PM-JAY)', 'Yeshasvini / State Schemes', 'ECHS', 'CGHS', 'Cashless TPA'],
+        facilities: ['High Volume Adult & Pediatric Cardiac Surgery', 'Comprehensive Oncology & Bone Marrow Unit', 'Advanced Dialysis & Renal Care', '24x7 Polytrauma Care & Stroke Unit', 'Affordable Super Specialty OP Services']
+      },
+      { 
+        prefix: 'Aster DM Healthcare Prime Hospital Branch', 
+        type: 'Super Specialty Hospital', 
+        tier: 'Tier 6 - Super-Specialty Chain Branch',
+        parentChain: 'Aster DM Healthcare',
+        emergency: true, 
+        beds: 450, 
+        icu: 70,
+        ots: 10,
+        year: 2015, 
+        rating: 4.8,
+        schemes: ['Cashless TPA Insurance', 'Ayushman Bharat (PM-JAY)', 'ECHS', 'CGHS'],
+        facilities: ['Aster Orthopedics & Joint Center', 'Women & Child Super Specialty', 'Advanced Gastroenterology & Liver Center', '24x7 Emergency Department', 'Minimally Invasive Laparoscopy']
+      },
+      { 
+        prefix: 'Medicover Multi-Specialty Hospital Branch', 
+        type: 'Super Specialty Care', 
+        tier: 'Tier 6 - Super-Specialty Chain Branch',
+        parentChain: 'Medicover Healthcare Group Europe-India',
+        emergency: true, 
+        beds: 480, 
+        icu: 75,
+        ots: 11,
+        year: 2016, 
+        rating: 4.8,
+        schemes: ['State Health Insurance', 'Ayushman Bharat (PM-JAY)', 'Cashless Insurance Plans'],
+        facilities: ['24x7 Emergency & Trauma Care', 'Interventional Cardiology & Cath Lab', 'Neuro Intensive Care', 'Dialysis & Renal Sciences', 'Comprehensive Executive Health Check']
+      },
+      { 
+        prefix: 'Rainbow Childrens & General Hospital Branch', 
+        type: 'Pediatric & Perinatal Super Specialty', 
+        tier: 'Tier 6 - Super-Specialty Chain Branch',
+        parentChain: 'Rainbow Childrens Medicare Ltd.',
+        emergency: true, 
+        beds: 350, 
+        icu: 60,
+        ots: 8,
+        year: 2012, 
+        rating: 4.9,
+        schemes: ['All Major Cashless Insurance TPAs', 'State Health Schemes', 'Corporate Family Health Plans'],
+        facilities: ['Level-3 NICU & PICU Critical Care', 'Pediatric Surgery & Cardiology', 'Perinatology & High-Risk Obstetrics', '24x7 Pediatric Emergency & Ambulance', 'Developmental Pediatrics & Child Rehab']
+      },
+
+      // 🏛️ Tier 7: Apex Institutes & AIIMS Teaching Hospitals (800-1500 Beds)
+      { 
+        prefix: 'AIIMS Regional Apex Teaching & Research Hospital', 
+        type: 'Apex National Autonomous Institute', 
+        tier: 'Tier 7 - Apex Institute / AIIMS',
+        parentChain: 'All India Institute of Medical Sciences (AIIMS)',
+        emergency: true, 
+        beds: 1200, 
+        icu: 200,
+        ots: 28,
+        year: 2014, 
+        rating: 4.9,
+        schemes: ['Ayushman Bharat (PM-JAY)', 'National Health Mission Free Care', 'CGHS', 'ECHS', 'Central Autonomous Free Care'],
+        facilities: ['Apex Level-1 Trauma & Disaster Response Center', 'Advanced Robotic Surgery & Hybrid OTs', 'Comprehensive Cancer & Nuclear Medicine Institute', 'Multi-Organ Transplant Centers', 'Telemedicine & National Medical Research Labs']
+      },
+      { 
+        prefix: 'Government General Apex Medical College Hospital', 
+        type: 'Government Apex Medical College', 
+        tier: 'Tier 7 - Apex Institute / AIIMS',
+        parentChain: 'Directorate of Medical Education (DME)',
+        emergency: true, 
+        beds: 1100, 
+        icu: 180,
+        ots: 24,
+        year: 1972, 
+        rating: 4.7,
+        schemes: ['Ayushman Bharat (PM-JAY)', 'State Free Healthcare for All', 'National Health Programs', 'ECHS', 'CGHS'],
+        facilities: ['24x7 Emergency Casualty & Trauma Mega Complex', 'Super Specialty Departments in 25+ Disciplines', 'State-of-the-Art Blood Bank & Component Lab', 'Renal, Cardiac & Neuro Intensive Units', 'Zero-Cost Medicine & Surgery for BPL Patients']
+      }
+    ];
+
+    // 5. Doctor Templates
+    const doctorTemplates = [
+      { name: 'Dr. Deepthi', qual: 'MBBS, MD, DM Cardiology', spec: 'Cardiologist', dept: 'Cardiology', fee: 900, exp: 15 },
       { name: 'Dr. Sneha Verma', qual: 'MBBS, MD, DM Neurology', spec: 'Neurologist', dept: 'Neurology', fee: 850, exp: 12 },
       { name: 'Dr. Vikram Rao', qual: 'MBBS, MS Ortho, MCh', spec: 'Orthopedic Surgeon', dept: 'Orthopedics', fee: 1000, exp: 18 },
       { name: 'Dr. Ananya Reddy', qual: 'MBBS, MD Pediatrics', spec: 'Pediatrician', dept: 'Pediatrics', fee: 700, exp: 9 },
@@ -318,21 +482,33 @@ const seedDatabase = async (skipConnect = false) => {
       { start: '15:00', end: '15:15' }, { start: '16:00', end: '16:15' }
     ];
 
+    let totalStatesCount = 0;
+    let totalDistrictsCount = 0;
+    let totalCitiesCount = 0;
+    let totalSubCitiesCount = 0;
     let totalHospitalsCount = 0;
     let totalDoctorsCount = 0;
     let totalSlotsCount = 0;
 
-    // Loop through ALL 29 STATES
+    console.log('Seeding National Hierarchy across all 29 States of India...');
+
     for (const stateItem of statesData) {
       const stateObj = await State.create({ name: stateItem.name });
+      totalStatesCount++;
 
       for (const distItem of stateItem.districts) {
         const distObj = await District.create({ name: distItem.name, stateId: stateObj._id });
+        totalDistrictsCount++;
 
         for (const cityItem of distItem.cities) {
-          const cityObj = await City.create({ name: cityItem.name, stateId: stateObj._id, districtId: distObj._id });
+          const cityObj = await City.create({
+            name: cityItem.name,
+            stateId: stateObj._id,
+            districtId: distObj._id
+          });
+          totalCitiesCount++;
 
-          // Seed Sub-cities / Areas
+          // Create SubCities / Areas
           const subCityObjs = [];
           for (const subName of cityItem.subCities) {
             const subObj = await SubCity.create({
@@ -342,72 +518,120 @@ const seedDatabase = async (skipConnect = false) => {
               stateId: stateObj._id
             });
             subCityObjs.push(subObj);
+            totalSubCitiesCount++;
           }
 
-          // Seed Hospitals per City / Sub-City
-          const hBrand = hospitalBrands[(totalHospitalsCount) % hospitalBrands.length];
-          totalHospitalsCount++;
-          const targetSubCity = subCityObjs[0] || null;
+          // Create Hospitals in SubCities / City
+          // Place hospitals in the sub-cities for granular neighborhood selection!
+          const hospitalCountForCity = Math.max(2, Math.min(subCityObjs.length, 3));
+          
+          for (let h = 0; h < hospitalCountForCity; h++) {
+            const assignedSub = subCityObjs[h % subCityObjs.length];
+            const hBrand = hospitalBrands[(totalHospitalsCount) % hospitalBrands.length];
+            const mainExteriorImage = hospitalExteriorImages[(totalHospitalsCount) % hospitalExteriorImages.length];
+            const emergencyImage = hospitalExteriorImages[(totalHospitalsCount + 1) % hospitalExteriorImages.length];
+            const diagnosticImage = hospitalExteriorImages[(totalHospitalsCount + 2) % hospitalExteriorImages.length];
+            const inpatientImage = hospitalExteriorImages[(totalHospitalsCount + 3) % hospitalExteriorImages.length];
+            totalHospitalsCount++;
 
-          const hospitalObj = await Hospital.create({
-            name: `${hBrand.prefix} - ${targetSubCity ? targetSubCity.name : cityItem.name}`,
-            cityId: cityObj._id,
-            districtId: distObj._id,
-            stateId: stateObj._id,
-            subCityId: targetSubCity ? targetSubCity._id : null,
-            address: `${targetSubCity ? targetSubCity.name : cityItem.name}, ${distItem.name}, ${stateItem.name}`,
-            phone: `0${Math.floor(100 + Math.random() * 899)}-${Math.floor(1000000 + Math.random() * 8999999)}`,
-            hospitalType: hBrand.type,
-            emergencyAvailable: hBrand.emergency,
-            departments: createdDepts.map(d => d._id)
-          });
+            const branchSlug = assignedSub.name.toLowerCase().replace(/[^a-z0-9]/g, '-');
+            const cleanChain = hBrand.parentChain.toLowerCase().replace(/[^a-z0-9]/g, '');
 
-          // Seed Doctors for Hospital
-          const docTemplates = [
-            doctorNames[(totalDoctorsCount) % doctorNames.length],
-            doctorNames[(totalDoctorsCount + 1) % doctorNames.length],
-            doctorNames[(totalDoctorsCount + 2) % doctorNames.length]
-          ];
-
-          for (let idx = 0; idx < docTemplates.length; idx++) {
-            const docTemplate = docTemplates[idx];
-            totalDoctorsCount++;
-            
-            const doctorObj = await Doctor.create({
-              name: `${docTemplate.name}`,
-              qualification: docTemplate.qual,
-              specialization: docTemplate.spec,
-              experience: docTemplate.exp,
-              hospitalId: hospitalObj._id,
-              departmentId: deptMap[docTemplate.dept],
-              consultationFee: docTemplate.fee,
-              profileImage: `https://ui-avatars.com/api/?name=${encodeURIComponent(docTemplate.name)}&background=0055D4&color=fff`
+            const hospitalObj = await Hospital.create({
+              name: `${hBrand.prefix} - ${assignedSub.name}`,
+              cityId: cityObj._id,
+              districtId: distObj._id,
+              stateId: stateObj._id,
+              subCityId: assignedSub._id,
+              address: `${assignedSub.name}, ${cityItem.name}, ${distItem.name}, ${stateItem.name}`,
+              phone: `0${Math.floor(100 + Math.random() * 899)}-${Math.floor(1000000 + Math.random() * 8999999)}`,
+              ambulancePhone: hBrand.emergency ? '108 / 1800-425-4444' : '108',
+              email: `desk-${branchSlug}@${cleanChain || 'hospitalcare'}.in`,
+              website: `https://www.hospitalcare.in/network/${branchSlug}`,
+              hospitalType: hBrand.type,
+              tier: hBrand.tier,
+              branchCode: `BR-${hBrand.prefix.slice(0, 3).toUpperCase()}-${String(totalHospitalsCount).padStart(4, '0')}`,
+              parentChain: hBrand.parentChain,
+              emergencyAvailable: hBrand.emergency,
+              imageUrl: mainExteriorImage,
+              gallery: [mainExteriorImage, emergencyImage, diagnosticImage, inpatientImage],
+              rating: hBrand.rating || 4.8,
+              bedCapacity: hBrand.beds || 300,
+              icuBeds: hBrand.icu || 35,
+              operationTheatres: hBrand.ots || 6,
+              establishedYear: hBrand.year || 2005,
+              opdTimings: 'Mon - Sat: 08:00 AM - 08:00 PM | Sun: 09:00 AM - 01:00 PM (24x7 Emergency)',
+              accreditations: ['NABH Accredited', 'NABL Quality Lab', 'ABDM Digital Health Certified'],
+              governmentSchemes: hBrand.schemes || ['Ayushman Bharat (PM-JAY)', 'State Health Scheme', 'All Cashless TPAs'],
+              facilities: hBrand.facilities || ['24x7 Emergency & Trauma', 'Modular OTs', 'Dialysis Unit', 'Digital Blood Bank'],
+              departments: createdDepts.map(d => d._id)
             });
 
-            // Mark 1 out of 5 doctors as "FULL / UNAVAILABLE" so alternative doctor recommendations trigger naturally!
-            const isDoctorFull = (totalDoctorsCount % 5 === 0);
+            // Assign 4-5 Specialized Doctors per hospital
+            const doctorsForHospital = [
+              doctorTemplates[(totalDoctorsCount) % doctorTemplates.length],
+              doctorTemplates[(totalDoctorsCount + 1) % doctorTemplates.length],
+              doctorTemplates[(totalDoctorsCount + 2) % doctorTemplates.length],
+              doctorTemplates[(totalDoctorsCount + 3) % doctorTemplates.length]
+            ];
 
-            const slotsToInsert = timeSlots.map(slot => ({
-              doctorId: doctorObj._id,
-              hospitalId: hospitalObj._id,
-              date: todayStr,
-              startTime: slot.start,
-              endTime: slot.end,
-              slotDuration: 15,
-              totalSlots: 1,
-              bookedSlots: isDoctorFull ? 1 : 0, // Booked = 1 makes it full!
-              status: isDoctorFull ? 'UNAVAILABLE' : 'AVAILABLE'
-            }));
+            const doctorsToInsert = doctorsForHospital.map(docTpl => {
+              totalDoctorsCount++;
+              return {
+                name: docTpl.name,
+                qualification: docTpl.qual,
+                specialization: docTpl.spec,
+                experience: docTpl.exp,
+                hospitalId: hospitalObj._id,
+                departmentId: deptMap[docTpl.dept],
+                consultationFee: docTpl.fee,
+                profileImage: `https://ui-avatars.com/api/?name=${encodeURIComponent(docTpl.name)}&background=0055D4&color=fff`
+              };
+            });
 
-            await DoctorSchedule.insertMany(slotsToInsert);
-            totalSlotsCount += slotsToInsert.length;
+            const createdDoctors = await Doctor.insertMany(doctorsToInsert);
+
+            // Generate OP Schedules / Time Slots for each doctor
+            const slotsToInsert = [];
+            createdDoctors.forEach((doc, docIdx) => {
+              // Mark 1 in 4 doctors as FULL / UNAVAILABLE to demonstrate intelligent alternative recommendations
+              const isDoctorFull = ((totalDoctorsCount + docIdx) % 4 === 0);
+
+              timeSlots.forEach(slot => {
+                slotsToInsert.push({
+                  doctorId: doc._id,
+                  hospitalId: hospitalObj._id,
+                  date: todayStr,
+                  startTime: slot.start,
+                  endTime: slot.end,
+                  slotDuration: 15,
+                  totalSlots: 1,
+                  bookedSlots: isDoctorFull ? 1 : 0,
+                  status: isDoctorFull ? 'UNAVAILABLE' : 'AVAILABLE'
+                });
+              });
+            });
+
+            if (slotsToInsert.length > 0) {
+              await DoctorSchedule.insertMany(slotsToInsert);
+              totalSlotsCount += slotsToInsert.length;
+            }
           }
         }
       }
     }
 
-    console.log(`Database Successfully Seeded for ALL 29 STATES OF INDIA!`);
-    console.log(`Summary: ${statesData.length} States, ${totalHospitalsCount} Hospitals, ${totalDoctorsCount} Doctors, ${totalSlotsCount} Doctor OP Slots created.`);
+    console.log(`\n======================================================`);
+    console.log(`✅ DATABASE SEEDED SUCCESSFULLY FOR ALL 29 STATES OF INDIA!`);
+    console.log(`======================================================`);
+    console.log(`🗺️  States        : ${totalStatesCount}`);
+    console.log(`📍 Districts     : ${totalDistrictsCount}`);
+    console.log(`🏙️  Cities        : ${totalCitiesCount}`);
+    console.log(`🏘️  Sub-Cities    : ${totalSubCitiesCount}`);
+    console.log(`🏥 Hospitals     : ${totalHospitalsCount}`);
+    console.log(`👨‍⚕️ Doctors       : ${totalDoctorsCount}`);
+    console.log(`📅 Live OP Slots : ${totalSlotsCount}`);
+    console.log(`======================================================\n`);
 
     if (require.main === module) process.exit(0);
   } catch (error) {

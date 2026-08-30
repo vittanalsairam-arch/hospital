@@ -4,6 +4,7 @@ import axios from 'axios';
 import { MapPin, Building, Hospital as HospIcon, User, Calendar, CheckCircle2, XCircle, Search, ChevronRight, ChevronDown, Volume2, Sparkles, AlertCircle, Layers, ListFilter } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { AudioButton } from '../components/VoiceAssistant';
+import HospitalDetailsModal from '../components/HospitalDetailsModal';
 
 export default function MasterExplorer() {
   const { t } = useLanguage();
@@ -11,6 +12,7 @@ export default function MasterExplorer() {
 
   const [loading, setLoading] = useState(true);
   const [viewMode, setViewMode] = useState('tree'); // 'tree' (Open Tree) or 'interactive' (Filter Mode)
+  const [selectedHospitalForModal, setSelectedHospitalForModal] = useState(null);
 
   const [data, setData] = useState({
     states: [],
@@ -121,14 +123,32 @@ export default function MasterExplorer() {
                 All 29 States Open Hospital Directory
               </h1>
               <p className="mt-2 text-slate-300 text-sm sm:text-base max-w-3xl">
-                View all 29 States ➔ Districts ➔ Cities ➔ Sub-Cities/Areas ➔ Hospitals ➔ Doctors & Live Availability.
+                View all 29 States → {data.districts.length} Districts → {data.cities.length} Cities → {data.subCities.length} Sub-Areas → {data.hospitals.length} Hospitals → {data.doctors.length} Doctors & Live Availability.
               </p>
+
+              {/* Live Stat Pills */}
+              <div className="flex flex-wrap gap-2 mt-4">
+                {[
+                  { icon: '🗺️', label: 'States', value: data.states.length, color: 'bg-cyan-500/20 text-cyan-300 border-cyan-500/30' },
+                  { icon: '🏙️', label: 'Districts', value: data.districts.length, color: 'bg-blue-500/20 text-blue-300 border-blue-500/30' },
+                  { icon: '🌆', label: 'Cities', value: data.cities.length, color: 'bg-violet-500/20 text-violet-300 border-violet-500/30' },
+                  { icon: '📍', label: 'Sub-Areas', value: data.subCities.length, color: 'bg-teal-500/20 text-teal-300 border-teal-500/30' },
+                  { icon: '🏥', label: 'Hospitals', value: data.hospitals.length, color: 'bg-emerald-500/20 text-emerald-300 border-emerald-500/30' },
+                  { icon: '👨‍⚕️', label: 'Doctors', value: data.doctors.length, color: 'bg-orange-500/20 text-orange-300 border-orange-500/30' },
+                ].map(stat => (
+                  <div key={stat.label} className={`flex items-center gap-1.5 border px-3 py-1 rounded-full text-xs font-bold ${stat.color}`}>
+                    <span>{stat.icon}</span>
+                    <span className="font-extrabold">{stat.value.toLocaleString()}</span>
+                    <span className="opacity-75">{stat.label}</span>
+                  </div>
+                ))}
+              </div>
             </div>
             
             {/* Audio Reader Header */}
             <div className="flex flex-col items-start md:items-end gap-2">
               <AudioButton 
-                textToRead={`All 29 States of India are open below. You can explore Andhra Pradesh, Maharashtra, Karnataka, Telangana, Tamil Nadu, Uttar Pradesh, West Bengal, and all other states with districts, cities, subcities, hospitals, and doctors.`}
+                textToRead={`All ${data.states.length} States of India are open below with ${data.districts.length} districts, ${data.cities.length} cities, ${data.hospitals.length} hospitals and ${data.doctors.length} doctors. You can explore Andhra Pradesh, Maharashtra, Karnataka, Telangana, Tamil Nadu, Uttar Pradesh, West Bengal, and all other states.`}
                 label="🔊 Listen Directory Summary"
                 className="py-2.5 px-4 text-sm"
               />
@@ -208,7 +228,10 @@ export default function MasterExplorer() {
                 const isExpanded = expandedStates[state._id];
                 const stateDistricts = data.districts.filter(d => d.stateId === state._id);
                 const stateHospitals = data.hospitals.filter(h => h.stateId === state._id);
-                const stateDoctors = data.doctors.filter(d => stateHospitals.some(h => h._id === d.hospitalId._id));
+                const stateDoctors = data.doctors.filter(d => {
+                  const docHospId = d.hospitalId?._id || d.hospitalId;
+                  return stateHospitals.some(h => h._id === docHospId);
+                });
 
                 return (
                   <div key={state._id} className="glass-card rounded-3xl border border-slate-700/80 overflow-hidden">
@@ -299,19 +322,45 @@ export default function MasterExplorer() {
                                         {/* Hospitals in City */}
                                         <div className="space-y-2 pt-2 border-t border-slate-800">
                                           {cityHospitals.map(hosp => {
-                                            const hospDocs = data.doctors.filter(d => d.hospitalId._id === hosp._id);
+                                            const hospDocs = data.doctors.filter(d => (d.hospitalId?._id || d.hospitalId) === hosp._id);
 
                                             return (
-                                              <div key={hosp._id} className="bg-slate-900/90 p-3 rounded-lg border border-slate-800 space-y-2">
-                                                <div className="flex items-start justify-between gap-2">
-                                                  <div>
-                                                    <span className="text-[10px] font-bold text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded">
-                                                      {hosp.hospitalType || 'Multi-Specialty'}
-                                                    </span>
-                                                    <h6 className="font-bold text-xs text-white mt-1">{hosp.name}</h6>
+                                              <div key={hosp._id} className="bg-slate-900/90 p-3.5 rounded-xl border border-slate-800 space-y-2.5 shadow-md">
+                                                <div className="flex items-start gap-3">
+                                                  {/* Hospital Exterior Out-View Photo */}
+                                                  <img 
+                                                    src={hosp.imageUrl || 'https://images.unsplash.com/photo-1587351021759-3e566b6af7cc?auto=format&fit=crop&w=1200&q=80'} 
+                                                    alt={hosp.name}
+                                                    className="w-16 h-16 rounded-xl object-cover border border-cyan-500/30 shrink-0"
+                                                  />
+                                                  <div className="flex-1 min-w-0">
+                                                    <div className="flex items-center gap-1.5 flex-wrap">
+                                                      <span className="text-[10px] font-bold text-cyan-300 bg-cyan-500/10 px-2 py-0.5 rounded border border-cyan-500/20">
+                                                        🏛️ {hosp.hospitalType || 'Area Hospital'}
+                                                      </span>
+                                                      {hosp.emergencyAvailable && (
+                                                        <span className="text-[9px] font-extrabold text-red-400 bg-red-500/10 px-1.5 py-0.5 rounded">
+                                                          🚨 24x7 Emergency
+                                                        </span>
+                                                      )}
+                                                      <span className="text-[9px] font-bold text-amber-300">
+                                                        ★ {hosp.rating || 4.8}
+                                                      </span>
+                                                    </div>
+                                                    <h6 className="font-bold text-xs text-white mt-1 truncate">{hosp.name}</h6>
+                                                    <p className="text-[10px] text-cyan-400 font-semibold truncate">Code: {hosp.branchCode || 'BR-MED-001'} • {hosp.parentChain || 'National Network'}</p>
+                                                    <p className="text-[10px] text-slate-400 truncate">{hosp.address}</p>
+                                                    
+                                                    <button
+                                                      onClick={() => setSelectedHospitalForModal(hosp)}
+                                                      className="mt-1 inline-flex items-center gap-1 text-[10px] font-bold text-cyan-300 hover:text-cyan-200 bg-cyan-500/10 hover:bg-cyan-500/20 px-2 py-0.5 rounded border border-cyan-500/30 transition-colors cursor-pointer"
+                                                    >
+                                                      <Building className="w-3 h-3" />
+                                                      <span>Top-to-Bottom Details &amp; Branch Info</span>
+                                                    </button>
                                                   </div>
                                                   <AudioButton 
-                                                    textToRead={`Hospital ${hosp.name}. Has ${hospDocs.length} doctors.`}
+                                                    textToRead={`Hospital ${hosp.name}, ${hosp.hospitalType || 'Area Hospital'}. Has ${hospDocs.length} doctors.`}
                                                     label="🔊"
                                                     className="px-1.5 py-0.5 text-[10px]"
                                                   />
@@ -493,6 +542,16 @@ export default function MasterExplorer() {
             )}
           </div>
         )}
+
+        {/* Hospital Top-to-Bottom Details Modal */}
+        <HospitalDetailsModal
+          hospital={selectedHospitalForModal}
+          isOpen={!!selectedHospitalForModal}
+          onClose={() => setSelectedHospitalForModal(null)}
+          onBookDoctor={(hosp) => {
+            navigate('/search');
+          }}
+        />
 
       </div>
     </div>

@@ -1,0 +1,7210 @@
+// COMPLETE OFFICIAL 29-STATE NATIONAL HIERARCHY OF INDIA
+// Comprehensive coverage of all official Districts, Cities, Mandals/Taluks, Hospitals & Exterior Photos
+
+module.exports = [
+  {
+    "name": "Andhra Pradesh",
+    "districts": [
+      {
+        "name": "Alluri Sitharama Raju",
+        "cities": [
+          {
+            "name": "Paderu",
+            "subCities": [
+              "Paderu ITDA Mandal",
+              "G.Madugula Mandal",
+              "Hukumpeta Mandal",
+              "Chintapalle Mandal",
+              "Araku Valley Tourism Mandal",
+              "Ananthagiri Mandal",
+              "Rampachodavaram Mandal",
+              "Maredumilli Eco Mandal"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Anakapalli",
+        "cities": [
+          {
+            "name": "Anakapalle Town",
+            "subCities": [
+              "Anakapalle Mandal",
+              "Sabbavaram Mandal",
+              "Kasimkota Mandal",
+              "Lankelapalem Industrial Area",
+              "Atchutapuram SEZ Mandal",
+              "Parawada Pharma City Mandal",
+              "Chodavaram Mandal",
+              "Munagapaka Mandal"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Ananthapuramu",
+        "cities": [
+          {
+            "name": "Anantapur City",
+            "subCities": [
+              "Subedari Mandal",
+              "Gandhi Nagar Area",
+              "Gooty Road Mandal",
+              "JNTU Campus Zone",
+              "Guntakal Railway Mandal",
+              "Tadipatri Cement Mandal",
+              "Uravakonda Mandal",
+              "Singanamala Mandal"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Annamayya",
+        "cities": [
+          {
+            "name": "Rayachoti",
+            "subCities": [
+              "Rayachoti Mandal",
+              "Madanapalle Town Mandal",
+              "Nimmanapalle Mandal",
+              "B.Kothakota Mandal",
+              "Valmikipuram Mandal",
+              "Pileru Mandal",
+              "Rajampeta Mandal",
+              "Railway Koduru Mandal"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Bapatla",
+        "cities": [
+          {
+            "name": "Bapatla Town",
+            "subCities": [
+              "Bapatla Engineering Mandal",
+              "Beach Road Mandal",
+              "Chirala Handloom Mandal",
+              "Vetapalem Mandal",
+              "Repalle Town Mandal",
+              "Bhattiprolu Mandal",
+              "Addanki Mandal",
+              "Korisapadu Mandal"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Chittoor",
+        "cities": [
+          {
+            "name": "Chittoor Town",
+            "subCities": [
+              "Chittoor Central Mandal",
+              "Greamspet Mandal",
+              "Kattamanchi Mandal",
+              "Nagari Town Mandal",
+              "Puttur Mandal",
+              "Palamaner Town Mandal",
+              "Kuppam PES Medical Mandal",
+              "Shanthipuram Mandal"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Dr. B.R. Ambedkar Konaseema",
+        "cities": [
+          {
+            "name": "Amalapuram",
+            "subCities": [
+              "Amalapuram Clock Tower Mandal",
+              "Ravulapalem Banana Market Mandal",
+              "Ramachandrapuram Mandal",
+              "Draksharamam Temple Mandal",
+              "Razole Coconut Mandal",
+              "Kothapeta Mandal",
+              "Mummdivaram Mandal",
+              "Allavaram Mandal"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "East Godavari",
+        "cities": [
+          {
+            "name": "Rajahmundry City",
+            "subCities": [
+              "Godavari Bund Mandal",
+              "Morampudi Junction Mandal",
+              "Danavayipeta Mandal",
+              "Aryapuram Mandal",
+              "Kovvur Goshpada Mandal",
+              "Nidadavole Town Mandal",
+              "Anaparthi Mandal",
+              "Rajanagaram Mandal"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Eluru",
+        "cities": [
+          {
+            "name": "Eluru City",
+            "subCities": [
+              "R.R. Pet Mandal",
+              "Powerpet Area",
+              "Tangellamudi Mandal",
+              "Jangareddygudem Agency Mandal",
+              "Chintalapudi Mandal",
+              "Nuzvid Mango Mandal",
+              "Kaikalur Kolleru Mandal",
+              "Denduluru Mandal"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Guntur",
+        "cities": [
+          {
+            "name": "Guntur City",
+            "subCities": [
+              "Broadpet Commercial Mandal",
+              "Arundelpet Mandal",
+              "Pattabhipuram Mandal",
+              "Tenali Town Mandal",
+              "Burripalem Mandal",
+              "Mangalagiri AIIMS Medical Mandal",
+              "Tadikonda Mandal",
+              "Prathipadu Mandal"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Kakinada",
+        "cities": [
+          {
+            "name": "Kakinada City",
+            "subCities": [
+              "Main Road Commercial Mandal",
+              "Sarpavaram Port Mandal",
+              "Bhanugudi Junction Mandal",
+              "Peddapuram Town Mandal",
+              "Samalkota ADB Mandal",
+              "Tuni Town Mandal",
+              "Pithapuram Temple Mandal",
+              "Gollaprolu Mandal"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Krishna",
+        "cities": [
+          {
+            "name": "Machilipatnam",
+            "subCities": [
+              "Chilakalapudi Port Mandal",
+              "Rustumbada Mandal",
+              "Gudivada Town Mandal",
+              "Pedaparimi Mandal",
+              "Vuyyuru Sugar Mandal",
+              "Pamarru Mandal",
+              "Avanigadda Mandal",
+              "Mopidevi Mandal"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Kurnool",
+        "cities": [
+          {
+            "name": "Kurnool City",
+            "subCities": [
+              "Bellary Road Mandal",
+              "C-Camp Locality Mandal",
+              "Nandyal Road Mandal",
+              "Adoni Commercial Mandal",
+              "Yemmiganur Weavers Mandal",
+              "Dhone Town Mandal",
+              "Kodumur Mandal",
+              "Pattikonda Mandal"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Nandyal",
+        "cities": [
+          {
+            "name": "Nandyal Town",
+            "subCities": [
+              "Sanjeeva Nagar Mandal",
+              "Srinivasa Center Mandal",
+              "Allagadda Ahobilam Mandal",
+              "Nandikotkur Mandal",
+              "Banaganapalle Mango Mandal",
+              "Atmakur Srisailam Gateway Mandal",
+              "Dhone Mandal"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "NTR",
+        "cities": [
+          {
+            "name": "Vijayawada City",
+            "subCities": [
+              "Benz Circle Mandal",
+              "Governorpet Commercial Mandal",
+              "Auto Nagar Industrial Mandal",
+              "One Town Heritage Mandal",
+              "Patamata High Street Mandal",
+              "Mylavaram Mandal",
+              "Jaggaiahpeta Cement Mandal",
+              "Tiruvuru Mandal",
+              "Nandigama Mandal",
+              "Ibrahimpatnam Thermal Mandal"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Palnadu",
+        "cities": [
+          {
+            "name": "Narasaraopet",
+            "subCities": [
+              "Narasaraopet Central Mandal",
+              "Sattenapalle Town Mandal",
+              "Macherla Nagarjuna Sagar Mandal",
+              "Vinukonda Town Mandal",
+              "Chilakaluripet Spices Mandal",
+              "Piduguralla Lime City Mandal",
+              "Gurazala Mandal"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Parvathipuram Manyam",
+        "cities": [
+          {
+            "name": "Parvathipuram Town",
+            "subCities": [
+              "Parvathipuram Mandal",
+              "Salur Tribal Mandal",
+              "Palakonda Town Mandal",
+              "Kurupam Agency Mandal",
+              "Gummalaxmipuram Mandal",
+              "Seethampeta ITDA Mandal"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Prakasam",
+        "cities": [
+          {
+            "name": "Ongole City",
+            "subCities": [
+              "Kurnool Road Mandal",
+              "Nehru Nagar Mandal",
+              "Markapur Slate Town Mandal",
+              "Giddalur Mandal",
+              "Kandukur Town Mandal",
+              "Podili Mandal",
+              "Yerragondapalem Mandal",
+              "Kanigiri Mandal"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Sri Potti Sriramulu Nellore",
+        "cities": [
+          {
+            "name": "Nellore City",
+            "subCities": [
+              "Grand Trunk Road Mandal",
+              "Pogathota Medical Mandal",
+              "Magunta Layout Mandal",
+              "Kavali Town Mandal",
+              "Gudur Port Mandal",
+              "Sullurpeta SHAR Space Mandal",
+              "Venkatagiri Handloom Mandal",
+              "Atmakur Mandal"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Sri Sathya Sai",
+        "cities": [
+          {
+            "name": "Puttaparthi",
+            "subCities": [
+              "Prasanthi Nilayam Super Specialty Mandal",
+              "Hindupur Industrial Mandal",
+              "Dharmavaram Silk Market Mandal",
+              "Kadiri Narasimha Mandal",
+              "Penukonda KIA Auto City Mandal",
+              "Madakasira Mandal",
+              "Bukkapatnam Mandal"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Srikakulam",
+        "cities": [
+          {
+            "name": "Srikakulam City",
+            "subCities": [
+              "Arasavalli Sun Temple Mandal",
+              "Old Town Mandal",
+              "Amadalavalasa Sugar Mandal",
+              "Palasa Cashew Industrial Mandal",
+              "Tekkali Town Mandal",
+              "Narasannapeta Mandal",
+              "Ichchapuram Border Mandal",
+              "Sompeta Coastal Mandal"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Tirupati",
+        "cities": [
+          {
+            "name": "Tirupati City",
+            "subCities": [
+              "Alipiri Temple Gateway Mandal",
+              "MR Palle Mandal",
+              "KT Road Mandal",
+              "Renigunta Airport Industrial Mandal",
+              "Srikalahasti Temple Mandal",
+              "Chandragiri Fort Mandal",
+              "Pakala Mandal",
+              "Puttur Mandal"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Visakhapatnam",
+        "cities": [
+          {
+            "name": "Visakhapatnam City",
+            "subCities": [
+              "Gajuwaka Industrial Mandal",
+              "MVP Colony Coastal Mandal",
+              "Siripuram City Center Mandal",
+              "Dwaraka Nagar Commercial Mandal",
+              "Rushikonda IT SEZ Mandal",
+              "Pendurthi Junction Mandal",
+              "Bheemili Beach Mandal",
+              "Madhurawada IT Hill Mandal",
+              "Steel Plant Township Mandal",
+              "Seethammadhara Mandal"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Vizianagaram",
+        "cities": [
+          {
+            "name": "Vizianagaram City",
+            "subCities": [
+              "Fort Junction Mandal",
+              "Cantonment Area Mandal",
+              "Phoolbagh Mandal",
+              "Bobbili Historical Fort Mandal",
+              "Cheepurupalli Ferro Alloys Mandal",
+              "Gajapathinagaram Mandal",
+              "Kothavalasa Railway Mandal",
+              "Srungavarapukota Mandal"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "West Godavari",
+        "cities": [
+          {
+            "name": "Bhimavaram City",
+            "subCities": [
+              "Somaramam Temple Mandal",
+              "P.P. Road Commercial Mandal",
+              "Tadepalligudem NIT Mandal",
+              "Tanuku Industrial Mandal",
+              "Palakol Ksheerarama Mandal",
+              "Narsapuram Port Mandal",
+              "Achanta Mandal",
+              "Akividu Aqua Mandal"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "YSR Kadapa",
+        "cities": [
+          {
+            "name": "Kadapa City",
+            "subCities": [
+              "Seven Roads Circle Mandal",
+              "RIMS Medical College Mandal",
+              "Yerramukkapalli Mandal",
+              "Proddatur Gold Market Mandal",
+              "Pulivendula Development Mandal",
+              "Jammalamadugu Mandal",
+              "Badvel Mandal",
+              "Mydukur Mandal",
+              "Rajampet Mandal"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Telangana",
+    "districts": [
+      {
+        "name": "Adilabad",
+        "cities": [
+          {
+            "name": "Adilabad City",
+            "subCities": [
+              "Adilabad Urban Mandal",
+              "Mavala Mandal",
+              "Bela Mandal",
+              "Utnoor ITDA Tribal Mandal",
+              "Gudihatnoor Mandal",
+              "Jainath Mandal"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Bhadradri Kothagudem",
+        "cities": [
+          {
+            "name": "Kothagudem",
+            "subCities": [
+              "SCCL Head Office Mandal",
+              "Rudrampur Mining Mandal",
+              "Bhadrachalam Temple Town Mandal",
+              "Manuguru Heavy Water Mandal",
+              "Yellandu Coal Mandal",
+              "Burgampahad ITC Mandal",
+              "Palwancha KTPS Power Mandal"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Hanamkonda",
+        "cities": [
+          {
+            "name": "Hanamkonda City",
+            "subCities": [
+              "Kakatiya University Mandal",
+              "Subedari Court Circle Mandal",
+              "NIT Warangal Campus Mandal",
+              "Naimnagar Mandal",
+              "Kazipet Railway Junction Mandal",
+              "Hasanparthy Mandal",
+              "Bheemadevarpally Mandal"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Hyderabad",
+        "cities": [
+          {
+            "name": "Hyderabad Central",
+            "subCities": [
+              "Banjara Hills Mandal",
+              "Jubilee Hills Mandal",
+              "Somajiguda Medical Mandal",
+              "Ameerpet Educational Mandal",
+              "Basheerbagh Mandal",
+              "Abids Commercial Mandal",
+              "Himayatnagar Mandal",
+              "Panjagutta Central Mandal"
+            ]
+          },
+          {
+            "name": "Secunderabad",
+            "subCities": [
+              "Paradise Circle Mandal",
+              "Marredpally Cantonment Mandal",
+              "Sainikpuri Mandal",
+              "Begumpet Airport Road Mandal",
+              "Tarnaka University Mandal",
+              "Bowenpally Mandal",
+              "Trimulgherry Mandal"
+            ]
+          },
+          {
+            "name": "Hyderabad East",
+            "subCities": [
+              "Uppal Stadium Mandal",
+              "LB Nagar Ring Road Mandal",
+              "Dilsukhnagar Metro Mandal",
+              "Nacharam Industrial Mandal",
+              "Habsiguda Research Mandal",
+              "Vanasthalipuram Mandal",
+              "Nagole Mandal"
+            ]
+          },
+          {
+            "name": "Hyderabad Old City",
+            "subCities": [
+              "Charminar Heritage Mandal",
+              "Mehdipatnam Commercial Mandal",
+              "Tolichowki IT Access Mandal",
+              "Malakpet Hospital Mandal",
+              "Faluknama Palace Mandal",
+              "Chandrayangutta Mandal",
+              "Santoshnagar Mandal"
+            ]
+          },
+          {
+            "name": "Kukatpally North",
+            "subCities": [
+              "KPHB Colony Mandal",
+              "Miyapur Metro Terminal Mandal",
+              "Nizampet Residential Mandal",
+              "Balanagar Industrial Mandal",
+              "Jeedimetla Pharma Mandal",
+              "Moosapet Mandal",
+              "Pragathi Nagar Mandal"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Jagtial",
+        "cities": [
+          {
+            "name": "Jagtial Town",
+            "subCities": [
+              "Jagtial Fort Mandal",
+              "Tower Circle Mandal",
+              "Korutla Textile Mandal",
+              "Metpally Commercial Mandal",
+              "Dharmapuri Temple Mandal",
+              "Raikal Mandal",
+              "Gollapally Mandal"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Jangaon",
+        "cities": [
+          {
+            "name": "Jangaon Town",
+            "subCities": [
+              "Jangaon Central Mandal",
+              "Station Ghanpur Mandal",
+              "Palakurthi Historical Mandal",
+              "Bachannapet Mandal",
+              "Devaruppula Mandal",
+              "Raghunathpally Mandal"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Jayashankar Bhupalpally",
+        "cities": [
+          {
+            "name": "Bhupalpally Town",
+            "subCities": [
+              "Bhupalpally Coal Mining Mandal",
+              "Kaleshwaram Project Zone Mandal",
+              "Chityal Mandal",
+              "Tekumatla Mandal",
+              "Mogullapally Mandal",
+              "Regonda Mandal"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Jogulamba Gadwal",
+        "cities": [
+          {
+            "name": "Gadwal Town",
+            "subCities": [
+              "Gadwal Saree Weavers Mandal",
+              "Alampur Shaktipeeth Temple Mandal",
+              "Maldakal Mandal",
+              "Ieeja Mandal",
+              "Ghattu Mandal",
+              "Dharur Mandal"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Kamareddy",
+        "cities": [
+          {
+            "name": "Kamareddy Town",
+            "subCities": [
+              "Kamareddy Urban Mandal",
+              "Banswada Agriculture Mandal",
+              "Yellareddy Forest Mandal",
+              "Domakonda Fort Heritage Mandal",
+              "Bhiknoor Mandal",
+              "Machareddy Mandal"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Karimnagar",
+        "cities": [
+          {
+            "name": "Karimnagar City",
+            "subCities": [
+              "Jyothi Nagar Mandal",
+              "KMC Hospital Road Mandal",
+              "Collectorate Zone Mandal",
+              "Telangana Chowk Mandal",
+              "Huzurabad Town Mandal",
+              "Jammikunta Market Mandal",
+              "Choppadandi Mandal",
+              "Manakondur Mandal"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Khammam",
+        "cities": [
+          {
+            "name": "Khammam City",
+            "subCities": [
+              "Wyra Road Commercial Mandal",
+              "Mutyalampadu Mandal",
+              "Mamillagudem Mandal",
+              "Sathupally Coal Mining Mandal",
+              "Madhira Town Mandal",
+              "Wyra Irrigation Mandal",
+              "Kalluru Mandal",
+              "Enkoor Mandal"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Kumuram Bheem Asifabad",
+        "cities": [
+          {
+            "name": "Asifabad Town",
+            "subCities": [
+              "Asifabad Tribal Mandal",
+              "Kagaznagar Paper Mill Mandal",
+              "Sirpur Town Mandal",
+              "Rebbena Coal Mandal",
+              "Wankidi Mandal",
+              "Kerameri Ghati Mandal"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Mahabubabad",
+        "cities": [
+          {
+            "name": "Mahabubabad Town",
+            "subCities": [
+              "Mahabubabad Railway Mandal",
+              "Thorrur Commercial Mandal",
+              "Kesamudram Grain Market Mandal",
+              "Dornakal Junction Mandal",
+              "Kuravi Veerabhadra Mandal",
+              "Bayyaram Iron Ore Mandal"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Mahabubnagar",
+        "cities": [
+          {
+            "name": "Mahabubnagar City",
+            "subCities": [
+              "Clock Tower Urban Mandal",
+              "Jadcherla Green Industrial SEZ Mandal",
+              "Bhoothpur Mandal",
+              "Balanagar Mandal",
+              "Devarkadra Mandal",
+              "Nawabpet Mandal",
+              "Hanwada Mandal"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Mancherial",
+        "cities": [
+          {
+            "name": "Mancherial Town",
+            "subCities": [
+              "Mancherial Commercial Mandal",
+              "Bellampalli Coal Hub Mandal",
+              "Mandamarri Mining Mandal",
+              "Chennur Historic Mandal",
+              "Luxettipet Godavari Mandal",
+              "Kyathampalli Mandal"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Medak",
+        "cities": [
+          {
+            "name": "Medak Town",
+            "subCities": [
+              "Medak Cathedral Church Mandal",
+              "Medak Fort Mandal",
+              "Narsapur Forest Bio Mandal",
+              "Haveli Ghanpur Mandal",
+              "Alladurg Mandal",
+              "Shankarampet Mandal",
+              "Papannapet Mandal"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Medchal-Malkajgiri",
+        "cities": [
+          {
+            "name": "Medchal-Malkajgiri",
+            "subCities": [
+              "Kompally Highway Commercial Mandal",
+              "Malkajgiri Urban Mandal",
+              "Alwal Cantonment Mandal",
+              "ECIL Technology SEZ Mandal",
+              "Kushaiguda Industrial Mandal",
+              "Medchal City Gate Mandal",
+              "Dundigal Aerospace Mandal",
+              "Quthbullapur Suchitra Mandal"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Mulugu",
+        "cities": [
+          {
+            "name": "Mulugu Town",
+            "subCities": [
+              "Mulugu Tribal Administrative Mandal",
+              "Ramappa UNESCO Heritage Mandal",
+              "Medaram Sammakka Sarakka Zone",
+              "Eturnagaram Wildlife Sanctuary Mandal",
+              "Govindaraopet Mandal",
+              "Venkatapur Mandal"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Nagarkurnool",
+        "cities": [
+          {
+            "name": "Nagarkurnool Town",
+            "subCities": [
+              "Nagarkurnool Central Mandal",
+              "Achampet Nallamala Gateway Mandal",
+              "Kalwakurthy Commercial Mandal",
+              "Kollapur Palace Mandal",
+              "Amrabad Tiger Reserve Mandal",
+              "Bijinepally Mandal"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Nalgonda",
+        "cities": [
+          {
+            "name": "Nalgonda City",
+            "subCities": [
+              "Clock Tower Mandal",
+              "Miryalaguda Rice Mill Hub Mandal",
+              "Devarakonda Hill Fort Mandal",
+              "Nagarjuna Sagar Tourism Mandal",
+              "Nakrekal Highway Mandal",
+              "Chityal Mandal",
+              "Munugode Mandal"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Narayanpet",
+        "cities": [
+          {
+            "name": "Narayanpet Town",
+            "subCities": [
+              "Narayanpet Silk Saree Mandal",
+              "Makthal Commercial Mandal",
+              "Kosgi Town Mandal",
+              "Damaragidda Mandal",
+              "Maddur Mandal",
+              "Utkoor Mandal"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Nirmal",
+        "cities": [
+          {
+            "name": "Nirmal Town",
+            "subCities": [
+              "Nirmal Toys & Art Craft Mandal",
+              "Bhainsa Commercial Mandal",
+              "Khanapur Forest Mandal",
+              "Kaddam Dam Mandal",
+              "Sarangapur Mandal",
+              "Laxmanchanda Mandal"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Nizamabad",
+        "cities": [
+          {
+            "name": "Nizamabad City",
+            "subCities": [
+              "Khaleelwadi Commercial Mandal",
+              "Dichpally University Mandal",
+              "Subhash Nagar Mandal",
+              "Armoor Rock Natural Formations Mandal",
+              "Bodhan Sugar City Mandal",
+              "Balkonda Mandal",
+              "Bheemgal Mandal"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Peddapalli",
+        "cities": [
+          {
+            "name": "Peddapalli Town",
+            "subCities": [
+              "Peddapalli Administrative Mandal",
+              "Ramagundam NTPC Super Thermal Mandal",
+              "Godavarikhani Coal City Mandal",
+              "Sulthanabad Agricultural Mandal",
+              "Manthani Heritage Mandal",
+              "Julapally Mandal"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Rajanna Sircilla",
+        "cities": [
+          {
+            "name": "Sircilla Town",
+            "subCities": [
+              "Textile Apparel Park Mandal",
+              "Vemulawada Rajarajeshwara Temple Mandal",
+              "Yellareddypet Mandal",
+              "Mustabad Mandal",
+              "Gambhiraopet Mandal",
+              "Konaraopet Mandal"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Ranga Reddy",
+        "cities": [
+          {
+            "name": "Cyberabad Core",
+            "subCities": [
+              "Gachibowli Financial Hub Mandal",
+              "Hitec City IT Corridor Mandal",
+              "Kondapur Cyber City Mandal",
+              "Madhapur IT Mandal",
+              "Nanakramguda Financial District Mandal",
+              "Kokapet SEZ Mandal",
+              "Shamshabad International Airport Mandal",
+              "Rajendranagar Agriculture University Mandal",
+              "Ibrahimpatnam Aerospace Mandal",
+              "Manikonda Puppalaguda Mandal"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Sangareddy",
+        "cities": [
+          {
+            "name": "Sangareddy Town",
+            "subCities": [
+              "Sangareddy Collectorate Mandal",
+              "IIT Hyderabad Kandi Mandal",
+              "Patancheru Heavy Industrial Mandal",
+              "Pashamylaram Pharma SEZ Mandal",
+              "Ameenpur Urban Lake Mandal",
+              "Beeramguda Temple Mandal",
+              "Zaheerabad Auto Mahindra Mandal",
+              "Sadasivpet Mandal"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Siddipet",
+        "cities": [
+          {
+            "name": "Siddipet City",
+            "subCities": [
+              "Siddipet Urban Tech Mandal",
+              "Komati Cheruvu Promenade Mandal",
+              "Gajwel Development Mandal",
+              "Husnabad Town Mandal",
+              "Dubbak Handloom Mandal",
+              "Cheriyal Scroll Painting Mandal",
+              "Mulugu R&D Mandal"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Suryapet",
+        "cities": [
+          {
+            "name": "Suryapet Town",
+            "subCities": [
+              "Suryapet High Speed NH65 Mandal",
+              "Kodad Interstate Trade Mandal",
+              "Huzurnagar Cement Industrial Mandal",
+              "Mothey Mandal",
+              "Chivvemla Mandal",
+              "Thungathurthy Mandal",
+              "Garidepally Mandal"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Vikarabad",
+        "cities": [
+          {
+            "name": "Vikarabad Town",
+            "subCities": [
+              "Vikarabad Hill Station Mandal",
+              "Ananthagiri Health Resort Mandal",
+              "Tandur Stone & Cement Hub Mandal",
+              "Pargi Commercial Mandal",
+              "Kodangal Mandal",
+              "Mominpet Mandal",
+              "Nawabpet Mandal"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Wanaparthy",
+        "cities": [
+          {
+            "name": "Wanaparthy Town",
+            "subCities": [
+              "Wanaparthy Samsthanam Palace Mandal",
+              "Pebbair NH44 Commercial Mandal",
+              "Gopalpeta Mandal",
+              "Kothakota Mandal",
+              "Pangal Fort Mandal",
+              "Revally Mandal"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Warangal",
+        "cities": [
+          {
+            "name": "Warangal Historic",
+            "subCities": [
+              "Warangal Fort Heritage Mandal",
+              "Mandi Bazar Grain Market Mandal",
+              "Hunter Road Mega Medical Mandal",
+              "Mamnoor Aviation Zone Mandal",
+              "Narsampet Town Mandal",
+              "Chennaraopet Mandal",
+              "Geesugonda Textile SEZ Mandal"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Yadadri Bhuvanagiri",
+        "cities": [
+          {
+            "name": "Bhongir",
+            "subCities": [
+              "Bhongir Monolithic Fort Mandal",
+              "Yadagirigutta Lakshmi Narasimha Temple Mandal",
+              "Bibinagar AIIMS Apex Hospital Mandal",
+              "Pochampally UNESCO Handloom Mandal",
+              "Alair Jain Heritage Mandal",
+              "Choutuppal Pharma Industrial Mandal"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Maharashtra",
+    "districts": [
+      {
+        "name": "Ahmednagar",
+        "cities": [
+          {
+            "name": "Ahmednagar City",
+            "subCities": [
+              "Savedi Urban Taluk",
+              "Nagar Cantonment",
+              "MIDC Nagapur",
+              "Shirdi Sai Baba Temple Taluk",
+              "Sangamner Sugar Taluk",
+              "Rahata Taluk",
+              "Kopargaon Taluk",
+              "Shrirampur Taluk",
+              "Parner Industrial Taluk",
+              "Nevasa Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Akola",
+        "cities": [
+          {
+            "name": "Akola City",
+            "subCities": [
+              "Civil Lines Central Taluk",
+              "Murtizapur Taluk",
+              "Akot Cotton Taluk",
+              "Telhara Taluk",
+              "Balapur Fort Taluk",
+              "Patur Taluk",
+              "Barshitakli Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Amravati",
+        "cities": [
+          {
+            "name": "Amravati City",
+            "subCities": [
+              "Rajapeth Commercial Taluk",
+              "Badnera Railway Junction Taluk",
+              "Achalpur Historical Taluk",
+              "Morshi Orange Taluk",
+              "Warud Citrus Taluk",
+              "Chandur Railway Taluk",
+              "Daryapur Taluk",
+              "Chikhaldara Hill Station Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Beed",
+        "cities": [
+          {
+            "name": "Beed City",
+            "subCities": [
+              "Beed Urban Taluk",
+              "Parli Vaijnath Jyotirlinga Taluk",
+              "Majalgaon Taluk",
+              "Georai Taluk",
+              "Ashti Taluk",
+              "Ambejogai Cultural Taluk",
+              "Kaij Taluk",
+              "Patoda Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Bhandara",
+        "cities": [
+          {
+            "name": "Bhandara Town",
+            "subCities": [
+              "Bhandara Brass City Taluk",
+              "Tumsar Rice Market Taluk",
+              "Pauni Silk Taluk",
+              "Sakoli Taluk",
+              "Mohadi Taluk",
+              "Lakhani Taluk",
+              "Lakhandur Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Buldhana",
+        "cities": [
+          {
+            "name": "Buldhana Town",
+            "subCities": [
+              "Buldhana Hill Taluk",
+              "Khamgaon Silver City Taluk",
+              "Malkapur Commercial Taluk",
+              "Lonar Meteorite Lake Taluk",
+              "Shegaon Gajanan Maharaj Taluk",
+              "Chikhli Taluk",
+              "Mehkar Taluk",
+              "Jalgaon Jamod Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Chandrapur",
+        "cities": [
+          {
+            "name": "Chandrapur City",
+            "subCities": [
+              "Chandrapur Super Thermal Taluk",
+              "Tadoba Tiger Reserve Gateway Taluk",
+              "Ballarpur Paper City Taluk",
+              "Warora Anandwan Taluk",
+              "Bhadravati Taluk",
+              "Rajura Cement Taluk",
+              "Mul Taluk",
+              "Nagbhid Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Chhatrapati Sambhajinagar",
+        "cities": [
+          {
+            "name": "Sambhajinagar (Aurangabad)",
+            "subCities": [
+              "CIDCO Town Center Taluk",
+              "Cannaught Commercial Taluk",
+              "Kranti Chowk Taluk",
+              "Waluj Auto Mega MIDC Taluk",
+              "Chikalthana Airport Taluk",
+              "Shendra DMIC Smart City Taluk",
+              "Paithan Silk Taluk",
+              "Gangapur Sugar Taluk",
+              "Vaijapur Taluk",
+              "Khuldabad Heritage Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Dharashiv (Osmanabad)",
+        "cities": [
+          {
+            "name": "Dharashiv Town",
+            "subCities": [
+              "Dharashiv Urban Taluk",
+              "Tuljapur Bhavani Temple Taluk",
+              "Omerga Commercial Taluk",
+              "Kallam Taluk",
+              "Paranda Fort Taluk",
+              "Bhum Taluk",
+              "Washi Taluk",
+              "Lohara Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Dhule",
+        "cities": [
+          {
+            "name": "Dhule City",
+            "subCities": [
+              "Agra Road Commercial Taluk",
+              "Deopur Urban Taluk",
+              "Shirpur Education City Taluk",
+              "Sakri Wind Energy Taluk",
+              "Sindkheda Taluk",
+              "Dondaicha Chilly Market Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Gadchiroli",
+        "cities": [
+          {
+            "name": "Gadchiroli Town",
+            "subCities": [
+              "Gadchiroli Administrative Taluk",
+              "Armori Tussar Silk Taluk",
+              "Chamorshi Taluk",
+              "Aheri Forest Taluk",
+              "Kurkheda Taluk",
+              "Dhanora Taluk",
+              "Desaiganj Wadsa Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Gondia",
+        "cities": [
+          {
+            "name": "Gondia City",
+            "subCities": [
+              "Gondia Rice City Taluk",
+              "Tirora Adani Power Taluk",
+              "Goregaon Taluk",
+              "Amgaon Taluk",
+              "Salekasa Taluk",
+              "Sadak Arjuni Taluk",
+              "Arjuni Morgaon Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Hingoli",
+        "cities": [
+          {
+            "name": "Hingoli Town",
+            "subCities": [
+              "Hingoli Central Taluk",
+              "Aundha Nagnath Jyotirlinga Taluk",
+              "Kalamnuri Taluk",
+              "Basmath Sugar Taluk",
+              "Sengaon Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Jalgaon",
+        "cities": [
+          {
+            "name": "Jalgaon City",
+            "subCities": [
+              "Gold Market Commercial Taluk",
+              "MIDC Industrial Sector Taluk",
+              "Bhusawal Railway Division Taluk",
+              "Chalisgaon Junction Taluk",
+              "Amalner Education Taluk",
+              "Pachora Taluk",
+              "Raver Banana Hub Taluk",
+              "Yawal Taluk",
+              "Jamner Taluk",
+              "Erandol Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Jalna",
+        "cities": [
+          {
+            "name": "Jalna City",
+            "subCities": [
+              "Jalna Steel City MIDC Taluk",
+              "Old Jalna Seed Capital Taluk",
+              "Ambad Matsyodari Taluk",
+              "Partur Taluk",
+              "Bhokardan Taluk",
+              "Jafrabad Taluk",
+              "Ghansawangi Taluk",
+              "Mantha Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Kolhapur",
+        "cities": [
+          {
+            "name": "Kolhapur City",
+            "subCities": [
+              "Tarabai Park High Street Taluk",
+              "Rajarampuri Commercial Taluk",
+              "Shahupuri Jaggery Market Taluk",
+              "Mahalakshmi Temple Heritage Taluk",
+              "Ichalkaranji Textile Manchester Taluk",
+              "Shirol Industrial Taluk",
+              "Hatkanangle Taluk",
+              "Kagal Five Star MIDC Taluk",
+              "Karveer Taluk",
+              "Panhala Hill Station Taluk",
+              "Radhanagari Bison Sanctuary Taluk",
+              "Gadhinglaj Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Latur",
+        "cities": [
+          {
+            "name": "Latur City",
+            "subCities": [
+              "MIDC Industrial Area Taluk",
+              "Gandhi Chowk Commercial Taluk",
+              "Ausa Fort Taluk",
+              "Udgir Historical Fort Taluk",
+              "Nilanga Taluk",
+              "Ahmedpur Taluk",
+              "Chakur Taluk",
+              "Renapur Taluk",
+              "Shirur Anantpal Taluk",
+              "Jalkot Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Mumbai City",
+        "cities": [
+          {
+            "name": "Mumbai South",
+            "subCities": [
+              "Colaba Waterfront Taluk",
+              "Fort Heritage Commercial Taluk",
+              "Marine Drive Promenade Taluk",
+              "Nariman Point Financial Taluk",
+              "Malabar Hill VIP Taluk",
+              "Parel Hospital & Medical Hub Taluk",
+              "Lower Parel Corporate IT Taluk",
+              "Dadar Shivaji Park Cultural Taluk",
+              "Worli Seaface Expressway Taluk",
+              "Byculla Heritage Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Mumbai Suburban",
+        "cities": [
+          {
+            "name": "Western Suburbs",
+            "subCities": [
+              "Bandra West Bandstand Taluk",
+              "Khar Linking Road Fashion Taluk",
+              "Santacruz Airport Domestic Taluk",
+              "Andheri West Lokhandwala Taluk",
+              "Andheri East MIDC SEZ Taluk",
+              "Juhu Beach Luxury Taluk",
+              "Goregaon East IT Hub Taluk",
+              "Malad West Mindspace SEZ Taluk",
+              "Kandivali Lokhandwala Complex Taluk",
+              "Borivali National Park Gateway Taluk"
+            ]
+          },
+          {
+            "name": "Eastern Suburbs",
+            "subCities": [
+              "Powai Hiranandani Tech Taluk",
+              "Ghatkopar East Metro Central Taluk",
+              "Chembur Diamond Garden Taluk",
+              "Mulund West Urban Taluk",
+              "Bhandup Industrial Taluk",
+              "Vikhroli Godrej One Tech Taluk",
+              "Kurla BKC Global Financial Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Nagpur",
+        "cities": [
+          {
+            "name": "Nagpur City",
+            "subCities": [
+              "Civil Lines Administrative Taluk",
+              "Dharampeth Commercial Taluk",
+              "Ramdaspeth Healthcare Hub Taluk",
+              "Sitabuldi Central Interchange Taluk",
+              "Wardha Road Airport Corridor Taluk",
+              "MIHAN SEZ Multi-Modal Taluk",
+              "MIDC Hingna Industrial Taluk",
+              "MIDC Butibori Mega Estate Taluk",
+              "Kamptee Military Cantonment Taluk",
+              "Katol Orange Taluk",
+              "Umred Coal Taluk",
+              "Savner Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Nanded",
+        "cities": [
+          {
+            "name": "Nanded City",
+            "subCities": [
+              "Hazur Sahib Gurudwara Heritage Taluk",
+              "VIP Road Commercial Taluk",
+              "MIDC Krushnoor Pharma Taluk",
+              "Degloor Interstate Trade Taluk",
+              "Kinwat Forest Taluk",
+              "Loha Taluk",
+              "Mudkhed Railway Taluk",
+              "Hadgaon Taluk",
+              "Mukhed Taluk",
+              "Bhokar Taluk",
+              "Kandhar Fort Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Nandurbar",
+        "cities": [
+          {
+            "name": "Nandurbar Town",
+            "subCities": [
+              "Nandurbar Commercial Taluk",
+              "Shahada Agricultural Taluk",
+              "Navapur Chilly Market Taluk",
+              "Taloda Taluk",
+              "Akrani Dhadgaon Taluk",
+              "Akkalkuwa Taluk",
+              "Toranmal Hill Resort Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Nashik",
+        "cities": [
+          {
+            "name": "Nashik City",
+            "subCities": [
+              "College Road High Street Taluk",
+              "Gangapur Road Premium Taluk",
+              "Dwarka Circle Transportation Taluk",
+              "Panchavati Godavari Heritage Taluk",
+              "Indira Nagar Urban Taluk",
+              "Satpur MIDC Manufacturing Taluk",
+              "Ambad Industrial Auto Taluk",
+              "Nashik Road Railway Division Taluk",
+              "Deolali Military Cantonment Taluk",
+              "Sinnar Industrial SEZ Taluk",
+              "Malegaon Powerloom Textile Taluk",
+              "Igatpuri Hill Station Taluk",
+              "Trimbakeshwar Jyotirlinga Taluk",
+              "Niphad Grape Capital Taluk",
+              "Yeola Paithani Saree Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Palghar",
+        "cities": [
+          {
+            "name": "Palghar District",
+            "subCities": [
+              "Palghar Administrative Taluk",
+              "Boisar Tarapur Atomic & MIDC Taluk",
+              "Vasai West Historical Fort Taluk",
+              "Virar West Coastal Taluk",
+              "Nalasopara Commercial Taluk",
+              "Dahanu Coastal Fruit Taluk",
+              "Jawhar Palace Hill Taluk",
+              "Wada Industrial Taluk",
+              "Talasari Border Taluk",
+              "Mokhada Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Parbhani",
+        "cities": [
+          {
+            "name": "Parbhani City",
+            "subCities": [
+              "Agricultural University Taluk",
+              "Station Road Commercial Taluk",
+              "Gangakhed Godavari Taluk",
+              "Jintur Nemgiri Jain Taluk",
+              "Pathri Sai Janmasthan Taluk",
+              "Sailu Cotton Taluk",
+              "Manwath Taluk",
+              "Palam Taluk",
+              "Purna Railway Junction Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Pune",
+        "cities": [
+          {
+            "name": "Pune West & Tech Corridor",
+            "subCities": [
+              "Hinjewadi Infotech Park Phase 1-3 Taluk",
+              "Baner IT Expressway Taluk",
+              "Balewadi High Street Sports Taluk",
+              "Aundh Residential Taluk",
+              "Wakad Urban Growth Taluk",
+              "Pashan DRDO Scientific Taluk",
+              "Bavdhan Expressway Taluk",
+              "Kothrud Cultural & Metro Taluk",
+              "Karve Nagar Educational Taluk",
+              "Warje Flyover Hub Taluk"
+            ]
+          },
+          {
+            "name": "Pune East & Airport Zone",
+            "subCities": [
+              "Viman Nagar Airport Tech Taluk",
+              "Kalyani Nagar IT Park Taluk",
+              "Koregaon Park Lifestyle Taluk",
+              "Hadapsar Magarpatta Cybercity Taluk",
+              "Kharadi EON World Trade Center Taluk",
+              "Wagholi Educational Growth Taluk",
+              "Shivajinagar Central Interchange Taluk",
+              "Camp Cantonment Commercial Taluk",
+              "Swargate Transport Interchange Taluk"
+            ]
+          },
+          {
+            "name": "Pimpri-Chinchwad & Auto Corridor",
+            "subCities": [
+              "Chinchwad Station Auto Cluster Taluk",
+              "Pimpri Commercial Market Taluk",
+              "Nigdi Pradhikaran Planned Taluk",
+              "Bhosari Mega MIDC Engineering Taluk",
+              "Akurdi Railway Knowledge Taluk",
+              "Pimple Saudagar Premium Taluk",
+              "Ravet Node Growth Taluk",
+              "Tathawade Education Taluk",
+              "Talegaon Dabhade Auto MIDC Taluk",
+              "Chakan International Auto Hub Taluk"
+            ]
+          },
+          {
+            "name": "Pune Rural Districts",
+            "subCities": [
+              "Baramati Sugar & Agro Industrial Taluk",
+              "Shirur Ranjangaon MIDC Taluk",
+              "Daund Railway Junction Taluk",
+              "Indapur Taluk",
+              "Bhor Historic Taluk",
+              "Junnar Shivneri Fort Taluk",
+              "Khed Rajgurunagar Taluk",
+              "Lonavala Khandala Hill Station Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Raigad",
+        "cities": [
+          {
+            "name": "Raigad & Navi Mumbai South",
+            "subCities": [
+              "Panvel Old & New Municipal Corporation Taluk",
+              "Kharghar Educational & Golf Course Taluk",
+              "Kamothe Mansarovar Node Taluk",
+              "Ulwe Waterfront Coastal Taluk",
+              "Dronagiri Port City Taluk",
+              "Alibag Beach Coastal Taluk",
+              "Pen Ganpati Idol Craft Taluk",
+              "Roha Chemical Industrial Taluk",
+              "Mahad Historical Industrial Taluk",
+              "Karjat Scenic Tourism Taluk",
+              "Khopoli Industrial Ghat Taluk",
+              "Mangaon Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Ratnagiri",
+        "cities": [
+          {
+            "name": "Ratnagiri City",
+            "subCities": [
+              "Ratnagiri Port & Alphonso Mango Taluk",
+              "Chiplun Industrial City Taluk",
+              "Guhagar Coastal Beach Taluk",
+              "Dapoli Agricultural University Taluk",
+              "Khed Taluk",
+              "Sangameshwar Taluk",
+              "Lanja Taluk",
+              "Rajapur Taluk",
+              "Mandangad Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Sangli",
+        "cities": [
+          {
+            "name": "Sangli-Miraj Twin City",
+            "subCities": [
+              "Sangli Turmeric Market Taluk",
+              "Vishrambag High Street Taluk",
+              "Miraj Super Medical Center Taluk",
+              "Kupwad MIDC Industrial Taluk",
+              "Islampur Industrial Sugar Taluk",
+              "Tasgaon Grapes Capital Taluk",
+              "Vita Gold Refining Taluk",
+              "Palus Taluk",
+              "Jath Taluk",
+              "Shirala Snake Festival Taluk",
+              "Khanapur Vita Taluk",
+              "Atpadi Taluk",
+              "Kavathe Mahankal Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Satara",
+        "cities": [
+          {
+            "name": "Satara City",
+            "subCities": [
+              "Powai Naka Historic Taluk",
+              "Ajinkyatara Fort Zone Taluk",
+              "MIDC Satara Engineering Taluk",
+              "Karad Pre-eminent Medical & Education Taluk",
+              "Wai Krishna Valley Temple Taluk",
+              "Mahabaleshwar Strawberry Hill Taluk",
+              "Panchgani Tableland Education Taluk",
+              "Phaltan Sugar Industrial Taluk",
+              "Koregaon Taluk",
+              "Patan Koyna Hydro Power Taluk",
+              "Khatav Vaduj Taluk",
+              "Man Dahiwadi Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Sindhudurg",
+        "cities": [
+          {
+            "name": "Sindhudurg District",
+            "subCities": [
+              "Oros Administrative Capital Taluk",
+              "Sawantwadi Wooden Toy Craft Taluk",
+              "Malvan Tarkarli Marine Scuba Taluk",
+              "Kankavli Commercial Central Taluk",
+              "Kudal Industrial Center Taluk",
+              "Vengurla Beach Port Taluk",
+              "Devgad Alphonso Mango Taluk",
+              "Vaibhavwadi Taluk",
+              "Dodamarg Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Solapur",
+        "cities": [
+          {
+            "name": "Solapur City",
+            "subCities": [
+              "Saat Rasta Commercial Center Taluk",
+              "Hotgi Road IT & Aviation Taluk",
+              "Old Pune Naka Industrial Textile Taluk",
+              "MIDC Chincholi Mega Textile Taluk",
+              "Pandharpur Vithoba Pilgrimage Taluk",
+              "Barshi Pulse & Grain Capital Taluk",
+              "Akkalkot Swami Samarth Temple Taluk",
+              "Mohol Taluk",
+              "Madha Kurduvadi Junction Taluk",
+              "Karmala Taluk",
+              "Sangola Pomegranate Capital Taluk",
+              "Mangalvedha Jowar Land Taluk",
+              "Malshiras Akluj Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Thane",
+        "cities": [
+          {
+            "name": "Thane City Municipal Corp",
+            "subCities": [
+              "Ghodbunder Road High Speed Corridor Taluk",
+              "Majiwada Golden Quadrant Taluk",
+              "Hiranandani Estate Tech Hub Taluk",
+              "Naupada Cultural Heritage Taluk",
+              "Panchpakhadi Administrative Taluk",
+              "Vasant Vihar Premium Residential Taluk",
+              "Wagle Industrial Estate IT SEZ Taluk",
+              "Kolshet Road Waterfront Taluk",
+              "Kopri Thane East Taluk"
+            ]
+          },
+          {
+            "name": "Kalyan-Dombivli-Ulhasnagar",
+            "subCities": [
+              "Kalyan West Central Railway Taluk",
+              "Khadakpada Luxury Residential Taluk",
+              "Dombivli East MIDC & Industrial Taluk",
+              "Manpada Road Residential Growth Taluk",
+              "Ulhasnagar Commercial Wholesale Taluk",
+              "Ambarnath Heavy Industrial MIDC Taluk",
+              "Badlapur Chemical & Residential Taluk",
+              "Titwala Mahaganapati Pilgrimage Taluk"
+            ]
+          },
+          {
+            "name": "Mira-Bhayandar & Northern Suburbs",
+            "subCities": [
+              "Mira Road East Beverly Park Taluk",
+              "Bhayandar West Golden Nest Taluk",
+              "Kanakia Park Urban Taluk",
+              "Bhiwandi E-Commerce Logistics Mega Hub Taluk",
+              "Shahapur Tourism & Water Supply Taluk",
+              "Murbad MIDC Industrial Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Wardha",
+        "cities": [
+          {
+            "name": "Wardha City",
+            "subCities": [
+              "Sevagram Mahatma Gandhi Ashram Taluk",
+              "Bapuji Nagar Commercial Taluk",
+              "Hinganghat Cotton Textile Taluk",
+              "Arvi Taluk",
+              "Deoli MIDC Steel Taluk",
+              "Pulgaon Military Depot Taluk",
+              "Seloo Taluk",
+              "Karanja Ghadge Taluk",
+              "Ashti Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Washim",
+        "cities": [
+          {
+            "name": "Washim City",
+            "subCities": [
+              "Balaji Sansthan Heritage Taluk",
+              "Civil Lines Commercial Taluk",
+              "Karanja Lad Gurumandir Taluk",
+              "Risod Agriculture Market Taluk",
+              "Mangrulpir Taluk",
+              "Malegaon Washim Taluk",
+              "Manora Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Yavatmal",
+        "cities": [
+          {
+            "name": "Yavatmal City",
+            "subCities": [
+              "Darda Nagar Commercial Taluk",
+              "Pusad Educational Hub Taluk",
+              "Umarkhed Taluk",
+              "Digras Taluk",
+              "Wani Coal Mining Hub Taluk",
+              "Ghatanji Taluk",
+              "Darwha Taluk",
+              "Pandharkawada National Highway Taluk",
+              "Arni Taluk",
+              "Ralegaon Taluk",
+              "Ner Taluk"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Karnataka",
+    "districts": [
+      {
+        "name": "Bagalkote",
+        "cities": [
+          {
+            "name": "Bagalkote Town",
+            "subCities": [
+              "Navanagar Administrative Taluk",
+              "Old Town Commercial Taluk",
+              "Badami Cave Temples UNESCO Taluk",
+              "Jamkhandi Royal Taluk",
+              "Mudhol Hound & Sugar Taluk",
+              "Ilkal Saree Weaving Taluk",
+              "Hungund Taluk",
+              "Bilagi Taluk",
+              "Guledgudda Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Ballari",
+        "cities": [
+          {
+            "name": "Ballari City",
+            "subCities": [
+              "Cantonment Urban Taluk",
+              "Gandhinagar Commercial Taluk",
+              "Infantry Road Taluk",
+              "Siruguppa Paddy Rice Taluk",
+              "Sandur Iron Ore Mining Taluk",
+              "Kurugodu Taluk",
+              "Kampli Sugar Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Belagavi",
+        "cities": [
+          {
+            "name": "Belagavi City",
+            "subCities": [
+              "Tilakwadi Premier Taluk",
+              "Camp Military Cantonment Taluk",
+              "Hindwadi High Street Taluk",
+              "Udyambag Engineering Foundry Taluk",
+              "Auto Nagar Industrial Taluk",
+              "Gokak Falls & Textile Taluk",
+              "Chikkodi Commercial Agriculture Taluk",
+              "Athani Sugar Capital Taluk",
+              "Bailhongal Rani Chennamma Taluk",
+              "Hukkeri Rural Electric Taluk",
+              "Savadatti Yellamma Temple Taluk",
+              "Ramdurg Taluk",
+              "Khanapur Forest Taluk",
+              "Raybag Sugar Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Bengaluru Rural",
+        "cities": [
+          {
+            "name": "Bengaluru Rural Districts",
+            "subCities": [
+              "Devanahalli Kempegowda Aerotropolis Taluk",
+              "Doddaballapura Industrial Textile Apparel Park Taluk",
+              "Hosakote Auto & Hardware SEZ Taluk",
+              "Nelamangala Highway Logistics Hub Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Bengaluru Urban",
+        "cities": [
+          {
+            "name": "Bengaluru East Tech Core",
+            "subCities": [
+              "Whitefield ITPL Global IT Taluk",
+              "Indiranagar 100ft Road Lifestyle Taluk",
+              "Marathahalli Multiplex Junction Taluk",
+              "Bellandur Eco-Space Outer Ring Road Taluk",
+              "Sarjapur Road Wipro Tech Corridor Taluk",
+              "Brookefield Healthcare Tech Taluk",
+              "KR Puram Metro Interchange Taluk",
+              "Mahadevapura IT Corridor Taluk",
+              "Varthur Gunjur Growth Taluk"
+            ]
+          },
+          {
+            "name": "Bengaluru South & Central",
+            "subCities": [
+              "Koramangala 4th-7th Block Startup Hub Taluk",
+              "HSR Layout Sector 1-7 Tech Unicorn Taluk",
+              "Electronic City Phase 1-2 IT Hub Taluk",
+              "Jayanagar 4th Block Planned Heritage Taluk",
+              "JP Nagar Phase 1-8 Cultural Taluk",
+              "BTM Layout Water Tank Commercial Taluk",
+              "Banashankari 2nd & 3rd Stage Taluk",
+              "Bannerghatta Road Super Specialty Medical Taluk",
+              "Basavanagudi Gandhi Bazaar Heritage Taluk"
+            ]
+          },
+          {
+            "name": "Bengaluru North & Airport Zone",
+            "subCities": [
+              "Hebbal Esteem Flyover Taluk",
+              "Yelahanka Satellite New Town Taluk",
+              "Manyata Embassy Tech Park Nagavara Taluk",
+              "Sahakara Nagar Luxury Residential Taluk",
+              "Hennur Outer Ring Road Tech Taluk",
+              "Thanisandra Bhartiya City Center Taluk",
+              "Jakkur Aerodrome Flying Club Taluk"
+            ]
+          },
+          {
+            "name": "Bengaluru West & Industrial Mega Base",
+            "subCities": [
+              "Malleswaram 8th Cross Traditional Taluk",
+              "Rajajinagar Industrial & Orion Mall Taluk",
+              "Yeshwanthpur APMC World Trade Center Taluk",
+              "Peenya Industrial Mega Estate Phase 1-4 Taluk",
+              "Vijayanagar Chord Road Commercial Taluk",
+              "Kengeri Satellite Metro Town Taluk",
+              "Nagarbhavi Bangalore University Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Bidar",
+        "cities": [
+          {
+            "name": "Bidar City",
+            "subCities": [
+              "Bidar Mahmud Gawan Fort Taluk",
+              "Bidriware Craft Heritage Taluk",
+              "Basavakalyan Sharana Capital Taluk",
+              "Humnabad National Highway Commercial Taluk",
+              "Bhalki Sugar Taluk",
+              "Aurad Taluk",
+              "Chitgoppa Taluk",
+              "Kamalnagar Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Chamarajanagara",
+        "cities": [
+          {
+            "name": "Chamarajanagar Town",
+            "subCities": [
+              "Chamarajanagar Urban Taluk",
+              "Gundlupet Bandipur Tiger Reserve Taluk",
+              "Kollegala Silk Capital Taluk",
+              "Yelandur Historic Taluk",
+              "Hanur Male Mahadeshwara Hills Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Chikkaballapura",
+        "cities": [
+          {
+            "name": "Chikkaballapura Town",
+            "subCities": [
+              "Nandi Hills Tourism Taluk",
+              "Chikkaballapura Urban Taluk",
+              "Gauribidanur Industrial Taluk",
+              "Chintamani Silk & Gold Taluk",
+              "Sidlaghatta Raw Silk Capital Taluk",
+              "Bagepalli Interstate Trade Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Chikkamagaluru",
+        "cities": [
+          {
+            "name": "Chikkamagaluru Town",
+            "subCities": [
+              "Mullayanagiri Peak Coffee Taluk",
+              "KM Road Commercial Taluk",
+              "Kadur Junction Taluk",
+              "Tarikere Iron & Agriculture Taluk",
+              "Mudigere Rain Coffee Taluk",
+              "Koppa Tea Taluk",
+              "Sringeri Sharada Peetham Taluk",
+              "Narasimharajapura Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Chitradurga",
+        "cities": [
+          {
+            "name": "Chitradurga City",
+            "subCities": [
+              "Seven-Ringed Stone Fort Taluk",
+              "BD Road Commercial Taluk",
+              "Challakere Science & Groundnut City Taluk",
+              "Hiriyur Vani Vilasa Sagara Taluk",
+              "Holalkere Taluk",
+              "Hosadurga Cement Taluk",
+              "Molakalmuru Silk Saree Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Dakshina Kannada",
+        "cities": [
+          {
+            "name": "Mangaluru City",
+            "subCities": [
+              "Hampankatta Central Business Taluk",
+              "Kadri Hills Manjunatha Temple Taluk",
+              "Kodialbail Educational Taluk",
+              "Bejai KSRTC Terminal Taluk",
+              "Attavar Father Muller Medical Taluk",
+              "Pandeshwar Bunder Port Taluk",
+              "Surathkal NITK Coastal Tech Taluk",
+              "Bantwal BC Road Taluk",
+              "Puttur Campco Chocolate Capital Taluk",
+              "Belthangady Dharmasthala Pilgrimage Taluk",
+              "Sullia Arecanut Taluk",
+              "Moodabidri Jain Heritage Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Davanagere",
+        "cities": [
+          {
+            "name": "Davanagere City",
+            "subCities": [
+              "Benne Dosa Food Heritage Taluk",
+              "MCC A & B Block Commercial Taluk",
+              "Vidyanagar Medical Hub Taluk",
+              "Harihar Tungabhadra Industrial Taluk",
+              "Channagiri Arecanut Capital Taluk",
+              "Honnali Riverbank Taluk",
+              "Jagalur Taluk",
+              "Nyamathi Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Dharwad",
+        "cities": [
+          {
+            "name": "Hubballi-Dharwad Twin City",
+            "subCities": [
+              "Vidyanagar Commercial Hub Taluk",
+              "Gokul Road Industrial Estate Taluk",
+              "Keshwapur Urban Growth Taluk",
+              "Deshpande Nagar High Street Taluk",
+              "Dharwad Sadhankeri Cultural Taluk",
+              "Dharwad High Court Bench & IIT Taluk",
+              "Navanagar Integrated District Capital Taluk",
+              "Kalghatgi Cradle Taluk",
+              "Navalgund Carpet Taluk",
+              "Kundgol Musical Heritage Taluk",
+              "Alnavar Forest Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Gadag",
+        "cities": [
+          {
+            "name": "Gadag-Betageri",
+            "subCities": [
+              "Printing Press Heritage Taluk",
+              "Pala Badami Road Taluk",
+              "Lakshmeshwar Someshwara Temple Taluk",
+              "Ron Historical Taluk",
+              "Shirhatti Taluk",
+              "Mundargi Wind Energy Taluk",
+              "Nargund Peasant Revolt Historic Taluk",
+              "Gajendragad Cotton Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Hassan",
+        "cities": [
+          {
+            "name": "Hassan City",
+            "subCities": [
+              "BM Road Commercial Taluk",
+              "Vidyanagar Urban Taluk",
+              "Belur Hoysala Architecture UNESCO Taluk",
+              "Halebeedu Sacred Ensembles Taluk",
+              "Shravanabelagola Bahubali Gommateshwara Taluk",
+              "Sakleshpur Western Ghats Coffee Taluk",
+              "Arsikere Coconut & Railway Junction Taluk",
+              "Channarayapatna Taluk",
+              "Alur Taluk",
+              "Arkalgud Taluk",
+              "Holenarasipura Riverbank Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Haveri",
+        "cities": [
+          {
+            "name": "Haveri Town",
+            "subCities": [
+              "Byadgi Red Chilli World Market Taluk",
+              "Haveri Cardamom City Taluk",
+              "Ranebennur Blackbuck Sanctuary & Seed Hub Taluk",
+              "Hangal Tarakeshwara Temple Taluk",
+              "Shiggaon Handloom Taluk",
+              "Savanur Nawab Heritage Taluk",
+              "Hirekerur Taluk",
+              "Rattihalli Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Kalaburagi",
+        "cities": [
+          {
+            "name": "Kalaburagi (Gulbarga) City",
+            "subCities": [
+              "Super Market Central Commercial Taluk",
+              "Sedam Road High Court Complex Taluk",
+              "MSK Mill Industrial Taluk",
+              "Central University of Karnataka Kadaganchi Taluk",
+              "Sedam Cement Capital Taluk",
+              "Chittapur Lime & Cement Stone Taluk",
+              "Aland Pulses Capital Taluk",
+              "Afzalpur Sugar Taluk",
+              "Jevargi Agriculture Taluk",
+              "Chincholi Wildlife Sanctuary Taluk",
+              "Kamalapur Red Banana Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Kodagu",
+        "cities": [
+          {
+            "name": "Kodagu (Coorg)",
+            "subCities": [
+              "Madikeri Raja Seat Palace Taluk",
+              "Kushalnagar Golden Temple Namdroling Monastery Taluk",
+              "Virajpet Coffee Planters Taluk",
+              "Gonikoppal Agriculture Taluk",
+              "Somwarpet Hill Coffee Taluk",
+              "Ponnampet Forestry College Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Kolar",
+        "cities": [
+          {
+            "name": "Kolar Town",
+            "subCities": [
+              "KGF Kolar Gold Fields Historic Mining Taluk",
+              "Kolar APMC Asia Largest Tomato Market Taluk",
+              "Bangarapet Railway & Chaat Junction Taluk",
+              "Malur Industrial Area KIADB Taluk",
+              "Mulbagal Dosa Heritage Taluk",
+              "Srinivaspur World Famous Mango Capital Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Koppal",
+        "cities": [
+          {
+            "name": "Koppal Town",
+            "subCities": [
+              "Koppal Toy Heritage & Steel Taluk",
+              "Gangavathi Paddy Rice Bowl of Karnataka Taluk",
+              "Anegundi Kishkindha Epic Heritage Taluk",
+              "Kushtagi Agriculture Taluk",
+              "Yelburga Taluk",
+              "Karatagi Rice Taluk",
+              "Kukanur Mahadeva Temple Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Mandya",
+        "cities": [
+          {
+            "name": "Mandya City",
+            "subCities": [
+              "Sugar City Sugar Factory Commercial Taluk",
+              "Maddur Vada Highway Food Hub Taluk",
+              "Srirangapatna Tipu Sultan Historic Island Taluk",
+              "Pandavapura Sugar Taluk",
+              "Malavalli Silk & Hydro Power Taluk",
+              "Nagamangala Bronze Craft Taluk",
+              "Krishnarajpet Agriculture Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Mysuru",
+        "cities": [
+          {
+            "name": "Mysuru City",
+            "subCities": [
+              "Gokulam 3rd Stage Yoga & Cultural Taluk",
+              "Jayalakshmipuram High Street Taluk",
+              "Kuvempunagar Planned Residential Taluk",
+              "Saraswathipuram Education & Library Taluk",
+              "Hebbal Electronic KIADB Industrial Taluk",
+              "Nanjangud Temple City & Industrial Mega Base Taluk",
+              "Hunsur Timber & Tobacco Gateway Taluk",
+              "KR Nagar Agriculture Taluk",
+              "T Narasipura Triveni Sangama Taluk",
+              "Piriyapatna Tobacco Taluk",
+              "HD Kote Kabini Wildlife Jungle Taluk",
+              "Saragur Bio-Organic Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Raichur",
+        "cities": [
+          {
+            "name": "Raichur City",
+            "subCities": [
+              "Raichur Thermal Power Station RTPS Shaktinagar Taluk",
+              "Station Road Cotton Ginnery Taluk",
+              "Sindhanur Super Irrigated Paddy Taluk",
+              "Manvi Gold Fields Taluk",
+              "Lingsugur Minerals Taluk",
+              "Devadurga Historic Taluk",
+              "Maski Ashoka Inscription Taluk",
+              "Sirwar Agriculture Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Ramanagara",
+        "cities": [
+          {
+            "name": "Ramanagara Town",
+            "subCities": [
+              "Silk City Asia Largest Cocoon Market Taluk",
+              "Sholay Sholay Sholay Ramadevarabetta Vulture Sanctuary Taluk",
+              "Channapatna Wooden Lacquerware Toy City Taluk",
+              "Kanakapura River Cauvery Sangama Taluk",
+              "Magadi Kempegowda Fort Taluk",
+              "Harohalli Industrial Mega SEZ Taluk",
+              "Bidadi Toyota Mega Industrial Hub Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Shivamogga",
+        "cities": [
+          {
+            "name": "Shivamogga City",
+            "subCities": [
+              "Vinoba Nagar Premier Commercial Taluk",
+              "Gopala Gowda Extension Medical Taluk",
+              "Bhadravathi VISL Steel & MPM Paper City Taluk",
+              "Sagara Jog Falls Gateway Taluk",
+              "Shikaripura Agricultural Taluk",
+              "Soraba Sandalwood Craft Taluk",
+              "Thirthahalli Arecanut Valley Taluk",
+              "Hosanagara Kodachadri Hill Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Tumakuru",
+        "cities": [
+          {
+            "name": "Tumakuru Smart City",
+            "subCities": [
+              "Siddaganga Mutt Education & Heritage Taluk",
+              "Batawadi NH48 Industrial Highway Taluk",
+              "Vasanthanarasapura Mega Industrial NIMZ Taluk",
+              "Tiptur Coconut Capital of India Taluk",
+              "Kunigal Stud Farm & Horse Racing Taluk",
+              "Sira Mughal Fort Historic Taluk",
+              "Madhugiri Monolithic Giant Fort Taluk",
+              "Pavagada World Class Solar Mega Park Taluk",
+              "Gubbi Agriculture Taluk",
+              "Chikkanayakanahalli Minerals Taluk",
+              "Turuvekere Historic Taluk",
+              "Koratagere Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Udupi",
+        "cities": [
+          {
+            "name": "Udupi-Manipal District",
+            "subCities": [
+              "Manipal International University & Medical City Taluk",
+              "Udupi Car Street Sri Krishna Matha Heritage Taluk",
+              "Kunjibettu Modern Commercial Taluk",
+              "Malpe International Fishery Harbour & St. Mary Island Taluk",
+              "Kundapura Coastal Port Town Taluk",
+              "Karkala Gommateshwara & Cashew Hub Taluk",
+              "Brahmavara Agriculture & Sugar Taluk",
+              "Kaup Coastal Lighthouse Taluk",
+              "Byndoor Kollur Mookambika Temple Taluk",
+              "Hebri Agumbe Rainforest Gateway Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Uttara Kannada",
+        "cities": [
+          {
+            "name": "Karwar & Coastal Towns",
+            "subCities": [
+              "Karwar Sea Bird Naval Base & Rabindranath Tagore Beach Taluk",
+              "Gokarna Mahabaleshwar Om Beach Pilgrimage Taluk",
+              "Bhatkal International Trade Port Taluk",
+              "Kumta Cashew & Wooden Art Taluk",
+              "Honnavar Sharavathi River Railway Bridge Taluk",
+              "Sirsi Marikamba Arecanut Spices Capital Taluk",
+              "Dandeli Kali River White Water Rafting & Paper Taluk",
+              "Yellapur Waterfalls Forest Taluk",
+              "Haliyal Sugar Taluk",
+              "Joida Kali Wilderness Taluk",
+              "Ankola Salt & Mango Taluk",
+              "Siddapur Spices Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Vijayanagara",
+        "cities": [
+          {
+            "name": "Hosapete (Hospet)",
+            "subCities": [
+              "Hampi UNESCO World Heritage Imperial Capital Taluk",
+              "Hosapete TB Dam & Tourism Promenade Taluk",
+              "Kudligi Historic Mineral Taluk",
+              "Hagaribommanahalli Cotton Taluk",
+              "Kotturu Guru Kottureshwara Temple Taluk",
+              "Harapanahalli Educational Taluk",
+              "Hoovina Hadagali Jasmine Capital Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Vijayapura",
+        "cities": [
+          {
+            "name": "Vijayapura (Bijapur) City",
+            "subCities": [
+              "Gol Gumbaz Whispering Gallery World Heritage Taluk",
+              "Station Road Commercial Business Taluk",
+              "Indi Red Gram & Lemon Capital Taluk",
+              "Muddebihal Historical Taluk",
+              "Sindagi Agriculture Market Taluk",
+              "Basavana Bagewadi Basaveshwara Birthplace Taluk",
+              "Babaleshwar Grapes Capital Taluk",
+              "Chadchan Handloom Textile Taluk",
+              "Talikoti Historic Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Yadgir",
+        "cities": [
+          {
+            "name": "Yadgir Town",
+            "subCities": [
+              "Yadgir Hill Fort Administrative Taluk",
+              "Shahapur Sleeping Buddha Hills Taluk",
+              "Shorapur Royal Nayaka Palace Taluk",
+              "Gurmitkal Khadi Weaving Taluk",
+              "Hunsagi Pre-historic Paleolithic Valley Taluk",
+              "Vadagera Taluk"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Tamil Nadu",
+    "districts": [
+      {
+        "name": "Ariyalur",
+        "cities": [
+          {
+            "name": "Ariyalur Town",
+            "subCities": [
+              "Cement Industrial Capital Taluk",
+              "Gangaikonda Cholapuram UNESCO Temple Taluk",
+              "Jayankondam Lignite Taluk",
+              "Sendurai Mineral Taluk",
+              "Udayarpalayam Palace Taluk",
+              "Andimadam Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Chengalpattu",
+        "cities": [
+          {
+            "name": "Chengalpattu District",
+            "subCities": [
+              "GST Road Highway Industrial Corridor Taluk",
+              "Mahabalipuram UNESCO Shore Temple & Coastal Heritage Taluk",
+              "Maraimalai Nagar Ford Automobile Mega City Taluk",
+              "Mahindra World City Integrated Business SEZ Taluk",
+              "Tambaram South Metro Gateway Taluk",
+              "Maduranthakam Temple Tank Taluk",
+              "Tiruporur Murugan IT Corridor Taluk",
+              "Cheyyur Coastal Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Chennai",
+        "cities": [
+          {
+            "name": "Chennai Central & South",
+            "subCities": [
+              "T. Nagar Panagal Park Retail Gold Capital Taluk",
+              "Adyar Gandhi Nagar Green Promenade Taluk",
+              "Anna Nagar Roundtana Planned Urban Taluk",
+              "Velachery Phoenix MarketCity Hub Taluk",
+              "Mylapore Kapaleeshwarar Temple Cultural Taluk",
+              "Alwarpet TTK Road Luxury Taluk",
+              "Besant Nagar Elliot Beach Coastal Taluk",
+              "Nungambakkam High Road Corporate & Diplomatic Taluk",
+              "Guindy Industrial & Tech Park Taluk",
+              "Royapettah Express Avenue Central Taluk"
+            ]
+          },
+          {
+            "name": "Chennai OMR IT Corridor",
+            "subCities": [
+              "Thoraipakkam OMR Expressway Taluk",
+              "Sholinganallur ELCOT IT Special Economic Zone Taluk",
+              "Perungudi Toll & Tech Hub Taluk",
+              "Navalur Marina Mall Growth Corridor Taluk",
+              "Siruseri SIPCOT IT Park Asia Largest Software Campus Taluk",
+              "Karapakkam Tech Corridor Taluk",
+              "Semmancherri Urban Growth Taluk"
+            ]
+          },
+          {
+            "name": "Chennai West & Northern Hubs",
+            "subCities": [
+              "Tambaram West Railway Terminus Taluk",
+              "Chromepet GST Road Commercial Taluk",
+              "Porur Sri Ramachandra Medical City Taluk",
+              "Ambattur Industrial Estate Manufacturing Taluk",
+              "Perambur Loco Works & Express Metro Taluk",
+              "Kolathur Urban Growth Taluk",
+              "Kilpauk Medical & Residential Taluk",
+              "Poonamallee Historic Film & Industrial Gateway Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Coimbatore",
+        "cities": [
+          {
+            "name": "Coimbatore Smart City",
+            "subCities": [
+              "RS Puram DB Road High Street Commercial Taluk",
+              "Gandhipuram Cross Cut Road Shopping Taluk",
+              "Peelamedu Airport & Educational Institutions Taluk",
+              "Avinashi Road Healthcare & Tech Corridor Taluk",
+              "Saibaba Colony Planned Residential Taluk",
+              "Race Course Promenade Green Taluk",
+              "Saravanampatti CHIL IT SEZ Tech Corridor Taluk",
+              "Singanallur Industrial Bus Terminal Taluk",
+              "Kuniyamuthur Educational Taluk",
+              "Pollachi Coconut & Jaggery Capital Taluk",
+              "Mettupalayam Nilgiri Mountain Railway Gateway Taluk",
+              "Sulur Air Force Station Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Cuddalore",
+        "cities": [
+          {
+            "name": "Cuddalore City",
+            "subCities": [
+              "Silver Beach Coastal Commercial Taluk",
+              "SIPCOT Chemical Industrial Complex Taluk",
+              "Neyveli Lignite NLC India Power Capital Taluk",
+              "Chidambaram Nataraja Cosmic Dance UNESCO Temple Taluk",
+              "Panruti Cashew & Jackfruit World Capital Taluk",
+              "Vridhachalam Ceramic & Temple Taluk",
+              "Tittakudi Taluk",
+              "Bhuvanagiri Raghavendra Swamy Birthplace Taluk",
+              "Kurinjipadi Handloom Weaving Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Dharmapuri",
+        "cities": [
+          {
+            "name": "Dharmapuri Town",
+            "subCities": [
+              "Hogenakkal Falls Niagara of India Tourism Taluk",
+              "Four Roads Commercial Center Taluk",
+              "Harur Historical Mineral Taluk",
+              "Palacode Sugarcane & Tomato Taluk",
+              "Pennagaram Forest Bamboo Taluk",
+              "Pappireddipatti Shevaroy Foothills Taluk",
+              "Karimangalam Taluk",
+              "Nallampalli Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Dindigul",
+        "cities": [
+          {
+            "name": "Dindigul City",
+            "subCities": [
+              "Rockfort Historic Lock & Biryani Capital Taluk",
+              "Kodaikanal Princess of Hill Stations Tourism Taluk",
+              "Palani Dandayuthapani Murugan Temple Divine Taluk",
+              "Oddanchatram Vegetable Wholesale Mega Market Taluk",
+              "Nilakottai Brass & Flower Market Taluk",
+              "Natham Spices & Mango Taluk",
+              "Vedasandur Tobacco Taluk",
+              "Gujiliamparai Taluk",
+              "Kodaikanal Vilpatti Eco Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Erode",
+        "cities": [
+          {
+            "name": "Erode City",
+            "subCities": [
+              "Turmeric City Global Spices Market Taluk",
+              "Textile B2B Market Texvalley Taluk",
+              "Perundurai SIPCOT Industrial Mega Growth Center Taluk",
+              "Bhavani Kooduthurai Sangameshwarar Triveni Sangama Taluk",
+              "Gobichettipalayam Mini Kollywood Paddy Seed Taluk",
+              "Sathyamangalam Tiger Reserve & Sandalwood Taluk",
+              "Anthiyur Horse & Cattle Fair Taluk",
+              "Modakkurichi Agriculture Taluk",
+              "Kodumudi Magudeswarar Temple Taluk",
+              "Thalavadi Tribal Highland Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Kallakurichi",
+        "cities": [
+          {
+            "name": "Kallakurichi Town",
+            "subCities": [
+              "Sugar Mill Agricultural Capital Taluk",
+              "Sankarapuram Foot of Kalvarayan Hills Taluk",
+              "Chinnasalem Modern Rice Mills Taluk",
+              "Tirukkoyilur Ulagalantha Perumal Temple Taluk",
+              "Ulundurpet Highway Junction Commercial Taluk",
+              "Kalvarayan Hills Eco Tribal Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Kanchipuram",
+        "cities": [
+          {
+            "name": "Kanchipuram Heritage City",
+            "subCities": [
+              "Silk City of Thousand Temples Heritage Taluk",
+              "Ekambareswarar & Varadharaja Perumal Divine Taluk",
+              "Sriperumbudur Hyundai-Samsung Global Auto Electronics SEZ Taluk",
+              "Oragadam Detroit of South Asia Auto Cluster Taluk",
+              "Walajabad Handloom Silk Weaving Taluk",
+              "Kundrathur Murugan Hill Temple Taluk",
+              "Uthiramerur Historic Democratic Inscription Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Kanyakumari",
+        "cities": [
+          {
+            "name": "Nagercoil & Kanyakumari",
+            "subCities": [
+              "Kanyakumari Vivekananda Rock Memorial & Thiruvalluvar Statue Taluk",
+              "Nagercoil Clock Tower High Street Commercial Taluk",
+              "Padmanabhapuram Wooden Palace Heritage Taluk",
+              "Marthandam Honey & Rubber Commercial Taluk",
+              "Colachel Historic Seaport Coastal Taluk",
+              "Thuckalay Commercial Taluk",
+              "Killiyoor Coastal Taluk",
+              "Vilavancode Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Karur",
+        "cities": [
+          {
+            "name": "Karur City",
+            "subCities": [
+              "Textile Export Capital of India Home Textiles Taluk",
+              "Bus Body Building & Paper Manufacturing Taluk",
+              "Thanthonimalai Kalyana Venkataramana Swamy Taluk",
+              "Kulithalai Kadambar Temple Cauvery Riverbank Taluk",
+              "Aravakurichi Agriculture Drumstick Capital Taluk",
+              "Krishnarayapuram Agriculture Taluk",
+              "Kadavur Slender Loris Sanctuary Taluk",
+              "Pugalur TNPL Mega Paper Mill Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Krishnagiri",
+        "cities": [
+          {
+            "name": "Krishnagiri Town",
+            "subCities": [
+              "Hosur Automobile & EV Manufacturing Hub Ola-TVS-Titan Taluk",
+              "Hosur Electronics SIPCOT Phase 1-2 Taluk",
+              "Krishnagiri Dam & Mango Pulp Capital Taluk",
+              "Pochampalli Industrial SIPCOT Park Taluk",
+              "Uthangarai Educational Taluk",
+              "Bargur Granite & Cattle Market Taluk",
+              "Denkanikottai Little England Taluk",
+              "Shoolagiri Highway Automotive Taluk",
+              "Anchetty Wildlife Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Madurai",
+        "cities": [
+          {
+            "name": "Madurai Smart City",
+            "subCities": [
+              "Meenakshi Amman World Renowned UNESCO Heritage Taluk",
+              "Anna Nagar High Street Lifestyle Taluk",
+              "KK Nagar Planned Modern Residential Taluk",
+              "Mattuthavani Integrated Bus Terminal & Fruit Market Taluk",
+              "Tallakulam Circuit House Heritage Taluk",
+              "Goripalayam Medical College & Hospital Hub Taluk",
+              "Tirupparankundram First Arupadaiveedu Murugan Temple Taluk",
+              "Usilampatti Agriculture Market Taluk",
+              "Melur Granite & Industrial Taluk",
+              "Vadipatti Agro Industrial Taluk",
+              "Thirumangalam All-Women Police Heritage Taluk",
+              "Peraiyur Taluk",
+              "Sholavandan Betel Leaf Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Mayiladuthurai",
+        "cities": [
+          {
+            "name": "Mayiladuthurai Town",
+            "subCities": [
+              "Mayuranathar Temple & Cauvery Pushkaram Taluk",
+              "Sirkazhi Bhramapureeswarar Temple Birthplace of Sambandar Taluk",
+              "Tharangambadi (Tranquebar) Danish Fort Coastal Heritage Taluk",
+              "Kuthalam Historic Temple Taluk",
+              "Poompuhar Ancient Chola Port Coastal Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Nagapattinam",
+        "cities": [
+          {
+            "name": "Nagapattinam Port Town",
+            "subCities": [
+              "Nagapattinam Deep Sea Port & Fishery Terminal Taluk",
+              "Velankanni Basilica of Our Lady of Good Health World Shrine Taluk",
+              "Nagore Dargah Sacred Coastal Heritage Taluk",
+              "Vedaranyam Salt Satyagraha & Wildlife Sanctuary Taluk",
+              "Kilvelur Agriculture Taluk",
+              "Thirukkuvalai Heritage Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Namakkal",
+        "cities": [
+          {
+            "name": "Namakkal City",
+            "subCities": [
+              "Egg City & Poultry Capital of India Taluk",
+              "Lorry Body Building & Transport Hub Taluk",
+              "Anjaneyar Giant Monolithic Statue Heritage Taluk",
+              "Tiruchengode Arthanareeswarar Hill Temple & Rig Manufacturing Taluk",
+              "Rasipuram Ghee & Sago Tapioca Capital Taluk",
+              "Kolli Hills 70 Hairpin Bends Medicinal Agro Taluk",
+              "Paramathi Velur Betel & Banana Riverbank Taluk",
+              "Kabilarmalai Heritage Taluk",
+              "Sendamangalam Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Nilgiris",
+        "cities": [
+          {
+            "name": "Udhagamandalam (Ooty)",
+            "subCities": [
+              "Ooty Botanical Gardens & Nilgiri Mountain Toy Train UNESCO Taluk",
+              "Coonoor Sim Park & Tea Plantation Capital Taluk",
+              "Kotagiri Catherine Waterfalls Scenic Tea Taluk",
+              "Gudalur Mudumalai Tiger Reserve & Rainforest Gateway Taluk",
+              "Wellington Defense Services Staff College Cantonment Taluk",
+              "Kundah Hydro Electric Power Valley Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Perambalur",
+        "cities": [
+          {
+            "name": "Perambalur Town",
+            "subCities": [
+              "SEZ Industrial Growth Center Taluk",
+              "Cotton & Shallot Onion Capital Taluk",
+              "Veppanthattai Cotton Research Taluk",
+              "Kunnam Minerals Taluk",
+              "Alathur Sugar & Industrial Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Pudukkottai",
+        "cities": [
+          {
+            "name": "Pudukkottai Town",
+            "subCities": [
+              "Princely State Palace & Heritage Taluk",
+              "Sittannavasal Jain Cave Paintings Rock Art Taluk",
+              "Avudaiyarkoil Athmanathar Temple Architecture Taluk",
+              "Aranthangi Historic Fort Coastal Taluk",
+              "Gandarvakottai Taluk",
+              "Viralimalai Peacock Sanctuary & Murugan Temple Taluk",
+              "Thirumayam Rock Cut Fort Taluk",
+              "Illuppur Taluk",
+              "Karambakudi Taluk",
+              "Manamelkudi Coastal Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Ramanathapuram",
+        "cities": [
+          {
+            "name": "Ramanathapuram & Rameswaram",
+            "subCities": [
+              "Rameswaram Ramanathaswamy Temple Corridor of Thousand Pillars Taluk",
+              "Dhanushkodi Ram Setu Land End Coastal Taluk",
+              "Ramanathapuram Raja Palace Heritage Taluk",
+              "Kalam National Memorial Pei Karumbu Taluk",
+              "Paramakudi Handloom Silk Weaving Taluk",
+              "Kilakarai Arab Maritime Heritage Taluk",
+              "Mudukulathur Agriculture Taluk",
+              "Kamuthi World Largest Solar Power Project Taluk",
+              "Tiruvadanai Taluk",
+              "Kadaladi Coastal Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Ranipet",
+        "cities": [
+          {
+            "name": "Ranipet District",
+            "subCities": [
+              "SIPCOT Leather & Finished Leather Goods Export Capital Taluk",
+              "BHEL Heavy Electrical Industrial Manufacturing Taluk",
+              "Walajah Historic Silk Road Taluk",
+              "Arcot Historic Nawab Heritage & Sweets Taluk",
+              "Arakkonam Mega Naval Air Station INS Rajali & Railway Hub Taluk",
+              "Nemili Taluk",
+              "Sholinghur Yoga Narasimha Hill Temple Taluk",
+              "Kalavai Historic Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Salem",
+        "cities": [
+          {
+            "name": "Salem City",
+            "subCities": [
+              "Fairlands Commercial High Street Taluk",
+              "Five Roads Commercial Convergence Taluk",
+              "Steel Plant of India SAIL Modern Industrial Taluk",
+              "Sago & Starch Capital of India SAGO-Serve Taluk",
+              "Yercaud Jewel of the South Shevaroy Hills Taluk",
+              "Attur Tapioca & Glass Beads Historic Taluk",
+              "Mettur Stanley Dam & Chemical Aluminum Hub Taluk",
+              "Sankari Cement Capital Taluk",
+              "Omalur Airport & Industrial Taluk",
+              "Edappadi Riverbank Agriculture Taluk",
+              "Gangavalli Valley Taluk",
+              "Valapady Mango Agro Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Sivaganga",
+        "cities": [
+          {
+            "name": "Sivaganga & Karaikudi",
+            "subCities": [
+              "Karaikudi Chettinad Heritage Mansions & Cuisine World Capital Taluk",
+              "Alagappa University Educational Hub Taluk",
+              "Sivaganga Rani Velu Nachiyar Historic Palace Taluk",
+              "Manamadurai Clay Ghatam & Potters Art Taluk",
+              "Devakottai Chettinad Heritage Architecture Taluk",
+              "Kalayarkoil Kaleeswarar Historic Temple Taluk",
+              "Tiruppuvanam Ancient Vaigai River Heritage Taluk",
+              "Singampunari Agricultural Trade Taluk",
+              "Ilayangudi Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Tenkasi",
+        "cities": [
+          {
+            "name": "Tenkasi Town",
+            "subCities": [
+              "Kasi Viswanathar Temple Gateway of South Taluk",
+              "Courtallam Spa of South India Nine Waterfalls Tourism Taluk",
+              "Sankarankovil Sankaranarayanaswamy Temple Divine Taluk",
+              "Kadayanallur Handloom Weaving Taluk",
+              "Shenkottai Western Ghats Border Pass Taluk",
+              "Alangulam Commercial Trade Taluk",
+              "Sivagiri Agriculture Taluk",
+              "Thiruvengadam Taluk",
+              "Veerakeralamputhur Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Thanjavur",
+        "cities": [
+          {
+            "name": "Thanjavur (Tanjore) Heritage City",
+            "subCities": [
+              "Brihadisvara UNESCO Great Living Chola Big Temple Taluk",
+              "Maratha Palace & Saraswathi Mahal Ancient Library Taluk",
+              "Tanjore Art Plate & Bronze Icon Casting Craft Taluk",
+              "Kumbakonam City of Temples & Mahamaham Tank Taluk",
+              "Swamimalai Swaminatha Swamy Fourth Arupadaiveedu Taluk",
+              "Papanasam 108 Shivalingas Temple Taluk",
+              "Pattukkottai Coconut Capital of South India Taluk",
+              "Thiruvaiyaru Saint Thyagaraja Aradhana Music Capital Taluk",
+              "Peravurani Coastal Agro Taluk",
+              "Orathanadu Agriculture Taluk",
+              "Budalur Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Theni",
+        "cities": [
+          {
+            "name": "Theni District",
+            "subCities": [
+              "Cardamom & Spices Trade Capital Taluk",
+              "Periyakulam Horticulture College & Mango Capital Taluk",
+              "Bodinayakanur Cardamom City of India Foothill Taluk",
+              "Cumbum Valley Grapes & Banana Super Green Belt Taluk",
+              "Uthamapalayam Historical Riverbank Taluk",
+              "Andipatti Handloom Weaving Taluk",
+              "Megamalai Highwavys Cloud Mountain Tea Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Thoothukudi",
+        "cities": [
+          {
+            "name": "Thoothukudi (Tuticorin)",
+            "subCities": [
+              "Pearl City VOC Deep Water International Seaport Taluk",
+              "SPIC Heavy Chemical & Thermal Power Industrial Mega Zone Taluk",
+              "Salt Pans of Tuticorin Salt Capital of Tamil Nadu Taluk",
+              "Tiruchendur Murugan Sea Shore Arupadaiveedu Temple Taluk",
+              "Kovilpatti Kadalai Mittai GI Tag Confectionery & Match Works Taluk",
+              "Ettayapuram Mahakavi Bharathiyar Birthplace Heritage Taluk",
+              "Kayalpattinam Ancient Arab Sea Trade Coastal Taluk",
+              "Srivaikuntam Nava Tirupathi Temple Taluk",
+              "Ottapidaram VO Chidambaram Heritage Taluk",
+              "Sathankulam Taluk",
+              "Vilathikulam Chilli Agro Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Tiruchirappalli",
+        "cities": [
+          {
+            "name": "Tiruchirappalli (Trichy)",
+            "subCities": [
+              "Rockfort Ucchi Pillayar Temple Divine Historic Taluk",
+              "Srirangam Sri Ranganathaswamy Temple Largest Functioning Temple in the World Taluk",
+              "Thillai Nagar High Street Commercial Business Taluk",
+              "Cantonment Central Bus & Railway Interchange Taluk",
+              "BHEL Heavy Boiler & Ordnance Factory OFT Defense Industrial Taluk",
+              "NIT Trichy World Class Technology Institute Zone Taluk",
+              "Thuvakudi Industrial Estate SIDCO Taluk",
+              "Manapparai Murukku GI Tag Food Heritage & Cattle Market Taluk",
+              "Musiri Akhanda Cauvery Riverbank Taluk",
+              "Lalgudi Rich Agricultural Green Delta Taluk",
+              "Thuraiyur Kolli Foothill Taluk",
+              "Tiruverumbur IT Corridor Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Tirunelveli",
+        "cities": [
+          {
+            "name": "Tirunelveli City",
+            "subCities": [
+              "Nellaiappar Temple Musical Pillars Historic Taluk",
+              "Tirunelveli Halwa World Famous Sweet Heritage Taluk",
+              "Palayamkottai Oxford of South India Education Taluk",
+              "Vannarpettai High Street Commercial Promenade Taluk",
+              "Gangaikondan Mega SIPCOT IT & Manufacturing SEZ Taluk",
+              "Ambasamudram Western Ghats Papanasam Dam Taluk",
+              "Cheranmahadevi Historic Agraharam Taluk",
+              "Radhapuram Wind Energy Capital of India Taluk",
+              "Kudankulam Nuclear Power Mega Station KNPP Taluk",
+              "Manur Agriculture Taluk",
+              "Nanguneri Special Economic Zone Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Tirupathur",
+        "cities": [
+          {
+            "name": "Tirupathur District",
+            "subCities": [
+              "Yelagiri Hills Princess of Poor Trekking & Lake Taluk",
+              "Ambur World Famous Leather Shoe Export & Biryani Capital Taluk",
+              "Vaniyambadi Leather Tanning & Islamic Education Taluk",
+              "Jolarpettai Major Railway Crossroads Junction Taluk",
+              "Natrampalli Agriculture Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Tiruppur",
+        "cities": [
+          {
+            "name": "Tiruppur District",
+            "subCities": [
+              "Knitwear Capital of India Dollar City Global Garment Export Taluk",
+              "Kumar Nagar & Rayapuram Hosiery Mega Industrial Taluk",
+              "Palladam Hi-Tech Weaving & Poultry Broiler Capital Taluk",
+              "Avinashi Avinasilingeswarar Historic Temple Taluk",
+              "Dharapuram Ancient Capital of Kongu Nadu Taluk",
+              "Udumalaipettai Windmill City & Sainik School Taluk",
+              "Kangeyam World Renowned Kangayam Bull Breed & Coconut Oil Taluk",
+              "Madathukulam Paper Mills Taluk",
+              "Uthukuli Famous Butter Capital of South India Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Tiruvallur",
+        "cities": [
+          {
+            "name": "Tiruvallur District",
+            "subCities": [
+              "Veeraraghava Swamy Divya Desam Temple Taluk",
+              "Gummidipoondi Mega SIPCOT Heavy Industrial Complex Taluk",
+              "Ponneri Smart Industrial City JICA Project Taluk",
+              "Avadi Defense Heavy Vehicles Factory HVF Tank City Taluk",
+              "Ennore Kamarajar International Port & Thermal Power Taluk",
+              "Pattabiram TIDEL Digital IT Park Phase 3 Taluk",
+              "Tiruttani Murugan Fifth Arupadaiveedu Divine Taluk",
+              "Uthukkottai Border Taluk",
+              "Poondi Reservoir Water Heritage Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Tiruvannamalai",
+        "cities": [
+          {
+            "name": "Tiruvannamalai Heritage City",
+            "subCities": [
+              "Annamalaiyar Temple Pancha Bhoota Fire Sthalam & Girivalam Path Taluk",
+              "Sri Ramana Maharshi & Yogi Ramsuratkumar International Ashram Taluk",
+              "Polur Silk Weaving & Mountain Pass Taluk",
+              "Arani World Renowned Arani Silk Saree & Rice Mills Taluk",
+              "Chengam Historic Valley Taluk",
+              "Vandavasi Historic Battle of Wandiwash Fort Taluk",
+              "Cheyyar SIPCOT Industrial Automotive Mega Complex Taluk",
+              "Kalasapakkam Forest Valley Taluk",
+              "Thandarampattu Sathanur Dam Scenic Taluk",
+              "Kilpennathur Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Tiruvarur",
+        "cities": [
+          {
+            "name": "Tiruvarur Heritage City",
+            "subCities": [
+              "Thyagaraja Temple World Largest Temple Chariot Azhi Ther Taluk",
+              "Kamalalayam Massive Holy Temple Tank Taluk",
+              "Trinity of Carnatic Music Thyagaraja Muthuswami Syama Birthplace Taluk",
+              "Mannargudi Rajagopalaswamy Temple Dakshina Dwaraka Taluk",
+              "Thiruthuraipoondi Mangrove Wetland Gateway Taluk",
+              "Valangaiman Mariamman Miracle Shrine Taluk",
+              "Kudavasal Traditional Taluk",
+              "Nannilam Agricultural Delta Taluk",
+              "Needamangalam Major Delta Railway Junction Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Vellore",
+        "cities": [
+          {
+            "name": "Vellore Smart City",
+            "subCities": [
+              "Vellore Sepoy Mutiny 1806 Granite Fort & Jalakanteswarar Temple Taluk",
+              "Christian Medical College CMC World Renowned Healthcare Apex Taluk",
+              "Sripuram Golden Temple Mahalakshmi Mahagopuram Taluk",
+              "VIT University Vellore Institute of Technology World Class Campus Taluk",
+              "Katpadi Major Interstate Railway Junction Hub Taluk",
+              "Bagayam CMC Rehabilitation Hospital Green Campus Taluk",
+              "Gudiyattam Matchbox & Handloom Lungies Industry Taluk",
+              "Anaicut Forest Agro Taluk",
+              "Kaniyambadi Healthcare Education Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Viluppuram",
+        "cities": [
+          {
+            "name": "Viluppuram Junction City",
+            "subCities": [
+              "Major Southern Railway Junction & Commercial Hub Taluk",
+              "Gingee (Senji) Troy of the East Impregnable Fort Heritage Taluk",
+              "Tindivanam Highway Automotive & Cashew Hub Taluk",
+              "Auroville International Universal Township Coastal Zone Taluk",
+              "Kandachipuram Historic Taluk",
+              "Vanur Coastal Agro Taluk",
+              "Vikravandi Industrial Food Corridor Taluk",
+              "Marakkanam Salt & Coastal Estuary Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Virudhunagar",
+        "cities": [
+          {
+            "name": "Virudhunagar City",
+            "subCities": [
+              "Trade Capital of South India Wholesale Grain Oil Spices Taluk",
+              "Kamarajar Birthplace Memorial House Heritage Taluk",
+              "Sivakasi Cracker City Print Capital of India & Matches Taluk",
+              "Rajapalayam Surgical Cotton Bandage & Rajapalayam Hound Breed Taluk",
+              "Srivilliputhur Andal Temple Emblem of Tamil Nadu & Palkova Sweet Taluk",
+              "Aruppukkottai Handloom Cotton Saree & Spinning Mills Taluk",
+              "Sattur Fountain Pen Nib & Spicy Karasev Capital Taluk",
+              "Watrap Foothill of Sathuragiri Hills Mystical Trekking Taluk",
+              "Kariapatti Agriculture Taluk",
+              "Tiruchuli Sri Ramana Maharshi Birthplace Taluk"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Delhi NCR (UT)",
+    "districts": [
+      {
+        "name": "Central Delhi",
+        "cities": [
+          {
+            "name": "Connaught Place & Old Delhi",
+            "subCities": [
+              "Connaught Place Inner & Outer Circle Commercial Taluk",
+              "Karol Bagh Ajmal Khan Market Fashion Taluk",
+              "Paharganj Tourist & Hotel Hub Taluk",
+              "Daryaganj Sunday Book Market Heritage Taluk",
+              "Chandni Chowk Red Fort UNESCO Commercial Taluk",
+              "Rajendra Nagar IAS Coaching Hub Taluk",
+              "Patel Nagar West Commercial Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "East Delhi",
+        "cities": [
+          {
+            "name": "Preet Vihar & Mayur Vihar",
+            "subCities": [
+              "Preet Vihar Vikas Marg Commercial Taluk",
+              "Mayur Vihar Phase 1-3 Residential Metro Taluk",
+              "Laxmi Nagar Chartered Accountancy & Trade Hub Taluk",
+              "Patparganj IP Extension Industrial & Healthcare Taluk",
+              "Karkardooma District Court & Commercial Complex Taluk",
+              "Anand Vihar Mega Multi-Modal ISBT Terminal Taluk",
+              "Shakarpur Commercial Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "New Delhi",
+        "cities": [
+          {
+            "name": "Lutyens & Diplomatic Zone",
+            "subCities": [
+              "Chanakyapuri World Diplomatic Enclave Taluk",
+              "Barakhamba Road Corporate High-Rise Taluk",
+              "Khan Market Luxury High Street Taluk",
+              "Lodhi Estate Cultural Centers & Art District Taluk",
+              "Jor Bagh Heritage Green Taluk",
+              "Golf Links Luxury Taluk",
+              "Sundar Nagar Heritage Taluk",
+              "India Gate Central Vista Promenade Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "North Delhi",
+        "cities": [
+          {
+            "name": "Civil Lines & DU Campus",
+            "subCities": [
+              "Civil Lines British Heritage & Secretariat Taluk",
+              "Kamla Nagar Delhi University North Campus Youth Hub Taluk",
+              "GTB Nagar Hudson Lane Food & Student Hub Taluk",
+              "Model Town 1-3 Gujranwala Town Taluk",
+              "Ashok Vihar Deep Market Luxury Taluk",
+              "Shalimar Bagh Club & High-Rise Taluk",
+              "Burari Northern Growth Corridor Taluk",
+              "Alipur Highway Logistics Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "North East Delhi",
+        "cities": [
+          {
+            "name": "Yamuna Vihar & Shahdara North",
+            "subCities": [
+              "Yamuna Vihar Commercial Complex Taluk",
+              "Seelampur Electronic Market Taluk",
+              "Gokulpuri Metro Corridor Taluk",
+              "Dilshad Garden Cancer Hospital & Metro Taluk",
+              "Nand Nagri Administrative Taluk",
+              "Karawal Nagar Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "North West Delhi",
+        "cities": [
+          {
+            "name": "Rohini & Pitampura",
+            "subCities": [
+              "Pitampura Netaji Subhash Place NSP Cyber Hub Taluk",
+              "Rohini Sector 7-9 Commercial DC Chowk Taluk",
+              "Rohini Sector 11-15 Residential Education Taluk",
+              "Rohini Sector 21-25 Japanese Park Green Taluk",
+              "Paschim Vihar Outer Ring Road Luxury Taluk",
+              "Punjabi Bagh Club Road High Street Taluk",
+              "Mangolpuri Industrial Area Taluk",
+              "Kanjhawala Administrative Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Shahdara",
+        "cities": [
+          {
+            "name": "Shahdara Heritage & Vivek Vihar",
+            "subCities": [
+              "Shahdara Grand Trunk Road Historic Trade Taluk",
+              "Vivek Vihar Surajmal Vihar Luxury Taluk",
+              "Jhilmil Industrial Colony Taluk",
+              "Seemapuri Cross Border Taluk",
+              "Mansarovar Park Metro Taluk",
+              "Vishwas Nagar Wire & Cable Market Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "South Delhi",
+        "cities": [
+          {
+            "name": "Saket & South Ext",
+            "subCities": [
+              "Saket District Centre Select CITYWALK Mall Taluk",
+              "Greater Kailash 1 & 2 M-Block Market Luxury Taluk",
+              "Hauz Khas Village & Deer Park Cultural Taluk",
+              "South Extension 1 & 2 Wedding Fashion Taluk",
+              "Green Park Market & AIIMS Access Taluk",
+              "Lajpat Nagar Central Market Ethnic Fashion Taluk",
+              "Defence Colony Flyover Gourmet Food Taluk",
+              "Malviya Nagar Shivalik Commercial Taluk",
+              "Gulmohar Park Cultural Taluk",
+              "Nehru Place Largest Electronic & IT Hardware Market in Asia Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "South East Delhi",
+        "cities": [
+          {
+            "name": "Okhla & Sarita Vihar",
+            "subCities": [
+              "Okhla Industrial Area Phase 1-3 IT & Corporate Taluk",
+              "Sarita Vihar Apollo Super Specialty Hospital Zone Taluk",
+              "Jasola District Centre High-Rise Office Taluk",
+              "New Friends Colony NFC Community Centre Taluk",
+              "Kalkaji Temple & Lotus Temple Heritage Taluk",
+              "Jamia Nagar Central University Taluk",
+              "Badarpur Thermal Industrial Gateway Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "South West Delhi",
+        "cities": [
+          {
+            "name": "Dwarka & Vasant Kunj",
+            "subCities": [
+              "Dwarka Sector 6 & 10 District Centre Taluk",
+              "Dwarka Sector 12-14 Metro University Corridor Taluk",
+              "Dwarka Sector 21 IGI Airport Express Interchange Taluk",
+              "Dwarka Sector 24-28 Yashobhoomi IICC Asia Largest Convention Taluk",
+              "Vasant Kunj Ambience DLF Promenade Luxury Mall Taluk",
+              "Vasant Vihar Priya Cinema Diplomatic Extension Taluk",
+              "Janakpuri District Centre West Delhi Business Taluk",
+              "Delhi Cantonment Army HQ & Air Force Station Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "West Delhi",
+        "cities": [
+          {
+            "name": "Rajouri Garden & Vikaspuri",
+            "subCities": [
+              "Rajouri Garden Main Market Mall Hub Taluk",
+              "Kirti Nagar Largest Furniture Market in Asia Taluk",
+              "Tilak Nagar Central Commercial Market Taluk",
+              "Vikaspuri PVR Complex Community Centre Taluk",
+              "Janakpuri West Metro Interchange Taluk",
+              "Tagore Garden Pacific Mall Sub-City Taluk",
+              "Uttam Nagar East & West Metro Spine Taluk",
+              "Pashchim Puri Industrial Taluk"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Kerala",
+    "districts": [
+      {
+        "name": "Alappuzha",
+        "cities": [
+          {
+            "name": "Alappuzha (Alleppey)",
+            "subCities": [
+              "Venice of the East Houseboat Backwater Tourism Taluk",
+              "Mullakkal High Street Commercial Taluk",
+              "Punnamada Lake Nehru Trophy Boat Race Taluk",
+              "Cherthala Infopark Mega Seafood Industrial Taluk",
+              "Kayamkulam Thermal Power & NTPC Taluk",
+              "Ambalapuzha Sri Krishna Temple Palpayasam Taluk",
+              "Mavelikkara Cultural Royal Heritage Taluk",
+              "Chengannur Sabarimala Gateway Railway Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Ernakulam",
+        "cities": [
+          {
+            "name": "Kochi (Cochin) Commercial Capital",
+            "subCities": [
+              "Edappally Lulu International Mall Hub Taluk",
+              "MG Road Commercial Shopping Spine Taluk",
+              "Marine Drive Waterfront Promenade & High Court Taluk",
+              "Kakkanad Infopark & SmartCity IT SEZ Taluk",
+              "Kadavanthra Central Metro Business Taluk",
+              "Palarivattom Medical & Corporate Highway Taluk",
+              "Vyttila Mobility Hub Asia Largest Transit Terminal Taluk",
+              "Panampilly Nagar Boutique Lifestyle Taluk",
+              "Fort Kochi & Mattancherry Historic Colonial Port Taluk",
+              "Aluva Periyar Riverbank Metro Terminus Taluk",
+              "Angamaly CIAL International Airport Industrial Taluk",
+              "Perumbavoor Timber & Plywood Capital Taluk",
+              "Muvattupuzha River Crossroads Taluk",
+              "Kothamangalam Gateway to High Ranges Taluk",
+              "North Paravur Muziris Heritage Coastal Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Idukki",
+        "cities": [
+          {
+            "name": "Idukki & Munnar High Ranges",
+            "subCities": [
+              "Munnar Tea Plantations & Eravikulam Nilgiri Tahr World Tourism Taluk",
+              "Idukki Arch Dam & Wildlife Sanctuary Taluk",
+              "Thodupuzha Commercial Hub of High Ranges Taluk",
+              "Kattappana Cardamom & Spices Capital Taluk",
+              "Nedumkandam Spices Market Taluk",
+              "Kumily Thekkady Periyar Tiger Reserve Tourism Taluk",
+              "Peerumade Hill Station Tea Taluk",
+              "Adimali Forest Commercial Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Kannur",
+        "cities": [
+          {
+            "name": "Kannur (Cannanore)",
+            "subCities": [
+              "Land of Looms and Lores Handloom & Theyyam Heritage Taluk",
+              "St. Angelo Fort Coastal Historic Taluk",
+              "Payyannur Khadi & Subramanya Swami Temple Taluk",
+              "Thalassery Circus Cake & Cricket Heritage Port Taluk",
+              "Mattannur Kannur International Airport KIAL City Taluk",
+              "Taliparamba Rajarajeshwara Temple Ancient Taluk",
+              "Iritty Rubber & Hill Produce Trade Taluk",
+              "Panoor Agriculture Taluk",
+              "Alakode Rubber Valley Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Kasaragod",
+        "cities": [
+          {
+            "name": "Kasaragod Town",
+            "subCities": [
+              "Bekal Fort Giant Coastal UNESCO Tourism Taluk",
+              "Kasaragod Town Commercial Taluk",
+              "Kanhangad Commercial & Nithyananda Ashram Taluk",
+              "Nileshwaram Cultural Capital of North Malabar Taluk",
+              "Manjeshwaram Border Trade Taluk",
+              "Uppala Coastal Trading Taluk",
+              "Vellarikundu High Range Farming Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Kollam",
+        "cities": [
+          {
+            "name": "Kollam (Quilon)",
+            "subCities": [
+              "Cashew Capital of the World Port Taluk",
+              "Ashtamudi Lake Gateway to Backwaters Tourism Taluk",
+              "Chinnakada Clock Tower Commercial Taluk",
+              "Karunagappally Agricultural Trade Taluk",
+              "Punalur Suspension Bridge & Paper Mill Taluk",
+              "Kottarakkara Kathakali Birthplace Heritage Taluk",
+              "Paravur Estuary Lake Coastal Taluk",
+              "Pathanapuram Forest Produce Taluk",
+              "Sasthamkotta Fresh Water Lake Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Kottayam",
+        "cities": [
+          {
+            "name": "Kottayam City",
+            "subCities": [
+              "Akshara Nagari City of Letters Rubber & Print Media Taluk",
+              "Kumarakom Vembanad Lake Bird Sanctuary Luxury Resort Taluk",
+              "Kanjirappally Gateway of Sabarimala Planters Capital Taluk",
+              "Pala Rubber Planters Commercial Town Taluk",
+              "Changanassery Commercial Market & SB College Taluk",
+              "Ettumanoor Mahadeva Temple Heritage Taluk",
+              "Vaikom Shiva Temple Satyagraha Memorial Taluk",
+              "Erattupetta Mountain Foothill Trade Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Kozhikode",
+        "cities": [
+          {
+            "name": "Kozhikode (Calicut) City of Spices",
+            "subCities": [
+              "Mavoor Road Commercial High Street Taluk",
+              "SM Street Sweet Meat Street Historic Trade Taluk",
+              "Nadakkavu English Church Zone Taluk",
+              "Calicut Beach Marine Promenade Taluk",
+              "Arayidathupalam Baby Memorial Healthcare Mega Hub Taluk",
+              "Kozhikode Cyberpark & Govt Cyberpark IT SEZ Taluk",
+              "Vatakara Kalaripayattu Martial Arts Heritage Taluk",
+              "Koyilandy Heritage Seaport & Hookah Craft Taluk",
+              "Thamarassery Ghats Mountain Pass Taluk",
+              "Feroke Tile & Timber Historic Taluk",
+              "Ramanattukara Airport Link Industrial Taluk",
+              "Mukkam Educational Hub Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Malappuram",
+        "cities": [
+          {
+            "name": "Malappuram City",
+            "subCities": [
+              "Down Hill Administrative Capital Taluk",
+              "Kottakkal Arya Vaidya Sala Global Ayurveda World Capital Taluk",
+              "Manjeri Judicial & Football Capital Taluk",
+              "Perinthalmanna Super Healthcare & Medical City Taluk",
+              "Tirur Thunchath Ezhuthachan Malayalam Heritage Taluk",
+              "Ponnani Historical Port & Fishery Center Taluk",
+              "Nilambur World Teak Museum & Gold Mining Taluk",
+              "Kondotty Calicut International Airport Aerotropolis Taluk",
+              "Edappal Commercial Trade Taluk",
+              "Tanur Coastal Seaport Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Palakkad",
+        "cities": [
+          {
+            "name": "Palakkad City",
+            "subCities": [
+              "Palakkad Fort Tipu Sultan Granite Heritage Taluk",
+              "Palakkad Gap Gateway to Kerala Commercial Taluk",
+              "Kanjikode Mega Industrial Park & IIT Palakkad Taluk",
+              "Ottapalam Cultural & Cinema Film Heritage Taluk",
+              "Shoranur Major Railway Crossroads Junction Taluk",
+              "Chittur Paddy Rice Bowl of Palakkad Taluk",
+              "Mannarkkad Silent Valley National Park Gateway Taluk",
+              "Pattambi Agricultural Research Taluk",
+              "Alathur Agro Market Taluk",
+              "Nenmara Vallangi Vela Festival Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Pathanamthitta",
+        "cities": [
+          {
+            "name": "Pathanamthitta Town",
+            "subCities": [
+              "Headquarters of Pilgrimage Tourism in Kerala Taluk",
+              "Sabarimala Lord Ayyappa Hill Shrine World Pilgrimage Taluk",
+              "Thiruvalla NRI Capital & Medical Educational Taluk",
+              "Adoor Cinema Heritage & Engineering Taluk",
+              "Ranni Rubber & Forest Produce Taluk",
+              "Kozhencherry Maramon Christian Convention Riverbank Taluk",
+              "Konni Elephant Training Cage & Ecotourism Taluk",
+              "Pandalam Palace Ayyappa Heritage Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Thiruvananthapuram",
+        "cities": [
+          {
+            "name": "Trivandrum Capital City",
+            "subCities": [
+              "Palayam Government Secretariat & University Campus Taluk",
+              "Kazhakoottam Technopark First & Largest IT Park in India Taluk",
+              "Kowdiar Palace Imperial Avenue Luxury Taluk",
+              "Pattom Medical College & Hospital Super Hub Taluk",
+              "Vellayambalam Napier Museum & Zoo Green Promenade Taluk",
+              "Thampanoor Central Railway & KSRTC Multi-Modal Terminal Taluk",
+              "Kovalam Crescent Beach International Lighthouse Tourism Taluk",
+              "Vizhinjam International Multi-Purpose Deepwater Transshipment Seaport Taluk",
+              "Attingal Royal Heritage & Commercial Market Taluk",
+              "Nedumangad Spices Market & VSSC ISRO Center Taluk",
+              "Neyyattinkara Handloom & Agro Taluk",
+              "Varkala Papanasam Cliff Beach & Sivagiri Mutt Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Thrissur",
+        "cities": [
+          {
+            "name": "Thrissur (Trichur) Cultural Capital",
+            "subCities": [
+              "Swaraj Round Vadakkunnathan Shiva Temple Thrissur Pooram World Festival Taluk",
+              "Kuruppam Road Gold Jewellery Manufacturing Capital of India Taluk",
+              "West Fort Healthcare & Super Specialty Medical Hub Taluk",
+              "Guruvayur Sri Krishna Temple Bhooloka Vaikuntam World Pilgrimage Taluk",
+              "Chalakudy Athirappilly Waterfalls Niagara of India Taluk",
+              "Irinjalakuda Koodalmanikyam Temple & Koodiyattam UNESCO Art Taluk",
+              "Kodungallur Cheraman Juma Masjid First Mosque in India Taluk",
+              "Kunnamkulam Printing & Book Binding Capital Taluk",
+              "Wadakkanchery Kerala Kalamandalam Deemed University of Arts Cheruthuruthy Taluk",
+              "Pudukad Industrial Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Wayanad",
+        "cities": [
+          {
+            "name": "Wayanad High Ranges",
+            "subCities": [
+              "Kalpetta District Headquarters Coffee & Spices Taluk",
+              "Sulthan Bathery Tipu Sultan Fort & Edakkal Prehistoric Caves Taluk",
+              "Mananthavady Pazhassi Raja Tomb & Kuruvadweep Island Taluk",
+              "Vythiri Rainforest Luxury Plantation Resort Taluk",
+              "Meppadi Chembra Peak Heart-Shaped Lake Taluk",
+              "Ambalavayal Agricultural Research & Heritage Museum Taluk",
+              "Panamaram Riverbank Valley Taluk"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Gujarat",
+    "districts": [
+      {
+        "name": "Ahmedabad",
+        "cities": [
+          {
+            "name": "Ahmedabad Mega City",
+            "subCities": [
+              "SG Highway Corporate & IT Corridor Taluk",
+              "Bodakdev Judges Bungalow Luxury Taluk",
+              "Satellite ISRO Colony Taluk",
+              "Navrangpura CG Road Commercial Taluk",
+              "Prahlad Nagar Corporate Road Financial Taluk",
+              "Bopal South Bopal Modern Urban Taluk",
+              "Vastrapur Lake High-Street Taluk",
+              "Thaltej Shilaj Corridor Taluk",
+              "Maninagar Kankaria Lake Promenade Taluk",
+              "Naroda GIDC Industrial Mega Base Taluk",
+              "Chandkheda Visat Circle Metro Taluk",
+              "Gota Vandematram Growth City Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Amreli",
+        "cities": [
+          {
+            "name": "Amreli City",
+            "subCities": [
+              "Amreli Central Commercial Taluk",
+              "Dhari Gir Asiatic Lion Sanctuary Taluk",
+              "Rajula Port Coastal Taluk",
+              "Babra Cotton Taluk",
+              "Savarkundla Weighing Scale Craft Taluk",
+              "Jafrabad Fishery Seaport Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Anand",
+        "cities": [
+          {
+            "name": "Anand Milk Capital",
+            "subCities": [
+              "Amul Dairy Global Headquarters Taluk",
+              "Vidyanagar Education Capital Vallabh Vidyanagar Taluk",
+              "Khambhat Historic Gulf Port & Agate Stone Taluk",
+              "Petlad Tobacco Industrial Taluk",
+              "Borsad Historic Taluk",
+              "Umreth Silk & Agriculture Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Aravalli",
+        "cities": [
+          {
+            "name": "Modasa Town",
+            "subCities": [
+              "Modasa Commercial Education Taluk",
+              "Shamlaji Lord Vishnu Temple Divine Taluk",
+              "Bhiloda Tribal Forest Taluk",
+              "Malpur Agro Taluk",
+              "Bayad Agriculture Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Banaskantha",
+        "cities": [
+          {
+            "name": "Palanpur & Ambaji",
+            "subCities": [
+              "Palanpur Diamond & Perfume Capital Taluk",
+              "Ambaji 51 Shaktipeeth Holy Mountain Taluk",
+              "Deesa Potato & Vegetable Capital of India Taluk",
+              "Dhanera Agricultural Trade Taluk",
+              "Tharad Border Crossroads Taluk",
+              "Vav Border Taluk",
+              "Bhabhar Market Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Bharuch",
+        "cities": [
+          {
+            "name": "Bharuch City",
+            "subCities": [
+              "Narmada River Golden Bridge Commercial Taluk",
+              "Ankleshwar Asia Largest Chemical Industrial Estate Taluk",
+              "Dahej Multi-Product Petroleum & LNG Mega SEZ Port Taluk",
+              "Jambusar Agro Taluk",
+              "Jhagadia Industrial GIDC Taluk",
+              "Amod Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Bhavnagar",
+        "cities": [
+          {
+            "name": "Bhavnagar City",
+            "subCities": [
+              "Ghogha RORO Terminal & Diamond Market Taluk",
+              "Palitana 863 Jain Temples Shatrunjaya World Heritage Taluk",
+              "Alang World Largest Ship Breaking & Recycling Yard Taluk",
+              "Mahuva Onion Dehydration & Coastal Fruit Taluk",
+              "Sihor Steel & Copper Craft Taluk",
+              "Gariadhar Diamond Taluk",
+              "Talaja Coastal Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Botad",
+        "cities": [
+          {
+            "name": "Botad Town",
+            "subCities": [
+              "Salangpur Hanuman Mandir World Divine Pilgrimage Taluk",
+              "Gadhada Swaminarayan Temple Heritage Taluk",
+              "Botad Cotton Processing Taluk",
+              "Barwala Agriculture Taluk",
+              "Ranpur Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Chhota Udaipur",
+        "cities": [
+          {
+            "name": "Chhota Udaipur Town",
+            "subCities": [
+              "Pithora Tribal Art Heritage Taluk",
+              "Dolomite Mining Hub Taluk",
+              "Bodeli Agro Commercial Taluk",
+              "Sankheda Lacquerware Wooden Furniture Heritage Taluk",
+              "Nasvadi Taluk",
+              "Jetpur Pavi Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Dahod",
+        "cities": [
+          {
+            "name": "Dahod Smart City",
+            "subCities": [
+              "Railway Electric Locomotive Works Taluk",
+              "Dahod Interstate Commercial Hub Taluk",
+              "Jhalod Tribal Agriculture Taluk",
+              "Limkheda Agro Taluk",
+              "Fatepura Border Taluk",
+              "Garbada Taluk",
+              "Devgadh Baria Forest Royal Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Dang",
+        "cities": [
+          {
+            "name": "Ahwa & Saputara",
+            "subCities": [
+              "Saputara Western Ghats Lake Hill Station Tourism Taluk",
+              "Ahwa Forest Administrative Taluk",
+              "Waghai Botanical Garden & Gira Waterfalls Taluk",
+              "Subir Tribal Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Devbhumi Dwarka",
+        "cities": [
+          {
+            "name": "Dwarka & Khambhalia",
+            "subCities": [
+              "Dwarkadhish Jagat Mandir Mokshapuri World Pilgrimage Taluk",
+              "Bet Dwarka Coastal Holy Island & Cable Bridge Sudarshan Setu Taluk",
+              "Khambhalia Ghee & Oil Capital Taluk",
+              "Okha International Fishery Port Taluk",
+              "Kalyanpur Minerals Taluk",
+              "Bhanvad Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Gandhinagar",
+        "cities": [
+          {
+            "name": "Gandhinagar Capital City",
+            "subCities": [
+              "GIFT City Gujarat International Finance Tec-City Mega Smart City Taluk",
+              "Sector 1-30 Secretariat & Raj Bhavan Administrative Taluk",
+              "Infocity High-Tech Software IT Park Taluk",
+              "Akshardham Temple Monumental Architecture Taluk",
+              "Kalol GIDC Heavy Industrial Taluk",
+              "Mansa Historical Taluk",
+              "Dehgam Agriculture Market Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Gir Somnath",
+        "cities": [
+          {
+            "name": "Veraval & Somnath",
+            "subCities": [
+              "Somnath Temple First of the 12 Jyotirlingas World Heritage Taluk",
+              "Veraval Deepwater Fishery & Processing Port Taluk",
+              "Talala Famous Kesar Mango Capital of India Taluk",
+              "Gir Gadhada Sanctuary Gateway Taluk",
+              "Una Commercial Coastal Taluk",
+              "Kodinar Sugar Industrial Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Jamnagar",
+        "cities": [
+          {
+            "name": "Jamnagar (Oil City)",
+            "subCities": [
+              "Reliance Industries World Largest Petroleum Refinery Complex Taluk",
+              "Brass City of India Global Hardware Manufacturing Taluk",
+              "Lakhota Lake Palace Heritage Taluk",
+              "Ayurvedic University Jamnagar Global Center Taluk",
+              "Khambhalia Gate Commercial Taluk",
+              "Dhrol Historic Taluk",
+              "Jodiya Coastal Taluk",
+              "Kalavad Agro Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Junagadh",
+        "cities": [
+          {
+            "name": "Junagadh Historical City",
+            "subCities": [
+              "Girnar Mountain 9999 Steps Holy Pilgrimage & Ropeway Taluk",
+              "Uparkot Ancient Fort & Buddhist Caves Taluk",
+              "Sakkarbaug Zoological Garden Gir Lion Breeding Taluk",
+              "Keshod Airport & Peanut Oil Hub Taluk",
+              "Manavadar Cotton Ginnery Taluk",
+              "Visavadar Gir Forest Taluk",
+              "Mangrol Coastal Fishery Taluk",
+              "Malia Hatina Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Kheda",
+        "cities": [
+          {
+            "name": "Nadiad City",
+            "subCities": [
+              "Santram Mandir Divine Pilgrimage & Healthcare Taluk",
+              "College Road Educational Taluk",
+              "Kapadvanj Glass & Cloth Craft Taluk",
+              "Dakore Ranchhodraiji Temple World Divine Taluk",
+              "Matar Agro Taluk",
+              "Mehmedabad Siddhivinayak Temple Taluk",
+              "Thasra Taluk",
+              "Kheda Historic Town Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Kutch",
+        "cities": [
+          {
+            "name": "Bhuj & Gandhidham",
+            "subCities": [
+              "Rann of Kutch White Desert Rann Utsav Tourism Taluk",
+              "Bhuj Palace Aina Mahal & Heritage Taluk",
+              "Gandhidham Sindhi Commercial Capital Taluk",
+              "Deendayal Kandla International Mega Seaport Taluk",
+              "Mundra Adani Mega Multi-Purpose Seaport & Power SEZ Taluk",
+              "Anjar Historic Metal Craft & Welspun City Taluk",
+              "Mandvi Coastal Palace & Shipbuilding Heritage Taluk",
+              "Nakhatrana Agro Taluk",
+              "Rapar Dholavira UNESCO Harappan Civilization Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Mahisagar",
+        "cities": [
+          {
+            "name": "Lunawada Town",
+            "subCities": [
+              "Lunawada Palace Historic Taluk",
+              "Santrampur Forest Heritage Taluk",
+              "Kadana Hydro Electric Dam Taluk",
+              "Balasinor Dinosaur Fossil Park & Museum Raiyoli Taluk",
+              "Virpur Taluk",
+              "Khanpur Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Mehsana",
+        "cities": [
+          {
+            "name": "Mehsana City",
+            "subCities": [
+              "Dudh Sagar Dairy Asia Largest Milk Cooperative Taluk",
+              "ONGC Oil & Gas Production Mega Asset Taluk",
+              "Modhera Sun Temple UNESCO World Heritage & Solar City Taluk",
+              "Vadnagar Ancient Historic Town & Archaeological Museum Taluk",
+              "Kadi Industrial Ceramic & Cotton Hub Taluk",
+              "Unjha Asia Largest Cumin & Isabgol Spices Market Taluk",
+              "Visnagar Brass Craft & Education Taluk",
+              "Vijapur Taluk",
+              "Becharaji Bahucharaji Temple & Maruti Suzuki Mega Plant Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Morbi",
+        "cities": [
+          {
+            "name": "Morbi Ceramic Capital",
+            "subCities": [
+              "Ceramic City of India Global Tile Manufacturing Taluk",
+              "Clock & Wall Clock Manufacturing Sector Taluk",
+              "Wankaner Royal Palace & Ceramic Hub Taluk",
+              "Halvad Salt & Agriculture Taluk",
+              "Maliya Miyana Coastal Taluk",
+              "Tankara Dayanand Saraswati Birthplace Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Narmada",
+        "cities": [
+          {
+            "name": "Rajpipla & Kevadia",
+            "subCities": [
+              "Statue of Unity World Tallest 182m Monument & Ecotourism Taluk",
+              "Sardar Sarovar Mega Dam Narmada Valley Taluk",
+              "Rajpipla Royal Heritage Palace Taluk",
+              "Dediapada Shoolpaneshwar Wildlife Sanctuary Taluk",
+              "Sagbara Border Taluk",
+              "Garudeshwar Datta Temple Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Navsari",
+        "cities": [
+          {
+            "name": "Navsari Twin City",
+            "subCities": [
+              "Twin City of Surat Diamond Cutting & Silk Weaving Taluk",
+              "Dandi Salt Satyagraha National Memorial Beach Taluk",
+              "Jamshedji Tata Birthplace Heritage Taluk",
+              "Gandevi Jaggery & Mango Cooperative Taluk",
+              "Chikhli Industrial Highway Taluk",
+              "Jalalpore Coastal Taluk",
+              "Vansda National Park Rainforest Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Panchmahal",
+        "cities": [
+          {
+            "name": "Godhra & Champaner",
+            "subCities": [
+              "Champaner-Pavagadh UNESCO World Heritage Archeological Park Taluk",
+              "Mahakali Temple Pavagadh Hill Ropeway Pilgrimage Taluk",
+              "Godhra Commercial Railway Junction Taluk",
+              "Halol Automobile Manufacturing General Motors Hero MotoCorp Taluk",
+              "Kalol GIDC Industrial Taluk",
+              "Shehra Agro Taluk",
+              "Ghoghamba Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Patan",
+        "cities": [
+          {
+            "name": "Patan Heritage City",
+            "subCities": [
+              "Rani ki Vav UNESCO Queen Stepwell Architectural Wonder Taluk",
+              "Patola Silk Double Ikkat Handloom Saree GI Tag Heritage Taluk",
+              "Hemchandracharya North Gujarat University Taluk",
+              "Sidhpur Matrugaya Bindu Sarovar Pilgrimage Taluk",
+              "Radhanpur Commercial Trade Taluk",
+              "Chanasma Historic Taluk",
+              "Santalpur Solar Energy Taluk",
+              "Harij Taluk",
+              "Sami Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Porbandar",
+        "cities": [
+          {
+            "name": "Porbandar Coastal City",
+            "subCities": [
+              "Kirti Mandir Mahatma Gandhi Birthplace Memorial Taluk",
+              "Sudama Mandir Friendship Temple Taluk",
+              "Deepwater Seaport & Chemical Soda Ash Industry Taluk",
+              "Chowpatty Beach Waterfront Promenade Taluk",
+              "Ranavav Barda Wildlife Sanctuary Taluk",
+              "Kutiyana Historic Riverbank Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Rajkot",
+        "cities": [
+          {
+            "name": "Rajkot Smart City",
+            "subCities": [
+              "150ft Ring Road Imperial Commercial Corridor Taluk",
+              "Kalawad Road High-Rise & Education Hub Taluk",
+              "Yagnik Road Diamond & Gold Jewellery High Street Taluk",
+              "Aji GIDC Auto Parts & Engineering Foundry Taluk",
+              "Metoda Mega GIDC Industrial Estate Taluk",
+              "Shapar-Veraval Industrial Engineering Cluster Taluk",
+              "Jetpur Saree Dyeing & Screen Printing Capital Taluk",
+              "Gondal Royal Vintage Car Palace & Cotton Oil Taluk",
+              "Dhoraji Agriculture Taluk",
+              "Upleta Cotton Taluk",
+              "Jasdan Traditional Brass Box Craft Taluk",
+              "Paddhari AIIMS Rajkot Apex Healthcare City Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Sabarkantha",
+        "cities": [
+          {
+            "name": "Himmatnagar Town",
+            "subCities": [
+              "Sabar Dairy Milk Cooperative Mega Hub Taluk",
+              "Ceramic Tile Industrial Highway Corridor Taluk",
+              "Idar Historic Hill Fort & Toys Craft Taluk",
+              "Prantij Agriculture Taluk",
+              "Khedbrahma Ambaji Temple Pilgrimage Taluk",
+              "Vadali Taluk",
+              "Talod Industrial Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Surat",
+        "cities": [
+          {
+            "name": "Surat Diamond & Textile Metropolis",
+            "subCities": [
+              "Diamond Research and Mercantile DREAM City Surat Diamond Bourse World Largest Office Building Taluk",
+              "Adajan Pal VIP Road Commercial Corridor Taluk",
+              "Ghod Dod Road Luxury Fashion High Street Taluk",
+              "Varachha Mini Diamond Trading Capital Taluk",
+              "Katargam Diamond Cutting & Polishing Hub Taluk",
+              "Ring Road Textile Market 50000+ Fabric Wholesale Hub Taluk",
+              "Vesu University & International Airport Corridor Taluk",
+              "Piplod Dumas Waterfront Luxury Promenade Taluk",
+              "Hazira Mega Petroleum Steel LNG Port Complex L&T ArcelorMittal Reliance Taluk",
+              "Bardoli Historic Sardar Patel Bardoli Satyagraha & Sugar Mill Taluk",
+              "Mandvi Forest Sugar Taluk",
+              "Kamrej Highway Logistics Taluk",
+              "Olpad Coastal Agro Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Surendranagar",
+        "cities": [
+          {
+            "name": "Surendranagar-Wadhwan",
+            "subCities": [
+              "Gateway to Saurashtra Cotton & Jinning Capital Taluk",
+              "Wadhwan Historic Fort & Metal Vessels Craft Taluk",
+              "Thangadh Asia Largest Sanitaryware Ceramic Hub Taluk",
+              "Dhrangadhra Soda Ash & Stone Quarry Taluk",
+              "Chotila Chamunda Mata Mountain Temple Taluk",
+              "Limbdi Interstate Highway Commercial Taluk",
+              "Dasada Little Rann of Kutch Wild Ass Sanctuary Taluk",
+              "Sayla Heritage Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Tapi",
+        "cities": [
+          {
+            "name": "Vyara Town",
+            "subCities": [
+              "Vyara Green Forest Administrative Taluk",
+              "Ukai Hydro Electric Mega Dam & Reservoir Taluk",
+              "Songadh Hill Fort & Paper Mill Taluk",
+              "Valod Khadi & Agro Food Craft Taluk",
+              "Nizar Border Agriculture Taluk",
+              "Uchchhal Interstate Transit Taluk",
+              "Kukarmunda Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Vadodara",
+        "cities": [
+          {
+            "name": "Vadodara (Baroda) Cultural City",
+            "subCities": [
+              "Laxmi Vilas Palace Largest Private Residence in the World Taluk",
+              "Alkapuri RC Dutt Road Luxury Lifestyle Corporate Taluk",
+              "Sayajigunj Maharaja Sayajirao University of Baroda Central Taluk",
+              "Gotri Road Super Specialty Medical Hub Taluk",
+              "Akota Stadium & High Street Residential Taluk",
+              "Old Padra Road Corporate Banking Spine Taluk",
+              "Manjalpur Sports Complex Urban Taluk",
+              "Makarpura GIDC Heavy Engineering & Electrical Cluster Taluk",
+              "Nandesari GIDC Petrochemical Complex Taluk",
+              "Waghodia GIDC Auto Component Cluster Taluk",
+              "Padra Vegetable Capital & Pharmaceutical Taluk",
+              "Dabhoi Historic Fortified Gateway & Narrow Gauge Railway Heritage Taluk",
+              "Savli Mega GIDC Multinational Engineering Hub Taluk",
+              "Karjan Riverbank Agro Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Valsad",
+        "cities": [
+          {
+            "name": "Valsad Coastal City",
+            "subCities": [
+              "Tithal Beach Swami Narayan Temple Waterfront Taluk",
+              "Alphonso Mango Hafoos Capital Taluk",
+              "Vapi Asia Largest Small Scale Chemical Industrial Estate GIDC Taluk",
+              "Umbergaon Coastal Port & Film City Studio Taluk",
+              "Pardi Chemical GIDC Taluk",
+              "Dharampur King Palace & Tribal Science Museum Taluk",
+              "Kaprada Western Ghats Rainforest Taluk"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Rajasthan",
+    "districts": [
+      {
+        "name": "Ajmer",
+        "cities": [
+          {
+            "name": "Ajmer & Pushkar",
+            "subCities": [
+              "Ajmer Sharif Dargah World Sufi Pilgrimage Taluk",
+              "Pushkar Lord Brahma Only Temple & Camel Fair Sacred Lake Taluk",
+              "Ana Sagar Lake Promenade & Circuit House Taluk",
+              "Kishangarh Marble Capital of Asia & Miniature Art Taluk",
+              "Beawar Mineral Cement & Tilpatti Sweet Taluk",
+              "Nasirabad Military Cantonment Taluk",
+              "Kekri Commercial Taluk",
+              "Sarwar Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Alwar",
+        "cities": [
+          {
+            "name": "Alwar Smart City",
+            "subCities": [
+              "Sariska Tiger Reserve & Siliserh Lake Tourism Taluk",
+              "Alwar City Palace & Milk-Cake Sweet Capital Taluk",
+              "Bhiwadi NCR Mega Industrial Automobile Ceramic Hub Taluk",
+              "Neemrana Japanese Industrial Zone & Fort Palace Taluk",
+              "Tijara Jain Temple Heritage Taluk",
+              "Behror Commercial Highway Taluk",
+              "Kishangarh Bas Taluk",
+              "Rajgarh Historic Taluk",
+              "Thanagazi Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Banswara",
+        "cities": [
+          {
+            "name": "Banswara Town",
+            "subCities": [
+              "City of Hundred Islands Mahi Dam Taluk",
+              "Tripura Sundari Temple Divine Pilgrimage Taluk",
+              "Kushalgarh Tribal Trade Taluk",
+              "Ghari Agriculture Taluk",
+              "Bagidora Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Baran",
+        "cities": [
+          {
+            "name": "Baran Town",
+            "subCities": [
+              "Baran Commercial Taluk",
+              "Shahbad Fort Heritage Taluk",
+              "Chhabra Super Thermal Power Plant Taluk",
+              "Atru Archaeological Temples Taluk",
+              "Anta Gas Thermal Power Taluk",
+              "Kishanganj Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Barmer",
+        "cities": [
+          {
+            "name": "Barmer Desert City",
+            "subCities": [
+              "Cairn India Mangala Oil Fields & Petroleum Refinery Taluk",
+              "Barmer Hand Block Print & Wood Carving Craft Taluk",
+              "Balotra Textile Dyeing & Processing Capital Taluk",
+              "Siwana Historic Fort Taluk",
+              "Baytu Oil Exploration Taluk",
+              "Chohtan Gond Gum Market Taluk",
+              "Gudamalani Agriculture Taluk",
+              "Sheo Border Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Bharatpur",
+        "cities": [
+          {
+            "name": "Bharatpur City",
+            "subCities": [
+              "Keoladeo Ghana National Bird Sanctuary UNESCO World Heritage Taluk",
+              "Lohagarh Iron Fort Unconquered Fortress Taluk",
+              "Deeg Palace & Magnificent Fountains Water Tourism Taluk",
+              "Bayana Historic Fort & Red Stone Quarry Taluk",
+              "Kaman Braj Bhoomi Pilgrimage Taluk",
+              "Nagar Taluk",
+              "Nadbai Mustard Market Taluk",
+              "Weir Historic Fort Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Bhilwara",
+        "cities": [
+          {
+            "name": "Bhilwara Textile City",
+            "subCities": [
+              "Textile City & Suiting Fabric Capital of India Taluk",
+              "Mandalgarh Historic Fort Taluk",
+              "Shahpura Phad Painting World Famous Heritage Taluk",
+              "Asind Devnarayan Temple Pilgrimage Taluk",
+              "Gulabpura Spinning Mills Taluk",
+              "Jahazpur Minerals Taluk",
+              "Kotri Taluk",
+              "Bijolia Historic Sandstone Temples Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Bikaner",
+        "cities": [
+          {
+            "name": "Bikaner Heritage City",
+            "subCities": [
+              "Junagarh Fort Royal Rajput Architecture Taluk",
+              "Bikaneri Bhujia & Rasgulla GI Tag World Food Capital Taluk",
+              "Karni Mata Rat Temple Deshnok Divine Pilgrimage Taluk",
+              "National Research Centre on Camel Camel Breeding Farm Taluk",
+              "Nokha Asia Largest Moth Dal Pulse Market Taluk",
+              "Lunkaransar Salt Lake & Peanut Capital Taluk",
+              "Kolayat Kapil Muni Sacred Lake Taluk",
+              "Khajuwala Border Agriculture Taluk",
+              "Dungargarh Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Bundi",
+        "cities": [
+          {
+            "name": "Bundi Heritage Town",
+            "subCities": [
+              "Taragarh Fort & Stepwells Baoris City of Stepwells Taluk",
+              "Chitrashala Royal Miniature Fresco Paintings Taluk",
+              "Keshoraipatan Sugar & River Chambal Pilgrimage Taluk",
+              "Nainwa Agriculture Taluk",
+              "Hindoli Mineral Taluk",
+              "Indragarh Chamunda Mata Temple Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Chittorgarh",
+        "cities": [
+          {
+            "name": "Chittorgarh Fort City",
+            "subCities": [
+              "Chittorgarh Fort Largest Fort in India UNESCO World Heritage Taluk",
+              "Vijay Stambh & Kirti Stambh Victory Tower Heritage Taluk",
+              "Birla Cement Works & Wonder Cement Mega Manufacturing Taluk",
+              "Rawatbhata Rajasthan Atomic Power Station RAPS Nuclear City Taluk",
+              "Nimbahera Limestone & Cement Hub Taluk",
+              "Kapasan Religious Taluk",
+              "Bari Sadri Taluk",
+              "Begun Historical Peasant Movement Taluk",
+              "Rashmi Matrikundiya Pilgrimage Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Churu",
+        "cities": [
+          {
+            "name": "Churu Desert Town",
+            "subCities": [
+              "Grand Painted Havelis Open Air Art Gallery Taluk",
+              "Tal Chhapar Blackbuck Sanctuary Taluk",
+              "Salasar Balaji Hanuman Temple World Divine Pilgrimage Taluk",
+              "Sujangarh Commercial Trade Taluk",
+              "Ratangarh Mega Railway Junction Taluk",
+              "Sardarshahar Education Gandhi Vidya Mandir Taluk",
+              "Rajgarh Sadulpur Sports Champion Taluk",
+              "Taranagar Agriculture Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Dausa",
+        "cities": [
+          {
+            "name": "Dausa Town",
+            "subCities": [
+              "Chand Baori Abhaneri World Deepest Stepwell Architectural Wonder Taluk",
+              "Mehandipur Balaji Exorcism & Hanuman Miracle Temple Taluk",
+              "Dausa Commercial Crossroads Taluk",
+              "Lalsot Red Stone & Agro Taluk",
+              "Bandikui First Railway Junction of Rajasthan Taluk",
+              "Mahwa Interstate Trade Taluk",
+              "Sikrai Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Dholpur",
+        "cities": [
+          {
+            "name": "Dholpur Heritage Town",
+            "subCities": [
+              "Red Sandstone Dholpur Stone Red Fort Taj Mahal Stone Taluk",
+              "Machkund Pilgrimage Tirtha Raj Sacred Tank Taluk",
+              "National Chambal Ghariyal Sanctuary River Safari Taluk",
+              "Bari Historic Stone Architecture Taluk",
+              "Rajakhera Riverbank Agriculture Taluk",
+              "Baseri Taluk",
+              "Sarmathura Stone Quarry Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Dungarpur",
+        "cities": [
+          {
+            "name": "Dungarpur City of Hills",
+            "subCities": [
+              "Juna Mahal 7-Storey Painted Royal Palace Heritage Taluk",
+              "Gaib Sagar Lake & Udai Bilas Palace Luxury Heritage Taluk",
+              "Beneshwar Dham Tribal Kumbh Mela Triveni Sangam Taluk",
+              "Sagwara Marble & Gold Craft Taluk",
+              "Aspur Historical Taluk",
+              "Simalwara Tribal Development Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Hanumangarh",
+        "cities": [
+          {
+            "name": "Hanumangarh Town",
+            "subCities": [
+              "Bhatner Fort Ancient 1700 Year Old Fortress Taluk",
+              "Kalibangan Harappan Civilization Excavation UNESCO Taluk",
+              "Indira Gandhi Canal Green Agricultural Breadbasket Taluk",
+              "Pilibanga Cotton & Paddy Mills Taluk",
+              "Nohar Agriculture Market Taluk",
+              "Bhadra Mustard & Pulse Taluk",
+              "Rawatsar Agriculture Taluk",
+              "Sangaria Educational Hub Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Jaipur",
+        "cities": [
+          {
+            "name": "Jaipur Pink City World Heritage",
+            "subCities": [
+              "C-Scheme High Street Diplomatic Corporate Promenade Taluk",
+              "MI Road Central Commercial High Street Taluk",
+              "Malviya Nagar World Trade Park WTP Luxury Tech Taluk",
+              "Vaishali Nagar Amrapali Luxury Lifestyle Commercial Taluk",
+              "Mansarovar Metro Corridor Asia Largest Planned Housing Colony Taluk",
+              "Tonk Road International Airport Healthcare Spine Taluk",
+              "Jagatpura Knowledge City & High-Rise IT SEZ Taluk",
+              "Sitapura Mega Industrial RIICO Gems & Jewellery SEZ Taluk",
+              "Civil Lines VIP Royal Residence Taluk",
+              "Bani Park Heritage Hotel District Taluk",
+              "Amer Amber Fort & Jal Mahal Royal UNESCO Heritage Taluk",
+              "Sanganer Block Print & Handmade Paper GI Tag Export Taluk",
+              "Bagru Natural Vegetable Dye Hand Block Print Taluk",
+              "Chomu Sweet Watermelon & Heritage Palace Taluk",
+              "Kotputli Mega Cement & Highway Industrial Corridor Taluk",
+              "Shahpura Highway Commercial Taluk",
+              "Phulera Sambhar Salt Lake Gateway Railway Junction Taluk",
+              "Dudu Interstate Highway Hub Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Jaisalmer",
+        "cities": [
+          {
+            "name": "Jaisalmer Golden City",
+            "subCities": [
+              "Sonar Qila Golden Living Fort UNESCO World Heritage Taluk",
+              "Sam Sand Dunes Thar Desert Camel Safari Cultural Resort Taluk",
+              "Patwon ki Haveli Intricate Yellow Sandstone Architecture Taluk",
+              "Pokhran Nuclear Test Site & Terracotta Pottery Craft Taluk",
+              "Tanot Mata Miraculous Border Temple Longewala War Memorial Taluk",
+              "Ramdevra Baba Ramdev Ji Pilgrimage Temple Taluk",
+              "Fatehgarh Wind Solar Energy Park Taluk",
+              "Mohangarh Canal End Oasis Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Jalore",
+        "cities": [
+          {
+            "name": "Jalore Granite City",
+            "subCities": [
+              "Golden Granite Capital of India Industrial Processing Taluk",
+              "Jalore Golden Fort Topkhana Historical Taluk",
+              "Bhinmal Poet Magha & Brahmagupta Heritage Taluk",
+              "Sanchore Cattle Fair & Narmada Canal Green Delta Taluk",
+              "Ahore Agriculture Taluk",
+              "Sayla Traditional Craft Taluk",
+              "Bagoda Agro Taluk",
+              "Raniwara Milk Cooperative Dairy Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Jhalawar",
+        "cities": [
+          {
+            "name": "Jhalawar City",
+            "subCities": [
+              "Gagron Fort Water Fort UNESCO World Heritage Taluk",
+              "Jhalrapatan City of Temple Bells Sun Temple Taluk",
+              "Oranges Capital of Rajasthan Mandarin Citrus Taluk",
+              "Bhawani Mandi Railway Station Divided in Two States Taluk",
+              "Khanpur Agriculture Taluk",
+              "Aklera Commercial Trade Taluk",
+              "Manohar Thana Border Taluk",
+              "Pirawa Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Jhunjhunu",
+        "cities": [
+          {
+            "name": "Jhunjhunu Shekhawati Capital",
+            "subCities": [
+              "Shekhawati Painted Open Air Fresco Havelis Heritage Taluk",
+              "Rani Sati Dadi Ji Temple Monumental Marble Pilgrimage Taluk",
+              "Khetri Copper Complex Hindustan Copper Mining City Taluk",
+              "Pilani BITS Pilani Premier Technology Institute & Science Museum Taluk",
+              "Mandawa World Famous Castle & Bollywood Shooting Hub Taluk",
+              "Nawalgarh City of Havelis Luxury Tourism Taluk",
+              "Bissau Heritage Taluk",
+              "Chirawa Peda Sweet & Educational Taluk",
+              "Surajgarh Fort Taluk",
+              "Udaipurwati Religious Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Jodhpur",
+        "cities": [
+          {
+            "name": "Jodhpur Sun City Blue City",
+            "subCities": [
+              "Mehrangarh Fort Magnificent Citadel of Marwar Taluk",
+              "Umaid Bhawan Palace Largest Living Art Deco Palace in the World Taluk",
+              "Sardarpura C-Road Commercial High Street Taluk",
+              "Shastri Nagar Medical Super Specialty Corridor Taluk",
+              "AIIMS Jodhpur Apex Healthcare Medical City Taluk",
+              "Ratanada Defense Air Force & Airport Luxury Taluk",
+              "Pal Road High-Rise Growth Corridor Taluk",
+              "Boronada Mega Industrial Wooden Handicraft Export SEZ Taluk",
+              "Mandore Ancient Capital Garden Cenotaphs Taluk",
+              "Phalodi Solar Capital of India & Salt Lake Taluk",
+              "Bilara Sacred Aai Mata Flame Temple Taluk",
+              "Piparcity Handicraft Textile Taluk",
+              "Osian Khajuraho of Rajasthan Ancient Desert Temples Taluk",
+              "Bhopalgarh Minerals Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Karauli",
+        "cities": [
+          {
+            "name": "Karauli Holy City",
+            "subCities": [
+              "Madan Mohan Ji Temple Divine Krishna Pilgrimage Taluk",
+              "Kaila Devi Shaktipeeth World Famous Pilgrimage Temple Taluk",
+              "City Palace Royal Heritage Fresco Taluk",
+              "Hindaun City Sandstone Slate & Iron Trade Taluk",
+              "Todabhim Historic Taluk",
+              "Sapotra Forest Valley Taluk",
+              "Mandrail Chambal Border Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Kota",
+        "cities": [
+          {
+            "name": "Kota Coaching Capital of India",
+            "subCities": [
+              "Vigyan Nagar & Landmark City Global IIT-NEET Coaching Hub Taluk",
+              "Talwandi & Jawahar Nagar Student Educational City Taluk",
+              "Chambal Riverfront World Class River Promenade & Seven Wonders Park Taluk",
+              "DCM & Kota Super Thermal Power Station Industrial Taluk",
+              "Kota Doria Saree GI Tag Weaving Heritage Kaithun Taluk",
+              "Industrial Area Indraprastha RIICO Mega Engineering Taluk",
+              "Ramganj Mandi Asia Largest Coriander Spices & Kota Stone Market Taluk",
+              "Sangod Agriculture Market Taluk",
+              "Pipalda Riverbank Agro Taluk",
+              "Digod Agriculture Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Nagaur",
+        "cities": [
+          {
+            "name": "Nagaur Historical City",
+            "subCities": [
+              "Nagaur Ahhichatragarh Fort Sultanate Rajput Architecture Taluk",
+              "Makrana World Renowned Pure White Marble Taj Mahal Stone Taluk",
+              "Didwana Salt Lake & Chemical Industries Taluk",
+              "Ladnun Jain Vishva Bharati Spiritual & University Taluk",
+              "Kuchaman City Massive High Cliff Fort Taluk",
+              "Merta City Mirabai Sacred Birthplace Temple Taluk",
+              "Degana Tungsten Mine Historic Taluk",
+              "Parbatsar Cattle Fair World Market Taluk",
+              "Nawa Salt City Sambhar Lake Taluk",
+              "Jayal Historic Taluk",
+              "Khinvsar Desert Sand Dune Heritage Palace Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Pali",
+        "cities": [
+          {
+            "name": "Pali Industrial City",
+            "subCities": [
+              "Textile Processing & Cotton Dyeing Mega Cluster Taluk",
+              "Ranakpur 1444 Carved Marble Pillars Jain Temple Architecture Marvel Taluk",
+              "Om Banna Bullet Baba Miraculous Highway Shrine Taluk",
+              "Sumerpur Jawai Leopard Hill Safari & Jawai Dam Tourism Taluk",
+              "Falna Umbrella City & Golden Temple Jain Shrine Taluk",
+              "Sadri Marble Gateway Taluk",
+              "Bali Historic Fort Taluk",
+              "Sojat World Renowned Mehndi Henna Capital of the World Taluk",
+              "Jaitaran Historic Battle of Giri Sumel Taluk",
+              "Rohat Royal Equestrian Heritage Taluk",
+              "Marwar Junction Major Railway Hub Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Pratapgarh",
+        "cities": [
+          {
+            "name": "Pratapgarh Tribal City",
+            "subCities": [
+              "Thewa Gold Foil on Glass GI Tag Jewelry Art World Capital Taluk",
+              "Sita Mata Wildlife Sanctuary Flying Squirrel Forest Taluk",
+              "Jakham Dam Highest Dam in Rajasthan Taluk",
+              "Chhoti Sadri Agriculture & Opium Poppy Taluk",
+              "Arnod Gautameshwar Mahadev Sacred Shrine Taluk",
+              "Dhariawad Forest Taluk",
+              "Peepal Khoont Tribal Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Rajsamand",
+        "cities": [
+          {
+            "name": "Rajsamand & Nathdwara",
+            "subCities": [
+              "Nathdwara Shrinathji Temple Pushtimarg World Vaishnava Capital Taluk",
+              "Statue of Belief Vishwas Swaroopam World Tallest 369ft Shiva Statue Taluk",
+              "Kumbhalgarh Fort Second Longest Wall in the World 36km UNESCO Taluk",
+              "Kankroli Rajsamand Lake Marble Promenade & JK Tyre Mega Plant Taluk",
+              "Amet Marble Mining Processing Taluk",
+              "Dariba Hindustan Zinc Silver Lead Underground Mega Mine Taluk",
+              "Bhim Highway Commercial Taluk",
+              "Deogarh Royal Heritage Palace Taluk",
+              "Railmagra Zinc Agro Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Sawai Madhopur",
+        "cities": [
+          {
+            "name": "Sawai Madhopur Ranthambore",
+            "subCities": [
+              "Ranthambore National Park Royal Bengal Tiger World Capital Taluk",
+              "Ranthambore UNESCO World Heritage Giant Hill Fort & Trinetra Ganesh Temple Taluk",
+              "Guava Capital of India Fresh Fruit Orchards Taluk",
+              "Gangapur City Railway Junction & Kheer Mohan Sweet Taluk",
+              "Bamanwas Agriculture Taluk",
+              "Bonli Taluk",
+              "Khandar Chambal River Fortress Taluk",
+              "Chauth Ka Barwara Chauth Mata Pilgrimage & Six Senses Fort Hotel Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Sikar",
+        "cities": [
+          {
+            "name": "Sikar Coaching & Education City",
+            "subCities": [
+              "Piprali Road & Nawalgarh Road Mega IIT-JEE NEET Coaching City Taluk",
+              "Khatu Shyam Ji Miracle Temple World Famous Lakhs Pilgrimage Taluk",
+              "Jeen Mata Durga Shaktipeeth Mountain Shrine Taluk",
+              "Fatehpur Shekhawati Grand Fresco Painted Mansions Taluk",
+              "Laxmangarh Clock Tower Planned Grid City Taluk",
+              "Sri Madhopur Agriculture Mandi Taluk",
+              "Reengus Major Pilgrimage Railway Transit Taluk",
+              "Neem Ka Thana Torawati Copper & Mineral Capital Taluk",
+              "Danta Ramgarh Historic Fort Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Sirohi",
+        "cities": [
+          {
+            "name": "Sirohi & Mount Abu",
+            "subCities": [
+              "Mount Abu Only Hill Station of Rajasthan Nakki Lake & Sunset Point Taluk",
+              "Dilwara Jain Temples World Foremost Marble Architectural Wonder Taluk",
+              "Brahma Kumaris World Spiritual University Global Headquarters Taluk",
+              "Sirohi Sword Making Royal Steel Craft Taluk",
+              "Pindwara Stone & Marble Temple Carving Sculptors Capital Taluk",
+              "Sheoganj Commercial Trade Taluk",
+              "Abu Road Riico Industrial Growth Center & Railway Gateway Taluk",
+              "Reodar Agriculture Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Sri Ganganagar",
+        "cities": [
+          {
+            "name": "Sri Ganganagar Food Bowl of Rajasthan",
+            "subCities": [
+              "Greenest City of Rajasthan Punjab Canal Irrigated Agriculture Taluk",
+              "Kinnow Citrus & Cotton Capital of India Taluk",
+              "Suratgarh Super Thermal Power Station Mega Electricity City Taluk",
+              "Suratgarh Super Military Air Force & Armor Station Taluk",
+              "Raisinghnagar Border Cotton Processing Taluk",
+              "Anupgarh Interstate Border Trade Taluk",
+              "Sadulshahar Agriculture Taluk",
+              "Padampur Paddy & Kinnow Taluk",
+              "Karanpur Border Farming Taluk",
+              "Gajsinghpur Grain Market Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Tonk",
+        "cities": [
+          {
+            "name": "Tonk Nawab City",
+            "subCities": [
+              "Sunehri Kothi Golden Mansion Glass & Gold Art Taluk",
+              "Arabic and Persian Research Institute Ancient Manuscripts Library Taluk",
+              "Niwai Mustard Oil Capital of India Oil Mills Taluk",
+              "Banas Riverbank Sand & Agriculture Taluk",
+              "Malpura Historic Commercial Taluk",
+              "Deoli CISF Training Mega Command & Kota Road Taluk",
+              "Todaraisingh Historic 300 Stepwells Water City Taluk",
+              "Uniara Miniature Painting Heritage Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Udaipur",
+        "cities": [
+          {
+            "name": "Udaipur City of Lakes Venice of the East",
+            "subCities": [
+              "City Palace Complex Lake Pichola UNESCO World Heritage Heritage Taluk",
+              "Fateh Sagar Lake Marine Drive Promenade & Solar Observatory Taluk",
+              "Sukhadia Circle & Panchwati High Street Commercial Promenade Taluk",
+              "Hiran Magri Sector 3-14 Planned Urban Residential Hub Taluk",
+              "Shobhagpura 100ft Road Luxury Hotels & Corporate Mile Taluk",
+              "Madri & Kaladwas Mega Industrial RIICO Estate Taluk",
+              "Debari Hindustan Zinc Smelter Plant Mega Industrial Taluk",
+              "Bhuwana Marble Mandi World Largest Green Marble Market Taluk",
+              "Iswal Zinc Valley Taluk",
+              "Salumber Tribal Mineral District Gateway Taluk",
+              "Kherwara Border Security Force BSF Command Taluk",
+              "Rishabhdeo Kesariyaji Jain Temple Miracle Pilgrimage Taluk",
+              "Jhadol Forest Ecotourism Taluk",
+              "Kotra Tribal High Range Taluk",
+              "Vallabhnagar Agriculture Research Taluk",
+              "Mavli Major Railway Junction Taluk",
+              "Gogunda Maharana Pratap Coronation Historic Taluk"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Uttar Pradesh",
+    "districts": [
+      {
+        "name": "Lucknow",
+        "cities": [
+          {
+            "name": "Lucknow Capital City",
+            "subCities": [
+              "Gomti Nagar Patrakar Puram Commercial Taluk",
+              "Gomti Nagar Extension IT City & Stadium Taluk",
+              "Hazratganj Victorian Heritage High Street Taluk",
+              "Aliganj Kapoorthala Commercial Taluk",
+              "Indira Nagar Munshipulia Metro Taluk",
+              "Alambagh Phoenix United Mall & ISBT Taluk",
+              "Mahanagar Gole Market Residential Taluk",
+              "Sushant Golf City Medanta Apex Medical Taluk",
+              "Chowk Heritage Old Lucknow Tunday Kabab Taluk",
+              "Vikas Nagar Tech Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Gautam Buddha Nagar (Noida)",
+        "cities": [
+          {
+            "name": "Noida City",
+            "subCities": [
+              "Sector 62 Institutional & IT Software Mega Hub Taluk",
+              "Sector 18 Atta Market Metro Commercial Mall Taluk",
+              "Sector 50 & 52 Metro Interchange Residential Taluk",
+              "Sector 137 Noida-Greater Noida Expressway Taluk",
+              "Sector 76 Metro High-Rise Urban Taluk",
+              "Sector 128 Jaypee Healthcare & Golf Course City Taluk",
+              "Film City Sector 16A Media Hub Taluk",
+              "Sector 142 Advant Navis Corporate Tech Taluk"
+            ]
+          },
+          {
+            "name": "Greater Noida",
+            "subCities": [
+              "Knowledge Park 3 Mega University City Taluk",
+              "Pari Chowk Landmark Commercial Gateway Taluk",
+              "Alpha 1 Commercial & Shopping Taluk",
+              "Beta 2 High Street Urban Taluk",
+              "Greater Noida West Gaur City 1-16 Extension Taluk",
+              "Ecotech Industrial Electronics Manufacturing Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Ghaziabad",
+        "cities": [
+          {
+            "name": "Ghaziabad NCR City",
+            "subCities": [
+              "Indirapuram Shipra Mall & Habitat Centre Taluk",
+              "Vaishali Metro Express & Max Hospital Taluk",
+              "Kaushambi Pacific Mall Luxury Metro Taluk",
+              "Raj Nagar Extension High-Rise Commercial Taluk",
+              "Crossings Republik Integrated Modern Township Taluk",
+              "Sahibabad Industrial Area Site 4 Taluk",
+              "Kavi Nagar Commercial & Residential Taluk",
+              "Modinagar Sugar & Educational Taluk",
+              "Muradnagar Defense Ordnance Factory Taluk",
+              "Loni Border Commercial Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Kanpur Nagar",
+        "cities": [
+          {
+            "name": "Kanpur Industrial Metropolis",
+            "subCities": [
+              "Civil Lines Green Park Cricket Stadium Taluk",
+              "Swaroop Nagar Rave 3 Mall Luxury Food Street Taluk",
+              "Kakadeo Premier IIT-JEE Medical Coaching City Taluk",
+              "Govind Nagar & Gumti No. 5 Retail Market Taluk",
+              "Kidwai Nagar South City Commercial Taluk",
+              "Kalyanpur IIT Kanpur Premier Tech Campus Taluk",
+              "Panki Industrial & Power Plant Taluk",
+              "Jajmau Leather Export Capital of India Taluk",
+              "Chakeri Airport Industrial Corridor Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Varanasi",
+        "cities": [
+          {
+            "name": "Varanasi (Kashi) Spiritual Capital",
+            "subCities": [
+              "Kashi Vishwanath Temple Corridor UNESCO Heritage Taluk",
+              "Dashashwamedh Ghat Ganga Aarti Heritage Promenade Taluk",
+              "Lanka Banaras Hindu University BHU & Sir Sunderlal Hospital Taluk",
+              "Assi Ghat Cultural & Music Heritage Taluk",
+              "Sigra IP Mall High Street Commercial Taluk",
+              "Mahmoorganj Corporate & Healthcare Spine Taluk",
+              "Cantonment Heritage Luxury & Railway Interchange Taluk",
+              "Sarnath Buddhist World UNESCO Pilgrimage Deer Park Taluk",
+              "Shivpur Highway Development Taluk",
+              "Ramnagar Historic Fort & Balaji Temple Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Prayagraj (Allahabad)",
+        "cities": [
+          {
+            "name": "Prayagraj Sangam City",
+            "subCities": [
+              "Triveni Sangam Maha Kumbh Mela Sacred Confluence Taluk",
+              "Civil Lines Subhash Chauraha High Street Commercial Taluk",
+              "George Town Heritage High Court Judiciary Taluk",
+              "Tagore Town University of Allahabad Oxford of East Taluk",
+              "Naini Industrial Area & Mega Bridge Corridor Taluk",
+              "Jhunsi Holy Bank & Residential Taluk",
+              "Dhoomanganj Railway & Medical Taluk",
+              "Katra Commercial Market Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Agra",
+        "cities": [
+          {
+            "name": "Agra City of Taj",
+            "subCities": [
+              "Taj Mahal World Wonder UNESCO Heritage Taluk",
+              "Agra Fort Red Sandstone Imperial Citadel Taluk",
+              "Sanjay Place Central Business District Commercial Taluk",
+              "Fatehabad Road Luxury Hotel & Tourism Promenade Taluk",
+              "Kamla Nagar Retail High Street Market Taluk",
+              "Sikandra Akbar Tomb Industrial Zone Taluk",
+              "Dayalbagh Educational Spiritual Colony Taluk",
+              "Shahganj Commercial Market Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Meerut",
+        "cities": [
+          {
+            "name": "Meerut Sports City",
+            "subCities": [
+              "Sports Goods Capital of India & Scissors Craft Taluk",
+              "Sadar Bazaar British Cantonment Commercial Taluk",
+              "Shastri Nagar Planned Residential Taluk",
+              "Ganga Nagar Educational Hub Taluk",
+              "Delhi Road Metro Rapid Rail RRTS Corridor Taluk",
+              "Partapur Industrial Estate Taluk",
+              "Modipuram Agriculture University Taluk",
+              "Mawana Sugar Mill Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Bareilly",
+        "cities": [
+          {
+            "name": "Bareilly Smart City",
+            "subCities": [
+              "Civil Lines Central Commercial Taluk",
+              "Rajendra Nagar High Street Market Taluk",
+              "IVRI Indian Veterinary Research Institute Izatnagar Taluk",
+              "Clutterbuckganj CB Ganj Industrial Estate Taluk",
+              "Nawabganj Agriculture Taluk",
+              "Aonla IFFCO Mega Fertilizer Plant Taluk",
+              "Faridpur Commercial Taluk",
+              "Baheri Sugar Industrial Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Aligarh",
+        "cities": [
+          {
+            "name": "Aligarh Lock City",
+            "subCities": [
+              "Aligarh Muslim University AMU Heritage Campus Taluk",
+              "Lock & Hardware Manufacturing Global Capital Taluk",
+              "Centre Point High Street Commercial Taluk",
+              "Civil Lines Medical & Residential Taluk",
+              "Tala Nagari Industrial Area Phase 1-2 Taluk",
+              "Atrauli Agriculture Taluk",
+              "Khair Commercial Taluk",
+              "Iglas Famous Chamcham Sweet Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Moradabad",
+        "cities": [
+          {
+            "name": "Moradabad Brass City",
+            "subCities": [
+              "Peetal Nagari Global Brassware Handicrafts Export Taluk",
+              "Civil Lines High Street Commercial Taluk",
+              "Kanth Road Modern Shopping & Healthcare Taluk",
+              "Delhi Road Industrial SEZ Taluk",
+              "Sambhal Road Wholesale Market Taluk",
+              "Bilari Agriculture Taluk",
+              "Thakurdwara Agro Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Gorakhpur",
+        "cities": [
+          {
+            "name": "Gorakhpur City",
+            "subCities": [
+              "Gorakhnath Temple World Famous Nath Spiritual Capital Taluk",
+              "AIIMS Gorakhpur Super Specialty Medical City Taluk",
+              "GIDA Gorakhpur Industrial Development Authority Mega Park Taluk",
+              "Civil Lines Commercial Central Taluk",
+              "Golghar Shopping High Street Taluk",
+              "Medical College Road BRD Medical Taluk",
+              "Mohaddipur Transit Hub Taluk",
+              "Pipraich Sugar Taluk",
+              "Sahjanwa Industrial Hub Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Jhansi",
+        "cities": [
+          {
+            "name": "Jhansi Bundelkhand Gateway",
+            "subCities": [
+              "Rani Mahal & Jhansi Fort Rani Lakshmibai Heritage Taluk",
+              "Sadar Bazaar Cantonment Commercial Taluk",
+              "Elite Crossing High Street Business Taluk",
+              "BHEL Heavy Electricals Industrial Manufacturing Taluk",
+              "Medical College Road MLB Medical Taluk",
+              "Babina Military Cantonment Armored Taluk",
+              "Mauranipur Cloth Market Taluk",
+              "Garautha Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Mathura",
+        "cities": [
+          {
+            "name": "Mathura & Vrindavan",
+            "subCities": [
+              "Shri Krishna Janmabhoomi World Pilgrimage Divine Taluk",
+              "Vrindavan Banke Bihari & ISKCON Prem Mandir Sacred City Taluk",
+              "Barsana Shri Radha Rani Birthplace Lathmar Holi Taluk",
+              "Govardhan 21km Holy Parikrama Hill Taluk",
+              "Gokul Historic Krishna Bal Leela Taluk",
+              "Indian Oil Mathura Mega Petroleum Refinery Taluk",
+              "Chhata Industrial Estate Taluk",
+              "Kosi Kalan Agro Industrial Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Ayodhya",
+        "cities": [
+          {
+            "name": "Ayodhya Shri Ram Janmabhoomi",
+            "subCities": [
+              "Shri Ram Janmabhoomi Mandir Divine World Pilgrimage Taluk",
+              "Hanuman Garhi Temple Sacred Citadel Taluk",
+              "Ram Ki Paidi Saryu River Ghat Promenade Taluk",
+              "Maharishi Valmiki International Airport Aerotropolis Taluk",
+              "Ayodhya Dham Junction World Class Railway Terminal Taluk",
+              "Civil Lines Faizabad Commercial High Street Taluk",
+              "Rikabganj Retail Commercial Market Taluk",
+              "Sohawal Highway Industrial Taluk",
+              "Bikapur Agriculture Taluk",
+              "Rudauli Historic Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Saharanpur",
+        "cities": [
+          {
+            "name": "Saharanpur City",
+            "subCities": [
+              "Wood Carving & Handicrafts GI Tag Global Export Taluk",
+              "Court Road Commercial High Street Taluk",
+              "Nehru Market Wholesale Trade Taluk",
+              "Deoband Darul Uloom Islamic University Taluk",
+              "Nakur Agro Taluk",
+              "Behat Mango & Stone Fruit Valley Taluk",
+              "Rampur Maniharan Agro Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Muzaffarnagar",
+        "cities": [
+          {
+            "name": "Muzaffarnagar City",
+            "subCities": [
+              "Sugar Bowl of India Jaggery Mandi Asia Largest Market Taluk",
+              "Steel Rolling Mills & Paper Industrial Complex Taluk",
+              "Shiv Chowk Central Commercial Taluk",
+              "New Mandi High Street Business Taluk",
+              "Khatauli Triveni Mega Sugar Mill Taluk",
+              "Budhana Agriculture Taluk",
+              "Jansath Historical Taluk"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "West Bengal",
+    "districts": [
+      {
+        "name": "Kolkata",
+        "cities": [
+          {
+            "name": "Kolkata South & Central",
+            "subCities": [
+              "Park Street Cultural Heritage Food Boulevard Taluk",
+              "Ballygunge Circular Road Luxury Residential Taluk",
+              "Alipore Burdwan Road High Net-Worth Diplomatic Taluk",
+              "Gariahat Market South Kolkata Retail Capital Taluk",
+              "Tollygunge Tollywood Cinema Industry Film City Taluk",
+              "Jadavpur University Academic Research & Tech Taluk",
+              "New Alipore Planned Urban Green Taluk",
+              "Esplanade & Dharmatala Central Metro Crossroads Taluk",
+              "Bhowanipore Heritage Commercial Taluk",
+              "Elgin Road Netaji Subhash Chandra Bose Memorial Taluk"
+            ]
+          },
+          {
+            "name": "Kolkata North & IT Metropolis",
+            "subCities": [
+              "Salt Lake Sector 5 Silicon Valley of Eastern India IT SEZ Taluk",
+              "Salt Lake City Centre 1 & 2 Planned Township Taluk",
+              "New Town Action Area 1-3 Eco Park World Convention IT Hub Taluk",
+              "Rajarhat Expressway High-Rise Growth Corridor Taluk",
+              "EM Bypass Ruby General Hospital Healthcare Spine Taluk",
+              "Shyambazar Five Point North Kolkata Heritage Landmark Taluk",
+              "Dum Dum Netaji Subhash Chandra Bose International Airport Metro Taluk",
+              "Kankurgachi VIP Market Modern Commercial Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Howrah",
+        "cities": [
+          {
+            "name": "Howrah City",
+            "subCities": [
+              "Howrah Station Busiest & Largest Railway Complex in India Taluk",
+              "Shibpur Acharya Jagadish Chandra Bose Indian Botanic Garden Giant Banyan Tree Taluk",
+              "Santragachi Railway Terminal & Migratory Bird Sanctuary Taluk",
+              "Bally Riverbank Commercial Taluk",
+              "Liluah Heavy Engineering & Rolling Stock Taluk",
+              "Dhulagarh Industrial Logistics Mega Park Taluk",
+              "Uluberia Mega Industrial Growth Center Taluk",
+              "Bagnan Agriculture & Flower Taluk",
+              "Amta Historic Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "North 24 Parganas",
+        "cities": [
+          {
+            "name": "Barasat & Barrackpore",
+            "subCities": [
+              "Barasat Colony District Administrative Capital Taluk",
+              "Barrackpore Historic Mangal Pandey 1857 Sepoy Mutiny Cantonment Taluk",
+              "Bidhannagar Salt Lake Urban Corporation Taluk",
+              "Habra Cotton Trade Taluk",
+              "Basirhat Border Agriculture Taluk",
+              "Bhatpara Jute Mills Taluk",
+              "Naihati Bankim Chandra Chattopadhyay Heritage Taluk",
+              "Kanchrapara Railway Workshop Taluk",
+              "Bongaon Petrapole International Land Port Indo-Bangladesh Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "South 24 Parganas",
+        "cities": [
+          {
+            "name": "Alipore & Sundarbans",
+            "subCities": [
+              "Sundarbans UNESCO World Heritage Mangrove Tiger Reserve Gateway Taluk",
+              "Baruipur District Headquarter Development Zone Taluk",
+              "Diamond Harbour Hooghly River Estuary Tourism Taluk",
+              "Budge Budge Petroleum Storage & Jute Taluk",
+              "Sonarpur Metro Suburban Growth Taluk",
+              "Canning Sundarban Tiger Gateway Port Taluk",
+              "Kakdwip Deep Sea Fishery Taluk",
+              "Bhangar Agriculture Taluk",
+              "Maheshtala Bata Shoe Mega Township Batanagar Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Darjeeling",
+        "cities": [
+          {
+            "name": "Darjeeling Queen of the Hills",
+            "subCities": [
+              "Darjeeling Mall Road Chowrasta Himalayan Heritage Taluk",
+              "Tiger Hill Kanchenjunga Sunrise World Tourism Taluk",
+              "Darjeeling Himalayan Railway DHR Toy Train UNESCO World Heritage Taluk",
+              "Darjeeling Tea World Renowned Orthodox Tea Gardens Taluk",
+              "Siliguri North Bengal Mega Commercial Gateway to Northeast Taluk",
+              "Matigara City Centre Mall IT Park Taluk",
+              "Kurseong Land of the White Orchids Tea Taluk",
+              "Mirik Sumendu Lake Orange Tea Hill Resort Taluk",
+              "Sukna Military Cantonment Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Paschim Bardhaman",
+        "cities": [
+          {
+            "name": "Durgapur & Asansol Twin Industrial Cities",
+            "subCities": [
+              "Durgapur Steel City SAIL Alloy Steel Mega Plant Taluk",
+              "Bidhan Nagar Super Specialty Healthcare & Tech Education Taluk",
+              "City Centre Commercial Durgapur High Street Taluk",
+              "Benachity Wholesale Shopping Market Taluk",
+              "Asansol Coal & Railway Divisional Headquarters Taluk",
+              "Burnpur IISCO Steel Modern Mega Complex Taluk",
+              "Raniganj Coalfields First Coal Mine of India Taluk",
+              "Kulti First Iron Foundry in India Taluk",
+              "Chittaranjan Locomotive Works CLW Electric Engine Capital Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Purba Bardhaman",
+        "cities": [
+          {
+            "name": "Bardhaman (Burdwan) Rice Bowl",
+            "subCities": [
+              "Bardhaman Royal Palace & University Heritage Taluk",
+              "Sitabhog & Mihidana GI Tag World Famous Sweets Taluk",
+              "Curzon Gate Heritage Commercial Central Taluk",
+              "Katwa Chaitanya Mahaprabhu Heritage Taluk",
+              "Kalna 108 Shiva Temples Terracotta Architecture Taluk",
+              "Memari Modern Rice Mills Taluk",
+              "Galsi Agriculture Delta Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Hooghly",
+        "cities": [
+          {
+            "name": "Chinsurah & Chandannagar",
+            "subCities": [
+              "Chandannagar French Colonial Architecture & Jagaddhatri Puja Taluk",
+              "Chinsurah Dutch Colonial Heritage Capital Taluk",
+              "Bandel Basilica of the Holy Rosary 1599 Ancient Church Taluk",
+              "Serampore Danish Colony & Serampore College 1818 Taluk",
+              "Uttarpara First Library of Bengal & Hindustan Motors Auto Taluk",
+              "Rishra First Jute Mill in India Taluk",
+              "Tarakeswar Taraknath Shiva Temple Massive Pilgrimage Taluk",
+              "Arambagh Agricultural Trade Taluk"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Madhya Pradesh",
+    "districts": [
+      {
+        "name": "Indore",
+        "cities": [
+          {
+            "name": "Indore Cleanest City of India 7-Star",
+            "subCities": [
+              "Vijay Nagar Scheme 54 High Street Corporate IT Hub Taluk",
+              "Palasia Square Commercial Promenade Taluk",
+              "AB Road Healthcare Super Specialty Corridor Taluk",
+              "Super Corridor TCS Infosys Crystal IT Park Mega SEZ Taluk",
+              "Chappan Dukan 56 Shops & Sarafa Bazaar World Famous Night Food Street Taluk",
+              "Bhawarkuan Premier MPPSC-UPSC Coaching City Taluk",
+              "Rau Bypass Automotive Research NATRAX Corridor Taluk",
+              "Pithampur Detroit of India Mega Automobile Industrial SEZ Taluk",
+              "Sanwer Agriculture Industrial Taluk",
+              "Mhow (Dr. Ambedkar Nagar) Military War College Birthplace Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Bhopal",
+        "cities": [
+          {
+            "name": "Bhopal City of Lakes Capital",
+            "subCities": [
+              "MP Nagar Zone 1 & 2 Corporate High Street Financial Taluk",
+              "Arera Colony E1-E7 Avenue Posh VIP Residential Taluk",
+              "Shahpura Lake Marine Promenade Food Court Taluk",
+              "Kolar Road Expressway Modern Urban Growth Taluk",
+              "Hoshangabad Road Medical Mile & AIIMS Bhopal Apex Health City Taluk",
+              "New Market TT Nagar Traditional Shopping Taluk",
+              "VIP Road Upper Lake Bada Talab Heritage View Taluk",
+              "BHEL Bhopal Heavy Electricals Bharat Heavy Electricals Township Taluk",
+              "Mandideep Mega Industrial Area HEG Procter & Gamble Taluk",
+              "Berasia Agriculture Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Jabalpur",
+        "cities": [
+          {
+            "name": "Jabalpur Cultural Capital (Sanskardhani)",
+            "subCities": [
+              "Bhedaghat Dhuandhar Falls Marble Rocks Narmada Gorge Taluk",
+              "Civil Lines High Court of Madhya Pradesh Judiciary Taluk",
+              "Wright Town & Napier Town Commercial High Street Taluk",
+              "Vehicle Factory Jabalpur VFJ & Gun Carriage Factory Defense Taluk",
+              "Madan Mahal Historic Gond Fort & Balancing Rock Taluk",
+              "Khamaria Ordnance Factory Taluk",
+              "Sihora Iron Ore Mining Taluk",
+              "Patan Agriculture Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Gwalior",
+        "cities": [
+          {
+            "name": "Gwalior Fort City",
+            "subCities": [
+              "Gwalior Fort Pearl in the Necklace of Forts of India UNESCO Creative City of Music Taluk",
+              "City Centre High-Rise Commercial Administrative Taluk",
+              "Maharaj Bada Seven Architectural Styles Market Square Taluk",
+              "Lashkar Commercial & Gold Jewellery Market Taluk",
+              "Morar Cantonment Heritage Taluk",
+              "Malanpur Mega Industrial GIDC SEZ Taluk",
+              "Dabra Sugar Mill & Agricultural Trade Taluk",
+              "Bhitarwar Agro Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Ujjain",
+        "cities": [
+          {
+            "name": "Ujjain Mahakal City",
+            "subCities": [
+              "Mahakaleshwar Jyotirlinga Temple Mahakal Lok Grand Corridor World Pilgrimage Taluk",
+              "Ram Ghat Holy Kshipra River Simhastha Kumbh Mela Taluk",
+              "Freeganj High Street Commercial Business Taluk",
+              "Kothi Palace Administrative Divisional Capital Taluk",
+              "Vikram University Ancient Astronomical Observatory Jantar Mantar Taluk",
+              "Nagda Grasim Chemical & Viscose Staple Fiber Taluk",
+              "Badnagar Agriculture Market Taluk",
+              "Mahidpur Historic Taluk",
+              "Tarana Taluk"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Punjab",
+    "districts": [
+      {
+        "name": "Amritsar",
+        "cities": [
+          {
+            "name": "Amritsar Holy City of Golden Temple",
+            "subCities": [
+              "Sri Harmandir Sahib Golden Temple World Renowned Spiritual Sacred Sanctuary Taluk",
+              "Jallianwala Bagh Historic National Freedom Memorial Taluk",
+              "Attari-Wagah Border Flag Lowering Ceremony Indo-Pak Patriotic Taluk",
+              "Ranjit Avenue A-E Block Corporate Shopping Tech Boulevard Taluk",
+              "Mall Road British Heritage Commercial Promenade Taluk",
+              "Lawrence Road World Famous Amritsari Kulcha & Food Street Taluk",
+              "Majitha Road Super Specialty Medical Enclave Taluk",
+              "Verka Milk Cooperative Dairy Giant Taluk",
+              "Rayya Trade Taluk",
+              "Ajnala Border Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Ludhiana",
+        "cities": [
+          {
+            "name": "Ludhiana Manchester of India",
+            "subCities": [
+              "Sarabha Nagar Main Market Kipss Lifestyle Fashion Taluk",
+              "Model Town Tupperware Chowk High Street Retail Taluk",
+              "BRS Nagar Ferozepur Road Luxury Mall Mile Taluk",
+              "Fountain Chowk & Civil Lines Commercial Corporate Taluk",
+              "Industrial Area A & B Hero Cycles Avon Hosiery Mega Hub Taluk",
+              "Focal Point Phase 1-8 Heavy Engineering & Auto Parts Taluk",
+              "Punjab Agricultural University PAU Green Revolution Headquarters Taluk",
+              "Pakhowal Road High-Rise Growth Corridor Taluk",
+              "Sahnewal Airport & Dry Port Logistics Taluk",
+              "Khanna Asia Largest Grain Market Mandi Taluk",
+              "Jagraon Commercial Trade Taluk",
+              "Samrala Agriculture Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "SAS Nagar (Mohali)",
+        "cities": [
+          {
+            "name": "Mohali Smart IT City",
+            "subCities": [
+              "Phase 3B2 High Street Food Street & Youth Lifestyle Taluk",
+              "Phase 7 Commercial Market & Business Promenade Taluk",
+              "Sector 82 IT City QuarkCity Infosys Mega Technology SEZ Taluk",
+              "Aerocity & IT City International Airport Highway Corridor Taluk",
+              "PCA Stadium IS Bindra International Cricket Stadium World Arena Taluk",
+              "Sector 70-71 Posh Planned Residential Urban Taluk",
+              "Kharar Greater Mohali Educational High-Rise Corridor Taluk",
+              "Kurali Timber & Industrial Taluk",
+              "Dera Bassi Mega Chemical & Pharma Industrial Complex Taluk",
+              "Zirakpur Chandigarh Gateway Commercial Capital Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Jalandhar",
+        "cities": [
+          {
+            "name": "Jalandhar Sports Goods Capital",
+            "subCities": [
+              "Sports Goods Manufacturing Capital of the World SG Beat All BDM Taluk",
+              "Model Town High Street Commercial Fashion Taluk",
+              "Civil Lines Corporate & Healthcare Medical Enclave Taluk",
+              "Leather Complex Leather Export Mega Industrial Park Taluk",
+              "Focal Point Engineering Cluster Taluk",
+              "Cantt Jalandhar Cantonment Military Headquarters Taluk",
+              "Nakodar Tombs of Ustad-Shagird Heritage Taluk",
+              "Phillaur Police Academy & Fort Taluk",
+              "Kartarpur Handcrafted Wooden Furniture Hub Taluk",
+              "Shahkot Agro Taluk",
+              "Adampur Airport Commercial Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Patiala",
+        "cities": [
+          {
+            "name": "Patiala Royal Heritage City",
+            "subCities": [
+              "Qila Mubarak Imperial Royal Sikh Architecture Palace Taluk",
+              "Sheesh Mahal & Baradari Gardens Royal Cultural Heritage Taluk",
+              "Patiala Shahi Pagg & Phulkari GI Tag Embroidery Craft Taluk",
+              "National Institute of Sports NIS Asia Largest Sports Institute Taluk",
+              "Leela Bhawan High Street Commercial Central Taluk",
+              "Urban Estate Phase 1-2 Posh Residential Taluk",
+              "Thapar Institute of Engineering & Technology TIET Campus Taluk",
+              "Rajpura Industrial Logistics Mega Crossroads Taluk",
+              "Nabha Royal Palace & Agricultural Implements Taluk",
+              "Samana Historic Commercial Taluk",
+              "Patran Rice Mills Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Bathinda",
+        "cities": [
+          {
+            "name": "Bathinda Thermal Power & Lake City",
+            "subCities": [
+              "Qila Mubarak Ancient 1400 Year Old Brick Fort Razia Sultana Taluk",
+              "AIIMS Bathinda Apex Super Specialty Healthcare City Taluk",
+              "Guru Gobind Singh Guru Nanak Dev Refinery HPCL Mega Refinery Taluk",
+              "National Fertilizers Limited NFL Mega Urea Plant Taluk",
+              "Civil Lines & Mall Road Commercial High Street Taluk",
+              "Rampura Phul Agriculture Mandi Taluk",
+              "Maur Mandi Cotton Hub Taluk",
+              "Talwandi Sabo Takht Sri Damdama Sahib Fourth Sikh Takht Taluk"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Haryana",
+    "districts": [
+      {
+        "name": "Gurugram",
+        "cities": [
+          {
+            "name": "Gurugram Millennium Cyber City",
+            "subCities": [
+              "DLF Cyber City & Cyber Hub Global Corporate Fortune 500 Headquarters Taluk",
+              "Golf Course Road DLF Phase 5 Ultra Luxury Billionaires Mile Taluk",
+              "Sohna Road Sector 47-49 Commercial Corporate Corridor Taluk",
+              "MG Road Mall Mile Metro Interchange Taluk",
+              "Sector 29 Entertainment World Brewery District Taluk",
+              "Golf Course Extension Road Sector 58-67 High-Rise Luxury Taluk",
+              "Dwarka Expressway Sector 102-113 Aerotropolis Corridor Taluk",
+              "Udyog Vihar Phase 1-5 Mega IT SEZ & Apparel Cluster Taluk",
+              "IMT Manesar Mega Industrial Automobile Maruti Suzuki Hero MotoCorp Taluk",
+              "Palam Vihar Luxury Residential Taluk",
+              "Sohna South Gurgaon Hot Sulphur Springs Growth City Taluk",
+              "Pataudi Royal Nawab Palace Heritage Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Faridabad",
+        "cities": [
+          {
+            "name": "Faridabad Industrial Smart City",
+            "subCities": [
+              "Sector 15 & 16 High Street Central Market Commercial Taluk",
+              "Neelam Bata Road Industrial Hub Taluk",
+              "Sector 21C Green Luxury Residential Foothill Taluk",
+              "Mathura Road Metro Expressway NH19 Industrial Corridor Taluk",
+              "Greater Faridabad Neharpar Sector 75-89 Modern Urban High-Rise Taluk",
+              "Surajkund International Crafts Mela UNESCO Tourism Taluk",
+              "Ballabgarh Raja Nahar Singh Fort & Metro Terminus Taluk",
+              "Industrial Area Sector 4-6 Heavy Engineering Taluk",
+              "Prithla Industrial SEZ Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Panchkula",
+        "cities": [
+          {
+            "name": "Panchkula Tricity Planned City",
+            "subCities": [
+              "Mata Mansa Devi Shaktipeeth World Holy Shrine Taluk",
+              "Sector 5 MDC Commercial Town Centre & Red Bishop Promenade Taluk",
+              "Sector 7 & 8 High Street Fashion Food Street Taluk",
+              "Sector 20 & 21 Planned High-Rise Housing Board Taluk",
+              "Pinjore Yadavindra Mughal Gardens Heritage Tourism Taluk",
+              "Morni Hills Only Hill Station of Haryana Tikkar Taal Lake Taluk",
+              "Barwala Poultry Industrial Hub Taluk",
+              "Kalka Himalayan Toy Train UNESCO Gateway Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Ambala",
+        "cities": [
+          {
+            "name": "Ambala Twin City",
+            "subCities": [
+              "Ambala Cantt Major Defense Air Force Station Rafale & Railway Division Taluk",
+              "Ambala City Scientific Instruments Capital of India 40% Lab Equipment Taluk",
+              "Cloth Market Asia Largest Wholesale Saree & Fabric Market Taluk",
+              "Barara Agriculture Taluk",
+              "Naraingarh Sugar Mill Taluk",
+              "Saha Industrial Growth Center Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Karnal",
+        "cities": [
+          {
+            "name": "Karnal Rice & Smart City",
+            "subCities": [
+              "National Dairy Research Institute NDRI World Renowned Dairy Science Taluk",
+              "Basmati Rice Capital of India Rice Processing & Export Taluk",
+              "Karna Lake Highway Tourism Promenade Taluk",
+              "Sector 12-14 Urban Estate Commercial Complex Taluk",
+              "Liberty Shoes & Agricultural Machinery Industrial Taluk",
+              "Gharaunda Indo-Israel Centre of Excellence for Vegetables Taluk",
+              "Assandh Ancient Stupa Historic Taluk",
+              "Nilokheri Polytechnic Educational Taluk",
+              "Indri Agriculture Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Panipat",
+        "cities": [
+          {
+            "name": "Panipat City of Weavers & Three Historic Battles",
+            "subCities": [
+              "Textile & Shoddy Yarn Handloom Capital of the World Taluk",
+              "Indian Oil Panipat Mega Petrochemical Refinery & Naphtha Cracker Complex Taluk",
+              "Model Town Posh High Street Commercial Taluk",
+              "GT Road Historic Battle of Panipat Kala Amb Memorial Taluk",
+              "Samalkha Industrial Machinery & Agriculture Taluk",
+              "Israna Educational Hub Taluk",
+              "Bapoli Agro Taluk"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Bihar",
+    "districts": [
+      {
+        "name": "Patna",
+        "cities": [
+          {
+            "name": "Patna Capital City (Ancient Pataliputra)",
+            "subCities": [
+              "Boring Road Chauraha Commercial High Street Coaching Taluk",
+              "Kankarbagh Colony Doctors Hub Largest Residential Colony in Asia Taluk",
+              "Bailey Road Expressway High Court & Bihar Museum World Class Taluk",
+              "Patliputra Industrial Estate & Posh Housing Colony Taluk",
+              "Dak Bungalow Crossing Fraser Road Central Business District Taluk",
+              "Gandhi Maidan World Largest Free Wi-Fi Zone Historic Ground Taluk",
+              "AIIMS Patna Phulwari Sharif Apex Healthcare City Taluk",
+              "Danapur Cantonment Major Railway Junction Military Base Taluk",
+              "Patna Sahib Takht Sri Patna Sahib Birthplace of Guru Gobind Singh Ji Taluk",
+              "Rajendra Nagar Railway Terminal & Stadium Taluk",
+              "Fatuha Industrial Port Confluence Taluk",
+              "Bihta Mega IIT Patna & New International Airport Industrial SEZ Taluk",
+              "Bakhtiyarpur Junction Taluk",
+              "Mokama Pulse & Railway Bridge Hub Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Gaya",
+        "cities": [
+          {
+            "name": "Gaya & Bodh Gaya",
+            "subCities": [
+              "Bodh Gaya Mahabodhi Temple UNESCO World Heritage Enlightenment of Buddha Taluk",
+              "Vishnupad Temple Phalgu River Pind Daan Pitru Paksha World Pilgrimage Taluk",
+              "Civil Lines Commercial Central High Street Taluk",
+              "AP Colony Posh Residential Taluk",
+              "Magadh University Bodh Gaya Academic Research Taluk",
+              "Sherghati GT Road Highway Commercial Taluk",
+              "Tekari Fort Heritage Taluk",
+              "Manpur Traditional Patwa Weavers Cotton Saree Taluk",
+              "Wazirganj Agro Taluk",
+              "Barachatti Border Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Muzaffarpur",
+        "cities": [
+          {
+            "name": "Muzaffarpur Smart City",
+            "subCities": [
+              "Shahi Litchi GI Tag World Famous Sweet Litchi Fruit Capital Taluk",
+              "Moti Jheel Commercial High Street Shopping Market Taluk",
+              "Sutapatti Wholesale Textile & Cloth Mega Mandi of North Bihar Taluk",
+              "Kalyani Chowk Central Business Taluk",
+              "Brahmapura Healthcare & Residential Taluk",
+              "Bela Industrial Area GIDC Taluk",
+              "Kanti Super Thermal Power Station Taluk",
+              "Motipur Mega Food Park Taluk",
+              "Sahebganj Agriculture Taluk",
+              "Saraiya Agro Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Bhagalpur",
+        "cities": [
+          {
+            "name": "Bhagalpur Silk City",
+            "subCities": [
+              "Tussar Silk & Bhagalpuri Silk GI Tag Handloom Weaving Capital Taluk",
+              "Vikramshila Ancient Buddhist University Excavation UNESCO Heritage Taluk",
+              "Gangetic Dolphin Sanctuary River Safari Taluk",
+              "Tilkamanjhi Bhagalpur University & Commercial Taluk",
+              "Kharmanchak High Street Taluk",
+              "Barari Medical College JLNMCH Taluk",
+              "Naugachia Banana City of Bihar Taluk",
+              "Kahalgaon NTPC Super Thermal Power Plant Taluk",
+              "Sultanganj Sacred Ganga Kanwar Yatra Holy Shrine Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Darbhanga",
+        "cities": [
+          {
+            "name": "Darbhanga Cultural Capital of Mithila",
+            "subCities": [
+              "Mithila Painting Madhubani Art World Heritage & Makhana Foxnut Capital Taluk",
+              "Darbhanga Royal Fort & Raj Palace Heritage Complex Taluk",
+              "Darbhanga Airport Civil Enclave UDAN Busiest Airport Taluk",
+              "Laheriasarai District Judicial & Administrative Capital Taluk",
+              "Tower Chowk Commercial Central Market Taluk",
+              "DMCH Darbhanga Medical College & AIIMS Darbhanga Apex Hospital Taluk",
+              "Benipur Agriculture Market Taluk",
+              "Biraul Riverbank Taluk",
+              "Baheri Agro Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Nalanda",
+        "cities": [
+          {
+            "name": "Bihar Sharif & Rajgir",
+            "subCities": [
+              "Nalanda Ancient University UNESCO World Heritage Archaeological Marvel Taluk",
+              "Rajgir Vishwa Shanti Stupa Glass Skywalk Ropeway & Hot Springs Tourism Taluk",
+              "Bihar Sharif Smart City Handloom & Badi Dargah Pilgrimage Taluk",
+              "Pawapuri Lord Mahavira Jal Mandir Nirvana Sthala Jain World Pilgrimage Taluk",
+              "Hilsa Commercial Agriculture Taluk",
+              "Islampur Vegetable Seed Taluk",
+              "Harnaut Railway Coach Maintenance Mega Factory Taluk",
+              "Silao Famous Khaja Sweet GI Tag Heritage Taluk"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Odisha",
+    "districts": [
+      {
+        "name": "Khordha (Bhubaneswar)",
+        "cities": [
+          {
+            "name": "Bhubaneswar Temple City Smart Capital",
+            "subCities": [
+              "Patia Infocity Silicon Valley of Odisha IT SEZ Tech Taluk",
+              "Saheed Nagar Commercial High Street Central Taluk",
+              "Jaydev Vihar Mayfair Luxury Hotel & Corporate Mile Taluk",
+              "Chandrasekharpur KIIT University & Software Technology Park Taluk",
+              "AIIMS Bhubaneswar Sijua Apex Healthcare City Taluk",
+              "Janpath Master Canteen High Street Commercial Promenade Taluk",
+              "Old Town Lingaraj Temple UNESCO 1000 Shiva Temples Heritage Taluk",
+              "Khandagiri & Udayagiri Ancient Jain Rock-Cut Caves Taluk",
+              "Nayapalli ISKCON & Fortune Tower Corporate Taluk",
+              "Jatni IIT Bhubaneswar & Khurda Road Major Railway Division Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Cuttack",
+        "cities": [
+          {
+            "name": "Cuttack Silver Millennium City",
+            "subCities": [
+              "Tarakasi Silver Filigree Delicate Wire Craft World Famous Taluk",
+              "Bada Bazar Wholesale Commercial Heart of Odisha Taluk",
+              "Barabati Fort & International Stadium Historic Sports Arena Taluk",
+              "SCB Medical College & Hospital Asia Oldest Apex Medical Center Taluk",
+              "Mahanadi Riverfront Ring Road & Boita Bandana Bali Yatra Festival Grounds Taluk",
+              "Choudwar Industrial Paper & Aviation Taluk",
+              "Athagarh Agriculture Taluk",
+              "Banki Charchika Temple Taluk",
+              "Salepur Famous Rasagola Sweet Heritage Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Puri",
+        "cities": [
+          {
+            "name": "Puri Jagannath Holy Dham",
+            "subCities": [
+              "Shri Jagannath Temple Char Dham World Pilgrimage Ratha Yatra Taluk",
+              "Grand Road Bada Danda Sacred Procession Promenade Taluk",
+              "Golden Beach Blue Flag Certified World Class Marine Promenade Taluk",
+              "Konark Sun Temple Black Pagoda UNESCO World Heritage Marvel Taluk",
+              "Pipili Applique Artwork GI Tag Heritage Handicraft Village Taluk",
+              "Chilika Lake Asia Largest Brackish Water Lagoon Dolphin Haven Taluk",
+              "Satyabadi Bakula Vana Gopabandhu Heritage Taluk",
+              "Nimapada Chenapoda Sweet Capital Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Sundargarh",
+        "cities": [
+          {
+            "name": "Rourkela Steel City",
+            "subCities": [
+              "Rourkela Steel Plant RSP SAIL First Integrated Public Steel Plant in India Taluk",
+              "Birsa Munda International Hockey Stadium Largest Seated Hockey Stadium in the World Guinness Record Taluk",
+              "NIT Rourkela Premier National Technology Institute Taluk",
+              "Sector 1-22 Planned Modern Steel Township Taluk",
+              "Panposh Confluence of Rivers Vedvyas Historic Mahabharata Temple Taluk",
+              "Civil Township High Street Commercial Taluk",
+              "Rajgangpur OCL Dalmia Mega Cement Industrial Complex Taluk",
+              "Sundargarh District Administrative Headquarters Taluk",
+              "Biramitrapur Dolomite Quarry Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Ganjam",
+        "cities": [
+          {
+            "name": "Berhampur (Brahmapur) Silk City",
+            "subCities": [
+              "Berhampur Silk Pata Handloom Saree GI Tag Heritage Taluk",
+              "Gopalpur-on-Sea Historic Seaport & Luxury Beach Resort Taluk",
+              "MKCG Medical College & Hospital Southern Odisha Healthcare Apex Taluk",
+              "Aska Sugar Mill Asia Oldest Sugar Factory & Distilleries Taluk",
+              "Chhatrapur District Administrative Coastal Headquarters Taluk",
+              "Bhanjanagar Reservoir Scenic Taluk",
+              "Tara Tarini Shaktipeeth Hill Temple Divine Pilgrimage Taluk",
+              "Hinjilicut Modern Growth Town Taluk",
+              "Rushikulya River Olive Ridley Sea Turtle Mass Nesting Rookery Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Sambalpur",
+        "cities": [
+          {
+            "name": "Sambalpur Cultural Capital of Western Odisha",
+            "subCities": [
+              "Sambalpuri Ikat Saree GI Tag Tie & Dye Handloom World Heritage Taluk",
+              "Hirakud Dam World Longest Earthen Dam & Vast Reservoir Tourism Taluk",
+              "Samaleswari Temple Grand Samalei Project Heritage Corridor Taluk",
+              "VIMSAR Burla Veer Surendra Sai Medical Science & IIM Sambalpur Taluk",
+              "Budharaja Hilltop Shiva Temple & Commercial Taluk",
+              "Ainthapali Transit Crossroads Taluk",
+              "Rairakhol Forest Timber Taluk",
+              "Kuchinda Famous Red Chilli Market of Odisha Taluk"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Jharkhand",
+    "districts": [
+      {
+        "name": "Ranchi",
+        "cities": [
+          {
+            "name": "Ranchi Capital City of Waterfalls",
+            "subCities": [
+              "Main Road Overbridge Commercial High Street Corporate Taluk",
+              "Lalpur Chowk Circular Road High Street Food & Student Hub Taluk",
+              "Kanke Road VIP Rock Garden & Birsa Agricultural University Taluk",
+              "Bariatu RIMS Rajendra Institute of Medical Sciences Apex Hospital Taluk",
+              "Dhurwa HEC Heavy Engineering Corporation & JSCA International Stadium Taluk",
+              "Namkum Defense Military Cantonment & Lac Research Institute Taluk",
+              "Tupudana Industrial Area Taluk",
+              "Hundru Jonha Dassam Magnificent Waterfalls Ecotourism Taluk",
+              "Tatisilwai Industrial Tech Park Taluk",
+              "Mandar Healthcare & Educational Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "East Singhbhum (Jamshedpur)",
+        "cities": [
+          {
+            "name": "Jamshedpur Steel City (Tatanagar)",
+            "subCities": [
+              "Tata Steel First & Largest Integrated Steel Plant in India Taluk",
+              "Bistupur Main Boulevard Corporate High Street Lifestyle Taluk",
+              "Sakchi Commercial Market Centre Founded by Jamsetji Tata Taluk",
+              "Kadma & Sonari Green Planned Residential River View Taluk",
+              "Telco Tata Motors Heavy Commercial Vehicle Manufacturing Plant Taluk",
+              "Jubilee Park & Tata Zoological Lake Green Promenade Taluk",
+              "XLRI Xavier School of Management World Renowned Business School Taluk",
+              "Gamharia Mega Auto Component & Industrial Ancillary SEZ Taluk",
+              "Ghatshila Hindustan Copper First Copper Smelter in Asia Taluk",
+              "Musabani Mining Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Dhanbad",
+        "cities": [
+          {
+            "name": "Dhanbad Coal Capital of India",
+            "subCities": [
+              "BCCL Bharat Coking Coal Headquarters Coal Mines Taluk",
+              "IIT ISM Indian Institute of Technology Indian School of Mines 1926 Taluk",
+              "Bank More Commercial High Street Financial Center Taluk",
+              "Saraidhela Modern High-Rise & Medical College SNMMCH Taluk",
+              "Jharia Historic Coking Coal Fire & Mining Hub Taluk",
+              "Sindri First Chemical Fertilizer Plant of India FCIL Taluk",
+              "Govindpur Industrial GT Road Highway Corridor Taluk",
+              "Katras Coal Mining Taluk",
+              "Nirsa Industrial Taluk",
+              "Maithon Dam DVC Hydro Power Scenic Lake Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Bokaro",
+        "cities": [
+          {
+            "name": "Bokaro Steel City",
+            "subCities": [
+              "Bokaro Steel Plant BSL SAIL Largest Steel Producer in Asia Taluk",
+              "City Centre Sector 4 Commercial High Street Mall Taluk",
+              "Sector 1-12 Planned Modern Educational Township Taluk",
+              "Chas High Density Commercial Wholesale Market Taluk",
+              "Bermo Tenughat Dam & Thermal Coal Belt Taluk",
+              "Phusro Coal Mining Commercial Taluk",
+              "Gomia World Largest Commercial Explosives Plant Orica IEL Taluk",
+              "Chandrapura DVC Thermal Power Plant Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Deoghar",
+        "cities": [
+          {
+            "name": "Deoghar Holy Pilgrimage City",
+            "subCities": [
+              "Baba Baidyanath Jyotirlinga Temple Holy Dham Shravani Mela World Pilgrimage Taluk",
+              "AIIMS Deoghar Super Specialty Apex Healthcare City Taluk",
+              "Deoghar International Airport Kunda Aviation Hub Taluk",
+              "Tower Chowk Commercial Market Taluk",
+              "Jasidih Major Interstate Railway Junction Industrial Taluk",
+              "Trikut Pahar Ropeway & Tapovan Caves Spiritual Taluk",
+              "Madhupur Heritage Railway & Health Resort Taluk",
+              "Sarath Agriculture Taluk"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Chhattisgarh",
+    "districts": [
+      {
+        "name": "Raipur",
+        "cities": [
+          {
+            "name": "Raipur Smart Capital & Nava Raipur Atal Nagar",
+            "subCities": [
+              "Pandri Wholesale Cloth Market Largest Textile Market in Central India Taluk",
+              "Jail Road & Telibandha Marine Drive Luxury Waterfront Promenade Taluk",
+              "Shankar Nagar VIP High Street Commercial Taluk",
+              "AIIMS Raipur Tatibandh Super Specialty Apex Medical City Taluk",
+              "Devendra Nagar Modern Healthcare & Residential Taluk",
+              "Urla & Siltara Mega Industrial Heavy Steel Rolling Complex Taluk",
+              "Nava Raipur Atal Nagar First Greenfield Smart City in India Secretariat & Jungle Safari Taluk",
+              "IIT Bhilai & IIM Raipur World Class Technology & Management Zone Taluk",
+              "Abhanpur Agriculture Market Taluk",
+              "Arang Ancient Temple Town of Temples Taluk",
+              "Tilda Neora Modern Rice Mills Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Durg (Bhilai)",
+        "cities": [
+          {
+            "name": "Bhilai Steel City",
+            "subCities": [
+              "Bhilai Steel Plant BSP SAIL 11-Times Prime Minister Trophy Winner Heavy Rail Producer Taluk",
+              "Civic Centre Commercial Heart of Bhilai Open Air Cultural Square Taluk",
+              "Sector 1-10 Planned Russian-Designed Educational City Taluk",
+              "IIT Bhilai Kutelabhata Permanent Ultra-Modern Campus Taluk",
+              "Nehru Nagar Posh High Street Commercial Taluk",
+              "Durg City Administrative & Major Railway Junction Hub Taluk",
+              "Kumhari Industrial Estate Taluk",
+              "Patan Development Taluk",
+              "Dhamdha Agriculture Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Bilaspur",
+        "cities": [
+          {
+            "name": "Bilaspur Judicial Capital",
+            "subCities": [
+              "High Court of Chhattisgarh Bodri Largest High Court in Asia Taluk",
+              "SECL South Eastern Coalfields Coal Giant Headquarters Taluk",
+              "SECR South East Central Railway Zonal Headquarters Taluk",
+              "Vyapar Vihar Commercial Corporate Business Park Taluk",
+              "Rama Magneto Mall & Srikanth Verma Marg Lifestyle Taluk",
+              "CIMS Chhattisgarh Institute of Medical Sciences Taluk",
+              "Sirgitti Mega Industrial Area Engineering Taluk",
+              "Tifra Industrial Area Taluk",
+              "Ratanpur Mahamaya Temple Historic Capital of Kalachuris Taluk",
+              "Kota CV Raman University & Bilasa Taal Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Korba",
+        "cities": [
+          {
+            "name": "Korba Power Capital of India",
+            "subCities": [
+              "NTPC Korba Super Thermal Power Station Mega Electricity Hub Taluk",
+              "BALCO Bharat Aluminium Company Mega Smelter City Taluk",
+              "SECL Mega Gevra & Dipka Coal Mines Largest Open Cast Coal Mines in Asia Taluk",
+              "Transport Nagar Commercial Heavy Vehicle Logistics Taluk",
+              "Niharika Commercial Complex Taluk",
+              "Katghora Forest Crossroads Taluk",
+              "Chaiturgarh Lafayette Fort of Chhattisgarh Tourism Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Surguja (Ambikapur)",
+        "cities": [
+          {
+            "name": "Ambikapur Cleanest City of Chhattisgarh",
+            "subCities": [
+              "Solid Waste Management Model City Zero Landfill Garbage Model Taluk",
+              "Mahamaya Temple Holy Devi Shrine Taluk",
+              "Mainpat Shimla of Chhattisgarh Tibetan Settlement & Tiger Point Waterfalls Taluk",
+              "Sadar Road Commercial Market Taluk",
+              "Sitapur Agriculture Taluk",
+              "Lakhanpur Coal Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Bastar (Jagdalpur)",
+        "cities": [
+          {
+            "name": "Jagdalpur Bastar Tribal Cultural Capital",
+            "subCities": [
+              "Chitrakote Waterfalls Niagara of India Horseshoe Falls Tourism Taluk",
+              "Tirathgarh Waterfalls Kanger Valley National Park & Stalactite Caves Taluk",
+              "Bastar Bell Metal Dhokra Craft & Wooden Art World Capital Taluk",
+              "Bastar Palace Heritage Royal Citadel Taluk",
+              "Dharampura Education & Medical College Bastar Taluk",
+              "Sanjay Market Tribal Forest Produce Mega Haat Taluk",
+              "Tokapal Agriculture Taluk",
+              "Lohandiguda Agro Taluk"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Assam",
+    "districts": [
+      {
+        "name": "Kamrup Metropolitan (Guwahati)",
+        "cities": [
+          {
+            "name": "Guwahati Gateway to the Northeast",
+            "subCities": [
+              "GS Road Commercial Highway Mall Mile & Corporate Spine Taluk",
+              "Dispur Capital Complex Government of Assam Secretariat Taluk",
+              "Maa Kamakhya Temple Nilachal Hill 51 Shaktipeeth Tantric Capital Taluk",
+              "Ganeshguri Flyover Commercial Trading Center Taluk",
+              "Paltan Bazaar Guwahati Central Railway Terminus & Transit Taluk",
+              "Pan Bazaar & Fancy Bazaar Century-Old Traditional Wholesale Market Taluk",
+              "Bhangagarh GMCH Gauhati Medical College & Healthcare Super City Taluk",
+              "IIT Guwahati North Guwahati World Class Premier Campus on Brahmaputra Taluk",
+              "AIIMS Guwahati Changsari Apex Healthcare City Taluk",
+              "Khanapara Administrative Border & Assam Administrative Staff College Taluk",
+              "Beltola Residential & Traditional Farmers Market Taluk",
+              "Lokpriya Gopinath Bordoloi International Airport Borjhar Aerotropolis Taluk",
+              "Chandmari Cultural Guwahati Commerce College Taluk",
+              "Uzan Bazaar Brahmaputra Riverside Promenade & High Court Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Dibrugarh",
+        "cities": [
+          {
+            "name": "Dibrugarh Tea City of India",
+            "subCities": [
+              "Tea Capital of the World Orthodox & CTC Tea Gardens Taluk",
+              "Assam Medical College AMCH First Medical College in North East India 1947 Taluk",
+              "Dibrugarh University Academic Research Campus Taluk",
+              "Bogibeel Bridge Longest Rail-Cum-Road Bridge in India on Brahmaputra Taluk",
+              "Chowkidinghee Commercial High Street Taluk",
+              "RMC Road Wholesale Trade Taluk",
+              "Naharkatiya First Oil Discovery of Independent India Oil India Taluk",
+              "Chabua Air Force Station & Tea Taluk",
+              "Tingkhong Tea Garden Valley Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Jorhat",
+        "cities": [
+          {
+            "name": "Jorhat Cultural & Tea Research Capital",
+            "subCities": [
+              "Tocklai Tea Research Association Oldest & Largest Tea Research Institute in the World Taluk",
+              "Majuli World Largest River Island Vaishnavite Satra Culture UNESCO Gateway Taluk",
+              "Assam Agricultural University AAU Premier Agricultural Research Taluk",
+              "Gar-Ali Commercial High Street Shopping Taluk",
+              "Jorhat Airport Rowriah Aviation Taluk",
+              "Mariani Railway Junction & Tea Taluk",
+              "Titabar Rice Bowl of Assam Taluk",
+              "Teok Agriculture Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Cachar (Silchar)",
+        "cities": [
+          {
+            "name": "Silchar Island of Peace",
+            "subCities": [
+              "Barak Valley Administrative & Commercial Capital Taluk",
+              "NIT Silchar Premier National Technology Institute Taluk",
+              "Silchar Medical College SMCH Apex Hospital of South Assam Taluk",
+              "Central Road Commercial Market Taluk",
+              "Tarapur Railway Terminal Taluk",
+              "Rangirkhari Healthcare & High-Rise Taluk",
+              "Kumbhirgram Airport Aviation Taluk",
+              "Lakhipur Tea & Bamboo Valley Taluk",
+              "Sonai Agriculture Taluk",
+              "Udharbond Tea Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Nagaon",
+        "cities": [
+          {
+            "name": "Nagaon Central Assam City",
+            "subCities": [
+              "Batadrava Than Birthplace of Srimanta Sankardev Vaishnavite Holy Seat Taluk",
+              "Kaziranga National Park Southern Gateway Rhino Sanctuary Taluk",
+              "Haibargaon Commercial Wholesale Market Taluk",
+              "Daccapatty High Street Taluk",
+              "Kampur Railway Junction Taluk",
+              "Kaliabor Tea & Historic Battle of Kaliabor Taluk",
+              "Raha Fishery & Agricultural Research Taluk",
+              "Samaguri Agro Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Tinsukia",
+        "cities": [
+          {
+            "name": "Tinsukia Commercial & Industrial City",
+            "subCities": [
+              "Digboi First Oil Refinery in Asia & Oldest Operating Oil Well in the World 1901 Taluk",
+              "Commercial Capital of Upper Assam Wholesale Trade Taluk",
+              "Margherita Coal City & North Eastern Coalfields Headquarters Taluk",
+              "Doomdooma Tea Capital Taluk",
+              "Sadiya Historic Himalayan Gateway & Bhupen Hazarika Setu Bridge Taluk",
+              "Dibru-Saikhowa National Park Feral Horses Ecotourism Taluk",
+              "Makum Plywood Historic Junction Taluk"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Uttarakhand",
+    "districts": [
+      {
+        "name": "Dehradun",
+        "cities": [
+          {
+            "name": "Dehradun Capital City of Schools",
+            "subCities": [
+              "Rajpur Road Pacific Mall High Street Commercial Lifestyle Taluk",
+              "Paltan Bazaar Clock Tower Historic Market Taluk",
+              "Vasant Vihar Posh Green Residential Taluk",
+              "Sahastradhara Road IT Park & Software Technology Parks of India Taluk",
+              "Ballupur & Chakrata Road Healthcare & Educational Corridor Taluk",
+              "FRI Forest Research Institute British Heritage Campus Taluk",
+              "IMA Indian Military Academy Premier Officer Training Academy Taluk",
+              "Mussoorie Queen of the Hills Mall Road & Kempty Falls World Tourism Taluk",
+              "Rishikesh Yoga Capital of the World AIIMS Rishikesh Ganga Ghats Adventure Taluk",
+              "Vikasnagar Agriculture & Hydro Power Valley Taluk",
+              "Doiwala Dehradun International Airport Jolly Grant Aerotropolis Taluk",
+              "Selaqui Mega Industrial & Pharmaceutical Pharma City SEZ Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Haridwar",
+        "cities": [
+          {
+            "name": "Haridwar Holy Gateway of the Gods",
+            "subCities": [
+              "Har Ki Pauri World Renowned Sacred Ganga Aarti & Maha Kumbh Mela Taluk",
+              "BHEL Ranipur Bharat Heavy Electricals Industrial Mega City Taluk",
+              "SIDCUL Mega Industrial Integrated Industrial Estate Hero ITC Mahindra Havells Taluk",
+              "Patanjali Yogpeeth Global Ayurveda & Yoga Wellness Capital Taluk",
+              "Roorkee IIT Roorkee Oldest Engineering Institution in India 1847 Taluk",
+              "Roorkee Cantonment & CBRI Central Building Research Institute Taluk",
+              "Jwalapur Century-Old Historic Commercial Market Taluk",
+              "Laksar Sugar Mill & Mega Railway Crossroads Taluk",
+              "Bhagwanpur Industrial Complex Taluk",
+              "Manglaur Agriculture Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Nainital",
+        "cities": [
+          {
+            "name": "Nainital City of Lakes & Haldwani",
+            "subCities": [
+              "Naini Lake Mall Road & Naina Devi Shaktipeeth Temple Tourism Taluk",
+              "Haldwani Gateway to Kumaon Commercial Financial Capital of Uttarakhand Taluk",
+              "Nainital Road Haldwani Super Specialty Medical & Corporate Corridor Taluk",
+              "Kathgodam Northern Railway Himalayan Terminus Taluk",
+              "Bhimtal Lotus Lake Island Aquarium Resort Taluk",
+              "Mukteshwar 180-Degree Himalayan View Apple Orchards Taluk",
+              "Ramnagar Jim Corbett National Park Oldest National Park in India Tiger Reserve Taluk",
+              "Lalkuan Paper Mill Century Pulp Paper Giant Taluk",
+              "Bhowali Fruit Market & TB Sanatorium Taluk",
+              "Kaladhungi Jim Corbett Heritage Museum Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Udham Singh Nagar",
+        "cities": [
+          {
+            "name": "Rudrapur Industrial Capital",
+            "subCities": [
+              "SIDCUL Pantnagar Integrated Industrial Estate Tata Motors Bajaj Auto Nestle Titan Taluk",
+              "GB Pant University of Agriculture and Technology First Agricultural University in India Taluk",
+              "Rudrapur Main Market Commercial Hub Taluk",
+              "Kashipur Industrial & IIM Kashipur Premier Management Campus Taluk",
+              "Kichha Modern Rice Mills & Agro Processing Taluk",
+              "Sitarganj Industrial Complex Phase 2 Taluk",
+              "Khatima Border Agriculture Taluk",
+              "Bazpur First Cooperative Sugar Mill in India Taluk",
+              "Jaspur Timber Wood Industry Taluk",
+              "Mahuakheraganj Industrial Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Pauri Garhwal",
+        "cities": [
+          {
+            "name": "Pauri & Kotdwar",
+            "subCities": [
+              "Kotdwar Gateway to Garhwal & BHEL Industrial BEL Taluk",
+              "Pauri Administrative Divisional Headquarters Himalayan View Taluk",
+              "Srinagar Garhwal HNB Garhwal Central University & Medical College Taluk",
+              "Lansdowne Garhwal Rifles Regimental Historic Cantonment Hill Station Taluk",
+              "Dugadda Historic Trade Taluk",
+              "Satpuli Valley Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Chamoli",
+        "cities": [
+          {
+            "name": "Chamoli & Badrinath",
+            "subCities": [
+              "Badrinath Temple Holy Char Dham Supreme Vishnu Himalayan Dham Taluk",
+              "Valley of Flowers UNESCO World Heritage Alpine Floral Meadow & Hemkund Sahib Taluk",
+              "Joshimath Ancient Shankaracharya Jyotirmath & Auli Skiing World Resort Taluk",
+              "Gopeshwar District Administrative Headquarters Gopinath Temple Taluk",
+              "Karnaprayag Confluence of Alaknanda and Pindar Rivers Taluk",
+              "Nandaprayag Alaknanda Nandakini Sangam Taluk",
+              "Gauchar Historic Trade Fair Airfield Taluk"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Himachal Pradesh",
+    "districts": [
+      {
+        "name": "Shimla",
+        "cities": [
+          {
+            "name": "Shimla Queen of Hill Stations Capital",
+            "subCities": [
+              "The Mall Road & The Ridge Christ Church Imperial British Heritage Taluk",
+              "Kalka-Shimla Toy Train UNESCO World Heritage Railway Terminus Taluk",
+              "Chotta Shimla Himachal Pradesh Government Secretariat Taluk",
+              "Sanjauli High Density Commercial & Educational Taluk",
+              "IGMC Indira Gandhi Medical College Super Specialty Hospital Taluk",
+              "Jakhoo Hill Lord Hanuman 108ft Giant Statue Highest Peak Taluk",
+              "Kufri Snow Skiing Himalayan Nature Park Tourism Taluk",
+              "Mashobra Apple Orchards & Craignano Nature Park Taluk",
+              "Naldehra 18-Hole Historic Golf Course Taluk",
+              "Rampur Bushahr Historic International Lavi Fair & Satluj Valley Taluk",
+              "Theog Potato & Apple Wholesale Mega Mandi Taluk",
+              "Rohru World Famous Royal Delicious Apple Valley Taluk",
+              "Kotkhai Apple Capital Taluk",
+              "Jubbal Royal Palace Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Kangra",
+        "cities": [
+          {
+            "name": "Dharamshala & Kangra",
+            "subCities": [
+              "McLeod Ganj Little Lhasa Residence of His Holiness Dalai Lama World Spiritual Tourism Taluk",
+              "HPCA Stadium Dharamshala Most Scenic Cricket Stadium in the World Taluk",
+              "Dharamshala Smart City Kotwali Bazaar Commercial Taluk",
+              "Kangra Town Brajeshwari Devi Shaktipeeth & Kangra Fort Ancient Citadel Taluk",
+              "Palampur Tea Capital of North India Tea Plantations & CSIR IHBT Research Taluk",
+              "Baijnath 1204 AD Ancient Vaidyanath Shiva Temple Taluk",
+              "Nurpur Historic Fort & Pashmina Shawl Weaving Taluk",
+              "Jawalamukhi Eternal Flame 51 Shaktipeeth Holy Pilgrimage Taluk",
+              "Nagrota Bagwan Modern Commercial & Education Taluk",
+              "Dehra Gopipur Pong Dam Wetland Bird Sanctuary Taluk",
+              "Shahpur Industrial Taluk",
+              "Fatehpur Agriculture Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Solan",
+        "cities": [
+          {
+            "name": "Solan Mushroom City of India",
+            "subCities": [
+              "City of Red Gold Tomato & Mushroom Capital of India Taluk",
+              "The Mall Road Commercial High Street Taluk",
+              "Baddi-Barotiwala-Nalagarh BBN Asia Largest Pharmaceutical Manufacturing Hub 35% of Asia Formulations Taluk",
+              "Kasauli British Cantonment Monkey Point & Heritage Church Hill Resort Taluk",
+              "Kandaghat Horticultural Research & High-Rise Taluk",
+              "Chail World Highest Cricket Ground & Royal Chail Palace Taluk",
+              "Nalagarh Historic Fort Palace & Mega Industrial Taluk",
+              "Darlaghat Ambuja Mega Cement Industrial Complex Taluk",
+              "Arki Historic Fortified Palace Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Mandi",
+        "cities": [
+          {
+            "name": "Mandi Chhoti Kashi",
+            "subCities": [
+              "Varanasi of Hills 81 Ancient Stone Shiva Temples Historic Taluk",
+              "Indira Market Sunken Garden Modern Commercial Taluk",
+              "IIT Mandi Kamand Himalayan Green Campus Premier Tech Institute Taluk",
+              "Sundernagar Planned Model Town Beas-Satluj Link Water Power Taluk",
+              "Jogindernagar Shanan 1925 Hydro Electric Project & Narrow Gauge Rail Taluk",
+              "Sarkaghat Agriculture Market Taluk",
+              "Karsog Apple & Traditional Wood Architecture Valley Taluk",
+              "Rewalsar Holy Lake of Three Religions Hindu Buddhist Sikh Taluk",
+              "Jhanjheli Serene Ecotourism Valley Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Kullu",
+        "cities": [
+          {
+            "name": "Kullu & Manali Valley of Gods",
+            "subCities": [
+              "Manali World Famous Tourism Capital Solang Valley & Atal Tunnel Rohtang Gateway Taluk",
+              "Old Manali & Mall Road Hippie Cafes & Wooden Architecture Taluk",
+              "Kullu Dussehra International Week-Long Festival Dhalpur Ground Taluk",
+              "Kullu Shawl Handloom GI Tag Weaving Craft Centers Taluk",
+              "Bhuntar Kullu-Manali Airport Aviation & River Confluence Taluk",
+              "Naggar Roerich Art Gallery & Historic Castle Tourism Taluk",
+              "Kasol Mini Israel of India Parvati Valley Trekking & Cafes Taluk",
+              "Manikaran Sahib Hot Sulphur Springs & Gurudwara Pilgrimage Taluk",
+              "Banjar Tirthan Valley Great Himalayan National Park GHNP UNESCO World Heritage Taluk",
+              "Anni Apple Belt Taluk",
+              "Nirmand Historic Village of Parashurama Taluk"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Goa",
+    "districts": [
+      {
+        "name": "North Goa",
+        "cities": [
+          {
+            "name": "Panaji & Coastal Tourism Hubs",
+            "subCities": [
+              "Panaji Capital City Fontainhas Latin Quarter Portuguese Heritage Taluk",
+              "Miramar Beach & Dona Paula Scenic Coastal Viewpoint Taluk",
+              "Patto Plaza Central Business District High-Rise Corporate Taluk",
+              "Porvorim Government of Goa Secretariat & Mall de Goa Taluk",
+              "Calangute Queen of Beaches Golden Sands Tourism Taluk",
+              "Baga Tito Lane Nightlife & Watersports Capital Taluk",
+              "Candolim Fort Aguada 1612 Portuguese Fortress Coastal Taluk",
+              "Anjuna Flea Market & Curlies Sunset Cliff Taluk",
+              "Vagator Chapora Fort Dil Chahta Hai Viewpoint Taluk",
+              "Morjim & Ashwem Olive Ridley Turtle Protected Beaches Taluk",
+              "Arambol Bohemian Sweetwater Lake Beach Taluk",
+              "Mapusa Friday Market Commercial Trading Hub of North Goa Taluk",
+              "Bicholim Iron Ore & Metal Handicraft Taluk",
+              "Pernem MOPA Manohar International Airport Aerotropolis Taluk",
+              "Valpoi Western Ghats Mhadei Wildlife Sanctuary Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "South Goa",
+        "cities": [
+          {
+            "name": "Margao & Coastal Heritage",
+            "subCities": [
+              "Margao Commercial Capital of Goa Municipal Garden Taluk",
+              "Fatorda Pandit Jawaharlal Nehru Stadium Sports Arena Taluk",
+              "Gogol Medical Hub & Educational Institutions Taluk",
+              "Colva White Sand Beach Coastal Promenade Taluk",
+              "Benaulim Traditional Fishery & Luxury Villa Resorts Taluk",
+              "Cavelossim & Mobor Five-Star Luxury Resort Estuary Belt Taluk",
+              "Majorda Bakery & Culinary Heritage Taluk",
+              "Vasco da Gama Port City Mormugao Port Trust MPT International Seaport Taluk",
+              "Dabolim Goa International Airport Airport City Taluk",
+              "Ponda Cultural & Temple Capital Shanta Durga Mangueshi Temples Taluk",
+              "Quepem Historic Palacio do Deao Taluk",
+              "Sanguem Salaulim Mega Irrigation Dam & Botanical Garden Taluk",
+              "Canacona Palolem Crescent Beach & Butterfly Island Taluk",
+              "Cabo de Rama Historic Sea Cliff Fortress Taluk",
+              "Curchorem Iron Ore Rail Hub Taluk"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Tripura",
+    "districts": [
+      {
+        "name": "West Tripura (Agartala)",
+        "cities": [
+          {
+            "name": "Agartala Capital Smart City",
+            "subCities": [
+              "Ujjayanta Palace Royal State Museum Heritage Taluk",
+              "Banamalipur Commercial High Street Shopping Taluk",
+              "Kunjaban AGMC Agartala Government Medical College & Secretariat Taluk",
+              "Ramnagar Road 1-12 Planned Residential Taluk",
+              "Akhaura Integrated Check Post ICP Indo-Bangladesh International Border Taluk",
+              "Hapania TMC Tripura Medical College & Exhibition Ground Taluk",
+              "MBB Airport Maharaja Bir Bikram Modern Airport Terminal Taluk",
+              "Ranirbazar Agro Commercial Taluk",
+              "Jirania Educational & NIT Agartala Campus Taluk",
+              "Mohanpur Agriculture Research Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Gomati",
+        "cities": [
+          {
+            "name": "Udaipur City of Lakes",
+            "subCities": [
+              "Tripura Sundari Matabari 51 Shaktipeeth World Holy Temple Taluk",
+              "Kalyan Sagar Sacred Giant Turtle Lake Taluk",
+              "Central Market Udaipur Commercial Taluk",
+              "Amarpur Chhabimura Rock Carvings on Gomati River Taluk",
+              "Karbook Tribal Agriculture Taluk",
+              "Killa Forest Agro Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "North Tripura",
+        "cities": [
+          {
+            "name": "Dharmanagar City",
+            "subCities": [
+              "Second Largest Commercial City of Tripura Railway Hub Taluk",
+              "Central Road Business District Taluk",
+              "Panisagar Defense BSF Headquarters Taluk",
+              "Kanchanpur Jampui Hills Orange Festival Cloud Paradise Taluk",
+              "Damcherra Border Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "South Tripura",
+        "cities": [
+          {
+            "name": "Belonia & Santirbazar",
+            "subCities": [
+              "Belonia Indo-Bangladesh Border Trade Taluk",
+              "Santirbazar Commercial Trade Taluk",
+              "Sabroom Maitri Setu Feni River Gateway to Chittagong Port Taluk",
+              "Pilak 8th-Century Buddhist Archaeological Excavation Heritage Taluk",
+              "Rajnagar Agriculture Taluk",
+              "Hrishyamukh Border Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Dhalai",
+        "cities": [
+          {
+            "name": "Ambassa Town",
+            "subCities": [
+              "Ambassa Administrative District Capital Taluk",
+              "Kamalpur Border Trade & Tea Gardens Taluk",
+              "Gandacherra Dumbur Lake Water Sports Tourism Taluk",
+              "Longtharai Mandir Hill Range Taluk",
+              "Manu River Crossing Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Unakoti",
+        "cities": [
+          {
+            "name": "Kailashahar & Unakoti",
+            "subCities": [
+              "Unakoti Rock Cut Massive Bas-Relief Sculptures of Shiva Angkor Wat of India UNESCO Heritage Taluk",
+              "Kailashahar Tea & Historic Royal Capital Taluk",
+              "Kumarghat Pineapple Capital of Tripura Rail Junction Taluk",
+              "Pecharthal Agro Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Khowai",
+        "cities": [
+          {
+            "name": "Khowai Town",
+            "subCities": [
+              "Khowai Riverfront Commercial Taluk",
+              "Teliamura Railway & Gas Thermal Power Plant Taluk",
+              "Padmabil Traditional Handloom Weaving Taluk",
+              "Bishramganj Rubber Processing Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Sepahijala",
+        "cities": [
+          {
+            "name": "Bishramganj & Sonamura",
+            "subCities": [
+              "Neermahal Water Palace Rudrasagar Lake Only Water Palace in Eastern India Taluk",
+              "Sepahijala Wildlife Sanctuary & Clouded Leopard National Park Taluk",
+              "Bishramganj Administrative Capital Taluk",
+              "Sonamura Indo-Bangladesh Inland Waterway Terminal Taluk",
+              "Boxanagar Ancient Buddhist Stupa Taluk",
+              "Jampuijala Tribal Arts Taluk"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Meghalaya",
+    "districts": [
+      {
+        "name": "East Khasi Hills (Shillong)",
+        "cities": [
+          {
+            "name": "Shillong Scotland of the East",
+            "subCities": [
+              "Police Bazaar Center Point Commercial High Street Shopping Taluk",
+              "Laitumkhrah Cathedral of Mary Help of Christians & Cafes Taluk",
+              "NEIGRIHMS North Eastern Indira Gandhi Regional Institute of Health & Medical Sciences Super Apex City Taluk",
+              "IIM Shillong Rajiv Gandhi Indian Institute of Management Taluk",
+              "Ward Lake & Polo Ground Sports Golf Course Taluk",
+              "Upper Shillong Air Force Headquarters & Elephant Falls Taluk",
+              "Cherrapunji (Sohra) Wettest Place on Earth Living Root Bridges Waterfalls Taluk",
+              "Mawkdok Dympep Valley Zip Lining & Canyon View Taluk",
+              "Mawlynnong Cleanest Village in Asia & Single Decker Living Root Bridge Taluk",
+              "Dawki Umngot Crystal Clear Glass Water River Border Boating Taluk",
+              "Mawphlang Sacred Grove Ancient Rainforest Taluk",
+              "Pynursla Spices Agro Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "West Garo Hills (Tura)",
+        "cities": [
+          {
+            "name": "Tura Cultural Capital of Garos",
+            "subCities": [
+              "Tura Peak Trekking & Panoramic View Taluk",
+              "Hawakhana Commercial High Street Taluk",
+              "Chandmary Cultural Arts Taluk",
+              "Pelga Falls & Ganol River Bamboo Bridge Taluk",
+              "Tikrikilla Agriculture Taluk",
+              "Phulbari River Port Taluk",
+              "Dadenggre Forest Agro Taluk",
+              "Selsella Cotton Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "West Jaintia Hills (Jowai)",
+        "cities": [
+          {
+            "name": "Jowai Town",
+            "subCities": [
+              "Jowai Myntdu River Valley Administrative Taluk",
+              "Thadlaskein Sacred Lake Tourism Taluk",
+              "Syntu Ksar Kiang Nangbah Historic Memorial Taluk",
+              "Nartiang Monoliths Tallest Monolith in the World Heritage Taluk",
+              "Amlarem Krang Shuri Magnificent Blue Waterfalls Taluk",
+              "Dawki Border Commercial Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Ri-Bhoi (Nongpoh)",
+        "cities": [
+          {
+            "name": "Nongpoh & Umiam",
+            "subCities": [
+              "Umiam Lake Barapani Water Sports & Luxury Resort Taluk",
+              "Nongpoh Highway Commercial Food Stop Taluk",
+              "Byrnihat Mega Industrial & Pharmaceutical Corridor Taluk",
+              "ICAR Research Complex for NEH Region Taluk",
+              "Umsning Agriculture Trade Taluk",
+              "Khanapara Border Commercial Hub Taluk"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Manipur",
+    "districts": [
+      {
+        "name": "Imphal West",
+        "cities": [
+          {
+            "name": "Imphal Capital City",
+            "subCities": [
+              "Ima Keithel (Mother Market) Largest & Only All-Women Run Market in the World Taluk",
+              "Kangla Fort Ancient Historical Seat of Manipur Kings Taluk",
+              "Thangal Bazaar & Paona Bazaar High Street Commercial Taluk",
+              "Lamphelpat RIMS Regional Institute of Medical Sciences Super Apex Hospital Taluk",
+              "Uripok Cultural Music & Dance Taluk",
+              "Sagolband Heritage Polo Birthplace Taluk",
+              "Langol Housing Complex & Ecotourism Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Imphal East",
+        "cities": [
+          {
+            "name": "Porompat & Mantripukhri",
+            "subCities": [
+              "JNIMS Jawaharlal Nehru Institute of Medical Sciences Healthcare Taluk",
+              "Porompat Administrative District Capital Taluk",
+              "Mantripukhri Secretariat IT SEZ & High Court Complex Taluk",
+              "Lamlong Wholesale Agriculture Market Taluk",
+              "Andro Ancient Pottery Heritage Craft Village Taluk",
+              "Heingang Marjing Polo Statue World Tallest Polo Player 122ft Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Bishnupur",
+        "cities": [
+          {
+            "name": "Bishnupur Heritage Town",
+            "subCities": [
+              "Loktak Lake World Only Floating Lake & Phumdis Tourism Taluk",
+              "Keibul Lamjao National Park World Only Floating National Park Home to Sangai Brow-Antlered Deer Taluk",
+              "Sendra Island Luxury Floating Resort Taluk",
+              "Moirang INA Memorial Netaji Subhash Chandra Bose First Tricolor Hoisted in 1944 Taluk",
+              "Bishnupur 15th-Century Vishnu Brick Temple Taluk",
+              "Nambol Japanese War Memorial Red Hill Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Churachandpur (Lamka)",
+        "cities": [
+          {
+            "name": "Churachandpur City",
+            "subCities": [
+              "Tedim Road Main Commercial High Street Taluk",
+              "Tuibong Administrative Headquarters Taluk",
+              "Medical College Churachandpur Healthcare Taluk",
+              "Tipaimukh River Confluence Taluk",
+              "Singngat Hill Valley Taluk",
+              "Thanlon Forest Agro Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Ukhrul",
+        "cities": [
+          {
+            "name": "Ukhrul Land of Shirui Lily",
+            "subCities": [
+              "Shirui Kashong Peak World Rare Shirui Lily State Flower Taluk",
+              "Ukhrul Viewland Commercial Market Taluk",
+              "Khayang Waterfalls Scenic Trekking Taluk",
+              "Hundung Limestone Mineral Taluk",
+              "Jessami Border Trade Taluk"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Nagaland",
+    "districts": [
+      {
+        "name": "Kohima",
+        "cities": [
+          {
+            "name": "Kohima Capital City",
+            "subCities": [
+              "Kohima War Cemetery Commonwealth Historic WWII Memorial Taluk",
+              "Kisama Heritage Village Hornbill Festival World Renowned Tourism Taluk",
+              "PR Hill & BOC Commercial High Street Market Taluk",
+              "High School Junction & Secretariat Complex Taluk",
+              "Naga Hospital Authority NHAK Apex Healthcare Taluk",
+              "Jakhama St. Joseph College & Dzukou Valley Trekking Gateway Taluk",
+              "Khonoma First Green Village of Asia Ecotourism Taluk",
+              "Tseminyu Rengma Heritage Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Dimapur & Chumoukedima",
+        "cities": [
+          {
+            "name": "Dimapur Commercial Hub",
+            "subCities": [
+              "Hong Kong Market & New Market Commercial Shopping Capital Taluk",
+              "Circular Road Financial & Corporate Banking Taluk",
+              "Dimapur Railway Station Busiest Rail Transit of Nagaland Taluk",
+              "Chumoukedima Police HQ & Nagaland Global University City Taluk",
+              "Medziphema Veterinary College & Agriculture ICAR Taluk",
+              "Diphupar Multi-Tribal Urban Taluk",
+              "Niuland Oil & Agro Development Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Mokokchung",
+        "cities": [
+          {
+            "name": "Mokokchung Cultural Capital of Aos",
+            "subCities": [
+              "Mokokchung Town Central Commercial Square Taluk",
+              "Ungma Ancient Ao Heritage Village Taluk",
+              "Imkongliba Memorial Hospital Healthcare Taluk",
+              "Mopungchuket Romantic Folklore Craft Village Taluk",
+              "Changtongya Commercial Trade Taluk",
+              "Tuli Paper Mill Industrial Taluk"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Mizoram",
+    "districts": [
+      {
+        "name": "Aizawl",
+        "cities": [
+          {
+            "name": "Aizawl Scenic Capital City",
+            "subCities": [
+              "Zarkawt High Street Lifestyle Commercial Taluk",
+              "Chanmari High Street Youth Fashion & Cafes Taluk",
+              "Dawrpui Bara Bazar Largest Market of Mizoram Taluk",
+              "Khatla VIP Civil Secretariat Government Zone Taluk",
+              "Falkawn ZMC Zoram Medical College & Hospital Super Apex Taluk",
+              "Durtlang Hills Church & Theological College Taluk",
+              "Bawngkawn Major Highway Transit Junction Taluk",
+              "Lengpui International Airport Green Aviation Taluk",
+              "Sairang Broad Gauge Railway Terminal Taluk",
+              "Reiek Peak Heritage Village Scenic Trekking Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Lunglei",
+        "cities": [
+          {
+            "name": "Lunglei Bridge of Rock",
+            "subCities": [
+              "Venglai Commercial Central Market Taluk",
+              "Civil Hospital Lunglei Southern Healthcare Apex Taluk",
+              "Bazar Veng High Street Taluk",
+              "Tlabung Khawthlangtuipui River Border Trade Taluk",
+              "Hnahthial Marble & Agriculture Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Champhai",
+        "cities": [
+          {
+            "name": "Champhai Rice Bowl of Mizoram",
+            "subCities": [
+              "Zokhawthar Indo-Myanmar International Border Trade Taluk",
+              "Champhai Extensive Grape Vineyards & Winery Taluk",
+              "Vangchhia Ancient Megaliths Archaeological UNESCO Tentative Taluk",
+              "Bazar Veng Commercial Taluk",
+              "Khawzawl Agro Trade Taluk"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Arunachal Pradesh",
+    "districts": [
+      {
+        "name": "Papum Pare (Itanagar)",
+        "cities": [
+          {
+            "name": "Itanagar & Naharlagun Twin Capital",
+            "subCities": [
+              "Ganga Market & Clock Tower Commercial High Street Taluk",
+              "Bank Tinali State Civil Secretariat & Assembly Taluk",
+              "TRIHMS Tomo Riba Institute of Health & Medical Sciences Super Apex Hospital Taluk",
+              "Ita Fort 14th-Century Ancient Brick Fortress Heritage Taluk",
+              "Jawaharlal Nehru State Museum Tribal Heritage Taluk",
+              "Naharlagun D-Sector Commercial Railway Station City Taluk",
+              "Nirjuli NERIST National Institute of Science & Technology Taluk",
+              "Donyi Polo Airport Hollongi Greenfield International Airport Taluk",
+              "Banderdewa Gateway Checkpost Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Tawang",
+        "cities": [
+          {
+            "name": "Tawang Monastic Paradise",
+            "subCities": [
+              "Tawang Monastery 1680 AD Largest Monastery in India Second Largest in the World Taluk",
+              "Sela Pass 13700ft Frozen Lake Himalayan High Mountain Pass Taluk",
+              "Old Market Tawang Traditional Tibetan Craft Taluk",
+              "Madhuri (Sangetsar) Lake Scenic Himalayan Glacier Lake Taluk",
+              "Tawang War Memorial 1962 Heroes Taluk",
+              "Lumla Border Trade Taluk",
+              "Jang Nuranang Waterfalls Hydro Power Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "East Siang (Pasighat)",
+        "cities": [
+          {
+            "name": "Pasighat Oldest Town of Arunachal",
+            "subCities": [
+              "Siang River Rafting & Daying Ering Wildlife Sanctuary Taluk",
+              "Pasighat Main Market Commercial Taluk",
+              "College of Horticulture & Forestry Taluk",
+              "Bakman General Hospital Taluk",
+              "Ruksin Border Checkpost Taluk",
+              "Mebo Agriculture Valley Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "West Kameng (Bomdila)",
+        "cities": [
+          {
+            "name": "Bomdila & Dirang",
+            "subCities": [
+              "Bomdila Monastery & Himalayan Viewpoint Taluk",
+              "Dirang Valley Hot Springs Apple & Kiwi Orchards Taluk",
+              "National Research Centre on Yak Dirang Taluk",
+              "Bhalukpong Orchid Sanctuary Entry Gateway Taluk",
+              "Rupa Valley Army Cantonment Taluk",
+              "Singchung Bugun Village Community Reserve Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Lohit & Namsai",
+        "cities": [
+          {
+            "name": "Tezu & Namsai",
+            "subCities": [
+              "Golden Pagoda Kongmu Kham Namsai Theravada Buddhist Temple World Tourism Taluk",
+              "Parashuram Kund Sacred Hindu Holy Pilgrimage on Lohit River Taluk",
+              "Tezu Airport & Citrus Fruit Market Taluk",
+              "Namsai University & Agriculture Capital Taluk",
+              "Chowkham Traditional Tai Khamti Heritage Taluk"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Sikkim",
+    "districts": [
+      {
+        "name": "Gangtok",
+        "cities": [
+          {
+            "name": "Gangtok Clean Himalayan Capital",
+            "subCities": [
+              "MG Marg Vehicle-Free Eco-Friendly Promenade World Famous High Street Taluk",
+              "Tadong CRH Central Referral Hospital Sikkim Manipal University Medical City Taluk",
+              "Deorali Ropeway Cable Car & Do-Drul Chorten Stupa Taluk",
+              "Enchey Monastery 200-Year Sacred Nyingma Temple Taluk",
+              "STNM Sir Thutob Namgyal Memorial Super Specialty Government Multi-Hospital Sochakgang Taluk",
+              "Banjhakri Falls Energy Park Ecotourism Taluk",
+              "Tsomgo (Changu) Lake 12400ft Glacial Sacred Lake Tourism Taluk",
+              "Nathula Pass 14140ft Historic Indo-China Silk Route Border Taluk",
+              "Ranipool ICAR & Sikkim University Growth Corridor Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Namchi",
+        "cities": [
+          {
+            "name": "Namchi Cultural Pilgrimage City",
+            "subCities": [
+              "Siddhesvara Dhaam Char Dham 108ft Giant Shiva Statue & 12 Jyotirlingas Taluk",
+              "Samdruptse 138ft Giant Golden Statue of Guru Padmasambhava Taluk",
+              "Namchi Central Park Commercial High Street Taluk",
+              "Temi Tea Garden Only Tea Estate in Sikkim Organic Tea World Capital Taluk",
+              "Jorethang Major Commercial Transit Hub & River Confluence Taluk",
+              "Ravangla Buddha Park Tathagata Tsal 130ft Buddha Statue Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Gyalshing (West Sikkim)",
+        "cities": [
+          {
+            "name": "Gyalshing & Pelling",
+            "subCities": [
+              "Pelling Skywalk & Chenrezig 137ft Giant Statue Kanchenjunga View Taluk",
+              "Pemayangtse Monastery Premier Ancient Nyingma Monastery Taluk",
+              "Rabdentse Ruins Ancient Second Royal Capital of Sikkim Taluk",
+              "Yuksom First Historical Capital of Sikkim Coronation Throne Taluk",
+              "Khecheopalri Sacred Wish-Fulfilling Holy Lake Taluk",
+              "Gyalshing District Administrative Headquarters Taluk",
+              "Dentam Organic Cheese Dairy Factory Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Mangan (North Sikkim)",
+        "cities": [
+          {
+            "name": "Mangan Himalayan Gateway",
+            "subCities": [
+              "Cardamom Capital of India World Organic Large Cardamom Hub Taluk",
+              "Lachung & Yumthang Valley of Flowers Rhododendron Sanctuary Taluk",
+              "Lachen & Gurudongmar Lake 17800ft Sacred Holy High Altitude Lake Taluk",
+              "Chungthang Confluence of Lachen and Lachung Rivers Teesta Hydro Power Taluk",
+              "Mangan District Administrative Headquarters Taluk",
+              "Dzongu Protected Lepcha Reserve Forest Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Pakyong",
+        "cities": [
+          {
+            "name": "Pakyong Green Airport City",
+            "subCities": [
+              "Pakyong Greenfield Himalayan Airport Aviation Hub Taluk",
+              "National Research Centre for Orchids ICAR Taluk",
+              "Rhenock Historic Border Trade Taluk",
+              "Aritar Lampokhari Emerald Boot-Shaped Lake Taluk",
+              "Rongli River Valley Taluk",
+              "Majhitar Advanced Technology Industrial Zone Taluk"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Soreng",
+        "cities": [
+          {
+            "name": "Soreng Agricultural District",
+            "subCities": [
+              "Soreng Administrative Capital Taluk",
+              "Chakung Pine Forest & Himalayan Viewpoint Taluk",
+              "Sombaria Agriculture Market Taluk",
+              "Daramdin Heritage Taluk"
+            ]
+          }
+        ]
+      }
+    ]
+  }
+];

@@ -5,6 +5,7 @@ import { MapPin, Building, Hospital as HospIcon, User, Calendar, CheckCircle2, X
 import axios from 'axios';
 import { useLanguage } from '../context/LanguageContext';
 import { AudioButton } from '../components/VoiceAssistant';
+import HospitalDetailsModal from '../components/HospitalDetailsModal';
 
 export default function Home() {
   const navigate = useNavigate();
@@ -12,6 +13,7 @@ export default function Home() {
 
   const [loading, setLoading] = useState(true);
   const [viewMode, setViewMode] = useState('tree'); // 'tree' or 'interactive'
+  const [selectedHospitalForModal, setSelectedHospitalForModal] = useState(null);
 
   const [data, setData] = useState({
     states: [],
@@ -112,18 +114,38 @@ export default function Home() {
             <h1 className="text-4xl sm:text-6xl font-black tracking-tight text-white leading-tight">
               Hospital OP Ticket Booking<br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-teal-300 to-blue-400">
-                29 States • All Districts • Cities • Hospitals
+                29 States • 280+ Districts • Cities • Hospitals
               </span>
             </h1>
 
             <p className="text-sm sm:text-lg text-slate-300 max-w-3xl mx-auto leading-relaxed font-medium">
-              Complete coverage across all 29 Indian States, Districts, Cities, Sub-Cities/Areas, Hospitals &amp; Doctors. Check live availability or recommended alternative doctors with voice reader support.
+              Complete national coverage across all 29 Indian States with 280+ Districts, 500+ Cities, Sub-Cities/Areas, Hospitals &amp; Doctors. Check live OP availability or find alternative doctors with voice reader support.
             </p>
+
+            {/* Live Stats Bar */}
+            {!loading && (
+              <div className="flex flex-wrap justify-center gap-3 pt-2">
+                {[
+                  { icon: '🗺️', label: 'States', value: data.states.length },
+                  { icon: '🏙️', label: 'Districts', value: data.districts.length },
+                  { icon: '🌆', label: 'Cities', value: data.cities.length },
+                  { icon: '📍', label: 'Sub-Areas', value: data.subCities.length },
+                  { icon: '🏥', label: 'Hospitals', value: data.hospitals.length },
+                  { icon: '👨‍⚕️', label: 'Doctors', value: data.doctors.length },
+                ].map(stat => (
+                  <div key={stat.label} className="flex items-center gap-1.5 bg-slate-900/80 border border-cyan-500/20 px-3.5 py-1.5 rounded-full text-xs font-bold">
+                    <span>{stat.icon}</span>
+                    <span className="text-cyan-300">{stat.value.toLocaleString()}</span>
+                    <span className="text-slate-400">{stat.label}</span>
+                  </div>
+                ))}
+              </div>
+            )}
 
             {/* Audio Reader Helper for Home Page */}
             <div className="flex justify-center pt-1">
               <AudioButton 
-                textToRead="Welcome to Medi OP. All 29 states of India, districts, cities, sub-cities, hospitals, and doctors are listed below. Click 🔊 to listen to any hospital or doctor details."
+                textToRead={`Welcome to Medi OP. All ${data.states.length} states of India are available with ${data.districts.length} districts, ${data.cities.length} cities, ${data.hospitals.length} hospitals and ${data.doctors.length} doctors listed below. Click the speak button to listen to any hospital or doctor details.`}
                 label="🔊 Listen Voice Guide"
                 className="py-2.5 px-5 text-sm"
               />
@@ -190,16 +212,21 @@ export default function Home() {
             {viewMode === 'tree' && (
               <div className="space-y-6">
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-                  <h2 className="text-2xl font-bold text-white flex items-center gap-2">
-                    <MapPin className="w-6 h-6 text-cyan-400" />
-                    <span>All 29 States National Hospital Directory</span>
-                  </h2>
+                  <div>
+                    <h2 className="text-2xl font-bold text-white flex items-center gap-2">
+                      <MapPin className="w-6 h-6 text-cyan-400" />
+                      <span>All 29 States — National Hospital Directory</span>
+                    </h2>
+                    <p className="text-xs text-slate-400 mt-1 ml-8">
+                      {data.states.length} States • {data.districts.length} Districts • {data.cities.length} Cities • {data.subCities.length} Areas • {data.hospitals.length} Hospitals • {data.doctors.length} Doctors
+                    </p>
+                  </div>
                   <div className="flex items-center gap-3 text-xs">
                     <button 
                       onClick={expandAll}
                       className="px-4 py-2 rounded-xl bg-cyan-500/20 text-cyan-300 border border-cyan-500/40 hover:bg-cyan-500/30 font-bold"
                     >
-                      ➕ Expand All 29 States
+                      ➕ Expand All {data.states.length} States
                     </button>
                     <button 
                       onClick={collapseAll}
@@ -216,7 +243,10 @@ export default function Home() {
                     const isExpanded = expandedStates[state._id];
                     const stateDistricts = data.districts.filter(d => d.stateId === state._id);
                     const stateHospitals = data.hospitals.filter(h => h.stateId === state._id);
-                    const stateDoctors = data.doctors.filter(d => stateHospitals.some(h => h._id === d.hospitalId._id));
+                    const stateDoctors = data.doctors.filter(d => {
+                      const docHospId = d.hospitalId?._id || d.hospitalId;
+                      return stateHospitals.some(h => h._id === docHospId);
+                    });
 
                     return (
                       <div key={state._id} className="glass-card rounded-3xl border border-slate-700/80 overflow-hidden">
@@ -307,19 +337,45 @@ export default function Home() {
                                             {/* Hospitals in City */}
                                             <div className="space-y-2 pt-2 border-t border-slate-800">
                                               {cityHospitals.map(hosp => {
-                                                const hospDocs = data.doctors.filter(d => d.hospitalId._id === hosp._id);
+                                                const hospDocs = data.doctors.filter(d => (d.hospitalId?._id || d.hospitalId) === hosp._id);
 
                                                 return (
-                                                  <div key={hosp._id} className="bg-slate-900 p-3 rounded-xl border border-slate-800 space-y-2">
-                                                    <div className="flex items-start justify-between gap-2">
-                                                      <div>
-                                                        <span className="text-[10px] font-bold text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded">
-                                                          {hosp.hospitalType || 'Multi-Specialty'}
-                                                        </span>
-                                                        <h6 className="font-bold text-xs text-white mt-1">{hosp.name}</h6>
+                                                  <div key={hosp._id} className="bg-slate-900/90 p-3.5 rounded-xl border border-slate-800 space-y-2.5 shadow-md">
+                                                    <div className="flex items-start gap-3">
+                                                      {/* Hospital Exterior Out-View Photo */}
+                                                      <img 
+                                                        src={hosp.imageUrl || 'https://images.unsplash.com/photo-1587351021759-3e566b6af7cc?auto=format&fit=crop&w=1200&q=80'} 
+                                                        alt={hosp.name}
+                                                        className="w-16 h-16 rounded-xl object-cover border border-cyan-500/30 shrink-0"
+                                                      />
+                                                      <div className="flex-1 min-w-0">
+                                                        <div className="flex items-center gap-1.5 flex-wrap">
+                                                          <span className="text-[10px] font-bold text-cyan-300 bg-cyan-500/10 px-2 py-0.5 rounded border border-cyan-500/20">
+                                                            🏛️ {hosp.hospitalType || 'Area Hospital'}
+                                                          </span>
+                                                          {hosp.emergencyAvailable && (
+                                                            <span className="text-[9px] font-extrabold text-red-400 bg-red-500/10 px-1.5 py-0.5 rounded">
+                                                              🚨 24x7 Emergency
+                                                            </span>
+                                                          )}
+                                                          <span className="text-[9px] font-bold text-amber-300">
+                                                            ★ {hosp.rating || 4.8}
+                                                          </span>
+                                                        </div>
+                                                        <h6 className="font-bold text-xs text-white mt-1 truncate">{hosp.name}</h6>
+                                                        <p className="text-[10px] text-cyan-400 font-semibold truncate">Code: {hosp.branchCode || 'BR-MED-001'} • {hosp.parentChain || 'National Network'}</p>
+                                                        <p className="text-[10px] text-slate-400 truncate">{hosp.address}</p>
+
+                                                        <button
+                                                          onClick={() => setSelectedHospitalForModal(hosp)}
+                                                          className="mt-1 inline-flex items-center gap-1 text-[10px] font-bold text-cyan-300 hover:text-cyan-200 bg-cyan-500/10 hover:bg-cyan-500/20 px-2 py-0.5 rounded border border-cyan-500/30 transition-colors cursor-pointer"
+                                                        >
+                                                          <Building className="w-3 h-3" />
+                                                          <span>Top-to-Bottom Details &amp; Branch Info</span>
+                                                        </button>
                                                       </div>
                                                       <AudioButton 
-                                                        textToRead={`Hospital ${hosp.name}. Has ${hospDocs.length} doctors.`}
+                                                        textToRead={`Hospital ${hosp.name}, ${hosp.hospitalType || 'Area Hospital'}. Has ${hospDocs.length} doctors.`}
                                                         label="🔊"
                                                         className="px-1.5 py-0.5 text-[10px]"
                                                       />
@@ -501,6 +557,16 @@ export default function Home() {
             )}
           </>
         )}
+
+        {/* Hospital Top-to-Bottom Details Modal */}
+        <HospitalDetailsModal
+          hospital={selectedHospitalForModal}
+          isOpen={!!selectedHospitalForModal}
+          onClose={() => setSelectedHospitalForModal(null)}
+          onBookDoctor={(hosp) => {
+            navigate('/search');
+          }}
+        />
 
       </div>
     </div>

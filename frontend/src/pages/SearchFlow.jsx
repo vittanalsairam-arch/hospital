@@ -5,6 +5,7 @@ import { MapPin, Building2, HeartPulse, ChevronRight, Activity, Search, ArrowLef
 import axios from 'axios';
 import { useLanguage } from '../context/LanguageContext';
 import { AudioButton } from '../components/VoiceAssistant';
+import HospitalDetailsModal from '../components/HospitalDetailsModal';
 
 const API_URL = 'http://localhost:5000/api';
 
@@ -29,6 +30,8 @@ export default function SearchFlow() {
   const [selectedCity, setSelectedCity] = useState(null);
   const [selectedSubCity, setSelectedSubCity] = useState(null);
   const [selectedHospital, setSelectedHospital] = useState(null);
+  const [selectedTier, setSelectedTier] = useState('ALL');
+  const [selectedHospitalForModal, setSelectedHospitalForModal] = useState(null);
 
   useEffect(() => {
     const fetchStates = async () => {
@@ -143,10 +146,17 @@ export default function SearchFlow() {
   const filteredStates = states.filter(s => s.name.toLowerCase().includes(searchTerm.toLowerCase()));
   const filteredDistricts = districts.filter(d => d.name.toLowerCase().includes(searchTerm.toLowerCase()));
   const filteredCities = cities.filter(c => c.name.toLowerCase().includes(searchTerm.toLowerCase()));
-  const filteredHospitals = hospitals.filter(h => 
-    h.name.toLowerCase().includes(searchTerm.toLowerCase()) || 
-    (h.address && h.address.toLowerCase().includes(searchTerm.toLowerCase()))
-  );
+  const filteredHospitals = hospitals.filter(h => {
+    const term = searchTerm.toLowerCase();
+    const matchesSearch = h.name.toLowerCase().includes(term) || 
+      (h.address && h.address.toLowerCase().includes(term)) ||
+      (h.parentChain && h.parentChain.toLowerCase().includes(term)) ||
+      (h.branchCode && h.branchCode.toLowerCase().includes(term));
+    const matchesSubCity = selectedSubCity ? (h.subCityId === selectedSubCity._id || h.subCityId?._id === selectedSubCity._id) : true;
+    const matchesTier = selectedTier === 'ALL' ? true : (h.tier && h.tier.includes(selectedTier));
+    return matchesSearch && matchesSubCity && matchesTier;
+  });
+  const displayedHospitals = filteredHospitals;
   const filteredIssues = healthIssues.filter(i => i.name.toLowerCase().includes(searchTerm.toLowerCase()));
 
   return (
@@ -157,45 +167,106 @@ export default function SearchFlow() {
         <div className="glass-panel p-6 sm:p-8 rounded-3xl border border-cyan-500/30 text-center space-y-3">
           <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/20 text-cyan-300 text-xs font-bold border border-cyan-500/30">
             <Sparkles className="w-4 h-4 text-cyan-300" />
-            <span>3-STEP GUIDED OP SEARCH & BOOKING</span>
+            <span>5-STEP NATIONAL OP SEARCH & BOOKING</span>
           </span>
-          <h1 className="text-3xl sm:text-4xl font-extrabold text-white">
-            Find Hospital OP Tickets Across India
-          </h1>
+          <h1 className="text-3xl sm:text-4xl font-extrabold text-white">Find Your Hospital &amp; Book OP Slot</h1>
           <p className="text-sm text-slate-300 max-w-xl mx-auto">
-            Select State ➔ District ➔ City ➔ Hospital to view available doctors and booking slots.
+            Browse across 29 States, Districts, Cities, Sub-Cities / Localities and book confirmed doctor OP appointments.
           </p>
 
-          <div className="flex justify-center pt-1">
+          {/* Voice Guide Button */}
+          <div className="pt-2 flex justify-center">
             <AudioButton 
-              textToRead="Follow the simple steps on screen to pick your state, district, city, and hospital to book an OP ticket."
-              label="🔊 Listen Guide"
+              textToRead={`Welcome to OP Search. Please follow the 5 steps: Select your State, District, City, Sub-city Locality, and choose your Hospital to view specialist doctors.`}
+              label="🔊 Listen Voice Instructions"
+              className="py-1.5 px-4 text-xs"
             />
           </div>
         </div>
 
-        {/* Progress Step Indicator Bar */}
-        <div className="glass-panel p-4 rounded-2xl border border-slate-700/80">
-          <div className="flex items-center justify-between relative max-w-4xl mx-auto">
-            <div className="absolute left-0 top-1/2 -translate-y-1/2 w-full h-1 bg-slate-800 rounded-full z-0"></div>
-            <div 
-              className="absolute left-0 top-1/2 -translate-y-1/2 h-1 bg-cyan-400 rounded-full z-0 transition-all duration-500"
-              style={{ width: `${((step - 1) / (steps.length - 1)) * 100}%` }}
-            ></div>
-            
-            {steps.map((s) => (
-              <div key={s.id} className="relative z-10 flex flex-col items-center">
-                <div className={`w-9 h-9 rounded-full flex items-center justify-center font-bold text-xs border-2 ${
-                  step >= s.id ? 'bg-cyan-500 border-cyan-300 text-white shadow-lg shadow-cyan-500/30' : 'bg-slate-900 border-slate-700 text-slate-500'
-                } transition-colors duration-300`}>
-                  {step > s.id ? <CheckCircle2 className="h-5 w-5 text-white" /> : s.id}
+        {/* Steps Progress Bar */}
+        <div className="grid grid-cols-5 gap-2">
+          {steps.map((s) => {
+            const Icon = s.icon;
+            const isActive = step === s.id;
+            const isDone = step > s.id;
+            return (
+              <div 
+                key={s.id}
+                onClick={() => { if (isDone) setStep(s.id); }}
+                className={`flex flex-col items-center p-3 rounded-2xl border transition-all cursor-pointer ${
+                  isActive 
+                    ? 'bg-cyan-500/20 border-cyan-400 text-cyan-300 shadow-lg shadow-cyan-500/20' 
+                    : isDone 
+                      ? 'bg-slate-900/80 border-emerald-500/40 text-emerald-400' 
+                      : 'bg-slate-900/40 border-slate-800 text-slate-400 opacity-60'
+                }`}
+              >
+                <div className="flex items-center gap-1.5">
+                  {isDone ? <CheckCircle2 className="w-4 h-4 text-emerald-400" /> : <Icon className="w-4 h-4" />}
+                  <span className="text-xs font-bold hidden sm:inline">{s.name}</span>
                 </div>
-                <span className={`mt-1.5 text-xs font-semibold ${step >= s.id ? 'text-cyan-300' : 'text-slate-500'}`}>
-                  {s.name}
+                <span className="text-[10px] text-slate-300 mt-1 font-semibold truncate max-w-full">
+                  {s.id === 1 && selectedState ? selectedState.name :
+                   s.id === 2 && selectedDistrict ? selectedDistrict.name :
+                   s.id === 3 && selectedCity ? selectedCity.name :
+                   s.id === 4 && selectedHospital ? selectedHospital.name :
+                   s.id === 5 ? 'Select Issue' : `Step ${s.id}`}
                 </span>
               </div>
-            ))}
+            );
+          })}
+        </div>
+
+        {/* Breadcrumb Navigation */}
+        <div className="flex items-center justify-between text-xs text-slate-300 px-2">
+          <div className="flex items-center gap-2 flex-wrap">
+            {selectedState && (
+              <span className="flex items-center gap-1 bg-slate-900 px-2.5 py-1 rounded-lg border border-slate-800">
+                <MapPin className="w-3 h-3 text-cyan-400" />
+                <span className="text-white font-bold">{selectedState.name}</span>
+              </span>
+            )}
+            {selectedDistrict && (
+              <>
+                <ChevronRight className="w-3 h-3 text-slate-400" />
+                <span className="bg-slate-900 px-2.5 py-1 rounded-lg border border-slate-800 text-white font-bold">{selectedDistrict.name}</span>
+              </>
+            )}
+            {selectedCity && (
+              <>
+                <ChevronRight className="w-3 h-3 text-slate-400" />
+                <span className="bg-slate-900 px-2.5 py-1 rounded-lg border border-slate-800 text-white font-bold">{selectedCity.name}</span>
+              </>
+            )}
+            {selectedSubCity && (
+              <>
+                <ChevronRight className="w-3 h-3 text-slate-400" />
+                <span className="bg-cyan-900/60 px-2.5 py-1 rounded-lg border border-cyan-500/40 text-cyan-200 font-bold">{selectedSubCity.name}</span>
+              </>
+            )}
+            {selectedHospital && (
+              <>
+                <ChevronRight className="w-3 h-3 text-slate-400" />
+                <span className="bg-emerald-950 px-2.5 py-1 rounded-lg border border-emerald-500/40 text-emerald-300 font-bold">{selectedHospital.name}</span>
+              </>
+            )}
           </div>
+
+          {step > 1 && (
+            <button 
+              onClick={() => {
+                if (step === 2) setStep(1);
+                if (step === 3) setStep(2);
+                if (step === 4) setStep(3);
+                if (step === 5) setStep(4);
+              }}
+              className="flex items-center gap-1 text-cyan-400 hover:text-cyan-300 font-bold ml-auto"
+            >
+              <ArrowLeft className="w-3.5 h-3.5" />
+              <span>Back</span>
+            </button>
+          )}
         </div>
 
         {/* Main Selection Card Container */}
@@ -208,7 +279,7 @@ export default function SearchFlow() {
               type="text" 
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              placeholder={`Search ${step === 1 ? 'State' : step === 2 ? 'District' : step === 3 ? 'City' : step === 4 ? 'Hospital' : 'Specialty'}...`}
+              placeholder={`Search ${step === 1 ? 'State' : step === 2 ? 'District' : step === 3 ? 'City' : step === 4 ? 'Hospital / Locality' : 'Specialty'}...`}
               className="w-full pl-12 pr-4 py-3 bg-slate-950/80 border border-slate-700 rounded-2xl focus:outline-none focus:border-cyan-400 text-sm text-white placeholder-slate-400"
             />
           </div>
@@ -286,37 +357,151 @@ export default function SearchFlow() {
                 </motion.div>
               )}
 
-              {/* STEP 4: SELECT HOSPITAL */}
+              {/* STEP 4: SELECT HOSPITAL & SUBCITY */}
               {step === 4 && (
                 <motion.div key="step4" initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="space-y-4">
-                  <div className="flex items-center justify-between">
-                    <h2 className="text-xl font-bold text-white">4. Hospitals in {selectedCity?.name}</h2>
-                    <span className="text-xs text-cyan-300 font-semibold">{filteredHospitals.length} Hospitals</span>
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                    <div>
+                      <h2 className="text-xl font-bold text-white">4. Mandal-Wise Hospitals in {selectedCity?.name}</h2>
+                      <p className="text-xs text-slate-400">Filter by specific Mandal / Taluk / Locality or choose an Area Hospital directly</p>
+                    </div>
+                    <span className="text-xs text-cyan-300 font-semibold">{filteredHospitals.length} Hospitals available</span>
                   </div>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    {filteredHospitals.map(hosp => (
-                      <div key={hosp._id} className="glass-card p-5 rounded-2xl border border-slate-700 space-y-3">
-                        <div>
-                          <h3 className="font-bold text-lg text-white">{hosp.name}</h3>
-                          <p className="text-xs text-slate-300 mt-1 flex items-center gap-1">
-                            <MapPin className="w-3.5 h-3.5 text-cyan-400" />
-                            {hosp.address}
-                          </p>
-                        </div>
-                        <div className="flex gap-2">
+
+                  {/* Mandal / Area filter pills */}
+                  {subCities.length > 0 && (
+                    <div className="space-y-2">
+                      <p className="text-[11px] font-bold text-slate-400 uppercase tracking-wider">1. Filter by Mandal / Locality:</p>
+                      <div className="flex items-center gap-1.5 overflow-x-auto pb-2 scrollbar-thin">
+                        <button
+                          onClick={() => setSelectedSubCity(null)}
+                          className={`px-3.5 py-1.5 rounded-full text-xs font-bold whitespace-nowrap transition-all border ${
+                            selectedSubCity === null
+                              ? 'bg-cyan-500 text-white border-cyan-400 shadow-md shadow-cyan-500/20'
+                              : 'bg-slate-900/80 text-slate-300 border-slate-700 hover:border-slate-500'
+                          }`}
+                        >
+                          🏛️ All Mandals &amp; Areas ({hospitals.length})
+                        </button>
+                        {subCities.map(sub => {
+                          const count = hospitals.filter(h => h.subCityId === sub._id || h.subCityId?._id === sub._id).length;
+                          return (
+                            <button
+                              key={sub._id}
+                              onClick={() => setSelectedSubCity(selectedSubCity?._id === sub._id ? null : sub)}
+                              className={`px-3.5 py-1.5 rounded-full text-xs font-bold whitespace-nowrap transition-all border ${
+                                selectedSubCity?._id === sub._id
+                                  ? 'bg-cyan-500 text-white border-cyan-400 shadow-md shadow-cyan-500/20'
+                                  : 'bg-slate-900/80 text-slate-300 border-slate-700 hover:border-slate-500'
+                              }`}
+                            >
+                              📍 {sub.name} {count > 0 && <span className="text-[10px] opacity-85">({count})</span>}
+                            </button>
+                          );
+                        })}
+                      </div>
+
+                      {/* Hospital Size & Tier Filters */}
+                      <p className="text-[11px] font-bold text-slate-400 uppercase tracking-wider pt-1">2. Filter by Hospital Size &amp; Category (Small to Big):</p>
+                      <div className="flex items-center gap-1.5 overflow-x-auto pb-2 scrollbar-thin">
+                        {[
+                          { id: 'ALL', label: '🏥 All Hospital Tiers' },
+                          { id: 'Tier 1', label: '🩺 Tier 1: Small Clinics (20-50 Beds)' },
+                          { id: 'Tier 2', label: '🏥 Tier 2: CHC Centers (50-150 Beds)' },
+                          { id: 'Tier 3', label: '🏛️ Tier 3: Area Hospitals (150-350 Beds)' },
+                          { id: 'Tier 4', label: '🏢 Tier 4: District Civil (400-800 Beds)' },
+                          { id: 'Tier 5', label: '🏥 Tier 5: Multi-Specialty Private' },
+                          { id: 'Tier 6', label: '⭐ Tier 6: Super Specialty Chains' },
+                          { id: 'Tier 7', label: '🏛️ Tier 7: Apex AIIMS (800-1500 Beds)' }
+                        ].map(tierOpt => (
                           <button
-                            onClick={() => handleHospitalSelect(hosp)}
-                            className="flex-1 py-2 bg-slate-800 hover:bg-slate-700 text-cyan-300 text-xs font-bold rounded-xl border border-slate-700"
+                            key={tierOpt.id}
+                            onClick={() => setSelectedTier(selectedTier === tierOpt.id ? 'ALL' : tierOpt.id)}
+                            className={`px-3 py-1 rounded-xl text-xs font-bold whitespace-nowrap transition-all border ${
+                              (selectedTier === tierOpt.id || (tierOpt.id === 'ALL' && selectedTier === 'ALL'))
+                                ? 'bg-indigo-600 text-white border-indigo-400 shadow-md'
+                                : 'bg-slate-900/80 text-slate-300 border-slate-700 hover:border-slate-500'
+                            }`}
                           >
-                            Filter by Health Issue
+                            {tierOpt.label}
                           </button>
-                          <button
-                            onClick={() => handleViewAllDoctorsAtHospital(hosp)}
-                            className="flex-1 py-2 bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-400 text-white text-xs font-bold rounded-xl shadow-md"
-                          >
-                            View All Doctors
-                          </button>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-1">
+                    {displayedHospitals.map(hosp => (
+                      <div key={hosp._id} className="glass-card rounded-2xl border border-slate-700 hover:border-cyan-500/60 transition-all overflow-hidden flex flex-col justify-between group shadow-lg">
+                        
+                        {/* Hospital Out-View Photo & Badges */}
+                        <div className="relative h-44 overflow-hidden bg-slate-900">
+                          <img 
+                            src={hosp.imageUrl || 'https://images.unsplash.com/photo-1587351021759-3e566b6af7cc?auto=format&fit=crop&w=1200&q=80'} 
+                            alt={hosp.name}
+                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
+                          
+                          <div className="absolute top-2.5 left-2.5 flex flex-wrap gap-1.5">
+                            <span className="bg-slate-900/90 text-cyan-300 text-[10px] font-extrabold px-2.5 py-0.5 rounded-md border border-cyan-500/40 backdrop-blur-md">
+                              {hosp.tier ? hosp.tier.split(' - ')[0] : 'Hospital'} • {hosp.hospitalType || 'General'}
+                            </span>
+                            {hosp.emergencyAvailable && (
+                              <span className="bg-red-500/90 text-white text-[10px] font-extrabold px-2 py-0.5 rounded-md shadow-md">
+                                🚨 24x7 Emergency
+                              </span>
+                            )}
+                          </div>
+
+                          <div className="absolute bottom-2.5 left-3 right-3 flex items-center justify-between">
+                            <span className="text-[10px] font-mono text-cyan-300 bg-slate-950/90 px-2 py-0.5 rounded-lg border border-slate-700">
+                              Code: {hosp.branchCode || 'BR-MED-001'}
+                            </span>
+                            <span className="text-[11px] font-bold text-amber-300 bg-slate-950/80 px-2 py-0.5 rounded-lg border border-slate-800 backdrop-blur-md">
+                              ★ {hosp.rating || 4.8}
+                            </span>
+                          </div>
                         </div>
+
+                        {/* Hospital Info & Buttons */}
+                        <div className="p-4 space-y-3">
+                          <div>
+                            <div className="flex items-center justify-between gap-1">
+                              <h3 className="font-bold text-base text-white group-hover:text-cyan-300 transition-colors line-clamp-1">{hosp.name}</h3>
+                            </div>
+                            <p className="text-[11px] text-cyan-400 font-semibold truncate">
+                              🏢 Network: {hosp.parentChain || 'National Healthcare Network'}
+                            </p>
+                            <p className="text-xs text-slate-300 mt-1 flex items-center gap-1 line-clamp-1">
+                              <MapPin className="w-3.5 h-3.5 text-cyan-400 shrink-0" />
+                              <span>{hosp.address}</span>
+                            </p>
+                          </div>
+
+                          <div className="grid grid-cols-2 gap-2 text-[11px] text-slate-300 pt-2 border-t border-slate-800/80">
+                            <span>Beds: <strong className="text-white">{hosp.bedCapacity || 250}+</strong> ({hosp.icuBeds || 30} ICU)</span>
+                            <span>OTs: <strong className="text-white">{hosp.operationTheatres || 6} OTs</strong></span>
+                          </div>
+
+                          <div className="flex flex-col sm:flex-row gap-2 pt-1">
+                            <button
+                              onClick={() => setSelectedHospitalForModal(hosp)}
+                              className="py-2 px-3 bg-slate-800 hover:bg-slate-700 text-cyan-300 text-xs font-bold rounded-xl border border-slate-700 transition-all flex items-center justify-center gap-1 cursor-pointer"
+                            >
+                              <Building2 className="w-3.5 h-3.5" />
+                              <span>Top-to-Bottom Details</span>
+                            </button>
+                            <button
+                              onClick={() => handleViewAllDoctorsAtHospital(hosp)}
+                              className="flex-1 py-2 px-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 text-white text-xs font-bold rounded-xl shadow-md transition-all flex items-center justify-center gap-1 cursor-pointer"
+                            >
+                              <Stethoscope className="w-3.5 h-3.5" />
+                              <span>Book OP at Branch</span>
+                            </button>
+                          </div>
+                        </div>
+
                       </div>
                     ))}
                   </div>
@@ -354,6 +539,14 @@ export default function SearchFlow() {
           )}
 
         </div>
+
+        {/* Top-to-Bottom Hospital Details Modal */}
+        <HospitalDetailsModal
+          hospital={selectedHospitalForModal}
+          isOpen={!!selectedHospitalForModal}
+          onClose={() => setSelectedHospitalForModal(null)}
+          onBookDoctor={(hosp) => handleViewAllDoctorsAtHospital(hosp)}
+        />
 
       </div>
     </div>

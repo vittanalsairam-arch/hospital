@@ -59,7 +59,7 @@ export default function BookingConfirmation() {
 
             <div className="pt-4 border-t border-slate-800 space-y-1">
               <p className="text-xs text-slate-400 flex items-center"><MapPin className="w-3.5 h-3.5 mr-1 text-cyan-400"/> Hospital &amp; Doctor Info</p>
-              <p className="font-bold text-white text-lg">{appointment?.doctorId?.name || 'Dr. Rahul Kumar'}</p>
+              <p className="font-bold text-white text-lg">{appointment?.doctorId?.name || 'Dr. Deepthi'}</p>
               <p className="text-cyan-300 text-xs font-semibold">{appointment?.hospitalId?.name || 'Apollo Super Specialty Hospital'}</p>
             </div>
           </div>

@@ -136,10 +136,20 @@ export default function DoctorAvailability() {
                 </div>
 
                 <p className="text-cyan-400 font-bold text-sm sm:text-base">{doctor?.specialization} ({doctor?.qualification})</p>
-                <p className="text-slate-300 text-xs sm:text-sm mt-1 flex items-center justify-center sm:justify-start gap-1">
-                  <MapPin className="w-4 h-4 text-cyan-400" />
-                  <span>{hospital?.name || doctor?.hospitalId?.name}</span>
-                </p>
+                <div className="flex items-center gap-2 mt-1.5 flex-wrap justify-center sm:justify-start">
+                  <span className="text-slate-300 text-xs sm:text-sm flex items-center gap-1">
+                    <MapPin className="w-4 h-4 text-cyan-400 shrink-0" />
+                    <span>{hospital?.name || doctor?.hospitalId?.name}</span>
+                  </span>
+                  {(hospital?.imageUrl || doctor?.hospitalId?.imageUrl) && (
+                    <img 
+                      src={hospital?.imageUrl || doctor?.hospitalId?.imageUrl} 
+                      alt="Hospital Exterior Out-View"
+                      title="Hospital Exterior Out-View"
+                      className="w-8 h-8 rounded-lg object-cover border border-cyan-400/40 shadow-sm"
+                    />
+                  )}
+                </div>
 
                 {/* Voice Reader for Doctor Details */}
                 <div className="mt-3">

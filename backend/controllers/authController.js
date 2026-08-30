@@ -3,7 +3,7 @@ const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
 
 const generateToken = (id) => {
-  return jwt.sign({ id }, process.env.JWT_SECRET, { expiresIn: '30d' });
+  return jwt.sign({ id }, process.env.JWT_SECRET || 'mediop_national_secret_key_2026', { expiresIn: '30d' });
 };
 
 exports.registerUser = async (req, res) => {
@@ -21,7 +21,17 @@ exports.registerUser = async (req, res) => {
 
     if (user) {
       res.status(201).json({
-        _id: user.id, name: user.name, email: user.email, role: user.role,
+        _id: user.id,
+        name: user.name,
+        email: user.email,
+        role: user.role,
+        avatar: user.avatar,
+        abhaId: user.abhaId,
+        phone: user.phone,
+        city: user.city,
+        state: user.state,
+        age: user.age,
+        gender: user.gender,
         token: generateToken(user._id)
       });
     } else {
@@ -38,7 +48,17 @@ exports.loginUser = async (req, res) => {
     const user = await User.findOne({ email });
     if (user && (await bcrypt.compare(password, user.password))) {
       res.json({
-        _id: user.id, name: user.name, email: user.email, role: user.role,
+        _id: user.id,
+        name: user.name,
+        email: user.email,
+        role: user.role,
+        avatar: user.avatar,
+        abhaId: user.abhaId,
+        phone: user.phone,
+        city: user.city,
+        state: user.state,
+        age: user.age,
+        gender: user.gender,
         token: generateToken(user._id)
       });
     } else {

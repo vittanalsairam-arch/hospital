@@ -57,24 +57,42 @@ exports.getSubCities = async (req, res) => {
 // Returns full hierarchy tree for the 29-State Directory Explorer
 exports.getLocationTree = async (req, res) => {
   try {
-    const states = await State.find({}).sort({ name: 1 }).lean();
-    const districts = await District.find({}).sort({ name: 1 }).lean();
-    const cities = await City.find({}).sort({ name: 1 }).lean();
-    const subCities = await SubCity.find({}).sort({ name: 1 }).lean();
-    const hospitals = await Hospital.find({}).lean();
-    const doctors = await Doctor.find({}).populate('departmentId').lean();
-    const schedules = await DoctorSchedule.find({}).lean();
+    const [states, districts, cities, subCities, hospitals, doctors, scheduleStats] = await Promise.all([
+      State.find({}).sort({ name: 1 }).lean(),
+      District.find({}).sort({ name: 1 }).lean(),
+      City.find({}).sort({ name: 1 }).lean(),
+      SubCity.find({}).sort({ name: 1 }).lean(),
+      Hospital.find({}).populate('departments').lean(),
+      Doctor.find({}).populate('departmentId').lean(),
+      DoctorSchedule.aggregate([
+        {
+          $group: {
+            _id: '$doctorId',
+            totalSlots: { $sum: 1 },
+            freeSlots: {
+              $sum: {
+                $cond: [
+                  { $and: [{ $eq: ['$status', 'AVAILABLE'] }, { $lt: ['$bookedSlots', '$totalSlots'] }] },
+                  1,
+                  0
+                ]
+              }
+            }
+          }
+        }
+      ])
+    ]);
 
     // Map schedules count per doctor
     const doctorStatusMap = {};
-    doctors.forEach(doc => {
-      const docSchedules = schedules.filter(s => s.doctorId.toString() === doc._id.toString());
-      const freeSlots = docSchedules.filter(s => s.status === 'AVAILABLE' && s.bookedSlots < s.totalSlots).length;
-      doctorStatusMap[doc._id.toString()] = {
-        totalSlots: docSchedules.length,
-        freeSlots,
-        isAvailable: freeSlots > 0
-      };
+    scheduleStats.forEach(stat => {
+      if (stat._id) {
+        doctorStatusMap[stat._id.toString()] = {
+          totalSlots: stat.totalSlots,
+          freeSlots: stat.freeSlots,
+          isAvailable: stat.freeSlots > 0
+        };
+      }
     });
 
     res.json({
