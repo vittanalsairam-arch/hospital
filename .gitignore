@@ -9,6 +9,8 @@ frontend/.env
 # Build output
 frontend/dist/
 frontend/build/
+frontend/.vite/
+.vite/
 
 # MongoDB data files
 *.db
