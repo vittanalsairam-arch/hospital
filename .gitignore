@@ -1,28 +1,63 @@
-# Dependencies
-node_modules/
+# ==========================================
+# HOSPITAL OP PORTAL - GITIGNORE CONFIGURATION
+# ==========================================
 
-# Environment variables - NEVER commit these
-backend/.env
-frontend/.env
+# 1. Sensitive Files & Secrets (NEVER COMMIT TO GITHUB)
 .env
+.env.*
+!.env.example
+*.env
+*.pem
+*.key
+*.cert
+*.crt
+*.pfx
+*.p12
 
-# Build output
+# 2. Dependency Directories
+node_modules/
+frontend/node_modules/
+backend/node_modules/
+.pnp
+.pnp.js
+
+# 3. Production & Build Outputs
+dist/
+build/
+out/
 frontend/dist/
 frontend/build/
 frontend/.vite/
 .vite/
 
-# MongoDB data files
-*.db
+# 4. Android Build Files & Keystores (Capacitor)
+frontend/android/.gradle/
+frontend/android/build/
+frontend/android/app/build/
+frontend/android/app/release/
+*.apk
+*.aab
+*.keystore
+*.jks
 
-# Logs
+# 5. Database & Local Storage Files
+*.db
+*.sqlite
+*.sqlite3
+mongo-data/
+
+# 6. Log Files & Crash Dumps
 *.log
 npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
 
-# OS files
+# 7. Operating System & Editor Files
 .DS_Store
 Thumbs.db
-
-# IDE
-.vscode/
+.vscode/*
+!.vscode/extensions.json
 .idea/
+*.sublime-project
+*.sublime-workspace
