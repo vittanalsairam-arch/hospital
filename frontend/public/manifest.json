@@ -1,0 +1,52 @@
+{
+  "name": "MediOP – National Hospital OP Booking Portal",
+  "short_name": "MediOP",
+  "description": "National Outpatient (OP) Booking & Healthcare Directory Portal across all 29 States of India",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#0b1120",
+  "theme_color": "#0ea5e9",
+  "lang": "en-IN",
+  "dir": "ltr",
+  "categories": ["medical", "health", "lifestyle", "productivity"],
+  "icons": [
+    {
+      "src": "/icon-192.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Find Doctors & OP Slots",
+      "short_name": "Book OP",
+      "description": "Search 4,680 specialists and book OPD appointments",
+      "url": "/search",
+      "icons": [{ "src": "/icon-192.svg", "sizes": "192x192" }]
+    },
+    {
+      "name": "Hospital Directory (29 States)",
+      "short_name": "Directory",
+      "description": "Browse hospitals across 373 districts and 3,245 mandals",
+      "url": "/directory",
+      "icons": [{ "src": "/icon-192.svg", "sizes": "192x192" }]
+    },
+    {
+      "name": "My ABHA Health Dashboard",
+      "short_name": "My ABHA",
+      "description": "View appointment tickets and digital health card",
+      "url": "/dashboard",
+      "icons": [{ "src": "/icon-192.svg", "sizes": "192x192" }]
+    }
+  ],
+  "prefer_related_applications": false
+}

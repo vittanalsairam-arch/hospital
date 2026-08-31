@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "in.gov.mediop.twa",
+      "sha256_cert_fingerprints": [
+        "14:6D:E9:7D:0C:5F:C1:21:40:9F:87:6D:2E:70:93:33:0B:4D:2E:8F:0E:0F:7D:66:3D:28:BD:54:3B:16:32:4D"
+      ]
+    }
+  }
+]

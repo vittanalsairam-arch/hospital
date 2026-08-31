@@ -1,12 +1,14 @@
 import { useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { Activity, User, Globe, MapPin, Search, LogOut, LogIn, ChevronDown, CheckCircle2, ShieldCheck, Stethoscope } from 'lucide-react';
+import { Activity, User, Globe, MapPin, Search, LogOut, LogIn, ChevronDown, CheckCircle2, ShieldCheck, Stethoscope, Smartphone } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { useAuth } from '../context/AuthContext';
+import { usePWA } from '../context/PWAContext';
 
 export default function Navbar() {
   const { lang, setLang, t } = useLanguage();
   const { user, logout, switchDemoUser } = useAuth();
+  const { openModal } = usePWA();
   const [showUserMenu, setShowUserMenu] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
@@ -61,8 +63,18 @@ export default function Navbar() {
             </Link>
           </div>
 
-          {/* Right Section: Language Switcher & User Buttons */}
-          <div className="flex items-center space-x-3">
+          {/* Right Section: Language Switcher, App Link & User Buttons */}
+          <div className="flex items-center space-x-2.5">
+            {/* App Link & Install Trigger */}
+            <button
+              onClick={openModal}
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-cyan-950/70 hover:bg-cyan-900/80 border border-cyan-500/40 text-cyan-300 hover:text-white text-xs font-bold transition-all shadow-md shadow-cyan-500/10 group cursor-pointer"
+              title="Get Mobile App Link, QR Code & Installation"
+            >
+              <Smartphone className="w-4 h-4 text-cyan-400 group-hover:scale-110 transition-transform" />
+              <span className="hidden sm:inline">App Link</span>
+            </button>
+
             {/* Language Switcher Dropdown */}
             <div className="flex items-center gap-1.5 bg-slate-800/80 border border-slate-700 px-2.5 py-1.5 rounded-xl shadow-inner">
               <Globe className="w-4 h-4 text-cyan-400" />
