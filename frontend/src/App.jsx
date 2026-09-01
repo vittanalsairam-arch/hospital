@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Navigate } from 'react-router-dom';
 import { LanguageProvider } from './context/LanguageContext';
 import { AuthProvider } from './context/AuthContext';
 import { PWAProvider } from './context/PWAContext';
@@ -34,6 +34,8 @@ function App() {
                 <Route path="/dashboard" element={<Dashboard />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/register" element={<Register />} />
+                {/* Fallback route for SPA unmatched paths */}
+                <Route path="*" element={<Navigate to="/" replace />} />
               </Routes>
             </main>
             <VoiceAssistantWidget />

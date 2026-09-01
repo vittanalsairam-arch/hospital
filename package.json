@@ -6,8 +6,8 @@
   "scripts": {
     "start": "node start.js",
     "dev": "node start.js",
-    "build": "npm --prefix frontend run build",
-    "seed": "npm --prefix backend run seed"
+    "build": "cd frontend && npm install && npm run build",
+    "seed": "cd backend && npm install && npm run seed"
   },
   "keywords": ["hospital", "op-booking", "healthcare", "india"],
   "author": "MediOP Team",
