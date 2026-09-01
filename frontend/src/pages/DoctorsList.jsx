@@ -2,35 +2,29 @@ import { useState, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Calendar, Clock, GraduationCap, Award, MapPin, Building2, CheckCircle2 } from 'lucide-react';
-import axios from 'axios';
+import { fetchDoctors } from '../services/apiService';
+import { FALLBACK_HOSPITALS } from '../data/fallbackData';
 import { useLanguage } from '../context/LanguageContext';
 import { AudioButton } from '../components/VoiceAssistant';
 import HospitalDetailsModal from '../components/HospitalDetailsModal';
-
-const API_URL = import.meta.env.VITE_API_URL || '/api';
 
 export default function DoctorsList() {
   const location = useLocation();
   const navigate = useNavigate();
   const { t } = useLanguage();
-  const { hospital, department, issueName } = location.state || {};
+  const { hospital: stateHospital, department, issueName } = location.state || {};
+  const hospital = stateHospital || FALLBACK_HOSPITALS[0];
   
   const [doctors, setDoctors] = useState([]);
   const [loading, setLoading] = useState(true);
   const [showHospitalModal, setShowHospitalModal] = useState(false);
 
   useEffect(() => {
-    if (!hospital) {
-      navigate('/search');
-      return;
-    }
-
-    const fetchDoctors = async () => {
+    const loadDoctors = async () => {
       try {
-        let url = `${API_URL}/doctors?hospitalId=${hospital._id}`;
-        if (department?._id) url += `&departmentId=${department._id}`;
-        const res = await axios.get(url);
-        setDoctors(res.data);
+        setLoading(true);
+        const data = await fetchDoctors(hospital?._id, department?._id);
+        setDoctors(Array.isArray(data) ? data : []);
       } catch (err) {
         console.error(err);
       } finally {
@@ -38,8 +32,8 @@ export default function DoctorsList() {
       }
     };
 
-    fetchDoctors();
-  }, [hospital, department, navigate]);
+    loadDoctors();
+  }, [hospital?._id, department?._id]);
 
   return (
     <div className="min-h-screen medical-bg-mesh text-slate-100 py-8 px-4 sm:px-6 lg:px-8">

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { MapPin, Building, Hospital as HospIcon, User, Calendar, CheckCircle2, XCircle, Search, ChevronRight, ChevronDown, Volume2, Sparkles, AlertCircle, Layers, ListFilter, Activity, Stethoscope, ArrowRight } from 'lucide-react';
-import axios from 'axios';
+import { fetchLocationTree, generateLiveAppointment } from '../services/apiService';
 import { useLanguage } from '../context/LanguageContext';
 import { AudioButton } from '../components/VoiceAssistant';
 import HospitalDetailsModal from '../components/HospitalDetailsModal';
@@ -34,19 +34,22 @@ export default function Home() {
   const [searchQuery, setSearchQuery] = useState('');
 
   useEffect(() => {
-    fetchTreeData();
+    loadTreeData();
   }, []);
 
-  const fetchTreeData = async () => {
+  const loadTreeData = async () => {
     try {
       setLoading(true);
-      const res = await axios.get('/api/locations/tree');
-      setData(res.data);
-      if (res.data.states.length > 0) {
-        setSelectedState(res.data.states[0]._id);
-        const initialExpanded = {};
-        res.data.states.slice(0, 4).forEach(s => { initialExpanded[s._id] = true; });
-        setExpandedStates(initialExpanded);
+      const tree = await fetchLocationTree();
+      if (tree && typeof tree === 'object') {
+        setData(tree);
+        const validStates = Array.isArray(tree.states) ? tree.states : [];
+        if (validStates.length > 0) {
+          setSelectedState(validStates[0]._id);
+          const initialExpanded = {};
+          validStates.slice(0, 4).forEach(s => { initialExpanded[s._id] = true; });
+          setExpandedStates(initialExpanded);
+        }
       }
     } catch (err) {
       console.error('Error fetching tree data:', err);
@@ -55,13 +58,20 @@ export default function Home() {
     }
   };
 
+  const statesList = Array.isArray(data?.states) ? data.states : [];
+  const districtsList = Array.isArray(data?.districts) ? data.districts : [];
+  const citiesList = Array.isArray(data?.cities) ? data.cities : [];
+  const subCitiesList = Array.isArray(data?.subCities) ? data.subCities : [];
+  const hospitalsList = Array.isArray(data?.hospitals) ? data.hospitals : [];
+  const doctorsList = Array.isArray(data?.doctors) ? data.doctors : [];
+
   const toggleStateExpand = (stateId) => {
     setExpandedStates(prev => ({ ...prev, [stateId]: !prev[stateId] }));
   };
 
   const expandAll = () => {
     const allExp = {};
-    data.states.forEach(s => { allExp[s._id] = true; });
+    statesList.forEach(s => { allExp[s._id] = true; });
     setExpandedStates(allExp);
   };
 
@@ -70,17 +80,17 @@ export default function Home() {
   };
 
   // Filtered lists for interactive mode
-  const currentDistricts = data.districts.filter(d => d.stateId === selectedState);
-  const currentCities = data.cities.filter(c => 
+  const currentDistricts = districtsList.filter(d => d.stateId === selectedState);
+  const currentCities = citiesList.filter(c => 
     c.stateId === selectedState && (!selectedDistrict || c.districtId === selectedDistrict)
   );
-  const currentSubCities = data.subCities.filter(sc => 
+  const currentSubCities = subCitiesList.filter(sc => 
     sc.stateId === selectedState && 
     (!selectedDistrict || sc.districtId === selectedDistrict) &&
     (!selectedCity || sc.cityId === selectedCity)
   );
 
-  const currentHospitals = data.hospitals.filter(h => {
+  const currentHospitals = hospitalsList.filter(h => {
     if (selectedSubCity) return h.subCityId === selectedSubCity;
     if (selectedCity) return h.cityId === selectedCity;
     if (selectedDistrict) return h.districtId === selectedDistrict;
@@ -88,11 +98,11 @@ export default function Home() {
     return true;
   });
 
-  const filteredStates = data.states.filter(s => 
-    s.name.toLowerCase().includes(searchQuery.toLowerCase())
+  const filteredStates = statesList.filter(s => 
+    (s.name || '').toLowerCase().includes(searchQuery.toLowerCase())
   );
 
-  const activeStateObj = data.states.find(s => s._id === selectedState);
+  const activeStateObj = statesList.find(s => s._id === selectedState);
 
   return (
     <div className="relative overflow-hidden medical-bg-mesh min-h-screen text-slate-100 pb-20">
@@ -147,11 +157,11 @@ export default function Home() {
               <button
                 onClick={async () => {
                   try {
-                    const res = await axios.post('/api/appointments/generate-live', {
+                    const appt = await generateLiveAppointment({
                       patientName: 'Sairam Vittanala',
                       patientPhone: '+91 98765 43210'
                     });
-                    navigate(`/confirmation/${res.data.appointmentId}`, { state: { appointment: res.data } });
+                    navigate(`/confirmation/${appt.appointmentId || appt._id}`, { state: { appointment: appt } });
                   } catch (e) {
                     navigate('/doctors');
                   }
@@ -253,7 +263,7 @@ export default function Home() {
                       onClick={expandAll}
                       className="px-4 py-2 rounded-xl bg-cyan-500/20 text-cyan-300 border border-cyan-500/40 hover:bg-cyan-500/30 font-bold"
                     >
-                      ➕ Expand All {data.states.length} States
+                      ➕ Expand All {statesList.length} States
                     </button>
                     <button 
                       onClick={collapseAll}
@@ -268,9 +278,9 @@ export default function Home() {
                 <div className="space-y-4">
                   {filteredStates.map((state) => {
                     const isExpanded = expandedStates[state._id];
-                    const stateDistricts = data.districts.filter(d => d.stateId === state._id);
-                    const stateHospitals = data.hospitals.filter(h => h.stateId === state._id);
-                    const stateDoctors = data.doctors.filter(d => {
+                    const stateDistricts = districtsList.filter(d => d.stateId === state._id);
+                    const stateHospitals = hospitalsList.filter(h => h.stateId === state._id);
+                    const stateDoctors = doctorsList.filter(d => {
                       const docHospId = d.hospitalId?._id || d.hospitalId;
                       return stateHospitals.some(h => h._id === docHospId);
                     });
@@ -291,7 +301,7 @@ export default function Home() {
                               <h3 className="text-xl font-extrabold text-white flex items-center gap-2">
                                 <span>{state.name}</span>
                                 <span className="text-xs px-2.5 py-0.5 rounded-full bg-cyan-950 text-cyan-300 border border-cyan-800 font-semibold">
-                                  State #{data.states.indexOf(state) + 1}
+                                  State #{statesList.indexOf(state) + 1}
                                 </span>
                               </h3>
                               <p className="text-xs text-slate-300 mt-0.5">
@@ -319,8 +329,8 @@ export default function Home() {
                               <p className="text-xs text-slate-400 italic">No district data loaded for this state.</p>
                             ) : (
                               stateDistricts.map(dist => {
-                                const distCities = data.cities.filter(c => c.districtId === dist._id);
-                                const distHospitals = data.hospitals.filter(h => h.districtId === dist._id);
+                                const distCities = citiesList.filter(c => c.districtId === dist._id);
+                                const distHospitals = hospitalsList.filter(h => h.districtId === dist._id);
 
                                 return (
                                   <div key={dist._id} className="bg-slate-900/90 p-5 rounded-2xl border border-slate-800 space-y-4">
@@ -337,8 +347,8 @@ export default function Home() {
                                     {/* Cities & Subcities Grid */}
                                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                       {distCities.map(city => {
-                                        const citySubCities = data.subCities.filter(sc => sc.cityId === city._id);
-                                        const cityHospitals = data.hospitals.filter(h => h.cityId === city._id);
+                                        const citySubCities = subCitiesList.filter(sc => sc.cityId === city._id);
+                                        const cityHospitals = hospitalsList.filter(h => h.cityId === city._id);
 
                                         return (
                                           <div key={city._id} className="bg-slate-950 p-4 rounded-xl border border-slate-800/80 space-y-3">
@@ -364,7 +374,7 @@ export default function Home() {
                                             {/* Hospitals in City */}
                                             <div className="space-y-2 pt-2 border-t border-slate-800">
                                               {cityHospitals.map(hosp => {
-                                                const hospDocs = data.doctors.filter(d => (d.hospitalId?._id || d.hospitalId) === hosp._id);
+                                                const hospDocs = doctorsList.filter(d => (d.hospitalId?._id || d.hospitalId) === hosp._id);
 
                                                 return (
                                                   <div key={hosp._id} className="bg-slate-900/90 p-3.5 rounded-xl border border-slate-800 space-y-2.5 shadow-md">
@@ -474,14 +484,14 @@ export default function Home() {
                 <div className="flex items-center justify-between">
                   <h2 className="text-xl font-bold text-white flex items-center gap-2">
                     <MapPin className="w-5 h-5 text-cyan-400" />
-                    <span>Select State (Total {data.states.length} States)</span>
+                    <span>Select State (Total {statesList.length} States)</span>
                   </h2>
                 </div>
 
                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
                   {filteredStates.map((state) => {
                     const isSelected = selectedState === state._id;
-                    const stateHospitalsCount = data.hospitals.filter(h => h.stateId === state._id).length;
+                    const stateHospitalsCount = hospitalsList.filter(h => h.stateId === state._id).length;
 
                     return (
                       <button
@@ -550,7 +560,7 @@ export default function Home() {
 
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 pt-4 border-t border-slate-800">
                       {currentHospitals.map(hosp => {
-                        const hospDocs = data.doctors.filter(d => (d.hospitalId?._id || d.hospitalId) === hosp._id);
+                        const hospDocs = doctorsList.filter(d => (d.hospitalId?._id || d.hospitalId) === hosp._id);
                         return (
                           <div key={hosp._id} className="glass-card p-6 rounded-3xl space-y-4 border border-slate-700">
                             <div className="flex justify-between items-start">

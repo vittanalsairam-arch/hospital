@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import axios from 'axios';
 import { MapPin, Building, Hospital as HospIcon, User, Calendar, CheckCircle2, XCircle, Search, ChevronRight, ChevronDown, Volume2, Sparkles, AlertCircle, Layers, ListFilter } from 'lucide-react';
+import { fetchLocationTree } from '../services/apiService';
 import { useLanguage } from '../context/LanguageContext';
 import { AudioButton } from '../components/VoiceAssistant';
 import HospitalDetailsModal from '../components/HospitalDetailsModal';
@@ -34,20 +34,23 @@ export default function MasterExplorer() {
   const [searchQuery, setSearchQuery] = useState('');
 
   useEffect(() => {
-    fetchTreeData();
+    loadTreeData();
   }, []);
 
-  const fetchTreeData = async () => {
+  const loadTreeData = async () => {
     try {
       setLoading(true);
-      const res = await axios.get('/api/locations/tree');
-      setData(res.data);
-      if (res.data.states.length > 0) {
-        setSelectedState(res.data.states[0]._id);
-        // Expand first 3 states by default in tree view
-        const initialExpanded = {};
-        res.data.states.slice(0, 3).forEach(s => { initialExpanded[s._id] = true; });
-        setExpandedStates(initialExpanded);
+      const tree = await fetchLocationTree();
+      if (tree && typeof tree === 'object') {
+        setData(tree);
+        const validStates = Array.isArray(tree.states) ? tree.states : [];
+        if (validStates.length > 0) {
+          setSelectedState(validStates[0]._id);
+          // Expand first 3 states by default in tree view
+          const initialExpanded = {};
+          validStates.slice(0, 3).forEach(s => { initialExpanded[s._id] = true; });
+          setExpandedStates(initialExpanded);
+        }
       }
     } catch (err) {
       console.error('Error fetching tree data:', err);
@@ -56,13 +59,20 @@ export default function MasterExplorer() {
     }
   };
 
+  const statesList = Array.isArray(data?.states) ? data.states : [];
+  const districtsList = Array.isArray(data?.districts) ? data.districts : [];
+  const citiesList = Array.isArray(data?.cities) ? data.cities : [];
+  const subCitiesList = Array.isArray(data?.subCities) ? data.subCities : [];
+  const hospitalsList = Array.isArray(data?.hospitals) ? data.hospitals : [];
+  const doctorsList = Array.isArray(data?.doctors) ? data.doctors : [];
+
   const toggleStateExpand = (stateId) => {
     setExpandedStates(prev => ({ ...prev, [stateId]: !prev[stateId] }));
   };
 
   const expandAll = () => {
     const allExp = {};
-    data.states.forEach(s => { allExp[s._id] = true; });
+    statesList.forEach(s => { allExp[s._id] = true; });
     setExpandedStates(allExp);
   };
 
@@ -71,17 +81,17 @@ export default function MasterExplorer() {
   };
 
   // Filtered lists for interactive mode
-  const currentDistricts = data.districts.filter(d => d.stateId === selectedState);
-  const currentCities = data.cities.filter(c => 
+  const currentDistricts = districtsList.filter(d => d.stateId === selectedState);
+  const currentCities = citiesList.filter(c => 
     c.stateId === selectedState && (!selectedDistrict || c.districtId === selectedDistrict)
   );
-  const currentSubCities = data.subCities.filter(sc => 
+  const currentSubCities = subCitiesList.filter(sc => 
     sc.stateId === selectedState && 
     (!selectedDistrict || sc.districtId === selectedDistrict) &&
     (!selectedCity || sc.cityId === selectedCity)
   );
 
-  const currentHospitals = data.hospitals.filter(h => {
+  const currentHospitals = hospitalsList.filter(h => {
     if (selectedSubCity) return h.subCityId === selectedSubCity;
     if (selectedCity) return h.cityId === selectedCity;
     if (selectedDistrict) return h.districtId === selectedDistrict;
@@ -89,8 +99,8 @@ export default function MasterExplorer() {
     return true;
   });
 
-  const filteredStates = data.states.filter(s => 
-    s.name.toLowerCase().includes(searchQuery.toLowerCase())
+  const filteredStates = statesList.filter(s => 
+    (s.name || '').toLowerCase().includes(searchQuery.toLowerCase())
   );
 
   if (loading) {
@@ -104,7 +114,7 @@ export default function MasterExplorer() {
     );
   }
 
-  const activeStateObj = data.states.find(s => s._id === selectedState);
+  const activeStateObj = statesList.find(s => s._id === selectedState);
 
   return (
     <div className="min-h-screen medical-bg-mesh text-slate-100 py-8 px-4 sm:px-6 lg:px-8">
@@ -123,18 +133,18 @@ export default function MasterExplorer() {
                 All 29 States Open Hospital Directory
               </h1>
               <p className="mt-2 text-slate-300 text-sm sm:text-base max-w-3xl">
-                View all 29 States → {data.districts.length} Districts → {data.cities.length} Cities → {data.subCities.length} Sub-Areas → {data.hospitals.length} Hospitals → {data.doctors.length} Doctors & Live Availability.
+                View all 29 States → {districtsList.length} Districts → {citiesList.length} Cities → {subCitiesList.length} Sub-Areas → {hospitalsList.length} Hospitals → {doctorsList.length} Doctors & Live Availability.
               </p>
 
               {/* Live Stat Pills */}
               <div className="flex flex-wrap gap-2 mt-4">
                 {[
-                  { icon: '🗺️', label: 'States', value: data.states.length, color: 'bg-cyan-500/20 text-cyan-300 border-cyan-500/30' },
-                  { icon: '🏙️', label: 'Districts', value: data.districts.length, color: 'bg-blue-500/20 text-blue-300 border-blue-500/30' },
-                  { icon: '🌆', label: 'Cities', value: data.cities.length, color: 'bg-violet-500/20 text-violet-300 border-violet-500/30' },
-                  { icon: '📍', label: 'Sub-Areas', value: data.subCities.length, color: 'bg-teal-500/20 text-teal-300 border-teal-500/30' },
-                  { icon: '🏥', label: 'Hospitals', value: data.hospitals.length, color: 'bg-emerald-500/20 text-emerald-300 border-emerald-500/30' },
-                  { icon: '👨‍⚕️', label: 'Doctors', value: data.doctors.length, color: 'bg-orange-500/20 text-orange-300 border-orange-500/30' },
+                  { icon: '🗺️', label: 'States', value: statesList.length, color: 'bg-cyan-500/20 text-cyan-300 border-cyan-500/30' },
+                  { icon: '🏙️', label: 'Districts', value: districtsList.length, color: 'bg-blue-500/20 text-blue-300 border-blue-500/30' },
+                  { icon: '🌆', label: 'Cities', value: citiesList.length, color: 'bg-violet-500/20 text-violet-300 border-violet-500/30' },
+                  { icon: '📍', label: 'Sub-Areas', value: subCitiesList.length, color: 'bg-teal-500/20 text-teal-300 border-teal-500/30' },
+                  { icon: '🏥', label: 'Hospitals', value: hospitalsList.length, color: 'bg-emerald-500/20 text-emerald-300 border-emerald-500/30' },
+                  { icon: '👨‍⚕️', label: 'Doctors', value: doctorsList.length, color: 'bg-orange-500/20 text-orange-300 border-orange-500/30' },
                 ].map(stat => (
                   <div key={stat.label} className={`flex items-center gap-1.5 border px-3 py-1 rounded-full text-xs font-bold ${stat.color}`}>
                     <span>{stat.icon}</span>
@@ -148,50 +158,46 @@ export default function MasterExplorer() {
             {/* Audio Reader Header */}
             <div className="flex flex-col items-start md:items-end gap-2">
               <AudioButton 
-                textToRead={`All ${data.states.length} States of India are open below with ${data.districts.length} districts, ${data.cities.length} cities, ${data.hospitals.length} hospitals and ${data.doctors.length} doctors. You can explore Andhra Pradesh, Maharashtra, Karnataka, Telangana, Tamil Nadu, Uttar Pradesh, West Bengal, and all other states.`}
-                label="🔊 Listen Directory Summary"
-                className="py-2.5 px-4 text-sm"
+                textToRead={`29 States Open Hospital Directory. Covering ${statesList.length} states, ${districtsList.length} districts, ${citiesList.length} cities, ${hospitalsList.length} hospitals, and ${doctorsList.length} doctors across India.`}
+                label="🔊 Listen Full Directory"
+                className="shadow-lg shadow-cyan-500/20 px-4 py-2"
               />
-              <span className="text-xs text-slate-400">Audio support active for educated & uneducated users</span>
+              <span className="text-[11px] text-cyan-300 font-semibold">🔊 Audio support enabled in Hindi, Telugu, English</span>
             </div>
           </div>
+        </div>
 
-          {/* Search Filter & View Mode Controls */}
-          <div className="mt-6 flex flex-col md:flex-row items-center justify-between gap-4">
-            <div className="relative flex-1 w-full">
-              <Search className="absolute left-4 top-3.5 w-5 h-5 text-slate-400" />
-              <input
-                type="text"
-                placeholder="Search any State, District, City, Hospital, or Doctor name..."
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full bg-slate-950/80 border border-slate-700/80 rounded-2xl pl-12 pr-4 py-3 text-sm text-white placeholder-slate-400 focus:outline-none focus:border-cyan-400 shadow-inner"
-              />
-            </div>
+        {/* Search Bar & View Mode Toggle Bar */}
+        <div className="glass-panel p-4 sm:p-5 rounded-2xl border border-slate-700/80 flex flex-col md:flex-row items-stretch md:items-center justify-between gap-4">
+          <div className="relative flex-1">
+            <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-cyan-400" />
+            <input 
+              type="text" 
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              placeholder="Search by state name (e.g. Andhra Pradesh, Maharashtra, Karnataka, Telangana)..."
+              className="w-full pl-10 pr-4 py-2.5 bg-slate-900/90 border border-slate-700/80 rounded-xl text-sm text-white placeholder-slate-400 focus:outline-none focus:border-cyan-400 transition-colors"
+            />
+          </div>
 
-            {/* View Mode Selector */}
-            <div className="flex items-center gap-2 bg-slate-900/90 p-1.5 rounded-2xl border border-slate-700 shrink-0">
+          <div className="flex items-center gap-2">
+            <div className="bg-slate-900/90 p-1 rounded-xl border border-slate-700 flex items-center">
               <button
                 onClick={() => setViewMode('tree')}
-                className={`flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-bold transition-all ${
-                  viewMode === 'tree' 
-                    ? 'bg-cyan-500 text-white shadow-lg shadow-cyan-500/30' 
-                    : 'text-slate-400 hover:text-slate-200'
+                className={`px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all flex items-center gap-1.5 ${
+                  viewMode === 'tree' ? 'bg-cyan-500 text-slate-950 shadow-md shadow-cyan-500/30' : 'text-slate-400 hover:text-white'
                 }`}
               >
-                <Layers className="w-4 h-4" />
-                <span>Open 29-State Tree View</span>
+                <Layers className="w-3.5 h-3.5" />
+                <span>All States Tree View</span>
               </button>
-
               <button
                 onClick={() => setViewMode('interactive')}
-                className={`flex items-center gap-1.5 px-4 py-2 rounded-xl text-xs font-bold transition-all ${
-                  viewMode === 'interactive' 
-                    ? 'bg-cyan-500 text-white shadow-lg shadow-cyan-500/30' 
-                    : 'text-slate-400 hover:text-slate-200'
+                className={`px-3.5 py-1.5 rounded-lg text-xs font-bold transition-all flex items-center gap-1.5 ${
+                  viewMode === 'interactive' ? 'bg-cyan-500 text-slate-950 shadow-md shadow-cyan-500/30' : 'text-slate-400 hover:text-white'
                 }`}
               >
-                <ListFilter className="w-4 h-4" />
+                <ListFilter className="w-3.5 h-3.5" />
                 <span>Filter Wizard View</span>
               </button>
             </div>
@@ -204,7 +210,7 @@ export default function MasterExplorer() {
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
               <h2 className="text-xl font-bold text-white flex items-center gap-2">
                 <MapPin className="w-5 h-5 text-cyan-400" />
-                <span>All 29 States Open Hierarchy ({data.states.length} States Total)</span>
+                <span>All 29 States Open Hierarchy ({statesList.length} States Total)</span>
               </h2>
               <div className="flex items-center gap-3 text-xs">
                 <button 
@@ -226,9 +232,9 @@ export default function MasterExplorer() {
             <div className="space-y-4">
               {filteredStates.map((state) => {
                 const isExpanded = expandedStates[state._id];
-                const stateDistricts = data.districts.filter(d => d.stateId === state._id);
-                const stateHospitals = data.hospitals.filter(h => h.stateId === state._id);
-                const stateDoctors = data.doctors.filter(d => {
+                const stateDistricts = districtsList.filter(d => d.stateId === state._id);
+                const stateHospitals = hospitalsList.filter(h => h.stateId === state._id);
+                const stateDoctors = doctorsList.filter(d => {
                   const docHospId = d.hospitalId?._id || d.hospitalId;
                   return stateHospitals.some(h => h._id === docHospId);
                 });
@@ -249,7 +255,7 @@ export default function MasterExplorer() {
                           <h3 className="text-xl font-extrabold text-white flex items-center gap-2">
                             <span>{state.name}</span>
                             <span className="text-xs px-2.5 py-0.5 rounded-full bg-slate-800 text-cyan-300 border border-slate-700 font-semibold">
-                              State #{data.states.indexOf(state) + 1}
+                              State #{statesList.indexOf(state) + 1}
                             </span>
                           </h3>
                           <p className="text-xs text-slate-400 mt-0.5">
@@ -277,8 +283,8 @@ export default function MasterExplorer() {
                           <p className="text-xs text-slate-400 italic">No district data loaded for this state.</p>
                         ) : (
                           stateDistricts.map(dist => {
-                            const distCities = data.cities.filter(c => c.districtId === dist._id);
-                            const distHospitals = data.hospitals.filter(h => h.districtId === dist._id);
+                            const distCities = citiesList.filter(c => c.districtId === dist._id);
+                            const distHospitals = hospitalsList.filter(h => h.districtId === dist._id);
 
                             return (
                               <div key={dist._id} className="bg-slate-900/80 p-5 rounded-2xl border border-slate-800 space-y-4">
@@ -295,8 +301,8 @@ export default function MasterExplorer() {
                                 {/* Cities & Subcities Grid */}
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                   {distCities.map(city => {
-                                    const citySubCities = data.subCities.filter(sc => sc.cityId === city._id);
-                                    const cityHospitals = data.hospitals.filter(h => h.cityId === city._id);
+                                    const citySubCities = subCitiesList.filter(sc => sc.cityId === city._id);
+                                    const cityHospitals = hospitalsList.filter(h => h.cityId === city._id);
 
                                     return (
                                       <div key={city._id} className="bg-slate-950 p-4 rounded-xl border border-slate-800/80 space-y-3">
@@ -322,7 +328,7 @@ export default function MasterExplorer() {
                                         {/* Hospitals in City */}
                                         <div className="space-y-2 pt-2 border-t border-slate-800">
                                           {cityHospitals.map(hosp => {
-                                            const hospDocs = data.doctors.filter(d => (d.hospitalId?._id || d.hospitalId) === hosp._id);
+                                            const hospDocs = doctorsList.filter(d => (d.hospitalId?._id || d.hospitalId) === hosp._id);
 
                                             return (
                                               <div key={hosp._id} className="bg-slate-900/90 p-3.5 rounded-xl border border-slate-800 space-y-2.5 shadow-md">
@@ -432,14 +438,14 @@ export default function MasterExplorer() {
             <div className="flex items-center justify-between">
               <h2 className="text-xl font-bold text-white flex items-center gap-2">
                 <MapPin className="w-5 h-5 text-cyan-400" />
-                <span>Select State (Total {data.states.length} States)</span>
+                <span>Select State (Total {statesList.length} States)</span>
               </h2>
             </div>
 
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3">
               {filteredStates.map((state) => {
                 const isSelected = selectedState === state._id;
-                const stateHospitalsCount = data.hospitals.filter(h => h.stateId === state._id).length;
+                const stateHospitalsCount = hospitalsList.filter(h => h.stateId === state._id).length;
 
                 return (
                   <button
@@ -510,7 +516,7 @@ export default function MasterExplorer() {
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 pt-4 border-t border-slate-800">
                   {currentHospitals.map(hosp => {
-                    const hospDocs = data.doctors.filter(d => (d.hospitalId?._id || d.hospitalId) === hosp._id);
+                    const hospDocs = doctorsList.filter(d => (d.hospitalId?._id || d.hospitalId) === hosp._id);
                     return (
                       <div key={hosp._id} className="glass-card p-6 rounded-3xl space-y-4 border border-slate-700">
                         <div className="flex justify-between items-start">

@@ -2,12 +2,10 @@ import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { MapPin, Building2, HeartPulse, ChevronRight, Activity, Search, ArrowLeft, PhoneCall, ShieldCheck, CheckCircle2, UserCheck, Stethoscope, Sparkles } from 'lucide-react';
-import axios from 'axios';
+import { fetchStates, fetchDistricts, fetchCities, fetchSubCities, fetchHospitals, fetchHealthIssues } from '../services/apiService';
 import { useLanguage } from '../context/LanguageContext';
 import { AudioButton } from '../components/VoiceAssistant';
 import HospitalDetailsModal from '../components/HospitalDetailsModal';
-
-const API_URL = import.meta.env.VITE_API_URL || '/api';
 
 export default function SearchFlow() {
   const navigate = useNavigate();
@@ -34,15 +32,18 @@ export default function SearchFlow() {
   const [selectedHospitalForModal, setSelectedHospitalForModal] = useState(null);
 
   useEffect(() => {
-    const fetchStates = async () => {
+    const loadInitialStates = async () => {
       try {
-        const res = await axios.get(`${API_URL}/locations/states`);
-        setStates(res.data);
+        setLoading(true);
+        const data = await fetchStates();
+        setStates(Array.isArray(data) ? data : []);
       } catch (err) {
         console.error("Could not fetch states", err);
+      } finally {
+        setLoading(false);
       }
     };
-    fetchStates();
+    loadInitialStates();
   }, []);
 
   const handleStateSelect = async (stateItem) => {
@@ -55,8 +56,8 @@ export default function SearchFlow() {
     setLoading(true);
 
     try {
-      const res = await axios.get(`${API_URL}/locations/districts?stateId=${stateItem._id}`);
-      setDistricts(res.data);
+      const data = await fetchDistricts(stateItem._id);
+      setDistricts(Array.isArray(data) ? data : []);
     } catch (err) {
       console.error(err);
     }
@@ -73,8 +74,8 @@ export default function SearchFlow() {
     setLoading(true);
 
     try {
-      const res = await axios.get(`${API_URL}/locations/cities?districtId=${districtItem._id}`);
-      setCities(res.data);
+      const data = await fetchCities(districtItem._id, selectedState?._id);
+      setCities(Array.isArray(data) ? data : []);
     } catch (err) {
       console.error(err);
     }
@@ -90,10 +91,12 @@ export default function SearchFlow() {
     setLoading(true);
 
     try {
-      const subRes = await axios.get(`${API_URL}/locations/subcities?cityId=${cityItem._id}`);
-      setSubCities(subRes.data);
-      const hospRes = await axios.get(`${API_URL}/hospitals?cityId=${cityItem._id}`);
-      setHospitals(hospRes.data);
+      const [subData, hospData] = await Promise.all([
+        fetchSubCities(cityItem._id),
+        fetchHospitals({ cityId: cityItem._id, districtId: selectedDistrict?._id, stateId: selectedState?._id })
+      ]);
+      setSubCities(Array.isArray(subData) ? subData : []);
+      setHospitals(Array.isArray(hospData) ? hospData : []);
     } catch (err) {
       console.error(err);
     }
@@ -107,8 +110,8 @@ export default function SearchFlow() {
     setLoading(true);
 
     try {
-      const res = await axios.get(`${API_URL}/medical/health-issues`);
-      setHealthIssues(res.data);
+      const data = await fetchHealthIssues();
+      setHealthIssues(Array.isArray(data) ? data : []);
     } catch (err) {
       console.error(err);
     }
@@ -143,12 +146,19 @@ export default function SearchFlow() {
     { id: 5, name: 'Specialty', icon: HeartPulse }
   ];
 
-  const filteredStates = states.filter(s => s.name.toLowerCase().includes(searchTerm.toLowerCase()));
-  const filteredDistricts = districts.filter(d => d.name.toLowerCase().includes(searchTerm.toLowerCase()));
-  const filteredCities = cities.filter(c => c.name.toLowerCase().includes(searchTerm.toLowerCase()));
-  const filteredHospitals = hospitals.filter(h => {
+  const validStates = Array.isArray(states) ? states : [];
+  const validDistricts = Array.isArray(districts) ? districts : [];
+  const validCities = Array.isArray(cities) ? cities : [];
+  const validSubCities = Array.isArray(subCities) ? subCities : [];
+  const validHospitals = Array.isArray(hospitals) ? hospitals : [];
+  const validIssues = Array.isArray(healthIssues) ? healthIssues : [];
+
+  const filteredStates = validStates.filter(s => (s.name || '').toLowerCase().includes(searchTerm.toLowerCase()));
+  const filteredDistricts = validDistricts.filter(d => (d.name || '').toLowerCase().includes(searchTerm.toLowerCase()));
+  const filteredCities = validCities.filter(c => (c.name || '').toLowerCase().includes(searchTerm.toLowerCase()));
+  const filteredHospitals = validHospitals.filter(h => {
     const term = searchTerm.toLowerCase();
-    const matchesSearch = h.name.toLowerCase().includes(term) || 
+    const matchesSearch = (h.name || '').toLowerCase().includes(term) || 
       (h.address && h.address.toLowerCase().includes(term)) ||
       (h.parentChain && h.parentChain.toLowerCase().includes(term)) ||
       (h.branchCode && h.branchCode.toLowerCase().includes(term));
@@ -157,7 +167,7 @@ export default function SearchFlow() {
     return matchesSearch && matchesSubCity && matchesTier;
   });
   const displayedHospitals = filteredHospitals;
-  const filteredIssues = healthIssues.filter(i => i.name.toLowerCase().includes(searchTerm.toLowerCase()));
+  const filteredIssues = validIssues.filter(i => (i.name || '').toLowerCase().includes(searchTerm.toLowerCase()));
 
   return (
     <div className="min-h-screen medical-bg-mesh text-slate-100 py-8 px-4 sm:px-6 lg:px-8">
@@ -369,7 +379,7 @@ export default function SearchFlow() {
                   </div>
 
                   {/* Mandal / Area filter pills */}
-                  {subCities.length > 0 && (
+                  {validSubCities.length > 0 && (
                     <div className="space-y-2">
                       <p className="text-[11px] font-bold text-slate-400 uppercase tracking-wider">1. Filter by Mandal / Locality:</p>
                       <div className="flex items-center gap-1.5 overflow-x-auto pb-2 scrollbar-thin">
@@ -381,10 +391,10 @@ export default function SearchFlow() {
                               : 'bg-slate-900/80 text-slate-300 border-slate-700 hover:border-slate-500'
                           }`}
                         >
-                          🏛️ All Mandals &amp; Areas ({hospitals.length})
+                          🏛️ All Mandals & Areas ({validHospitals.length})
                         </button>
-                        {subCities.map(sub => {
-                          const count = hospitals.filter(h => h.subCityId === sub._id || h.subCityId?._id === sub._id).length;
+                        {validSubCities.map(sub => {
+                          const count = validHospitals.filter(h => h.subCityId === sub._id || h.subCityId?._id === sub._id).length;
                           return (
                             <button
                               key={sub._id}

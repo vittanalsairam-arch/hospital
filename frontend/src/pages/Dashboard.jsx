@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import axios from 'axios';
 import { 
   Calendar, 
   Clock, 
@@ -21,10 +20,9 @@ import {
   ShieldCheck,
   Building2
 } from 'lucide-react';
+import { fetchUserAppointments, generateLiveAppointment, cancelAppointment } from '../services/apiService';
 import { AudioButton } from '../components/VoiceAssistant';
 import { useAuth } from '../context/AuthContext';
-
-const API_URL = import.meta.env.VITE_API_URL || '/api';
 
 export default function Dashboard() {
   const { user } = useAuth();
@@ -38,35 +36,10 @@ export default function Dashboard() {
   const fetchAppointments = async () => {
     try {
       setLoading(true);
-      const res = await axios.get(`${API_URL}/appointments`, {
-        params: {
-          phone: user?.phone || '+91 98765 43210',
-          email: user?.email || 'sairam@hospitalop.in',
-          patientId: user?._id
-        }
-      });
-      if (res.data && res.data.length > 0) {
-        setAppointments(res.data);
-      } else {
-        // Fallback default appointments
-        setAppointments([
-          { 
-            _id: 'sample-1',
-            appointmentId: 'MEDOP-2026-88421', 
-            doctorId: { name: 'Dr. Deepthi', specialization: 'Cardiologist', qualification: 'MBBS, MD Cardiology' },
-            departmentId: { name: 'Cardiology' },
-            hospitalId: { name: 'Apollo Super Specialty Hospital', branchCode: 'BR-APO-0001' }, 
-            date: new Date().toISOString().split('T')[0], 
-            time: '10:30 AM', 
-            status: 'Confirmed', 
-            opToken: 'OP-02',
-            roomNo: 'OPD Room 104, Wing A',
-            consultationFee: 900
-          }
-        ]);
-      }
+      const data = await fetchUserAppointments(user);
+      setAppointments(Array.isArray(data) ? data : []);
     } catch (err) {
-      console.warn('Failed to load appointments from server:', err);
+      console.warn('Failed to load appointments:', err);
     } finally {
       setLoading(false);
     }
@@ -80,7 +53,7 @@ export default function Dashboard() {
   const handleGenerateLive = async () => {
     setGenerating(true);
     try {
-      const res = await axios.post(`${API_URL}/appointments/generate-live`, {
+      const appt = await generateLiveAppointment({
         patientName: user?.name || 'Sairam Vittanala',
         patientPhone: user?.phone || '+91 98765 43210',
         patientEmail: user?.email || 'sairam@hospitalop.in',
@@ -89,15 +62,15 @@ export default function Dashboard() {
         abhaId: user?.abhaId || '9821-4412-8820'
       });
 
-      if (res.data) {
-        setAppointments(prev => [res.data, ...prev]);
-        setToastMessage(`🎉 Real OP Ticket ${res.data.appointmentId} Generated with Token ${res.data.opToken}!`);
+      if (appt) {
+        setAppointments(prev => [appt, ...(Array.isArray(prev) ? prev : [])]);
+        setToastMessage(`🎉 Real OP Ticket ${appt.appointmentId} Generated with Token ${appt.opToken}!`);
         setTimeout(() => setToastMessage(null), 5000);
         // Direct navigation to official printable ticket
-        navigate(`/confirmation/${res.data.appointmentId}`, { state: { appointment: res.data } });
+        navigate(`/confirmation/${appt.appointmentId || appt._id}`, { state: { appointment: appt } });
       }
     } catch (err) {
-      alert('Error generating live appointment: ' + (err.response?.data?.message || err.message));
+      alert('Error generating live appointment: ' + err.message);
     } finally {
       setGenerating(false);
     }
@@ -106,8 +79,8 @@ export default function Dashboard() {
   const handleCancelAppointment = async (apptId) => {
     if (!window.confirm('Are you sure you want to cancel this hospital appointment?')) return;
     try {
-      await axios.put(`${API_URL}/appointments/${apptId}/cancel`);
-      setAppointments(prev => prev.map(a => (a._id === apptId || a.appointmentId === apptId) ? { ...a, status: 'Cancelled' } : a));
+      await cancelAppointment(apptId);
+      setAppointments(prev => (Array.isArray(prev) ? prev : []).map(a => (a._id === apptId || a.appointmentId === apptId) ? { ...a, status: 'Cancelled' } : a));
       setToastMessage('Appointment marked as cancelled.');
       setTimeout(() => setToastMessage(null), 4000);
     } catch (err) {
@@ -115,7 +88,8 @@ export default function Dashboard() {
     }
   };
 
-  const filtered = appointments.filter(a => {
+  const validAppointments = Array.isArray(appointments) ? appointments : [];
+  const filtered = validAppointments.filter(a => {
     if (activeTab === 'upcoming') return a.status === 'Confirmed';
     if (activeTab === 'past') return a.status === 'Completed';
     if (activeTab === 'cancelled') return a.status === 'Cancelled';

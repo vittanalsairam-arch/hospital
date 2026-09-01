@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useLocation, Link, useParams } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import axios from 'axios';
 import { 
   CheckCircle2, 
   Calendar, 
@@ -21,9 +20,8 @@ import {
   Copy,
   Check
 } from 'lucide-react';
+import { fetchAppointmentById } from '../services/apiService';
 import { AudioButton } from '../components/VoiceAssistant';
-
-const API_URL = import.meta.env.VITE_API_URL || '/api';
 
 export default function BookingConfirmation() {
   const { id } = useParams();
@@ -39,9 +37,9 @@ export default function BookingConfirmation() {
       if (!id) return;
       try {
         setLoading(true);
-        const res = await axios.get(`${API_URL}/appointments/${id}`);
-        if (res.data) {
-          setAppointment(res.data);
+        const data = await fetchAppointmentById(id);
+        if (data) {
+          setAppointment(data);
         }
       } catch (err) {
         console.warn('Live appointment fetch failed, using fallback/state:', err);

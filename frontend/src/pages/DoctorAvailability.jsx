@@ -3,11 +3,10 @@ import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { format, addDays, startOfToday } from 'date-fns';
 import { Calendar as CalendarIcon, Clock, CheckCircle2, XCircle, AlertTriangle, Sparkles, User, MapPin } from 'lucide-react';
-import axios from 'axios';
+import { fetchDoctorById, fetchDoctorAvailability, fetchDoctorAlternatives, createAppointment, generateLiveAppointment } from '../services/apiService';
+import { FALLBACK_DOCTORS } from '../data/fallbackData';
 import { useLanguage } from '../context/LanguageContext';
 import { AudioButton } from '../components/VoiceAssistant';
-
-const API_URL = import.meta.env.VITE_API_URL || '/api';
 
 export default function DoctorAvailability() {
   const { id } = useParams();
@@ -40,49 +39,52 @@ export default function DoctorAvailability() {
   // Fetch doctor info if opened via direct URL
   useEffect(() => {
     if (!doctor) {
-      axios.get(`${API_URL}/doctors/${id}`)
-        .then(res => {
-          setDoctor(res.data);
-          setHospital(res.data.hospitalId);
+      fetchDoctorById(id)
+        .then(docData => {
+          if (docData) {
+            setDoctor(docData);
+            setHospital(docData.hospitalId);
+          }
         })
-        .catch(err => console.error(err));
+        .catch(err => {
+          const fallback = FALLBACK_DOCTORS.find(d => d._id === id) || FALLBACK_DOCTORS[0];
+          setDoctor(fallback);
+          setHospital(fallback.hospitalId);
+        });
     }
   }, [id, doctor]);
 
   // Fetch Availability & Alternatives
   useEffect(() => {
-    if (!id) return;
+    const docId = id || doctor?._id;
+    if (!docId) return;
     const formattedDate = format(selectedDate, 'yyyy-MM-dd');
     
-    axios.get(`${API_URL}/doctors/${id}/availability?date=${formattedDate}`)
-      .then(res => {
-        setSchedules(res.data);
-        const hasFree = res.data.some(s => s.status === 'AVAILABLE' && s.bookedSlots < s.totalSlots);
+    fetchDoctorAvailability(docId, formattedDate)
+      .then(data => {
+        const slots = Array.isArray(data) ? data : [];
+        setSchedules(slots);
+        const hasFree = slots.some(s => s.status === 'AVAILABLE' && s.bookedSlots < s.totalSlots);
         setIsDoctorUnavailable(!hasFree);
       })
       .catch(err => {
-        const mockSchedules = [
-          { _id: 's1', startTime: '10:00', status: 'AVAILABLE', bookedSlots: 0, totalSlots: 1 },
-          { _id: 's2', startTime: '10:30', status: 'LIMITED', bookedSlots: 0, totalSlots: 1 },
-          { _id: 's3', startTime: '11:00', status: 'FULL', bookedSlots: 1, totalSlots: 1 },
-          { _id: 's4', startTime: '11:30', status: 'AVAILABLE', bookedSlots: 0, totalSlots: 1 }
-        ];
-        setSchedules(mockSchedules);
+        console.error(err);
       });
 
     // Fetch alternative doctors
     setLoadingAlternatives(true);
-    axios.get(`${API_URL}/doctors/${id}/alternatives`)
-      .then(res => setAlternatives(res.data))
+    fetchDoctorAlternatives(docId)
+      .then(data => setAlternatives(Array.isArray(data) ? data : []))
       .catch(err => console.error(err))
       .finally(() => setLoadingAlternatives(false));
 
-  }, [id, selectedDate]);
+  }, [id, doctor?._id, selectedDate]);
 
   const handleBooking = async (e) => {
     if (e) e.preventDefault();
-    if (!selectedSlot && schedules.length > 0) {
-      setSelectedSlot(schedules.find(s => s.status === 'AVAILABLE') || schedules[0]);
+    const validSchedules = Array.isArray(schedules) ? schedules : [];
+    if (!selectedSlot && validSchedules.length > 0) {
+      setSelectedSlot(validSchedules.find(s => s.status === 'AVAILABLE') || validSchedules[0]);
     }
     
     setBookingLoading(true);
@@ -91,44 +93,30 @@ export default function DoctorAvailability() {
       const payload = {
         ...formData,
         hospitalId: hospital?._id || doctor?.hospitalId?._id || doctor?.hospitalId,
-        doctorId: doctor._id,
-        departmentId: doctor.departmentId?._id || doctor.departmentId,
+        doctorId: doctor?._id || id,
+        departmentId: doctor?.departmentId?._id || doctor?.departmentId,
         date: format(selectedDate, 'yyyy-MM-dd'),
         time: slotTime
       };
       
-      const res = await axios.post(`${API_URL}/appointments`, payload);
-      navigate(`/confirmation/${res.data.appointmentId}`, { state: { appointment: res.data } });
+      const appt = await createAppointment(payload);
+      navigate(`/confirmation/${appt.appointmentId || appt._id}`, { state: { appointment: appt } });
     } catch (err) {
-      console.warn('Direct slot booking fallback:', err);
-      try {
-        const genRes = await axios.post(`${API_URL}/appointments/generate-live`, {
-          patientName: formData.patientName || 'Sairam Vittanala',
-          patientPhone: formData.patientPhone || '+91 98765 43210',
-          specialization: doctor?.specialization
-        });
-        navigate(`/confirmation/${genRes.data.appointmentId}`, { state: { appointment: genRes.data } });
-      } catch (fallbackErr) {
-        const mockAppt = { 
-          appointmentId: `MEDOP-${new Date().getFullYear()}-${Math.floor(10000+Math.random()*90000)}`, 
-          ...formData, 
-          doctorId: doctor,
-          hospitalId: hospital || doctor?.hospitalId,
-          date: format(selectedDate, 'yyyy-MM-dd'),
-          time: selectedSlot?.startTime || '10:30 AM',
-          opToken: 'OP-03',
-          roomNo: 'OPD Room 102, Wing A',
-          status: 'Confirmed'
-        };
-        navigate(`/confirmation/${mockAppt.appointmentId}`, { state: { appointment: mockAppt } });
-      }
+      console.warn('Booking error fallback:', err);
+      const appt = await generateLiveAppointment({
+        patientName: formData.patientName || 'Sairam Vittanala',
+        patientPhone: formData.patientPhone || '+91 98765 43210',
+        specialization: doctor?.specialization
+      });
+      navigate(`/confirmation/${appt.appointmentId || appt._id}`, { state: { appointment: appt } });
     } finally {
       setBookingLoading(false);
     }
   };
 
-
-  const availableSlotsCount = schedules.filter(s => s.status === 'AVAILABLE' && s.bookedSlots < s.totalSlots).length;
+  const validSchedules = Array.isArray(schedules) ? schedules : [];
+  const validAlternatives = Array.isArray(alternatives) ? alternatives : [];
+  const availableSlotsCount = validSchedules.filter(s => s.status === 'AVAILABLE' && s.bookedSlots < s.totalSlots).length;
 
   return (
     <div className="min-h-screen medical-bg-mesh text-slate-100 py-8 px-4 sm:px-6 lg:px-8">
