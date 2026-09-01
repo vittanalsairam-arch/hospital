@@ -66,3 +66,6 @@ An automated workflow has been created at [`.github/workflows/build-android-play
 | **Theme Color** | `#0ea5e9` | ✅ Configured |
 | **App Icons** | 192x192 & 512x512 adaptive | ✅ Included |
 | **Network Security** | HTTPS + Cleartext fallback | ✅ Configured |
+
+
+

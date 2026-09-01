@@ -79,3 +79,40 @@
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(14, 165, 233, 0.8);
 }
+
+/* Printable Hospital OP Ticket Styles */
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+  nav, footer, .no-print, .voice-widget-container, .install-banner, .install-modal {
+    display: none !important;
+  }
+  .print-ticket-container {
+    background: #ffffff !important;
+    color: #0f172a !important;
+    box-shadow: none !important;
+    border: 2px solid #0284c7 !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 20px !important;
+    page-break-inside: avoid;
+  }
+  .print-ticket-container * {
+    color: #0f172a !important;
+    background: transparent !important;
+    border-color: #cbd5e1 !important;
+    text-shadow: none !important;
+  }
+  .print-ticket-container .print-accent {
+    color: #0284c7 !important;
+    font-weight: 800 !important;
+  }
+  .print-ticket-container .print-badge {
+    border: 2px solid #0284c7 !important;
+    color: #0284c7 !important;
+    font-weight: 800 !important;
+  }
+}
+

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { Activity, User, Globe, MapPin, Search, LogOut, LogIn, ChevronDown, CheckCircle2, ShieldCheck, Stethoscope, Smartphone } from 'lucide-react';
+import { Activity, User, Globe, MapPin, Search, LogOut, LogIn, ChevronDown, CheckCircle2, ShieldCheck, Stethoscope, Smartphone, FileText } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { useAuth } from '../context/AuthContext';
 import { usePWA } from '../context/PWAContext';
@@ -55,13 +55,26 @@ export default function Navbar() {
             </Link>
 
             <Link 
-              to="/search" 
-              className={`flex items-center gap-1.5 font-semibold text-sm transition-colors ${isActive('/search') ? 'text-cyan-400' : 'text-slate-300 hover:text-cyan-300'}`}
+              to="/doctors" 
+              className={`flex items-center gap-1.5 font-semibold text-sm transition-colors ${isActive('/doctors') ? 'text-cyan-400' : 'text-slate-300 hover:text-cyan-300'}`}
             >
-              <Search className="w-4 h-4 text-cyan-400" />
-              <span>{t('search')}</span>
+              <Stethoscope className="w-4 h-4 text-cyan-400" />
+              <span>Specialists</span>
+            </Link>
+
+            <Link 
+              to="/dashboard" 
+              className={`flex items-center gap-1.5 font-semibold text-sm transition-colors px-3 py-1 rounded-full ${
+                isActive('/dashboard') 
+                  ? 'bg-cyan-500 text-white font-bold shadow-md shadow-cyan-500/20' 
+                  : 'bg-cyan-500/10 text-cyan-300 hover:bg-cyan-500/20 border border-cyan-500/30'
+              }`}
+            >
+              <FileText className="w-4 h-4 text-cyan-400" />
+              <span>⚡ My OP Tickets</span>
             </Link>
           </div>
+
 
           {/* Right Section: Language Switcher, App Link & User Buttons */}
           <div className="flex items-center space-x-2.5">
@@ -143,7 +156,7 @@ export default function Navbar() {
                         className="w-full flex items-center gap-2.5 px-3 py-2 rounded-xl text-xs font-bold text-slate-200 hover:text-white hover:bg-cyan-500/20 transition-colors"
                       >
                         <Activity className="w-4 h-4 text-cyan-400" />
-                        <span>My OP Tickets & Dashboard</span>
+                        <span>My Hospital OP & Dashboard</span>
                       </Link>
 
                       <div className="pt-1 border-t border-slate-800/80">

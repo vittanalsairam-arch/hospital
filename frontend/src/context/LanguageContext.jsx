@@ -21,7 +21,7 @@ export const translations = {
     alternativeDoctors: "💡 Recommended Available Alternative Doctors",
     listenBtn: "🔊 Listen",
     stopAudio: "⏹️ Stop Voice",
-    bookNow: "Book OP Ticket",
+    bookNow: "Hospital OP",
     viewDetails: "View Slots & Info",
     easyVoiceGuide: "Click 🔊 on any hospital or doctor to hear details out loud!",
     filterByState: "Browse by State"

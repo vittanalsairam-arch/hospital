@@ -1,37 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Volume2, VolumeX, Sparkles } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
+import { speakText, stopSpeech } from '../utils/speech';
 
-export const speakText = (text, lang = 'en') => {
-  if (!('speechSynthesis' in window)) return;
-
-  window.speechSynthesis.cancel(); // Stop any active speech
-
-  const utterance = new SpeechSynthesisUtterance(text);
-  
-  // Set language voice code
-  const langMap = {
-    en: 'en-IN',
-    hi: 'hi-IN',
-    te: 'te-IN',
-    ta: 'ta-IN',
-    kn: 'kn-IN',
-    mr: 'mr-IN',
-    bn: 'bn-IN'
-  };
-
-  utterance.lang = langMap[lang] || 'en-US';
-  utterance.rate = 0.9; // Slightly slower for clear understanding by all users
-  utterance.pitch = 1.0;
-
-  window.speechSynthesis.speak(utterance);
-};
-
-export const stopSpeech = () => {
-  if ('speechSynthesis' in window) {
-    window.speechSynthesis.cancel();
-  }
-};
 
 export function AudioButton({ textToRead, className = "", label }) {
   const { lang, t } = useLanguage();
@@ -43,10 +14,11 @@ export function AudioButton({ textToRead, className = "", label }) {
       stopSpeech();
       setSpeaking(false);
     } else {
+      if (!textToRead) return;
       setSpeaking(true);
       speakText(textToRead, lang);
       // Auto reset status after estimated speech length
-      const words = textToRead.split(' ').length;
+      const words = String(textToRead).split(' ').length;
       setTimeout(() => setSpeaking(false), words * 400 + 1000);
     }
   };

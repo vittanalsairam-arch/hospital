@@ -47,13 +47,16 @@ exports.getAlternativeDoctors = async (req, res) => {
     if (!currentDoctor) return res.status(404).json({ message: 'Doctor not found' });
 
     // 1. Search for other doctors in the SAME hospital or SAME department
+    const hospId = currentDoctor.hospitalId?._id || currentDoctor.hospitalId;
+    const orConditions = [
+      { specialization: currentDoctor.specialization }
+    ];
+    if (hospId) orConditions.push({ hospitalId: hospId });
+    if (currentDoctor.departmentId) orConditions.push({ departmentId: currentDoctor.departmentId });
+
     let alternativeQuery = {
       _id: { $ne: currentDoctor._id },
-      $or: [
-        { hospitalId: currentDoctor.hospitalId._id },
-        { departmentId: currentDoctor.departmentId },
-        { specialization: currentDoctor.specialization }
-      ]
+      $or: orConditions
     };
 
     let alternatives = await Doctor.find(alternativeQuery)

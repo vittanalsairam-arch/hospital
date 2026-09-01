@@ -62,9 +62,10 @@ self.addEventListener('fetch', (event) => {
           if (cachedResponse) {
             return cachedResponse;
           }
-          if (event.request.headers.get('accept').includes('text/html')) {
+          if (event.request.headers && event.request.headers.get('accept') && event.request.headers.get('accept').includes('text/html')) {
             return caches.match('/index.html');
           }
+          return new Response('Offline - MediOP Cache', { status: 503, statusText: 'Service Unavailable' });
         });
       })
   );

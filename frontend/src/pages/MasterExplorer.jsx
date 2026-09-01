@@ -40,7 +40,7 @@ export default function MasterExplorer() {
   const fetchTreeData = async () => {
     try {
       setLoading(true);
-      const res = await axios.get('http://localhost:5000/api/locations/tree');
+      const res = await axios.get('/api/locations/tree');
       setData(res.data);
       if (res.data.states.length > 0) {
         setSelectedState(res.data.states[0]._id);
@@ -510,7 +510,7 @@ export default function MasterExplorer() {
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 pt-4 border-t border-slate-800">
                   {currentHospitals.map(hosp => {
-                    const hospDocs = data.doctors.filter(d => d.hospitalId._id === hosp._id);
+                    const hospDocs = data.doctors.filter(d => (d.hospitalId?._id || d.hospitalId) === hosp._id);
                     return (
                       <div key={hosp._id} className="glass-card p-6 rounded-3xl space-y-4 border border-slate-700">
                         <div className="flex justify-between items-start">

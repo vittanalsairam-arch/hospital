@@ -84,7 +84,7 @@ export default function Register() {
 
           <div className="flex justify-center pt-1">
             <AudioButton 
-              textToRead="Fill in your name, email, phone number and state to register as a patient and book OP tickets across India."
+              textToRead="Fill in your name, email, phone number and state to register as a patient and book Hospital OP across India."
               label="🔊 Listen to Instructions"
               className="text-xs"
             />

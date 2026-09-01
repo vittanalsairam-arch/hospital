@@ -265,7 +265,7 @@ export default function HospitalDetailsModal({ hospital, isOpen, onClose, onBook
                 className="w-1/2 sm:w-auto px-6 py-2.5 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white text-xs font-bold rounded-xl shadow-lg shadow-cyan-500/20 flex items-center justify-center gap-2 hover:scale-105 transition-all cursor-pointer"
               >
                 <Stethoscope className="w-4 h-4" />
-                <span>Book OP Ticket at this Branch</span>
+                <span>Hospital OP at this Branch</span>
               </button>
             </div>
           </div>

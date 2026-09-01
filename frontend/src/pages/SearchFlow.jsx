@@ -7,7 +7,7 @@ import { useLanguage } from '../context/LanguageContext';
 import { AudioButton } from '../components/VoiceAssistant';
 import HospitalDetailsModal from '../components/HospitalDetailsModal';
 
-const API_URL = 'http://localhost:5000/api';
+const API_URL = import.meta.env.VITE_API_URL || '/api';
 
 export default function SearchFlow() {
   const navigate = useNavigate();

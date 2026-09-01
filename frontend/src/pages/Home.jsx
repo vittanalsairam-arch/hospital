@@ -40,7 +40,7 @@ export default function Home() {
   const fetchTreeData = async () => {
     try {
       setLoading(true);
-      const res = await axios.get('http://localhost:5000/api/locations/tree');
+      const res = await axios.get('/api/locations/tree');
       setData(res.data);
       if (res.data.states.length > 0) {
         setSelectedState(res.data.states[0]._id);
@@ -112,7 +112,7 @@ export default function Home() {
             </span>
 
             <h1 className="text-4xl sm:text-6xl font-black tracking-tight text-white leading-tight">
-              Hospital OP Ticket Booking<br />
+              Hospital OP Booking<br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-teal-300 to-blue-400">
                 29 States • 280+ Districts • Cities • Hospitals
               </span>
@@ -142,17 +142,44 @@ export default function Home() {
               </div>
             )}
 
-            {/* Audio Reader Helper for Home Page */}
-            <div className="flex justify-center pt-1">
+            {/* Quick Actions & Instant Real OP Booking */}
+            <div className="flex flex-wrap items-center justify-center gap-3 pt-2">
+              <button
+                onClick={async () => {
+                  try {
+                    const res = await axios.post('/api/appointments/generate-live', {
+                      patientName: 'Sairam Vittanala',
+                      patientPhone: '+91 98765 43210'
+                    });
+                    navigate(`/confirmation/${res.data.appointmentId}`, { state: { appointment: res.data } });
+                  } catch (e) {
+                    navigate('/doctors');
+                  }
+                }}
+                className="px-6 py-3 bg-gradient-to-r from-emerald-500 via-teal-500 to-cyan-500 hover:from-emerald-400 hover:to-cyan-400 text-slate-950 font-black text-sm rounded-2xl shadow-xl shadow-emerald-500/25 transition-all flex items-center gap-2 hover:scale-105"
+              >
+                <Sparkles className="w-5 h-5 text-slate-950" />
+                <span>⚡ Instant Real OP Appointment (1-Click)</span>
+              </button>
+
+              <button
+                onClick={() => navigate('/dashboard')}
+                className="px-5 py-3 bg-slate-800/90 hover:bg-slate-700 text-cyan-300 font-bold text-sm rounded-2xl border border-cyan-500/30 transition-all flex items-center gap-2"
+              >
+                <Calendar className="w-4 h-4 text-cyan-400" />
+                <span>View My OP Tickets</span>
+              </button>
+
               <AudioButton 
-                textToRead={`Welcome to Medi OP. All ${data.states.length} states of India are available with ${data.districts.length} districts, ${data.cities.length} cities, ${data.hospitals.length} hospitals and ${data.doctors.length} doctors listed below. Click the speak button to listen to any hospital or doctor details.`}
-                label="🔊 Listen Voice Guide"
-                className="py-2.5 px-5 text-sm"
+                textToRead={`Welcome to Medi OP. All ${data.states.length} states of India are available with ${data.districts.length} districts, ${data.cities.length} cities, ${data.hospitals.length} hospitals and ${data.doctors.length} doctors. You can generate a real live OP appointment in one click or browse doctors below.`}
+                label="🔊 Voice Guide"
+                className="py-3 px-4 text-sm rounded-2xl"
               />
             </div>
           </motion.div>
         </div>
       </div>
+
 
       {/* MAIN DATA INTEGRATION SECTION (ALL 29 STATES INTEGRATED RIGHT HERE) */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
@@ -523,7 +550,7 @@ export default function Home() {
 
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 pt-4 border-t border-slate-800">
                       {currentHospitals.map(hosp => {
-                        const hospDocs = data.doctors.filter(d => d.hospitalId._id === hosp._id);
+                        const hospDocs = data.doctors.filter(d => (d.hospitalId?._id || d.hospitalId) === hosp._id);
                         return (
                           <div key={hosp._id} className="glass-card p-6 rounded-3xl space-y-4 border border-slate-700">
                             <div className="flex justify-between items-start">

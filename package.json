@@ -1,0 +1,15 @@
+{
+  "name": "mediop-root",
+  "version": "1.0.0",
+  "description": "MediOP – National Hospital OP Booking Portal (All 29 States of India)",
+  "main": "start.js",
+  "scripts": {
+    "start": "node start.js",
+    "dev": "node start.js",
+    "build": "npm --prefix frontend run build",
+    "seed": "npm --prefix backend run seed"
+  },
+  "keywords": ["hospital", "op-booking", "healthcare", "india"],
+  "author": "MediOP Team",
+  "license": "MIT"
+}

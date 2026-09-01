@@ -1,4 +1,7 @@
 const mongoose = require('mongoose');
+const path = require('path');
+
+let mongoServerInstance = null;
 
 const connectDB = async () => {
   try {
@@ -10,8 +13,11 @@ const connectDB = async () => {
     console.warn(`Local MongoDB connection failed (${error.message}). Starting MongoMemoryServer fallback...`);
     try {
       const { MongoMemoryServer } = require('mongodb-memory-server');
-      const mongoServer = await MongoMemoryServer.create();
-      const mongoUri = mongoServer.getUri();
+      mongoServerInstance = await MongoMemoryServer.create({
+        instance: { launchTimeout: 60000 },
+        binary: { downloadDir: path.join(__dirname, '../node_modules/.cache/mongodb-memory-server') }
+      });
+      const mongoUri = mongoServerInstance.getUri();
       const conn = await mongoose.connect(mongoUri);
       console.log(`MongoDB Memory Server Connected: ${conn.connection.host}`);
 
