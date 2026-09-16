@@ -15,6 +15,7 @@ import Register from './pages/Register';
 import VoiceAssistantWidget from './components/VoiceAssistant';
 import InstallAppModal from './components/InstallAppModal';
 import InstallAppBanner from './components/InstallAppBanner';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
                 <Route path="*" element={<Navigate to="/" replace />} />
               </Routes>
             </main>
+            <Footer />
             <VoiceAssistantWidget />
             <InstallAppModal />
             <InstallAppBanner />

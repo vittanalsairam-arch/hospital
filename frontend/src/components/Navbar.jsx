@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { Activity, User, Globe, MapPin, Search, LogOut, LogIn, ChevronDown, CheckCircle2, ShieldCheck, Stethoscope, Smartphone, FileText } from 'lucide-react';
+import { Activity, User, Globe, MapPin, Search, LogOut, LogIn, ChevronDown, CheckCircle2, ShieldCheck, Stethoscope, Smartphone, FileText, Github } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { useAuth } from '../context/AuthContext';
 import { usePWA } from '../context/PWAContext';
@@ -78,6 +78,18 @@ export default function Navbar() {
 
           {/* Right Section: Language Switcher, App Link & User Buttons */}
           <div className="flex items-center space-x-2.5">
+            {/* GitHub Repository Link */}
+            <a
+              href="https://github.com/vittanalsairam-arch/op-tickets"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-800/90 hover:bg-slate-700/90 border border-slate-600/70 hover:border-cyan-400 text-slate-200 hover:text-white text-xs font-bold transition-all shadow-md group cursor-pointer"
+              title="GitHub Repository: vittanalsairam-arch/op-tickets"
+            >
+              <Github className="w-4 h-4 text-cyan-400 group-hover:scale-110 transition-transform" />
+              <span className="hidden sm:inline">GitHub</span>
+            </a>
+
             {/* App Link & Install Trigger */}
             <button
               onClick={openModal}
