@@ -1,5 +1,7 @@
 # 🏥 MediOP – National Hospital OP Booking Portal (All 29 States of India)
 
+> 🔗 **GitHub Repository:** [https://github.com/vittanalsairam-arch/op-tickets](https://github.com/vittanalsairam-arch/op-tickets)
+
 A comprehensive, state-of-the-art **National Outpatient (OP) Booking & Healthcare Directory Portal** covering **all 29 States & Union Territories of India**, **373 Administrative Districts**, **390 Cities**, and **3,245 Mandals / Taluks / Sub-cities**.
 
 ---

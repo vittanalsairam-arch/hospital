@@ -1,0 +1,17 @@
+======================================================
+  🏥 MediOP - Official GitHub Repository Links
+======================================================
+
+Primary GitHub Repository:
+https://github.com/vittanalsairam-arch/op-tickets
+
+Direct Git Clone URL:
+https://github.com/vittanalsairam-arch/op-tickets.git
+
+Secondary / Backup Repository:
+https://github.com/vittanalsairam-arch/hospital
+
+======================================================
+Local Folder:
+c:\Users\vittanala sairam\OneDrive\Desktop\HOSPITAL OP
+======================================================

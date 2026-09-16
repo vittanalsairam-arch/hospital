@@ -1,0 +1,24 @@
+======================================================
+  🏥 MediOP - Hospital OP Portal Application URLs
+======================================================
+
+The project is currently running!
+
+🌐 FRONTEND APPLICATION (Local):
+   http://localhost:8080
+
+📱 FRONTEND APPLICATION (Mobile / Same Wi-Fi Network):
+   http://10.223.77.31:8080
+
+⚙️ BACKEND API SERVER:
+   http://localhost:5000
+   API Health Check: http://localhost:5000/api/health
+
+🔗 GITHUB REPOSITORY:
+   https://github.com/vittanalsairam-arch/op-tickets
+
+======================================================
+Quick Access:
+- Click or double-click "LOCALHOST_URL.url" in this folder.
+- Or double-click "OPEN_LOCALHOST.bat" to launch in your browser.
+======================================================
